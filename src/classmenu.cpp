@@ -73,7 +73,7 @@ void classMenu::open(void)
 {
 	if(ui->classList->currentRow() != -1)
 	{
-		classID = ui->classList->currentRow();
+		classID = classManager::classIDs().value(ui->classList->currentRow());
 		accept();
 	}
 }
@@ -84,7 +84,7 @@ void classMenu::open(void)
  */
 void classMenu::open(QListWidgetItem* item)
 {
-	classID = ui->classList->row(item);
+	classID = classManager::classIDs().value(ui->classList->row(item));
 	accept();
 }
 
