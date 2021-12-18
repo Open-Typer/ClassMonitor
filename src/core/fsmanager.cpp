@@ -28,7 +28,7 @@ QList<int> classManager::classIDs(void)
 {
 	QList<int> out;
 	out.clear();
-	QDirIterator it(fileUtils::configLocation(),QDirIterator::NoIteratorFlags);
+	QDirIterator it(fileUtils::configLocation()+"/classes",QDirIterator::NoIteratorFlags);
 	QString item;
 	while(it.hasNext())
 	{
@@ -48,7 +48,7 @@ QList<int> classManager::classIDs(void)
 /*! Returns the name of the class. */
 QString classManager::className(int id)
 {
-	QSettings classIni(fileUtils::configLocation() + "/" +
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
 		QString::number(id) + "/class.ini",
 		QSettings::IniFormat);
 	return classIni.value("main/name","?").toString();
@@ -77,7 +77,7 @@ QList<int> classManager::studentIDs(int classID)
 {
 	QList<int> out;
 	out.clear();
-	QDirIterator it(fileUtils::configLocation() + "/" +
+	QDirIterator it(fileUtils::configLocation() + "/classes/" +
 		QString::number(classID),
 		QDirIterator::NoIteratorFlags);
 	QString item;
@@ -103,7 +103,7 @@ QList<int> classManager::studentIDs(int classID)
 /*! Returns the name of the student. */
 QString classManager::studentName(int classID, int id)
 {
-	QSettings studentIni(fileUtils::configLocation() + "/" +
+	QSettings studentIni(fileUtils::configLocation() + "/classes/" +
 		QString::number(classID) + "/student_" + QString::number(id) + "/student.ini",
 		QSettings::IniFormat);
 	return studentIni.value("main/name","?").toString();
