@@ -18,6 +18,9 @@
  * along with Open-Typer. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef FSMANAGER_H
+#define FSMANAGER_H
+
 #include <QObject>
 #include <QList>
 #include <QStandardPaths>
@@ -45,3 +48,5 @@ class fileUtils : public QObject
 	public:
 		static QString configLocation(void);
 };
+
+#endif // FSMANAGER_H
