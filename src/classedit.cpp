@@ -43,7 +43,10 @@ classEdit::~classEdit()
 	delete ui;
 }
 
-/*! Checks if all info is correct and enables the OK button. */
+/*!
+ * Connected from nameEdit->textChanged().\n
+ * Checks if all info is correct and enables the OK button.
+ */
 void classEdit::verify(void)
 {
 	ui->okButton->setEnabled(false);
