@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .ci/common/build.sh win32
+source .ci/common/build.sh win64
 
 cd release
 rm -f *.o *.cpp *.h
