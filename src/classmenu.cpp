@@ -51,8 +51,11 @@ classMenu::~classMenu()
  */
 void classMenu::open(void)
 {
-	classID = ui->classList->currentRow();
-	accept();
+	if(ui->classList->currentRow() != -1)
+	{
+		classID = ui->classList->currentRow();
+		accept();
+	}
 }
 
 /*!
