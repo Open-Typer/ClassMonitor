@@ -28,7 +28,6 @@ QList<int> classManager::classIDs(void)
 {
 	QList<int> out;
 	out.clear();
-	printf("reading %s\n",qPrintable(fileUtils::configLocation()));
 	QDirIterator it(fileUtils::configLocation(),QDirIterator::NoIteratorFlags);
 	QString item;
 	while(it.hasNext())
