@@ -46,6 +46,26 @@ QList<int> classManager::classIDs(void)
 	return out;
 }
 
+/*! Returns the name of the class. */
+QString classManager::className(int id)
+{
+	QSettings classIni(fileUtils::configLocation() + "/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	return classIni.value("main/name","?").toString();
+}
+
+/*! Returns list of classes (with their real names). */
+QStringList classManager::classNames(void)
+{
+	QStringList out;
+	out.clear();
+	QList<int> idList = classIDs();
+	for(int i=0; i < idList.count(); i++)
+		out += className(idList[i]);
+	return out;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>

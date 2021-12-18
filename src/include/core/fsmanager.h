@@ -22,6 +22,7 @@
 #include <QList>
 #include <QStandardPaths>
 #include <QDirIterator>
+#include <QSettings>
 
 /*! \brief The classManager class provides functions for class data reading and writing. */
 class classManager : public QObject
@@ -29,6 +30,8 @@ class classManager : public QObject
 	Q_OBJECT
 	public:
 		static QList<int> classIDs(void);
+		static QString className(int id);
+		static QStringList classNames(void);
 };
 
 /*! \brief The fileUtils class contains functions for file or directory paths. */
