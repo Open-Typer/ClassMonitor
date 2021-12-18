@@ -19,17 +19,20 @@ INCLUDEPATH += \
     src/include
 
 SOURCES += \
+    src/classedit.cpp \
     src/classmenu.cpp \
     src/main.cpp \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp
 
 HEADERS += \
+    src/include/classedit.h \
     src/include/classmenu.h \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h
 
 FORMS += \
+    ui/classedit.ui \
     ui/classmenu.ui \
     ui/monitorwindow.ui
 
