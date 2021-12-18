@@ -39,6 +39,7 @@ class classManager : public QObject
 		static QString studentName(int classID, int id);
 		static QStringList studentNames(int classID);
 		static void addClass(QString name, bool hasIcon = false, QString iconName = "");
+		static bool removeClass(int id);
 };
 
 /*! \brief The fileUtils class contains functions for file or directory paths. */

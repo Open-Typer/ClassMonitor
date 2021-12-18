@@ -90,6 +90,13 @@ void classManager::addClass(QString name, bool hasIcon, QString iconName)
 		classIni.setValue("main/icon",iconName);
 }
 
+/*! Removes a class. Returns true if successful. */
+bool classManager::removeClass(int id)
+{
+	QDir dir(fileUtils::configLocation() + "/classes/" + QString::number(id));
+	return dir.removeRecursively();
+}
+
 /*
  * Returns list of student IDs.
  * \see studentNames()
