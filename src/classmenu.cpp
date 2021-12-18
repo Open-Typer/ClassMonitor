@@ -27,13 +27,7 @@ classMenu::classMenu(QWidget *parent) :
 	ui(new Ui::classMenu)
 {
 	ui->setupUi(this);
-	QList<int> classes = classManager::classIDs();
-	for(int i=0; i < classes.count(); i++)
-	{
-		// TODO: Use icon in the QListWidgetItem constructor.
-		QListWidgetItem *item = new QListWidgetItem(classManager::className(classes[i]));
-		ui->classList->addItem(item);
-	}
+	setupList();
 	// Connections
 	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
 	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
@@ -43,6 +37,18 @@ classMenu::classMenu(QWidget *parent) :
 classMenu::~classMenu()
 {
 	delete ui;
+}
+
+void classMenu::setupList(void)
+{
+	ui->classList->clear();
+	QList<int> classes = classManager::classIDs();
+	for(int i=0; i < classes.count(); i++)
+	{
+		// TODO: Use icon in the QListWidgetItem constructor.
+		QListWidgetItem *item = new QListWidgetItem(classManager::className(classes[i]));
+		ui->classList->addItem(item);
+	}
 }
 
 /*!

@@ -40,6 +40,7 @@ class classMenu : public QDialog
 
 	private:
 		Ui::classMenu *ui;
+		void setupList(void);
 
 	private slots:
 		void open(void);
