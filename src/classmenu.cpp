@@ -40,6 +40,7 @@ classMenu::~classMenu()
 	delete ui;
 }
 
+/*! Loads the classes. */
 void classMenu::setupList(void)
 {
 	ui->classList->clear();
