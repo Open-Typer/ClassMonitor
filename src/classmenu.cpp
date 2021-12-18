@@ -31,6 +31,7 @@ classMenu::classMenu(QWidget *parent) :
 	// Connections
 	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
 	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
+	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addClass()));
 }
 
 /*! Destroys the classMenu object. */
@@ -72,4 +73,17 @@ void classMenu::open(QListWidgetItem* item)
 {
 	classID = ui->classList->row(item);
 	accept();
+}
+
+/*!
+ * Connected from addButton->clicked().\n
+ * Opens classEdit and adds a new class.
+ * \see classEdit
+ */
+void classMenu::addClass(void)
+{
+	classEdit dialog(true);
+	if(dialog.exec() == QDialog::Accepted)
+		classManager::addClass(dialog.className);
+	setupList();
 }
