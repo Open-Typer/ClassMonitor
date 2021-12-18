@@ -33,6 +33,8 @@ class classManager : public QObject
 		static QString className(int id);
 		static QStringList classNames(void);
 		static QList<int> studentIDs(int classID);
+		static QString studentName(int classID, int id);
+		static QStringList studentNames(int classID);
 };
 
 /*! \brief The fileUtils class contains functions for file or directory paths. */

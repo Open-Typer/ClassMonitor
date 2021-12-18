@@ -69,7 +69,10 @@ QStringList classManager::classNames(void)
 	return out;
 }
 
-/* Returns list of student IDs. */
+/*
+ * Returns list of student IDs.
+ * \see studentNames()
+ */
 QList<int> classManager::studentIDs(int classID)
 {
 	QList<int> out;
@@ -94,6 +97,30 @@ QList<int> classManager::studentIDs(int classID)
 			}
 		}
 	}
+	return out;
+}
+
+/*! Returns the name of the student. */
+QString classManager::studentName(int classID, int id)
+{
+	QSettings studentIni(fileUtils::configLocation() + "/" +
+		QString::number(classID) + "/student_" + QString::number(id) + "/student.ini",
+		QSettings::IniFormat);
+	return studentIni.value("main/name","?").toString();
+}
+
+/*!
+ * Returns list of students (with their real names).
+ * \see studentIDs()
+ * \see studentName()
+ */
+QStringList classManager::studentNames(int classID)
+{
+	QStringList out;
+	out.clear();
+	QList<int> idList = studentIDs(classID);
+	for(int i=0; i < idList.count(); i++)
+		out += studentName(classID,idList[i]);
 	return out;
 }
 
