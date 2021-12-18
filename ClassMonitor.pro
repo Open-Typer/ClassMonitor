@@ -21,11 +21,13 @@ INCLUDEPATH += \
 SOURCES += \
     src/classmenu.cpp \
     src/main.cpp \
-    src/monitorwindow.cpp
+    src/monitorwindow.cpp \
+    src/core/fsmanager.cpp
 
 HEADERS += \
     src/include/classmenu.h \
-    src/include/monitorwindow.h
+    src/include/monitorwindow.h \
+    src/include/core/fsmanager.h
 
 FORMS += \
     ui/classmenu.ui \
