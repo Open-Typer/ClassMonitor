@@ -69,6 +69,27 @@ QStringList classManager::classNames(void)
 	return out;
 }
 
+/*! Adds a new class. */
+void classManager::addClass(QString name, bool hasIcon, QString iconName)
+{
+	QList<int> IDs = classIDs();
+	int i, max = 0, id;
+	for(i=0; i < IDs.count(); i++)
+	{
+		if(IDs[i] > max)
+			max = IDs[i];
+	}
+	id = max+1;
+	QDir dir;
+	dir.mkpath(fileUtils::configLocation() + "/classes/" + QString::number(id));
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	classIni.setValue("main/name",name);
+	if(hasIcon)
+		classIni.setValue("main/icon",iconName);
+}
+
 /*
  * Returns list of student IDs.
  * \see studentNames()
