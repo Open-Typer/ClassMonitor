@@ -22,7 +22,7 @@
 
 /*!
  * Returns list of class IDs (class directory names).
- * \see classList()
+ * \see classNames()
  */
 QList<int> classManager::classIDs(void)
 {
@@ -55,7 +55,11 @@ QString classManager::className(int id)
 	return classIni.value("main/name","?").toString();
 }
 
-/*! Returns list of classes (with their real names). */
+/*!
+ * Returns list of classes (with their real names).
+ * \see classIDs()
+ * \see className()
+ */
 QStringList classManager::classNames(void)
 {
 	QStringList out;
