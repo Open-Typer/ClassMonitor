@@ -23,6 +23,7 @@
 
 #include <QDialog>
 #include <QListWidgetItem>
+#include <QMessageBox>
 #include "core/fsmanager.h"
 #include "classedit.h"
 
@@ -48,6 +49,7 @@ class classMenu : public QDialog
 		void open(void);
 		void open(QListWidgetItem* item);
 		void addClass(void);
+		void removeClass(void);
 };
 
 #endif // CLASSMENU_H

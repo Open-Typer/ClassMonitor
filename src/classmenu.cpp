@@ -34,6 +34,7 @@ classMenu::classMenu(QWidget *parent) :
 	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
 	connect(ui->classList,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addClass()));
+	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeClass()));
 }
 
 /*! Destroys the classMenu object. */
@@ -58,11 +59,13 @@ void classMenu::setupList(void)
 
 /*!
  * Connected from classList->itemSelectionChanged().\n
- * Checks if there's a selected class and enables the open button.
+ * Checks if there's a selected class and enables the open and remove buttons.
  */
 void classMenu::verify(void)
 {
-	ui->openButton->setEnabled(ui->classList->currentRow() != -1);
+	bool enable = (ui->classList->currentRow() != -1);
+	ui->openButton->setEnabled(enable);
+	ui->removeButton->setEnabled(enable);
 }
 
 /*!
@@ -98,5 +101,22 @@ void classMenu::addClass(void)
 	classEdit dialog(true);
 	if(dialog.exec() == QDialog::Accepted)
 		classManager::addClass(dialog.className);
+	setupList();
+}
+
+void classMenu::removeClass(void)
+{
+	if(ui->classList->currentRow() == -1)
+		return;
+	QMessageBox confirmDialog;
+	confirmDialog.setText(tr("Are you sure you want to remove class ") + classManager::className(classManager::classIDs().value(ui->classList->currentRow())) + "?");
+	QPushButton *yesButton = confirmDialog.addButton(tr("Yes"),QMessageBox::YesRole);
+	QPushButton *noButton = confirmDialog.addButton(tr("No"),QMessageBox::NoRole);
+	confirmDialog.setIcon(QMessageBox::Question);
+	confirmDialog.exec();
+	if(confirmDialog.clickedButton() == yesButton)
+		classManager::removeClass(classManager::classIDs().value(ui->classList->currentRow()));
+	else if(confirmDialog.clickedButton() == noButton)
+		return;
 	setupList();
 }
