@@ -28,9 +28,11 @@ classMenu::classMenu(QWidget *parent) :
 {
 	ui->setupUi(this);
 	setupList();
+	verify();
 	// Connections
 	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
 	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
+	connect(ui->classList,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addClass()));
 }
 
@@ -51,6 +53,16 @@ void classMenu::setupList(void)
 		QListWidgetItem *item = new QListWidgetItem(classManager::className(classes[i]));
 		ui->classList->addItem(item);
 	}
+	verify();
+}
+
+/*!
+ * Connected from classList->itemSelectionChanged().\n
+ * Checks if there's a selected class and enables the open button.
+ */
+void classMenu::verify(void)
+{
+	ui->openButton->setEnabled(ui->classList->currentRow() != -1);
 }
 
 /*!
