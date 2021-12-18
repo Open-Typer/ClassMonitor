@@ -22,6 +22,7 @@
 #define CLASSMENU_H
 
 #include <QDialog>
+#include "core/fsmanager.h"
 
 namespace Ui {
 	class classMenu;
