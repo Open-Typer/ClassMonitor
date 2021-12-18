@@ -34,10 +34,33 @@ classMenu::classMenu(QWidget *parent) :
 		QListWidgetItem *item = new QListWidgetItem(classManager::className(classes[i]));
 		ui->classList->addItem(item);
 	}
+	// Connections
+	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
+	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
 }
 
 /*! Destroys the classMenu object. */
 classMenu::~classMenu()
 {
 	delete ui;
+}
+
+/*!
+ * Connected from openButton->clicked().\n
+ * Opens selected class.
+ */
+void classMenu::open(void)
+{
+	classID = ui->classList->currentRow();
+	accept();
+}
+
+/*!
+ * Connected from classList->itemDoubleClicked().\n
+ * Opens double-clicked class.
+ */
+void classMenu::open(QListWidgetItem* item)
+{
+	classID = ui->classList->row(item);
+	accept();
 }

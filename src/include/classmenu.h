@@ -22,6 +22,7 @@
 #define CLASSMENU_H
 
 #include <QDialog>
+#include <QListWidgetItem>
 #include "core/fsmanager.h"
 
 namespace Ui {
@@ -35,9 +36,14 @@ class classMenu : public QDialog
 	public:
 		explicit classMenu(QWidget *parent = nullptr);
 		~classMenu();
+		int classID;
 
 	private:
 		Ui::classMenu *ui;
+
+	private slots:
+		void open(void);
+		void open(QListWidgetItem* item);
 };
 
 #endif // CLASSMENU_H
