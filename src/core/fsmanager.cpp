@@ -69,6 +69,34 @@ QStringList classManager::classNames(void)
 	return out;
 }
 
+/* Returns list of student IDs. */
+QList<int> classManager::studentIDs(int classID)
+{
+	QList<int> out;
+	out.clear();
+	QDirIterator it(fileUtils::configLocation() + "/" +
+		QString::number(classID),
+		QDirIterator::NoIteratorFlags);
+	QString item;
+	while(it.hasNext())
+	{
+		item = it.next();
+		QFileInfo fileInfo(item);
+		if(fileInfo.isDir())
+		{
+			QString name = fileInfo.fileName();
+			if(name.left(8) == "student_")
+			{
+				bool ok;
+				int id = name.mid(8).toInt(&ok);
+				if(ok)
+					out += id;
+			}
+		}
+	}
+	return out;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
