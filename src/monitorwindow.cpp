@@ -28,6 +28,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 {
 	ui->setupUi(this);
 	ui->classControls->hide();
+	updateSchoolName();
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
 	{
@@ -69,4 +70,10 @@ void MonitorWindow::openClass(void)
 void MonitorWindow::closeClass(void)
 {
 	ui->classControls->hide();
+}
+
+void MonitorWindow::updateSchoolName(void)
+{
+	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
+	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString());
 }

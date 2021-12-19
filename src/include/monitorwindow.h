@@ -43,5 +43,6 @@ class MonitorWindow : public QMainWindow
 	private slots:
 		void openClass(void);
 		void closeClass(void);
+		void updateSchoolName(void);
 };
 #endif // MONITORWINDOW_H
