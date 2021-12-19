@@ -26,6 +26,7 @@
 #include <QMessageBox>
 #include "core/fsmanager.h"
 #include "classedit.h"
+#include "authdialog.h"
 
 namespace Ui {
 	class classMenu;
