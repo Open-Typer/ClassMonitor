@@ -28,7 +28,6 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 {
 	ui->setupUi(this);
 	ui->classControls->hide();
-	updateSchoolName();
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
 	{
@@ -43,6 +42,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
 	connect(ui->closeClassButton,SIGNAL(clicked()),this,SLOT(closeClass()));
 	emit openClass();
+	updateSchoolName();
 }
 
 /*! Destroys the MonitorWindow object. */
