@@ -32,7 +32,10 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	{
 		initialSetup setupDialog;
 		if(setupDialog.exec() == QDialog::Rejected)
+		{
 			QMetaObject::invokeMethod(this,"close",Qt::QueuedConnection);
+			return;
+		}
 	}
 	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
 	emit openClass();
