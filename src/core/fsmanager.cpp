@@ -148,8 +148,8 @@ QStringList classManager::classNames(void)
 	return out;
 }
 
-/*! Adds a new class. */
-void classManager::addClass(QString name, bool hasIcon, QString iconName)
+/*! Adds a new class. Returns true if successful. */
+bool classManager::addClass(QString name, bool hasIcon, QString iconName)
 {
 	QList<int> IDs = classIDs();
 	int i, max = 0, id;
@@ -160,13 +160,15 @@ void classManager::addClass(QString name, bool hasIcon, QString iconName)
 	}
 	id = max+1;
 	QDir dir;
-	dir.mkpath(fileUtils::configLocation() + "/classes/" + QString::number(id));
+	if(!dir.mkpath(fileUtils::configLocation() + "/classes/" + QString::number(id)))
+		return false;
 	QSettings classIni(fileUtils::configLocation() + "/classes/" +
 		QString::number(id) + "/class.ini",
 		QSettings::IniFormat);
 	classIni.setValue("main/name",name);
 	if(hasIcon)
 		classIni.setValue("main/icon",iconName);
+	return true;
 }
 
 /*! Removes a class. Returns true if successful. */
