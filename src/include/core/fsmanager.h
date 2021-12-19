@@ -27,6 +27,16 @@
 #include <QDirIterator>
 #include <QSettings>
 
+/*! \brief The userManager class provides functions for user management. */
+class userManager : public QObject
+{
+	Q_OBJECT
+	public:
+		static QList<int> userIDs(void);
+		static QString userName(int id);
+		static QStringList userNames(void);
+};
+
 /*! \brief The classManager class provides functions for class data reading and writing. */
 class classManager : public QObject
 {

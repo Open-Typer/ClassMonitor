@@ -21,6 +21,55 @@
 #include "core/fsmanager.h"
 
 /*!
+ * Returns list of user IDs (user directory names).
+ * \see userNames()
+ */
+QList<int> userManager::userIDs(void)
+{
+	QList<int> out;
+	out.clear();
+	QDirIterator it(fileUtils::configLocation()+"/users",QDirIterator::NoIteratorFlags);
+	QString item;
+	while(it.hasNext())
+	{
+		item = it.next();
+		QFileInfo fileInfo(item);
+		if(fileInfo.isDir())
+		{
+			bool ok;
+			int id = fileInfo.fileName().toInt(&ok);
+			if(ok)
+				out += id;
+		}
+	}
+	return out;
+}
+
+/*! Returns the name of the user. */
+QString userManager::userName(int id)
+{
+	QSettings userIni(fileUtils::configLocation() + "/users/" +
+		QString::number(id) + "/user.ini",
+		QSettings::IniFormat);
+	return userIni.value("main/name","?").toString();
+}
+
+/*!
+ * Returns list of users (with their real names).
+ * \see userIDs()
+ * \see userName()
+ */
+QStringList userManager::userNames(void)
+{
+	QStringList out;
+	out.clear();
+	QList<int> idList = userIDs();
+	for(int i=0; i < idList.count(); i++)
+		out += userName(idList[i]);
+	return out;
+}
+
+/*!
  * Returns list of class IDs (class directory names).
  * \see classNames()
  */
