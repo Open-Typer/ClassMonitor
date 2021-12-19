@@ -100,7 +100,7 @@ void classMenu::addClass(void)
 {
 	classEdit dialog(true);
 	if(dialog.exec() == QDialog::Accepted)
-		classManager::addClass(dialog.className);
+		classManager::addClass(dialog.className,dialog.classOwner);
 	setupList();
 }
 
