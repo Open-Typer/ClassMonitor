@@ -27,6 +27,7 @@ classEdit::classEdit(bool newClass, QWidget *parent) :
 	ui(new Ui::classEdit)
 {
 	ui->setupUi(this);
+	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	ui->okButton->setEnabled(false);
 	if(newClass)
 		setWindowTitle(tr("New class"));
