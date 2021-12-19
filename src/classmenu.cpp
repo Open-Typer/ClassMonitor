@@ -107,7 +107,7 @@ void classMenu::addClass(void)
 
 /*!
  * Connected from removeButton->clicked().\n
- * Remove selected class.
+ * Removes selected class.
  */
 void classMenu::removeClass(void)
 {
