@@ -104,6 +104,10 @@ void classMenu::addClass(void)
 	setupList();
 }
 
+/*!
+ * Connected from removeButton->clicked().\n
+ * Remove selected class.
+ */
 void classMenu::removeClass(void)
 {
 	if(ui->classList->currentRow() == -1)
