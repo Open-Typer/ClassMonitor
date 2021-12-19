@@ -25,7 +25,8 @@ SOURCES += \
     src/initialsetup.cpp \
     src/main.cpp \
     src/monitorwindow.cpp \
-    src/core/fsmanager.cpp
+    src/core/fsmanager.cpp \
+    src/usermanager.cpp
 
 HEADERS += \
     src/include/authdialog.h \
@@ -33,14 +34,16 @@ HEADERS += \
     src/include/classmenu.h \
     src/include/initialsetup.h \
     src/include/monitorwindow.h \
-    src/include/core/fsmanager.h
+    src/include/core/fsmanager.h \
+    src/include/usermanager.h
 
 FORMS += \
     ui/authdialog.ui \
     ui/classedit.ui \
     ui/classmenu.ui \
     ui/initialsetup.ui \
-    ui/monitorwindow.ui
+    ui/monitorwindow.ui \
+    ui/usermanager.ui
 
 TRANSLATIONS += \
     lang/ClassMonitor_sk_SK.ts
