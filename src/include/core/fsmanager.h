@@ -26,6 +26,7 @@
 #include <QStandardPaths>
 #include <QDirIterator>
 #include <QSettings>
+#include <QCryptographicHash>
 
 /*! \brief The userManager class provides functions for user management. */
 class userManager : public QObject
@@ -35,6 +36,7 @@ class userManager : public QObject
 		static QList<int> userIDs(void);
 		static QString userName(int id);
 		static QStringList userNames(void);
+		static bool addUser(QString name, QString role, QString password);
 };
 
 /*! \brief The classManager class provides functions for class data reading and writing. */

@@ -69,6 +69,36 @@ QStringList userManager::userNames(void)
 	return out;
 }
 
+/*! Adds a new user. Returns true if successful. */
+bool userManager::addUser(QString name, QString role, QString password)
+{
+	QList<int> IDs = userIDs();
+	int i, max = 0, id;
+	for(i=0; i < IDs.count(); i++)
+	{
+		if(IDs[i] > max)
+			max = IDs[i];
+	}
+	id = max+1;
+	QDir dir;
+	if(!dir.mkpath(fileUtils::configLocation() + "/users/" + QString::number(id)))
+		return false;
+	QSettings userIni(fileUtils::configLocation() + "/users/" +
+		QString::number(id) + "/user.ini",
+		QSettings::IniFormat);
+	userIni.setValue("main/name",name);
+	userIni.setValue("main/role",role);
+	// Save password hash
+	QCryptographicHash hash(QCryptographicHash::Sha256);
+	hash.addData(password.toUtf8());
+	QFile passwdFile(fileUtils::configLocation() + "/users/" + QString::number(id) + "/passwd");
+	if(passwdFile.open(QIODevice::WriteOnly | QIODevice::Unbuffered))
+		passwdFile.write(hash.result());
+	else
+		return false;
+	return true;
+}
+
 /*!
  * Returns list of class IDs (class directory names).
  * \see classNames()
