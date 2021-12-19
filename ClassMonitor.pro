@@ -21,6 +21,7 @@ INCLUDEPATH += \
 SOURCES += \
     src/classedit.cpp \
     src/classmenu.cpp \
+    src/initialsetup.cpp \
     src/main.cpp \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp
@@ -28,12 +29,14 @@ SOURCES += \
 HEADERS += \
     src/include/classedit.h \
     src/include/classmenu.h \
+    src/include/initialsetup.h \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h
 
 FORMS += \
     ui/classedit.ui \
     ui/classmenu.ui \
+    ui/initialsetup.ui \
     ui/monitorwindow.ui
 
 TRANSLATIONS += \
