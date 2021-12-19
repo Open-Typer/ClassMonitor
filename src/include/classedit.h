@@ -37,7 +37,8 @@ class classEdit : public QDialog
 	public:
 		explicit classEdit(bool newClass = false, QWidget *parent = nullptr);
 		~classEdit();
-		QString className, classOwner;
+		QString className;
+		int classOwner;
 
 	private:
 		Ui::classEdit *ui;
