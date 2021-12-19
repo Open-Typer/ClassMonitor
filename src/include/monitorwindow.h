@@ -39,6 +39,7 @@ class MonitorWindow : public QMainWindow
 
 	private:
 		Ui::MonitorWindow *ui;
+		int classID;
 
 	private slots:
 		void openClass(void);
