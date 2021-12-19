@@ -35,6 +35,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 			QMetaObject::invokeMethod(this,"close",Qt::QueuedConnection);
 	}
 	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
+	emit openClass();
 }
 
 /*! Destroys the MonitorWindow object. */
