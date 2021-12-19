@@ -77,6 +77,7 @@ void MonitorWindow::closeClass(void)
 	ui->classControls->hide();
 }
 
+/*! Updates schoolNameLabel. */
 void MonitorWindow::updateSchoolName(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
