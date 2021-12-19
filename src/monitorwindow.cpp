@@ -27,6 +27,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
+	ui->classControls->hide();
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
 	{
@@ -37,7 +38,9 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 			return;
 		}
 	}
+	// Connections
 	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
+	connect(ui->closeClassButton,SIGNAL(clicked()),this,SLOT(closeClass()));
 	emit openClass();
 }
 
@@ -57,4 +60,9 @@ void MonitorWindow::openClass(void)
 {
 	classMenu menu;
 	menu.exec();
+}
+
+void MonitorWindow::closeClass(void)
+{
+	ui->classControls->hide();
 }
