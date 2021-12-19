@@ -63,6 +63,7 @@ void MonitorWindow::openClass(void)
 	if(menu.exec() == QDialog::Accepted)
 		classID = menu.classID;
 	ui->classControls->show();
+	ui->classNameLabel->setText(classManager::className(classID));
 }
 
 /*!
