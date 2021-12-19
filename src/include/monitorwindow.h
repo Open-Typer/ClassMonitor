@@ -24,6 +24,7 @@
 #include <QMainWindow>
 #include "classmenu.h"
 #include "initialsetup.h"
+#include "usermanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MonitorWindow; }
@@ -43,6 +44,7 @@ class MonitorWindow : public QMainWindow
 
 	private slots:
 		void openClass(void);
+		void openUserManager(void);
 		void closeClass(void);
 		void updateSchoolName(void);
 };

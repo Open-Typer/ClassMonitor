@@ -40,6 +40,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	}
 	// Connections
 	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
+	connect(ui->manageUsersButton,SIGNAL(clicked()),this,SLOT(openUserManager()));
 	connect(ui->closeClassButton,SIGNAL(clicked()),this,SLOT(closeClass()));
 	emit openClass();
 	updateSchoolName();
@@ -82,4 +83,16 @@ void MonitorWindow::updateSchoolName(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString());
+}
+
+/*!
+ * Connected from manageUsersButton->clicked().
+ * Opens userManagerDialog.
+ * \see userManagerDialog
+ */
+void MonitorWindow::openUserManager(void)
+{
+	userManagerDialog dialog;
+	dialog.exec();
+	updateSchoolName();
 }
