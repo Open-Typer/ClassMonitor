@@ -149,7 +149,7 @@ QStringList classManager::classNames(void)
 }
 
 /*! Adds a new class. Returns true if successful. */
-bool classManager::addClass(QString name, bool hasIcon, QString iconName)
+bool classManager::addClass(QString name, QString owner, bool hasIcon, QString iconName)
 {
 	QList<int> IDs = classIDs();
 	int i, max = 0, id;
@@ -166,6 +166,7 @@ bool classManager::addClass(QString name, bool hasIcon, QString iconName)
 		QString::number(id) + "/class.ini",
 		QSettings::IniFormat);
 	classIni.setValue("main/name",name);
+	classIni.setValue("main/owner",owner);
 	if(hasIcon)
 		classIni.setValue("main/icon",iconName);
 	return true;
