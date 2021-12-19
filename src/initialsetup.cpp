@@ -27,6 +27,7 @@ initialSetup::initialSetup(QWidget *parent) :
 	ui(new Ui::initialSetup)
 {
 	ui->setupUi(this);
+	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->schoolNameEdit->setText(settings.value("main/schoolname","").toString());
 	verify();
