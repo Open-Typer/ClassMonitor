@@ -62,6 +62,10 @@ void MonitorWindow::openClass(void)
 	menu.exec();
 }
 
+/*!
+ * Connected from closeClassButton->clicked().\n
+ * Closes opened class.
+ */
 void MonitorWindow::closeClass(void)
 {
 	ui->classControls->hide();
