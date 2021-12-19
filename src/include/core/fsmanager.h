@@ -46,6 +46,7 @@ class classManager : public QObject
 	public:
 		static QList<int> classIDs(void);
 		static QString className(int id);
+		static int classOwner(int id);
 		static QStringList classNames(void);
 		static QList<int> studentIDs(int classID);
 		static QString studentName(int classID, int id);

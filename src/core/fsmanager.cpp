@@ -133,6 +133,15 @@ QString classManager::className(int id)
 	return classIni.value("main/name","?").toString();
 }
 
+/*! Returns the class owner ID. */
+int classManager::classOwner(int id)
+{
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	return classIni.value("main/owner","1").toInt();
+}
+
 /*!
  * Returns list of classes (with their real names).
  * \see classIDs()
