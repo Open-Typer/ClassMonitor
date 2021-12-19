@@ -18,8 +18,8 @@
  * along with Open-Typer. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef ADDCLASSDIALOG_H
-#define ADDCLASSDIALOG_H
+#ifndef CLASSEDIT_H
+#define CLASSEDIT_H
 
 #include <QDialog>
 #include "core/fsmanager.h"
@@ -44,4 +44,4 @@ class classEdit : public QDialog
 		void verify(void);
 };
 
-#endif // ADDCLASSDIALOG_H
+#endif // CLASSEDIT_H
