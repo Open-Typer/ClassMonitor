@@ -19,6 +19,7 @@ INCLUDEPATH += \
     src/include
 
 SOURCES += \
+    src/authdialog.cpp \
     src/classedit.cpp \
     src/classmenu.cpp \
     src/initialsetup.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
     src/core/fsmanager.cpp
 
 HEADERS += \
+    src/include/authdialog.h \
     src/include/classedit.h \
     src/include/classmenu.h \
     src/include/initialsetup.h \
@@ -34,6 +36,7 @@ HEADERS += \
     src/include/core/fsmanager.h
 
 FORMS += \
+    ui/authdialog.ui \
     ui/classedit.ui \
     ui/classmenu.ui \
     ui/initialsetup.ui \
