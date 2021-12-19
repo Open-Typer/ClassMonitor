@@ -149,7 +149,7 @@ QStringList classManager::classNames(void)
 }
 
 /*! Adds a new class. Returns true if successful. */
-bool classManager::addClass(QString name, QString owner, bool hasIcon, QString iconName)
+bool classManager::addClass(QString name, int owner, bool hasIcon, QString iconName)
 {
 	QList<int> IDs = classIDs();
 	int i, max = 0, id;
