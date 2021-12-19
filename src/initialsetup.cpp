@@ -27,6 +27,8 @@ initialSetup::initialSetup(QWidget *parent) :
 	ui(new Ui::initialSetup)
 {
 	ui->setupUi(this);
+	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
+	ui->schoolNameEdit->setText(settings.value("main/schoolname","").toString());
 	verify();
 	// Connections
 	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&initialSetup::verify);
