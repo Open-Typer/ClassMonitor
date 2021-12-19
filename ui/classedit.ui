@@ -78,9 +78,6 @@
         <property name="maxLength">
          <number>20</number>
         </property>
-        <property name="placeholderText">
-         <string>I. A-2020</string>
-        </property>
        </widget>
       </item>
       <item row="1" column="0">
