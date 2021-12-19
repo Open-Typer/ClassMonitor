@@ -105,7 +105,7 @@
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="1" column="0" alignment="Qt::AlignLeft">
      <widget class="QFrame" name="controlFrame">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
