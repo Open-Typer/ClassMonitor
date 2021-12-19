@@ -22,6 +22,8 @@
 #define CLASSEDIT_H
 
 #include <QDialog>
+#include <QCryptographicHash>
+#include <QMessageBox>
 #include "core/fsmanager.h"
 
 namespace Ui {
@@ -35,13 +37,15 @@ class classEdit : public QDialog
 	public:
 		explicit classEdit(bool newClass = false, QWidget *parent = nullptr);
 		~classEdit();
-		QString className;
+		QString className, classOwner;
 
 	private:
 		Ui::classEdit *ui;
 
 	private slots:
 		void verify(void);
+		void updateOwner(const QString name);
+		void finish(void);
 };
 
 #endif // CLASSEDIT_H

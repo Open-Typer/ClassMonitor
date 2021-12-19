@@ -32,9 +32,15 @@ classEdit::classEdit(bool newClass, QWidget *parent) :
 		setWindowTitle(tr("New class"));
 	else
 		setWindowTitle(tr("Edit class"));
+	// Set up list of users
+	ui->ownerBox->clear();
+	ui->ownerBox->addItems(userManager::userNames());
+	updateOwner(ui->ownerBox->currentText());
 	// Connections
 	connect(ui->nameEdit,&QLineEdit::textChanged,this,&classEdit::verify);
-	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(accept()));
+	connect(ui->ownerBox,SIGNAL(currentTextChanged(const QString)),this,SLOT(updateOwner(const QString)));
+	connect(ui->passwordEdit,&QLineEdit::textChanged,this,&classEdit::verify);
+	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(finish()));
 }
 
 /*! Destroys the classEdit object. */
@@ -44,7 +50,7 @@ classEdit::~classEdit()
 }
 
 /*!
- * Connected from nameEdit->textChanged().\n
+ * Connected from all line edits' textChanged() signal.\n
  * Checks if all info is correct and enables the OK button.
  */
 void classEdit::verify(void)
@@ -59,7 +65,45 @@ void classEdit::verify(void)
 		if(classes[i] == ui->nameEdit->text())
 			return;
 	}
+	// Check password
+	if(ui->passwordEdit->text() == "")
+		return;
 	// Everything is correct
 	className = ui->nameEdit->text();
+	classOwner = userManager::userIDs().value(ui->ownerBox->currentIndex());
 	ui->okButton->setEnabled(true);
+}
+
+/*!
+ * Connected from passwordEdit->currentTextChanged().\n
+ * Updates passwordLabel.
+ */
+void classEdit::updateOwner(const QString name)
+{
+	ui->passwordLabel->setText("Password for " + name + ":");
+	verify();
+}
+
+/*!
+ * Connected from okButton->clicked().\n
+ * Checks owner password and closes the dialog.
+ */
+void classEdit::finish(void)
+{
+	QCryptographicHash hash(QCryptographicHash::Sha256);
+	hash.addData(ui->passwordEdit->text().toUtf8());
+	QFile passwdFile(fileUtils::configLocation() + "/users/" + QString::number(userManager::userIDs().value(ui->ownerBox->currentIndex())) + "/passwd");
+	if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
+	{
+		if(passwdFile.readAll().compare(hash.result()) == 0)
+			accept();
+		else
+		{
+			QMessageBox errBox;
+			errBox.setText(tr("Incorrect password!"));
+			errBox.setStandardButtons(QMessageBox::Ok);
+			errBox.setIcon(QMessageBox::Warning);
+			errBox.exec();
+		}
+	}
 }
