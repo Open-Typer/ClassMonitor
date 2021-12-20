@@ -88,7 +88,7 @@ QString userManager::roleName(int id)
 			role = "admin";
 			break;
 	}
-	return;
+	return role;
 }
 
 /*!
