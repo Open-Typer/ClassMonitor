@@ -114,6 +114,7 @@ void userManagerDialog::addUser(void)
 {
 	userEdit dialog(true);
 	dialog.exec();
+	setupList();
 }
 
 /*!
