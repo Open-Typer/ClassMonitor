@@ -19,6 +19,7 @@ INCLUDEPATH += \
     src/include
 
 SOURCES += \
+    src/adminselector.cpp \
     src/authdialog.cpp \
     src/classedit.cpp \
     src/classmenu.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
     src/usermanager.cpp
 
 HEADERS += \
+    src/include/adminselector.h \
     src/include/authdialog.h \
     src/include/classedit.h \
     src/include/classmenu.h \
@@ -40,6 +42,7 @@ HEADERS += \
     src/include/usermanager.h
 
 FORMS += \
+    ui/adminselector.ui \
     ui/authdialog.ui \
     ui/classedit.ui \
     ui/classmenu.ui \
