@@ -33,6 +33,7 @@ classEdit::classEdit(bool newClass, QWidget *parent) :
 		setWindowTitle(tr("New class"));
 	else
 		setWindowTitle(tr("Edit class"));
+	creatingNewClass = newClass;
 	// Set up list of users
 	ui->ownerBox->clear();
 	ui->ownerBox->addItems(userManager::userNames());
@@ -70,8 +71,6 @@ void classEdit::verify(void)
 	if(ui->passwordEdit->text() == "")
 		return;
 	// Everything is correct
-	className = ui->nameEdit->text();
-	classOwner = userManager::userIDs().value(ui->ownerBox->currentIndex());
 	ui->okButton->setEnabled(true);
 }
 
@@ -87,7 +86,7 @@ void classEdit::updateOwner(const QString name)
 
 /*!
  * Connected from okButton->clicked().\n
- * Checks owner password and closes the dialog.
+ * Checks owner password, creates or edits the class and closes the dialog.
  */
 void classEdit::finish(void)
 {
@@ -97,7 +96,11 @@ void classEdit::finish(void)
 	if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
 	{
 		if(passwdFile.readAll().compare(hash.result()) == 0)
+		{
+			if(creatingNewClass)
+				addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex())); // TODO: Add class icon
 			accept();
+		}
 		else
 		{
 			QMessageBox errBox;

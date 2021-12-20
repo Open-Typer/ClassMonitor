@@ -37,11 +37,10 @@ class classEdit : public QDialog
 	public:
 		explicit classEdit(bool newClass = false, QWidget *parent = nullptr);
 		~classEdit();
-		QString className;
-		int classOwner;
 
 	private:
 		Ui::classEdit *ui;
+		bool creatingNewClass;
 
 	private slots:
 		void verify(void);
