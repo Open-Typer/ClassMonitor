@@ -99,6 +99,28 @@ bool userManager::addUser(QString name, QString role, QString password)
 	return true;
 }
 
+/*! Edits the user. Returns true if successful. */
+bool userManager::editUser(int id, QString name, QString role, QString password)
+{
+	QSettings userIni(fileUtils::configLocation() + "/users/" +
+		QString::number(id) + "/user.ini",
+		QSettings::IniFormat);
+	userIni.setValue("main/name",name);
+	userIni.setValue("main/role",role);
+	if(password != "")
+	{
+		// Save password hash
+		QCryptographicHash hash(QCryptographicHash::Sha256);
+		hash.addData(password.toUtf8());
+		QFile passwdFile(fileUtils::configLocation() + "/users/" + QString::number(id) + "/passwd");
+		if(passwdFile.open(QIODevice::WriteOnly | QIODevice::Unbuffered))
+			passwdFile.write(hash.result());
+		else
+			return false;
+	}
+	return true;
+}
+
 /*!
  * Returns list of class IDs (class directory names).
  * \see classNames()
@@ -179,6 +201,20 @@ bool classManager::addClass(QString name, int owner, bool hasIcon, QString iconN
 	if(hasIcon)
 		classIni.setValue("main/icon",iconName);
 	return true;
+}
+
+/*! Edits the class. */
+void classManager::editClass(int id, QString name, int owner, bool hasIcon, QString iconName)
+{
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	classIni.setValue("main/name",name);
+	classIni.setValue("main/owner",owner);
+	if(hasIcon)
+		classIni.setValue("main/icon",iconName);
+	else
+		classIni.setValue("main/icon","");
 }
 
 /*! Removes a class. Returns true if successful. */

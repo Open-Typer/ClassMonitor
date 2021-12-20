@@ -37,6 +37,7 @@ class userManager : public QObject
 		static QString userName(int id);
 		static QStringList userNames(void);
 		static bool addUser(QString name, QString role, QString password);
+		static bool editUser(int id, QString name, QString role, QString password = "");
 };
 
 /*! \brief The classManager class provides functions for class data reading and writing. */
@@ -52,6 +53,7 @@ class classManager : public QObject
 		static QString studentName(int classID, int id);
 		static QStringList studentNames(int classID);
 		static bool addClass(QString name, int owner, bool hasIcon = false, QString iconName = "");
+		static void editClass(int id, QString name, int owner, bool hasIcon = false, QString iconName = "");
 		static bool removeClass(int id);
 };
 
