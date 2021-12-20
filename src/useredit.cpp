@@ -111,17 +111,7 @@ void userEdit::resetPassword(void)
  */
 void userEdit::finish(void)
 {
-	QString role;
-	switch(ui->roleBox->currentIndex()) {
-		case 0:
-			// Basic
-			role = "basic";
-			break;
-		case 1:
-			// Administrator
-			role = "admin";
-			break;
-	}
+	QString role = userManager::roleName(ui->roleBox->currentIndex());
 	if(creatingNewUser)
 		userManager::addUser(ui->userNameEdit->text(),role,ui->passwordEdit->text());
 	else
