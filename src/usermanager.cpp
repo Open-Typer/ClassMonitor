@@ -101,7 +101,7 @@ void userManagerDialog::closeEvent(QCloseEvent *event)
 
 /*!
  * Connected from addButton->clicked().\n
- * Opens userEdit.
+ * Opens userEdit and creates a new user.
  *
  * \see userEdit
  */
