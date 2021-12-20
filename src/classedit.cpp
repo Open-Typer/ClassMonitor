@@ -22,7 +22,7 @@
 #include "ui_classedit.h"
 
 /*! Constructs classEdit. */
-classEdit::classEdit(bool newClass, QWidget *parent) :
+classEdit::classEdit(bool newClass, int id, QWidget *parent) :
 	QDialog(parent),
 	ui(new Ui::classEdit)
 {
@@ -32,8 +32,12 @@ classEdit::classEdit(bool newClass, QWidget *parent) :
 	if(newClass)
 		setWindowTitle(tr("New class"));
 	else
+	{
 		setWindowTitle(tr("Edit class"));
+		ui->nameEdit->setText(classManager::className(id));
+	}
 	creatingNewClass = newClass;
+	classID = id;
 	// Set up list of users
 	ui->ownerBox->clear();
 	ui->ownerBox->addItems(userManager::userNames());
@@ -97,8 +101,11 @@ void classEdit::finish(void)
 	{
 		if(passwdFile.readAll().compare(hash.result()) == 0)
 		{
+			// TODO: Add class icon
 			if(creatingNewClass)
-				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex())); // TODO: Add class icon
+				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()));
+			else
+				classManager::editClass(classID,ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()));
 			accept();
 		}
 		else

@@ -35,12 +35,13 @@ class classEdit : public QDialog
 {
 	Q_OBJECT
 	public:
-		explicit classEdit(bool newClass = false, QWidget *parent = nullptr);
+		explicit classEdit(bool newClass = false, int id = 1, QWidget *parent = nullptr);
 		~classEdit();
 
 	private:
 		Ui::classEdit *ui;
 		bool creatingNewClass;
+		int classID;
 
 	private slots:
 		void verify(void);
