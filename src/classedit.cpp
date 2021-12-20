@@ -29,6 +29,21 @@ classEdit::classEdit(bool newClass, int id, QWidget *parent) :
 	ui->setupUi(this);
 	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	ui->okButton->setEnabled(false);
+	// Set up list of icons
+	QDirIterator icons(":res/images/class-icons",QDirIterator::NoIteratorFlags);
+	QStringList iconNames;
+	while(icons.hasNext())
+		iconNames += icons.next();
+	iconNames.sort();
+	for(int i=0; i < iconNames.count(); i++)
+	{
+		QListWidgetItem *item = new QListWidgetItem(QIcon(iconNames[i]),"");
+		ui->iconList->addItem(item);
+	}
+	if(newClass)
+		ui->iconList->setCurrentRow(0);
+	else
+		ui->iconList->setCurrentRow(classManager::classIcon(id));
 	if(newClass)
 		setWindowTitle(tr("New class"));
 	else
@@ -104,11 +119,10 @@ void classEdit::finish(void)
 	{
 		if(passwdFile.readAll().compare(hash.result()) == 0)
 		{
-			// TODO: Add class icon
 			if(creatingNewClass)
-				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()));
+				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
 			else
-				classManager::editClass(classID,ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()));
+				classManager::editClass(classID,ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
 			accept();
 		}
 		else
