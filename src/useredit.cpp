@@ -27,6 +27,12 @@ userEdit::userEdit(bool newUser, int id, QWidget *parent) :
 	ui(new Ui::userEdit)
 {
 	ui->setupUi(this);
+	// Roles
+	QStringList roles;
+	roles += tr("Basic","Basic user role");
+	roles += tr("Administrator","Administrator user role");
+	ui->roleBox->addItems(roles);
+	ui->roleBox->setCurrentIndex(0);
 	if(newUser)
 	{
 		setWindowTitle(tr("New user"));
@@ -39,16 +45,11 @@ userEdit::userEdit(bool newUser, int id, QWidget *parent) :
 		ui->repeatPasswordLabel->hide();
 		ui->repeatPasswordEdit->hide();
 		ui->userNameEdit->setText(userManager::userName(id));
+		ui->roleBox->setCurrentIndex(userManager::roleID(userManager::userRole(id)));
 	}
 	creatingNewUser = newUser;
 	userID = id;
 	verify();
-	// Roles
-	QStringList roles;
-	roles += tr("Basic","Basic user role");
-	roles += tr("Administrator","Administrator user role");
-	ui->roleBox->addItems(roles);
-	ui->roleBox->setCurrentIndex(0);
 	// Connections
 	connect(ui->userNameEdit,&QLineEdit::textChanged,this,&userEdit::verify);
 	connect(ui->passwordEdit,&QLineEdit::textChanged,this,&userEdit::verify);
