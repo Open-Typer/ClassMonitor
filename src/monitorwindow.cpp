@@ -92,7 +92,13 @@ void MonitorWindow::updateSchoolName(void)
  */
 void MonitorWindow::openUserManager(void)
 {
-	userManagerDialog dialog;
-	dialog.exec();
+	adminSelector adminDialog;
+	if(adminDialog.exec() == QDialog::Rejected)
+		return;
+	if(userManager::auth(adminDialog.userID))
+	{
+		userManagerDialog dialog(adminDialog.userID);
+		dialog.exec();
+	}
 	updateSchoolName();
 }

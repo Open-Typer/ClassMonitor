@@ -25,6 +25,7 @@
 #include "classmenu.h"
 #include "initialsetup.h"
 #include "usermanager.h"
+#include "adminselector.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MonitorWindow; }
