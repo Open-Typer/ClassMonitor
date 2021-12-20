@@ -98,7 +98,7 @@ void classEdit::finish(void)
 		if(passwdFile.readAll().compare(hash.result()) == 0)
 		{
 			if(creatingNewClass)
-				addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex())); // TODO: Add class icon
+				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex())); // TODO: Add class icon
 			accept();
 		}
 		else
