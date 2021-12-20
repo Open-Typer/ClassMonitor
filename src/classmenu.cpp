@@ -165,10 +165,7 @@ void classMenu::editClass(void)
 {
 	if(ui->classList->currentRow() == -1)
 		return;
-	if(auth())
-	{
-		classEdit dialog(false,classManager::classIDs().value(ui->classList->currentRow()));
-		dialog.exec();
-	}
+	classEdit dialog(false,classManager::classIDs().value(ui->classList->currentRow()));
+	dialog.exec();
 	setupList();
 }
