@@ -44,7 +44,6 @@ class classMenu : public QDialog
 	private:
 		Ui::classMenu *ui;
 		void setupList(void);
-		bool auth(void);
 
 	private slots:
 		void verify(void);

@@ -77,11 +77,9 @@ void classMenu::verify(void)
  */
 void classMenu::open(void)
 {
-	if((ui->classList->currentRow() != -1) && auth())
-	{
-		classID = classManager::classIDs().value(ui->classList->currentRow());
+	classID = classManager::classIDs().value(ui->classList->currentRow());
+	if((ui->classList->currentRow() != -1) && userManager::auth(classManager::classOwner(classID)))
 		accept();
-	}
 }
 
 /*!
@@ -96,40 +94,6 @@ void classMenu::addClass(void)
 		setupList();
 }
 
-/*!
- * Opens authDialog and checks the password.
- * \see authDialog
- */
-bool classMenu::auth(void)
-{
-	if(ui->classList->currentRow() == -1)
-		return false;
-	int classID = classManager::classIDs().value(ui->classList->currentRow());
-	int ownerID = classManager::classOwner(classID);
-	authDialog auth(userManager::userName(ownerID));
-	if(auth.exec() == QDialog::Accepted)
-	{
-		QCryptographicHash hash(QCryptographicHash::Sha256);
-		hash.addData(auth.password.toUtf8());
-		QFile passwdFile(fileUtils::configLocation() + "/users/" +
-			QString::number(ownerID) +
-			"/passwd");
-		if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
-		{
-			if(passwdFile.readAll().compare(hash.result()) == 0)
-				return true;
-			else
-			{
-				QMessageBox errBox;
-				errBox.setText(tr("Incorrect password!"));
-				errBox.setStandardButtons(QMessageBox::Ok);
-				errBox.setIcon(QMessageBox::Warning);
-				errBox.exec();
-			}
-		}
-	}
-	return false;
-}
 /*!
  * Connected from removeButton->clicked().\n
  * Removes selected class.
@@ -147,7 +111,7 @@ void classMenu::removeClass(void)
 	confirmDialog.exec();
 	if(confirmDialog.clickedButton() == yesButton)
 	{
-		if(auth())
+		if(userManager::auth(classManager::classOwner(classID)))
 			classManager::removeClass(classID);
 	}
 	else if(confirmDialog.clickedButton() == noButton)
