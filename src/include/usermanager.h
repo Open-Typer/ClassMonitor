@@ -51,6 +51,7 @@ class userManagerDialog : public QDialog
 		void finish(void);
 		void addUser(void);
 		void removeUser(void);
+		void editUser(void);
 };
 
 #endif // USERMANAGER_H

@@ -37,6 +37,7 @@ userManagerDialog::userManagerDialog(int userLoginID, QWidget *parent) :
 	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&userManagerDialog::verify);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addUser()));
 	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeUser()));
+	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editUser()));
 	connect(ui->closeButton,SIGNAL(clicked()),this,SLOT(finish()));
 }
 
@@ -140,5 +141,18 @@ void userManagerDialog::removeUser(void)
 	}
 	else if(confirmDialog.clickedButton() == noButton)
 		return;
+	setupList();
+}
+
+/*!
+ * Connected from editButton->clicked().\n
+ * Opens userEdit and edits selected user.
+ *
+ * \see userEdit
+ */
+void userManagerDialog::editUser(void)
+{
+	userEdit dialog(false,userManager::userIDs().value(ui->userList->currentRow()));
+	dialog.exec();
 	setupList();
 }
