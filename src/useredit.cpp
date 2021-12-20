@@ -78,7 +78,7 @@ void userEdit::verify(void)
 	QStringList users = userManager::userNames();
 	for(int i=0; i < users.count(); i++)
 	{
-		if(users[i] == ui->userNameEdit->text())
+		if((users[i] == ui->userNameEdit->text()) || creatingNewUser)
 		{
 			if(userManager::userIDs().value(i) != userID)
 				return;
