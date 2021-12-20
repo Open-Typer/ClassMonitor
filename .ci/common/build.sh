@@ -6,7 +6,8 @@ qmake
 if [[ "$PLATFORM" == "win32" ]]; then
 	mingw32-make.exe -j4
 elif [[ "$PLATFORM" == "win64" ]]; then
-	make -j4
+	echo "Error: Only win32 is supported right now."
+	exit 1
 elif [[ "$PLATFORM" == "macos" ]]; then
 	make -j6
 else
