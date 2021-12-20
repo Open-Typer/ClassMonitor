@@ -48,6 +48,7 @@ userEdit::userEdit(bool newUser, int id, QWidget *parent) :
 		ui->roleBox->setCurrentIndex(userManager::roleID(userManager::userRole(id)));
 	}
 	creatingNewUser = newUser;
+	passwordReset = false;
 	userID = id;
 	verify();
 	// Connections
@@ -80,7 +81,7 @@ void userEdit::verify(void)
 		if(users[i] == ui->userNameEdit->text())
 			return;
 	}
-	if(creatingNewUser)
+	if(creatingNewUser || passwordReset)
 	{
 		// Check password
 		if(ui->passwordEdit->text() == "")
@@ -102,7 +103,7 @@ void userEdit::resetPassword(void)
 	ui->passwordEdit->show();
 	ui->repeatPasswordLabel->show();
 	ui->repeatPasswordEdit->show();
-	creatingNewUser = true;
+	passwordReset = true;
 	verify();
 }
 
@@ -116,6 +117,11 @@ void userEdit::finish(void)
 	if(creatingNewUser)
 		userManager::addUser(ui->userNameEdit->text(),role,ui->passwordEdit->text());
 	else
-		userManager::editUser(userID,ui->userNameEdit->text(),role,ui->passwordEdit->text());
+	{
+		if(passwordReset)
+			userManager::editUser(userID,ui->userNameEdit->text(),role,ui->passwordEdit->text());
+		else
+			userManager::editUser(userID,ui->userNameEdit->text(),role);
+	}
 	accept();
 }

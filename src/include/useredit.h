@@ -38,7 +38,7 @@ class userEdit : public QDialog
 
 	private:
 		Ui::userEdit *ui;
-		bool creatingNewUser;
+		bool creatingNewUser, passwordReset;
 		int userID;
 
 	private slots:
