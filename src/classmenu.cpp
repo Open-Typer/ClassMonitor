@@ -83,7 +83,11 @@ void classMenu::open(void)
 {
 	classID = classManager::classIDs().value(ui->classList->currentRow());
 	if((ui->classList->currentRow() != -1) && userManager::auth(classManager::classOwner(classID)))
+	{
+		MonitorWindow *monitor = new MonitorWindow(classID);
+		monitor->show();
 		accept();
+	}
 }
 
 /*!

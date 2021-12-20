@@ -24,6 +24,7 @@
 #include <QDialog>
 #include <QListWidgetItem>
 #include <QMessageBox>
+#include "monitorwindow.h"
 #include "core/fsmanager.h"
 #include "classedit.h"
 #include "authdialog.h"
