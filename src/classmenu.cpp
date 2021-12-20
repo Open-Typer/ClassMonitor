@@ -32,7 +32,7 @@ classMenu::classMenu(QWidget *parent) :
 	verify();
 	// Connections
 	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
-	connect(ui->classList,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(open(QListWidgetItem*)));
+	connect(ui->classList,&QListWidget::itemDoubleClicked,this,&classMenu::open);
 	connect(ui->classList,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addClass()));
 	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeClass()));
@@ -71,26 +71,16 @@ void classMenu::verify(void)
 }
 
 /*!
- * Connected from openButton->clicked().\n
+ * Connected from openButton->clicked() and classList->itemDoubleClicked().\n
  * Opens selected class.
  */
 void classMenu::open(void)
 {
-	if(ui->classList->currentRow() != -1)
+	if((ui->classList->currentRow() != -1) && auth())
 	{
 		classID = classManager::classIDs().value(ui->classList->currentRow());
 		accept();
 	}
-}
-
-/*!
- * Connected from classList->itemDoubleClicked().\n
- * Opens double-clicked class.
- */
-void classMenu::open(QListWidgetItem* item)
-{
-	classID = classManager::classIDs().value(ui->classList->row(item));
-	accept();
 }
 
 /*!

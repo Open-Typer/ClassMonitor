@@ -49,7 +49,6 @@ class classMenu : public QDialog
 	private slots:
 		void verify(void);
 		void open(void);
-		void open(QListWidgetItem* item);
 		void addClass(void);
 		void removeClass(void);
 		void editClass(void);
