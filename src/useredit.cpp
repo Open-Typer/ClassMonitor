@@ -79,7 +79,10 @@ void userEdit::verify(void)
 	for(int i=0; i < users.count(); i++)
 	{
 		if(users[i] == ui->userNameEdit->text())
-			return;
+		{
+			if(userManager::userIDs().value(i) != userID)
+				return;
+		}
 	}
 	if(creatingNewUser || passwordReset)
 	{
