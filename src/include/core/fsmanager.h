@@ -59,8 +59,8 @@ class classManager : public QObject
 		static QList<int> studentIDs(int classID);
 		static QString studentName(int classID, int id);
 		static QStringList studentNames(int classID);
-		static bool addClass(QString name, int owner, bool hasIcon = false, QString iconName = "");
-		static void editClass(int id, QString name, int owner, bool hasIcon = false, QString iconName = "");
+		static bool addClass(QString name, int owner, bool hasIcon = false, int icon = 0);
+		static void editClass(int id, QString name, int owner, bool hasIcon = false, int icon = 0);
 		static bool removeClass(int id);
 };
 

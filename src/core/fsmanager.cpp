@@ -266,7 +266,7 @@ QStringList classManager::classNames(void)
 }
 
 /*! Adds a new class. Returns true if successful. */
-bool classManager::addClass(QString name, int owner, bool hasIcon, QString iconName)
+bool classManager::addClass(QString name, int owner, bool hasIcon, int icon)
 {
 	QList<int> IDs = classIDs();
 	int i, max = 0, id;
@@ -285,12 +285,12 @@ bool classManager::addClass(QString name, int owner, bool hasIcon, QString iconN
 	classIni.setValue("main/name",name);
 	classIni.setValue("main/owner",owner);
 	if(hasIcon)
-		classIni.setValue("main/icon",iconName);
+		classIni.setValue("main/icon",icon);
 	return true;
 }
 
 /*! Edits the class. */
-void classManager::editClass(int id, QString name, int owner, bool hasIcon, QString iconName)
+void classManager::editClass(int id, QString name, int owner, bool hasIcon, int icon)
 {
 	QSettings classIni(fileUtils::configLocation() + "/classes/" +
 		QString::number(id) + "/class.ini",
@@ -298,7 +298,7 @@ void classManager::editClass(int id, QString name, int owner, bool hasIcon, QStr
 	classIni.setValue("main/name",name);
 	classIni.setValue("main/owner",owner);
 	if(hasIcon)
-		classIni.setValue("main/icon",iconName);
+		classIni.setValue("main/icon",icon);
 	else
 		classIni.setValue("main/icon","");
 }
