@@ -250,6 +250,14 @@ int classManager::classOwner(int id)
 	return classIni.value("main/owner","1").toInt();
 }
 
+/*! Returns the class icon ID. */
+int classManager::classIcon(int id)
+{
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	return classIni.value("main/icon","0").toInt();
+}
 /*!
  * Returns list of classes (with their real names).
  * \see classIDs()
