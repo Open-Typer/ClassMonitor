@@ -48,12 +48,16 @@ classMenu::~classMenu()
 /*! Loads the classes. */
 void classMenu::setupList(void)
 {
+	QDirIterator icons(":res/images/class-icons",QDirIterator::NoIteratorFlags);
+	QStringList iconNames;
+	while(icons.hasNext())
+		iconNames += icons.next();
+	iconNames.sort();
 	ui->classList->clear();
 	QList<int> classes = classManager::classIDs();
 	for(int i=0; i < classes.count(); i++)
 	{
-		// TODO: Use icon in the QListWidgetItem constructor.
-		QListWidgetItem *item = new QListWidgetItem(classManager::className(classes[i]));
+		QListWidgetItem *item = new QListWidgetItem(QIcon(iconNames[classManager::classIcon(classes[i])]),classManager::className(classes[i]));
 		ui->classList->addItem(item);
 	}
 	verify();
