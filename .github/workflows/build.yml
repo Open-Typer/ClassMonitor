@@ -22,7 +22,7 @@ jobs:
       with:
         version: ${{ matrix.qt-version }}
         host: 'windows'
-        arch: 'win64_mingw73'
+        arch: 'win32_mingw73'
         target: ${{ matrix.qt-target }}
         dir: '${{ github.workspace }}'
         setup-python: 'false'
@@ -60,7 +60,7 @@ jobs:
       uses: papeloto/action-zip@v1
       with:
         files: release/
-        dest: Open-Typer-ClassMonitor-win64.zip
+        dest: Open-Typer-ClassMonitor-win32.zip
     ## Upload
     # Windows
     - if: contains(matrix.os, 'windows')
