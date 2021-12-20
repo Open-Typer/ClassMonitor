@@ -22,7 +22,7 @@
 #include "ui_usermanager.h"
 
 /*! Constructs userManagerDialog. */
-userManagerDialog::userManagerDialog(QWidget *parent) :
+userManagerDialog::userManagerDialog(int userLoginID, QWidget *parent) :
 	QDialog(parent),
 	ui(new Ui::userManagerDialog)
 {
@@ -30,11 +30,13 @@ userManagerDialog::userManagerDialog(QWidget *parent) :
 	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->schoolNameEdit->setText(settings.value("main/schoolname","?").toString());
+	loginID = userLoginID;
 	setupList();
 	// Connections
 	connect(ui->userList,&QListWidget::itemSelectionChanged,this,&userManagerDialog::verify);
 	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&userManagerDialog::verify);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addUser()));
+	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeUser()));
 	connect(ui->closeButton,SIGNAL(clicked()),this,SLOT(finish()));
 }
 
@@ -67,8 +69,11 @@ void userManagerDialog::verify(void)
 	ui->closeButton->setEnabled(false);
 	// Check list of users
 	bool enable = (ui->userList->currentRow() != -1);
-	ui->removeButton->setEnabled(enable);
 	ui->editButton->setEnabled(enable);
+	if((userManager::userIDs().value(ui->userList->currentRow()) != loginID) && enable)
+		ui->removeButton->setEnabled(true);
+	else
+		ui->removeButton->setEnabled(false);
 	// Check school name
 	if(ui->schoolNameEdit->text() == "")
 		return;
@@ -109,4 +114,30 @@ void userManagerDialog::addUser(void)
 {
 	userEdit dialog(true);
 	dialog.exec();
+}
+
+/*!
+ * Connected from removeButton->clicked().\n
+ * Removes selected user.
+ */
+void userManagerDialog::removeUser(void)
+{
+	if(ui->userList->currentRow() == -1)
+		return;
+	int userID = userManager::userIDs().value(ui->userList->currentRow());
+	QMessageBox confirmDialog;
+	confirmDialog.setText(tr("Are you sure you want to remove user") + " " + userManager::userName(userID) + "?");
+	confirmDialog.setInformativeText(tr("This will remove all classes the user owns!"));
+	QPushButton *yesButton = confirmDialog.addButton(tr("Yes"),QMessageBox::YesRole);
+	QPushButton *noButton = confirmDialog.addButton(tr("No"),QMessageBox::NoRole);
+	confirmDialog.setIcon(QMessageBox::Question);
+	confirmDialog.exec();
+	if(confirmDialog.clickedButton() == yesButton)
+	{
+		if(userManager::auth(loginID))
+			userManager::removeUser(userID);
+	}
+	else if(confirmDialog.clickedButton() == noButton)
+		return;
+	setupList();
 }

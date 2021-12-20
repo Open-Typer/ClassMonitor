@@ -35,12 +35,13 @@ class userManagerDialog : public QDialog
 {
 	Q_OBJECT
 	public:
-		explicit userManagerDialog(QWidget *parent = nullptr);
+		explicit userManagerDialog(int userLoginID, QWidget *parent = nullptr);
 		~userManagerDialog();
 
 	private:
 		Ui::userManagerDialog *ui;
 		void setupList(void);
+		int loginID;
 
 	protected:
 		void closeEvent(QCloseEvent *event);
@@ -49,6 +50,7 @@ class userManagerDialog : public QDialog
 		void verify(void);
 		void finish(void);
 		void addUser(void);
+		void removeUser(void);
 };
 
 #endif // USERMANAGER_H
