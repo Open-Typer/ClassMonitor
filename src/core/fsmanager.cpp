@@ -54,6 +54,15 @@ QString userManager::userName(int id)
 	return userIni.value("main/name","?").toString();
 }
 
+/*! Returns the role of the user. */
+QString userManager::userRole(int id)
+{
+	QSettings userIni(fileUtils::configLocation() + "/users/" +
+		QString::number(id) + "/user.ini",
+		QSettings::IniFormat);
+	return userIni.value("main/role","basic").toString();
+}
+
 /*!
  * Returns list of users (with their real names).
  * \see userIDs()
