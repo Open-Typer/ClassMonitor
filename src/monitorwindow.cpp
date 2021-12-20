@@ -27,7 +27,6 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
-	ui->classControls->hide();
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
 	{
@@ -38,11 +37,6 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 			return;
 		}
 	}
-	// Connections
-	connect(ui->openClassButton,SIGNAL(clicked()),this,SLOT(openClass()));
-	connect(ui->manageUsersButton,SIGNAL(clicked()),this,SLOT(openUserManager()));
-	connect(ui->closeClassButton,SIGNAL(clicked()),this,SLOT(closeClass()));
-	emit openClass();
 	updateSchoolName();
 }
 
@@ -52,53 +46,9 @@ MonitorWindow::~MonitorWindow()
 	delete ui;
 }
 
-/*!
- * Connected from openClassButton.\n
- * Opens class menu dialog.
- *
- * \see classMenu
- */
-void MonitorWindow::openClass(void)
-{
-	classMenu menu;
-	if(menu.exec() == QDialog::Accepted)
-	{
-		classID = menu.classID;
-		ui->classControls->show();
-		ui->classNameLabel->setText(classManager::className(classID));
-	}
-}
-
-/*!
- * Connected from closeClassButton->clicked().\n
- * Closes opened class.
- */
-void MonitorWindow::closeClass(void)
-{
-	ui->classControls->hide();
-}
-
 /*! Updates schoolNameLabel. */
 void MonitorWindow::updateSchoolName(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
-	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString());
-}
-
-/*!
- * Connected from manageUsersButton->clicked().
- * Opens userManagerDialog.
- * \see userManagerDialog
- */
-void MonitorWindow::openUserManager(void)
-{
-	adminSelector adminDialog;
-	if(adminDialog.exec() == QDialog::Rejected)
-		return;
-	if(userManager::auth(adminDialog.userID))
-	{
-		userManagerDialog dialog(adminDialog.userID);
-		dialog.exec();
-	}
-	updateSchoolName();
+	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString() + " - " + classManager::className(classID));
 }

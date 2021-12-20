@@ -44,9 +44,6 @@ class MonitorWindow : public QMainWindow
 		int classID;
 
 	private slots:
-		void openClass(void);
-		void openUserManager(void);
-		void closeClass(void);
 		void updateSchoolName(void);
 };
 #endif // MONITORWINDOW_H
