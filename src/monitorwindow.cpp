@@ -22,11 +22,12 @@
 #include "ui_monitorwindow.h"
 
 /*! Constructs MonitorWindow. */
-MonitorWindow::MonitorWindow(QWidget *parent)
+MonitorWindow::MonitorWindow(int openClassID, QWidget *parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
+	classID = openClassID;
 	updateSchoolName();
 }
 

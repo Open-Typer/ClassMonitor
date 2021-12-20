@@ -34,7 +34,7 @@ class MonitorWindow : public QMainWindow
 {
 	Q_OBJECT
 	public:
-		MonitorWindow(QWidget *parent = nullptr);
+		MonitorWindow(int openClassID, QWidget *parent = nullptr);
 		~MonitorWindow();
 
 	private:
