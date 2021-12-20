@@ -130,6 +130,24 @@ bool userManager::editUser(int id, QString name, QString role, QString password)
 	return true;
 }
 
+/*! Removes a user and all classes the user owns. Returns true if successful. */
+bool userManager::removeUser(int id)
+{
+	// Remove user's classes
+	QList<int> classes = classManager::classIDs();
+	for(int i=0; i < classes.count(); i++)
+	{
+		if(classManager::classOwner(classes[i]) == id)
+		{
+			if(!classManager::removeClass(classes[i]))
+				return false;
+		}
+	}
+	// Remove user
+	QDir dir(fileUtils::configLocation() + "/users/" + QString::number(id));
+	return dir.removeRecursively();
+}
+
 /*!
  * Opens authDialog and checks the password.
  * \see authDialog
