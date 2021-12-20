@@ -23,7 +23,6 @@
 
 #include <QMainWindow>
 #include "classmenu.h"
-#include "initialsetup.h"
 #include "usermanager.h"
 #include "adminselector.h"
 

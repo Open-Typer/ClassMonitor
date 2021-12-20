@@ -20,11 +20,19 @@
 
 #include <QApplication>
 #include "monitorwindow.h"
+#include "initialsetup.h"
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	classMenu w;
+	// Open initialSetup if no users are found
+	if(userManager::userIDs().count() == 0)
+	{
+		initialSetup setupDialog;
+		if(setupDialog.exec() == QDialog::Rejected)
+			QMetaObject::invokeMethod(&w,"close",Qt::QueuedConnection);
+	}
 	w.show();
 	return a.exec();
 }

@@ -27,16 +27,6 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
-	// Open initialSetup if no users are found
-	if(userManager::userIDs().count() == 0)
-	{
-		initialSetup setupDialog;
-		if(setupDialog.exec() == QDialog::Rejected)
-		{
-			QMetaObject::invokeMethod(this,"close",Qt::QueuedConnection);
-			return;
-		}
-	}
 	updateSchoolName();
 }
 
