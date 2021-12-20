@@ -69,7 +69,10 @@ void classEdit::verify(void)
 	for(int i=0; i < classes.count(); i++)
 	{
 		if(classes[i] == ui->nameEdit->text())
-			return;
+		{
+			if((classManager::classIDs().value(i) != classID) || creatingNewClass)
+				return;
+		}
 	}
 	// Check password
 	if(ui->passwordEdit->text() == "")
