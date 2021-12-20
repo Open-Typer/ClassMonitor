@@ -34,6 +34,7 @@ userManagerDialog::userManagerDialog(QWidget *parent) :
 	// Connections
 	connect(ui->userList,&QListWidget::itemSelectionChanged,this,&userManagerDialog::verify);
 	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&userManagerDialog::verify);
+	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addUser()));
 	connect(ui->closeButton,SIGNAL(clicked()),this,SLOT(finish()));
 }
 
@@ -96,4 +97,16 @@ void userManagerDialog::closeEvent(QCloseEvent *event)
 {
 	emit finish();
 	event->accept();
+}
+
+/*!
+ * Connected from addButton->clicked().\n
+ * Opens userEdit.
+ *
+ * \see userEdit
+ */
+void userManagerDialog::addUser(void)
+{
+	userEdit dialog(true);
+	dialog.exec();
 }

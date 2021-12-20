@@ -23,6 +23,7 @@
 
 #include <QDialog>
 #include "classmenu.h"
+#include "useredit.h"
 #include "core/fsmanager.h"
 
 namespace Ui {
@@ -47,6 +48,7 @@ class userManagerDialog : public QDialog
 	private slots:
 		void verify(void);
 		void finish(void);
+		void addUser(void);
 };
 
 #endif // USERMANAGER_H
