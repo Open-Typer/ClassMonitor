@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/images/class-icons/icon1.png</file>
+        <file>res/images/class-icons/icon2.png</file>
+        <file>res/images/class-icons/icon3.png</file>
+        <file>res/images/class-icons/icon4.png</file>
+        <file>res/images/class-icons/icon5.png</file>
+        <file>res/images/class-icons/icon6.png</file>
+        <file>res/images/class-icons/icon7.png</file>
+        <file>res/images/class-icons/icon8.png</file>
+        <file>res/images/class-icons/icon9.png</file>
+        <file>res/images/class-icons/icon10.png</file>
+    </qresource>
+</RCC>
