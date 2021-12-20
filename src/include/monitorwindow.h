@@ -22,9 +22,8 @@
 #define MONITORWINDOW_H
 
 #include <QMainWindow>
-#include "classmenu.h"
-#include "usermanager.h"
-#include "adminselector.h"
+#include <QSettings>
+#include "core/fsmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MonitorWindow; }

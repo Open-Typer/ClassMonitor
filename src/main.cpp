@@ -21,6 +21,7 @@
 #include <QApplication>
 #include "monitorwindow.h"
 #include "initialsetup.h"
+#include "classmenu.h"
 
 int main(int argc, char *argv[])
 {
