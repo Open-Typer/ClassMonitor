@@ -26,6 +26,7 @@ SOURCES += \
     src/main.cpp \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp \
+    src/useredit.cpp \
     src/usermanager.cpp
 
 HEADERS += \
@@ -35,6 +36,7 @@ HEADERS += \
     src/include/initialsetup.h \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h \
+    src/include/useredit.h \
     src/include/usermanager.h
 
 FORMS += \
@@ -43,6 +45,7 @@ FORMS += \
     ui/classmenu.ui \
     ui/initialsetup.ui \
     ui/monitorwindow.ui \
+    ui/useredit.ui \
     ui/usermanager.ui
 
 TRANSLATIONS += \
