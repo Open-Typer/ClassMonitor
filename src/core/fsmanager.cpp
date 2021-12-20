@@ -63,6 +63,34 @@ QString userManager::userRole(int id)
 	return userIni.value("main/role","basic").toString();
 }
 
+/*! Returns role ID. */
+int userManager::roleID(QString roleName)
+{
+	if(roleName == "basic")
+		return 0;
+	else if(roleName == "admin")
+		return 1;
+	else
+		return -1;
+}
+
+/*! Returns role name. */
+QString userManager::roleName(int id)
+{
+	QString role = "";
+	switch(id) {
+		case 0:
+			// Basic
+			role = "basic";
+			break;
+		case 1:
+			// Administrator
+			role = "admin";
+			break;
+	}
+	return;
+}
+
 /*!
  * Returns list of users (with their real names).
  * \see userIDs()

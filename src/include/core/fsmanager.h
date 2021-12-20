@@ -38,6 +38,8 @@ class userManager : public QObject
 		static QList<int> userIDs(void);
 		static QString userName(int id);
 		static QString userRole(int id);
+		static int roleID(QString roleName);
+		static QString roleName(int id);
 		static QStringList userNames(void);
 		static bool addUser(QString name, QString role, QString password);
 		static bool editUser(int id, QString name, QString role, QString password = "");
