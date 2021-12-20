@@ -85,3 +85,15 @@ void userManagerDialog::finish(void)
 	settings.setValue("main/schoolname",ui->schoolNameEdit->text());
 	accept();
 }
+
+/*!
+ * Overrides QDialog#closeEvent().\n
+ * Emits finish().
+ *
+ * \see finish()
+ */
+void userManagerDialog::closeEvent(QCloseEvent *event)
+{
+	emit finish();
+	event->accept();
+}

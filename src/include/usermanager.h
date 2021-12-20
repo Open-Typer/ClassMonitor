@@ -41,6 +41,9 @@ class userManagerDialog : public QDialog
 		Ui::userManagerDialog *ui;
 		void setupList(void);
 
+	protected:
+		void closeEvent(QCloseEvent *event);
+
 	private slots:
 		void verify(void);
 		void finish(void);
