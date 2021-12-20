@@ -131,6 +131,37 @@ bool userManager::editUser(int id, QString name, QString role, QString password)
 }
 
 /*!
+ * Opens authDialog and checks the password.
+ * \see authDialog
+ */
+bool userManager::auth(int userID)
+{
+	authDialog auth(userName(userID));
+	if(auth.exec() == QDialog::Accepted)
+	{
+		QCryptographicHash hash(QCryptographicHash::Sha256);
+		hash.addData(auth.password.toUtf8());
+		QFile passwdFile(fileUtils::configLocation() + "/users/" +
+			QString::number(userID) +
+			"/passwd");
+		if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
+		{
+			if(passwdFile.readAll().compare(hash.result()) == 0)
+				return true;
+			else
+			{
+				QMessageBox errBox;
+				errBox.setText(tr("Incorrect password!"));
+				errBox.setStandardButtons(QMessageBox::Ok);
+				errBox.setIcon(QMessageBox::Warning);
+				errBox.exec();
+			}
+		}
+	}
+	return false;
+}
+
+/*!
  * Returns list of class IDs (class directory names).
  * \see classNames()
  */

@@ -27,6 +27,8 @@
 #include <QDirIterator>
 #include <QSettings>
 #include <QCryptographicHash>
+#include <QMessageBox>
+#include "authdialog.h"
 
 /*! \brief The userManager class provides functions for user management. */
 class userManager : public QObject
@@ -39,6 +41,7 @@ class userManager : public QObject
 		static QStringList userNames(void);
 		static bool addUser(QString name, QString role, QString password);
 		static bool editUser(int id, QString name, QString role, QString password = "");
+		static bool auth(int userID);
 };
 
 /*! \brief The classManager class provides functions for class data reading and writing. */
