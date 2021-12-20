@@ -68,6 +68,7 @@ void classMenu::verify(void)
 	bool enable = (ui->classList->currentRow() != -1);
 	ui->openButton->setEnabled(enable);
 	ui->removeButton->setEnabled(enable);
+	ui->editButton->setEnabled(enable);
 }
 
 /*!
