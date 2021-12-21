@@ -22,6 +22,7 @@
 #define CLASSCONTROLS_H
 
 #include <QWidget>
+#include "studentedit.h"
 #include "core/fsmanager.h"
 
 namespace Ui {
@@ -43,6 +44,7 @@ class classControls : public QWidget
 
 	private slots:
 		void verify(void);
+		void addStudent(void);
 };
 
 #endif // CLASSCONTROLS_H
