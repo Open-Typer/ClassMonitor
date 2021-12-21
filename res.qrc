@@ -12,5 +12,6 @@
         <file>res/images/class-icons/icon10.png</file>
         <file>res/images/plus.png</file>
         <file>res/images/remove.png</file>
+        <file>res/images/edit.png</file>
     </qresource>
 </RCC>
