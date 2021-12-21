@@ -432,6 +432,28 @@ bool classManager::addStudent(int classID, QString name, QString username, QStri
 	return true;
 }
 
+/*! Edits the student. Returns true if successful. */
+bool classManager::editStudent(int classID, int id, QString name, QString username, QString password)
+{
+	QSettings studentIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(classID) + "/student_" + QString::number(id) + "/student.ini",
+		QSettings::IniFormat);
+	studentIni.setValue("main/name",name);
+	studentIni.setValue("main/username",username);
+	if(password != "")
+	{
+		// Save password hash
+		QCryptographicHash hash(QCryptographicHash::Sha256);
+		hash.addData(password.toUtf8());
+		QFile passwdFile(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id) + "/passwd");
+		if(passwdFile.open(QIODevice::WriteOnly | QIODevice::Unbuffered))
+			passwdFile.write(hash.result());
+		else
+			return false;
+	}
+	return true;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
