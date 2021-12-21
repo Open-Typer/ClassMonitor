@@ -27,7 +27,8 @@
 #include "monitorwindow.h"
 #include "core/fsmanager.h"
 #include "classedit.h"
-#include "authdialog.h"
+#include "adminselector.h"
+#include "usermanager.h"
 
 namespace Ui {
 	class classMenu;
@@ -49,6 +50,7 @@ class classMenu : public QDialog
 	private slots:
 		void verify(void);
 		void open(void);
+		void openUserManager(void);
 		void addClass(void);
 		void removeClass(void);
 		void editClass(void);

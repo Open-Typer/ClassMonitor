@@ -32,6 +32,7 @@ classMenu::classMenu(QWidget *parent) :
 	verify();
 	// Connections
 	connect(ui->openButton,SIGNAL(clicked()),this,SLOT(open()));
+	connect(ui->usersButton,SIGNAL(clicked()),this,SLOT(openUserManager()));
 	connect(ui->classList,&QListWidget::itemDoubleClicked,this,&classMenu::open);
 	connect(ui->classList,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addClass()));
@@ -141,4 +142,23 @@ void classMenu::editClass(void)
 	classEdit dialog(false,classManager::classIDs().value(ui->classList->currentRow()));
 	dialog.exec();
 	setupList();
+}
+
+/*!
+ * Connected from usersButton->clicked().\n
+ * Asks for administrator authentication and opens userManagerDialog.
+ *
+ * \see adminSelector
+ * \see userManagerDialog
+ */
+void classMenu::openUserManager(void)
+{
+	adminSelector adminDialog;
+	if(adminDialog.exec() == QDialog::Rejected)
+		return;
+	if(userManager::auth(adminDialog.userID))
+	{
+		userManagerDialog dialog(adminDialog.userID);
+		dialog.exec();
+	}
 }
