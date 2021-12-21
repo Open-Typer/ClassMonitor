@@ -329,11 +329,14 @@ QList<int> classManager::studentIDs(int classID)
 	QDirIterator it(fileUtils::configLocation() + "/classes/" +
 		QString::number(classID),
 		QDirIterator::NoIteratorFlags);
-	QString item;
+	QStringList items;
+	items.clear();
 	while(it.hasNext())
+		items += it.next();
+	items.sort();
+	for(int i=0; i < items.count(); i++)
 	{
-		item = it.next();
-		QFileInfo fileInfo(item);
+		QFileInfo fileInfo(items[i]);
 		if(fileInfo.isDir())
 		{
 			QString name = fileInfo.fileName();
