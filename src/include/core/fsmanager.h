@@ -57,12 +57,12 @@ class classManager : public QObject
 		static int classOwner(int id);
 		static int classIcon(int id);
 		static QStringList classNames(void);
-		static QList<int> studentIDs(int classID);
-		static QString studentName(int classID, int id);
-		static QStringList studentNames(int classID);
 		static bool addClass(QString name, int owner, bool hasIcon = false, int icon = 0);
 		static void editClass(int id, QString name, int owner, bool hasIcon = false, int icon = 0);
 		static bool removeClass(int id);
+		static QList<int> studentIDs(int classID);
+		static QString studentName(int classID, int id);
+		static QStringList studentNames(int classID);
 };
 
 /*! \brief The fileUtils class contains functions for file or directory paths. */
