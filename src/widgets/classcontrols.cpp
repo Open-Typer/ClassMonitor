@@ -87,7 +87,7 @@ void classControls::verify(void)
  */
 void classControls::addStudent(void)
 {
-	studentEdit dialog(true);
+	studentEdit dialog(true,classID);
 	dialog.exec();
 	setupTable();
 }
