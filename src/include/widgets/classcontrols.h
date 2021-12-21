@@ -45,6 +45,7 @@ class classControls : public QWidget
 	private slots:
 		void verify(void);
 		void addStudent(void);
+		void editStudent(void);
 };
 
 #endif // CLASSCONTROLS_H

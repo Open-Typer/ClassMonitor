@@ -33,6 +33,7 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	// Connections
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addStudent()));
+	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editStudent()));
 }
 
 /*! Destroys the classControls object. */
@@ -84,6 +85,19 @@ void classControls::verify(void)
 void classControls::addStudent(void)
 {
 	studentEdit dialog(true);
+	dialog.exec();
+	setupTable();
+}
+
+/*!
+ * Connected from editButton->clicked().\n
+ * Opens studentEdit and edits the student.
+ *
+ * \see studentEdit
+ */
+void classControls::editStudent(void)
+{
+	studentEdit dialog(false,classID,classManager::studentIDs(classID).value(ui->studentsTable->selectionModel()->selectedRows()[0].row()));
 	dialog.exec();
 	setupTable();
 }
