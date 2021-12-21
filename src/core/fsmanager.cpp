@@ -217,6 +217,8 @@ QList<int> classManager::classIDs(void)
 	out.clear();
 	QDirIterator it(fileUtils::configLocation()+"/classes",QDirIterator::NoIteratorFlags);
 	QString item;
+	QMultiMap<QDateTime, int> map;
+	map.clear();
 	while(it.hasNext())
 	{
 		item = it.next();
@@ -226,9 +228,12 @@ QList<int> classManager::classIDs(void)
 			bool ok;
 			int id = fileInfo.fileName().toInt(&ok);
 			if(ok)
-				out += id;
+				map.insert(classTimestamp(id),id);
 		}
 	}
+	QList<int> inv = map.values();
+	for(int i = inv.count()-1; i >= 0; i--)
+		out += inv[i];
 	return out;
 }
 
