@@ -142,8 +142,21 @@
          </item>
          <item>
           <widget class="QPushButton" name="editButton">
+           <property name="toolTip">
+            <string>Edit class</string>
+           </property>
            <property name="text">
-            <string>Edit</string>
+            <string notr="true"/>
+           </property>
+           <property name="icon">
+            <iconset resource="../res.qrc">
+             <normaloff>:/res/images/edit.png</normaloff>:/res/images/edit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>26</width>
+             <height>26</height>
+            </size>
            </property>
           </widget>
          </item>
