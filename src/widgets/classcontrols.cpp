@@ -41,7 +41,7 @@ classControls::~classControls()
 void classControls::setupTable(void)
 {
 	ui->studentsTable->clear();
-	ui->studentsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+	ui->studentsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	ui->studentsTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 	// Columns
 	ui->studentsTable->setColumnCount(1);
