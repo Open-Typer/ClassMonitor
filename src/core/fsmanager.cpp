@@ -176,35 +176,42 @@ bool userManager::removeUser(int id)
 	return dir.removeRecursively();
 }
 
+/*! Checks user password. */
+bool userManager::auth(int userID, QString password)
+{
+	QCryptographicHash hash(QCryptographicHash::Sha256);
+	hash.addData(password.toUtf8());
+	QFile passwdFile(fileUtils::configLocation() + "/users/" +
+		QString::number(userID) +
+		"/passwd");
+	if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
+	{
+		if(passwdFile.readAll().compare(hash.result()) == 0)
+			return true;
+		else
+		{
+			QMessageBox errBox;
+			errBox.setWindowTitle(tr("Error"));
+			errBox.setText(tr("Incorrect password!"));
+			errBox.setStandardButtons(QMessageBox::Ok);
+			errBox.setIcon(QMessageBox::Warning);
+			errBox.exec();
+		}
+	}
+	return false;
+}
+
 /*!
  * Opens authDialog and checks the password.
  * \see authDialog
  */
 bool userManager::auth(int userID)
 {
-	authDialog auth(userName(userID));
-	if(auth.exec() == QDialog::Accepted)
-	{
-		QCryptographicHash hash(QCryptographicHash::Sha256);
-		hash.addData(auth.password.toUtf8());
-		QFile passwdFile(fileUtils::configLocation() + "/users/" +
-			QString::number(userID) +
-			"/passwd");
-		if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
-		{
-			if(passwdFile.readAll().compare(hash.result()) == 0)
-				return true;
-			else
-			{
-				QMessageBox errBox;
-				errBox.setText(tr("Incorrect password!"));
-				errBox.setStandardButtons(QMessageBox::Ok);
-				errBox.setIcon(QMessageBox::Warning);
-				errBox.exec();
-			}
-		}
-	}
-	return false;
+	authDialog auth_dialog(userName(userID));
+	if(auth_dialog.exec() == QDialog::Accepted)
+		return auth(userID,auth_dialog.password);
+	else
+		return false;
 }
 
 /*!

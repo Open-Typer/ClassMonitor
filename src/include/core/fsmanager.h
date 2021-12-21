@@ -45,6 +45,7 @@ class userManager : public QObject
 		static bool addUser(QString name, QString role, QString password);
 		static bool editUser(int id, QString name, QString role, QString password = "");
 		static bool removeUser(int id);
+		static bool auth(int userID, QString password);
 		static bool auth(int userID);
 };
 
