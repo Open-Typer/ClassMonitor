@@ -402,6 +402,36 @@ QStringList classManager::studentNames(int classID)
 	return out;
 }
 
+/*! Adds a new student. Returns true if successful. */
+bool classManager::addStudent(int classID, QString name, QString username, QString password)
+{
+	QList<int> IDs = studentIDs(classID);
+	int i, max = 0, id;
+	for(i=0; i < IDs.count(); i++)
+	{
+		if(IDs[i] > max)
+			max = IDs[i];
+	}
+	id = max+1;
+	QDir dir;
+	if(!dir.mkpath(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id)))
+		return false;
+	QSettings studentIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(classID) + "/student_" + QString::number(id) + "/student.ini",
+		QSettings::IniFormat);
+	studentIni.setValue("main/name",name);
+	studentIni.setValue("main/username",username);
+	// Save password hash
+	QCryptographicHash hash(QCryptographicHash::Sha256);
+	hash.addData(password.toUtf8());
+	QFile passwdFile(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id) + "/passwd");
+	if(passwdFile.open(QIODevice::WriteOnly | QIODevice::Unbuffered))
+		passwdFile.write(hash.result());
+	else
+		return false;
+	return true;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
