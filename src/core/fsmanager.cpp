@@ -309,6 +309,7 @@ bool classManager::addClass(QString name, int owner, bool hasIcon, int icon)
 	classIni.setValue("main/owner",owner);
 	if(hasIcon)
 		classIni.setValue("main/icon",icon);
+	classIni.setValue("main/timestamp",QDateTime::currentDateTimeUtc().toString(Qt::ISODate));
 	return true;
 }
 
@@ -324,6 +325,7 @@ void classManager::editClass(int id, QString name, int owner, bool hasIcon, int 
 		classIni.setValue("main/icon",icon);
 	else
 		classIni.setValue("main/icon","");
+	classIni.setValue("main/timestamp",QDateTime::currentDateTimeUtc().toString(Qt::ISODate));
 }
 
 void classManager::setClassTimestamp(int id, QDateTime time)
