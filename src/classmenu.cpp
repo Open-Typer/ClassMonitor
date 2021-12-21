@@ -114,6 +114,7 @@ void classMenu::removeClass(void)
 		return;
 	int classID = classManager::classIDs().value(ui->classList->currentRow());
 	QMessageBox confirmDialog;
+	confirmDialog.setWindowTitle(tr("Confirm"));
 	confirmDialog.setText(tr("Are you sure you want to remove class ") + classManager::className(classID) + "?");
 	QPushButton *yesButton = confirmDialog.addButton(tr("Yes"),QMessageBox::YesRole);
 	QPushButton *noButton = confirmDialog.addButton(tr("No"),QMessageBox::NoRole);
