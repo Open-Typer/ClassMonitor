@@ -100,6 +100,7 @@ void classControls::removeStudent(void)
 {
 	int studentID = classManager::studentIDs(classID).value(ui->studentsTable->selectionModel()->selectedRows()[0].row());
 	QMessageBox confirmDialog;
+	confirmDialog.setWindowTitle(tr("Confirm"));
 	confirmDialog.setText(tr("Are you sure you want to remove student") + " " + classManager::studentName(classID, studentID) + "?");
 	confirmDialog.setInformativeText(tr("This will remove whole training history of the student!"));
 	QPushButton *yesButton = confirmDialog.addButton(tr("Yes"),QMessageBox::YesRole);
