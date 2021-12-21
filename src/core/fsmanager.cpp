@@ -454,6 +454,13 @@ bool classManager::editStudent(int classID, int id, QString name, QString userna
 	return true;
 }
 
+/*! Removes a student. Returns true if successful. */
+bool classManager::removeStudent(int classID, int id)
+{
+	QDir dir(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id));
+	return dir.removeRecursively();
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
