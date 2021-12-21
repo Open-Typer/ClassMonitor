@@ -10,5 +10,6 @@
         <file>res/images/class-icons/icon8.png</file>
         <file>res/images/class-icons/icon9.png</file>
         <file>res/images/class-icons/icon10.png</file>
+        <file>res/images/plus.png</file>
     </qresource>
 </RCC>
