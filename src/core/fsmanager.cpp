@@ -387,6 +387,15 @@ QString classManager::studentName(int classID, int id)
 	return studentIni.value("main/name","?").toString();
 }
 
+/*! Returns the username of the student. */
+QString classManager::studentUsername(int classID, int id)
+{
+	QSettings studentIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(classID) + "/student_" + QString::number(id) + "/student.ini",
+		QSettings::IniFormat);
+	return studentIni.value("main/username","?").toString();
+}
+
 /*!
  * Returns list of students (with their real names).
  * \see studentIDs()

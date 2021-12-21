@@ -65,6 +65,7 @@ class classManager : public QObject
 		static bool removeClass(int id);
 		static QList<int> studentIDs(int classID);
 		static QString studentName(int classID, int id);
+		static QString studentUsername(int classID, int id);
 		static QStringList studentNames(int classID);
 		static bool addStudent(int classID, QString name, QString username, QString password);
 		static bool editStudent(int classID, int id, QString name, QString username, QString password = "");
