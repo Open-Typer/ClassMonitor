@@ -29,6 +29,9 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	ui->setupUi(this);
 	classID = openClassID;
 	setupTable();
+	verify();
+	// Connections
+	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 }
 
 /*! Destroys the classControls object. */
@@ -56,4 +59,17 @@ void classControls::setupTable(void)
 		QTableWidgetItem *item = new QTableWidgetItem(students[i]);
 		ui->studentsTable->setItem(i,0,item);
 	}
+}
+
+/*!
+ * Connected from studentsTable->itemSelectionChanged().\n
+ * Checks if everything is correct and enables buttons.
+ */
+void classControls::verify(void)
+{
+	// Check students table
+	bool enable = ui->studentsTable->selectionModel()->hasSelection();
+	ui->editButton->setEnabled(enable);
+	ui->removeButton->setEnabled(enable);
+	ui->detailsButton->setEnabled(enable);
 }

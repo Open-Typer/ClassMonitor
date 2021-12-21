@@ -40,6 +40,9 @@ class classControls : public QWidget
 		Ui::classControls *ui;
 		int classID;
 		void setupTable(void);
+
+	private slots:
+		void verify(void);
 };
 
 #endif // CLASSCONTROLS_H
