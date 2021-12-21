@@ -140,6 +140,13 @@
           <number>0</number>
          </property>
          <item>
+          <widget class="QPushButton" name="usersButton">
+           <property name="text">
+            <string>Users</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="openButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
