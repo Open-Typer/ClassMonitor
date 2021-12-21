@@ -112,26 +112,12 @@ void classEdit::updateOwner(const QString name)
  */
 void classEdit::finish(void)
 {
-	QCryptographicHash hash(QCryptographicHash::Sha256);
-	hash.addData(ui->passwordEdit->text().toUtf8());
-	QFile passwdFile(fileUtils::configLocation() + "/users/" + QString::number(userManager::userIDs().value(ui->ownerBox->currentIndex())) + "/passwd");
-	if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
+	if(userManager::auth(userManager::userIDs().value(ui->ownerBox->currentIndex()),ui->passwordEdit->text()))
 	{
-		if(passwdFile.readAll().compare(hash.result()) == 0)
-		{
-			if(creatingNewClass)
-				classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
-			else
-				classManager::editClass(classID,ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
-			accept();
-		}
+		if(creatingNewClass)
+			classManager::addClass(ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
 		else
-		{
-			QMessageBox errBox;
-			errBox.setText(tr("Incorrect password!"));
-			errBox.setStandardButtons(QMessageBox::Ok);
-			errBox.setIcon(QMessageBox::Warning);
-			errBox.exec();
-		}
+			classManager::editClass(classID,ui->nameEdit->text(),userManager::userIDs().value(ui->ownerBox->currentIndex()),true,ui->iconList->currentRow());
+		accept();
 	}
 }
