@@ -50,15 +50,19 @@ void classControls::setupTable(void)
 	ui->studentsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	ui->studentsTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 	// Columns
-	ui->studentsTable->setColumnCount(1);
-	ui->studentsTable->setHorizontalHeaderLabels({ tr("Name") });
+	ui->studentsTable->setColumnCount(2);
+	ui->studentsTable->setHorizontalHeaderLabels({ tr("Full name"), tr("Username") });
 	// Rows
-	QStringList students = classManager::studentNames(classID);
+	QList<int> students = classManager::studentIDs(classID);
 	ui->studentsTable->setRowCount(students.count());
 	for(int i=0; i < students.count(); i++)
 	{
-		QTableWidgetItem *item = new QTableWidgetItem(students[i]);
-		ui->studentsTable->setItem(i,0,item);
+		// Full name
+		QTableWidgetItem *nameItem = new QTableWidgetItem(classManager::studentName(classID,students[i]));
+		ui->studentsTable->setItem(i,0,nameItem);
+		// Username
+		QTableWidgetItem *usernameItem = new QTableWidgetItem(classManager::studentUsername(classID,students[i]));
+		ui->studentsTable->setItem(i,1,usernameItem);
 	}
 }
 
