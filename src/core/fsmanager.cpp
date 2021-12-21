@@ -328,6 +328,7 @@ void classManager::editClass(int id, QString name, int owner, bool hasIcon, int 
 	classIni.setValue("main/timestamp",QDateTime::currentDateTimeUtc().toString(Qt::ISODate));
 }
 
+/*! Sets class timestamp (when the class was used last time). */
 void classManager::setClassTimestamp(int id, QDateTime time)
 {
 	QSettings classIni(fileUtils::configLocation() + "/classes/" +
@@ -335,6 +336,7 @@ void classManager::setClassTimestamp(int id, QDateTime time)
 		QSettings::IniFormat);
 	classIni.setValue("main/timestamp",time.toString(Qt::ISODate));
 }
+
 /*! Removes a class. Returns true if successful. */
 bool classManager::removeClass(int id)
 {
