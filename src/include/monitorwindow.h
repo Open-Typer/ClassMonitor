@@ -23,6 +23,7 @@
 
 #include <QMainWindow>
 #include <QSettings>
+#include "widgets/classcontrols.h"
 #include "core/fsmanager.h"
 
 QT_BEGIN_NAMESPACE
@@ -40,6 +41,8 @@ class MonitorWindow : public QMainWindow
 	private:
 		Ui::MonitorWindow *ui;
 		int classID;
+		QList<QWidget*> controlWidgets;
+		void updateControlWidget(void);
 
 	private slots:
 		void updateSchoolName(void);

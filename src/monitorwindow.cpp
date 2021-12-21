@@ -29,6 +29,10 @@ MonitorWindow::MonitorWindow(int openClassID, QWidget *parent)
 	ui->setupUi(this);
 	classID = openClassID;
 	updateSchoolName();
+	controlWidgets.clear();
+	classControls *newWidget = new classControls(classID);
+	controlWidgets += newWidget;
+	updateControlWidget();
 }
 
 /*! Destroys the MonitorWindow object. */
@@ -42,4 +46,14 @@ void MonitorWindow::updateSchoolName(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString() + " - " + classManager::className(classID));
+}
+
+/*! Sets current control widget. */
+void MonitorWindow::updateControlWidget(void)
+{
+	// Remove all widgets
+	for(int i=0; i < ui->classControlsBody->count(); i++)
+		ui->classControlsBody->removeWidget(ui->classControlsBody->widget(i));
+	// Add current widget
+	ui->classControlsBody->addWidget(controlWidgets.last());
 }
