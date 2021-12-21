@@ -33,6 +33,7 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	// Connections
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addStudent()));
+	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeStudent()));
 	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editStudent()));
 }
 
@@ -86,6 +87,27 @@ void classControls::addStudent(void)
 {
 	studentEdit dialog(true);
 	dialog.exec();
+	setupTable();
+}
+
+/*!
+ * Connected from removeButton->clicked().\n
+ * Removes selected student.
+ */
+void classControls::removeStudent(void)
+{
+	int studentID = classManager::studentIDs(classID).value(ui->studentsTable->selectionModel()->selectedRows()[0].row());
+	QMessageBox confirmDialog;
+	confirmDialog.setText(tr("Are you sure you want to remove student") + " " + classManager::studentName(classID, studentID) + "?");
+	confirmDialog.setInformativeText(tr("This will remove whole training history of the student!"));
+	QPushButton *yesButton = confirmDialog.addButton(tr("Yes"),QMessageBox::YesRole);
+	QPushButton *noButton = confirmDialog.addButton(tr("No"),QMessageBox::NoRole);
+	confirmDialog.setIcon(QMessageBox::Question);
+	confirmDialog.exec();
+	if(confirmDialog.clickedButton() == yesButton)
+		classManager::removeStudent(classID, studentID);
+	else if(confirmDialog.clickedButton() == noButton)
+		return;
 	setupTable();
 }
 
