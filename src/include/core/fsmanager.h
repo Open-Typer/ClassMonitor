@@ -28,6 +28,7 @@
 #include <QSettings>
 #include <QCryptographicHash>
 #include <QMessageBox>
+#include <QDateTime>
 #include "authdialog.h"
 
 /*! \brief The userManager class provides functions for user management. */
@@ -56,9 +57,11 @@ class classManager : public QObject
 		static QString className(int id);
 		static int classOwner(int id);
 		static int classIcon(int id);
+		static QDateTime classTimestamp(int id);
 		static QStringList classNames(void);
 		static bool addClass(QString name, int owner, bool hasIcon = false, int icon = 0);
 		static void editClass(int id, QString name, int owner, bool hasIcon = false, int icon = 0);
+		static void setClassTimestamp(int id, QDateTime time);
 		static bool removeClass(int id);
 		static QList<int> studentIDs(int classID);
 		static QString studentName(int classID, int id);

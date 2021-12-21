@@ -258,6 +258,16 @@ int classManager::classIcon(int id)
 		QSettings::IniFormat);
 	return classIni.value("main/icon","0").toInt();
 }
+
+/*! Returns class timestamp (when the class was used last time). */
+QDateTime classManager::classTimestamp(int id)
+{
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	return QDateTime::fromString(classIni.value("main/timestamp","0").toString(),Qt::ISODate);
+}
+
 /*!
  * Returns list of classes (with their real names).
  * \see classIDs()
@@ -311,6 +321,13 @@ void classManager::editClass(int id, QString name, int owner, bool hasIcon, int 
 		classIni.setValue("main/icon","");
 }
 
+void classManager::setClassTimestamp(int id, QDateTime time)
+{
+	QSettings classIni(fileUtils::configLocation() + "/classes/" +
+		QString::number(id) + "/class.ini",
+		QSettings::IniFormat);
+	classIni.setValue("main/timestamp",time.toString(Qt::ISODate));
+}
 /*! Removes a class. Returns true if successful. */
 bool classManager::removeClass(int id)
 {
