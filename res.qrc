@@ -13,5 +13,6 @@
         <file>res/images/plus.png</file>
         <file>res/images/remove.png</file>
         <file>res/images/edit.png</file>
+        <file>res/images/user.png</file>
     </qresource>
 </RCC>
