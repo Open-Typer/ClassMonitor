@@ -212,8 +212,21 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="toolTip">
+            <string>Open</string>
+           </property>
            <property name="text">
-            <string notr="true">Open</string>
+            <string notr="true"/>
+           </property>
+           <property name="icon">
+            <iconset resource="../res.qrc">
+             <normaloff>:/res/images/done.png</normaloff>:/res/images/done.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>26</width>
+             <height>26</height>
+            </size>
            </property>
            <property name="default">
             <bool>true</bool>
