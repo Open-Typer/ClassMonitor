@@ -51,8 +51,6 @@ void classControls::setupTable(void)
 	ui->studentsTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 	// Columns
 	ui->studentsTable->setColumnCount(1);
-	QStringList columns;
-	columns += tr("Name");
 	ui->studentsTable->setHorizontalHeaderLabels({ tr("Name") });
 	// Rows
 	QStringList students = classManager::studentNames(classID);
