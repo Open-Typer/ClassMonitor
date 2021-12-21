@@ -43,7 +43,19 @@ studentEdit::studentEdit(bool newStudent, int class_id, int id, QWidget *parent)
 	creatingNewStudent = newStudent;
 	passwordReset = false;
 	classID = class_id;
-	studentID = id;
+	if(creatingNewStudent)
+	{
+		QList<int> IDs = classManager::studentIDs(classID);
+		int i, max = 0;
+		for(i=0; i < IDs.count(); i++)
+		{
+			if(IDs[i] > max)
+				max = IDs[i];
+		}
+		studentID = max+1;
+	}
+	else
+		studentID = id;
 	verify();
 	// Connections
 	connect(ui->nameEdit,&QLineEdit::textChanged,this,&studentEdit::verify);
