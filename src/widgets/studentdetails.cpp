@@ -83,4 +83,13 @@ void studentDetails::refresh(void)
 	if(oldS == -1)
 		oldS = 0;
 	ui->sublessonBox->setCurrentIndex(oldS);
+	// Exercise
+	ui->exerciseBox->clear();
+	QList<int> exercises = classManager::studentExercises(classID,studentID,ui->packBox->currentText(),
+		lessons[ui->lessonBox->currentIndex()],
+		sublessons[ui->sublessonBox->currentIndex()]);
+	ui->exerciseBox->addItems(classManager::exerciseList(exercises));
+	if(oldE == -1)
+		oldE = 0;
+	ui->sublessonBox->setCurrentIndex(oldE);
 }
