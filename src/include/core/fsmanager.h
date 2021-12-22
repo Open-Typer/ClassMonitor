@@ -79,6 +79,7 @@ class classManager : public QObject
 		static QStringList sublessonList(QList<int> in);
 		static QStringList exerciseList(QList<int> in);
 		static int historySize(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise);
+		static QStringList historyEntry(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, int entry);
 
 	private:
 		static int exerciseID(const QString name, const int part);

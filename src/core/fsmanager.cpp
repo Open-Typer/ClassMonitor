@@ -672,6 +672,41 @@ int classManager::historySize(int classID, int studentID, QString pack, int less
 		return 0;
 }
 
+/*! Returns single row of the exercise history. */
+QStringList classManager::historyEntry(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, int entry)
+{
+	QFile historyFile(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(studentID) + "/stats/" + pack + "/" +
+		QString::number(lesson) + "." + QString::number(sublesson) + "." + QString::number(exercise) + "/history.csv");
+	if(historyFile.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		int i, line = 0;
+		while(!historyFile.atEnd())
+		{
+			QString currentLine = historyFile.readLine();
+			if(line == entry)
+			{
+				QStringList out;
+				out.clear();
+				QString part = "";
+				for(i=0; i < currentLine.count(); i++)
+				{
+					if(currentLine[i] == ';')
+					{
+						out += part;
+						part = "";
+					}
+					else
+						part += currentLine[i];
+				}
+				out += part;
+				return out;
+			}
+			line++;
+		}
+	}
+	return QStringList();
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
