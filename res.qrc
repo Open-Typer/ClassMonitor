@@ -16,5 +16,6 @@
         <file>res/images/user.png</file>
         <file>res/images/done.png</file>
         <file>res/images/stats.png</file>
+        <file>res/images/previous.png</file>
     </qresource>
 </RCC>
