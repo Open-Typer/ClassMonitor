@@ -29,6 +29,7 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	ui->setupUi(this);
 	classID = openClassID;
 	studentID = id;
+	ui->titleLabel->setText(classManager::studentName(classID,studentID));
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 }

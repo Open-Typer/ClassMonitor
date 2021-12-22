@@ -22,6 +22,7 @@
 #define STUDENTDETAILS_H
 
 #include <QWidget>
+#include "core/fsmanager.h"
 
 namespace Ui {
 	class studentDetails;
