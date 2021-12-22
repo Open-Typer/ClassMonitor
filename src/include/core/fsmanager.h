@@ -71,6 +71,7 @@ class classManager : public QObject
 		static bool addStudent(int classID, QString name, QString username, QString password);
 		static bool editStudent(int classID, int id, QString name, QString username, QString password = "");
 		static bool removeStudent(int classID, int id);
+		static QStringList studentPacks(int classID, int id);
 };
 
 /*! \brief The fileUtils class contains functions for file or directory paths. */

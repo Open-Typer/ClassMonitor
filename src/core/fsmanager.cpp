@@ -477,6 +477,23 @@ bool classManager::removeStudent(int classID, int id)
 	return dir.removeRecursively();
 }
 
+/*! Returns list of lesson packs the student has used. */
+QStringList classManager::studentPacks(int classID, int id)
+{
+	QStringList out;
+	out.clear();
+	QDirIterator it(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id) + "/stats");
+	QString item;
+	while(it.hasNext())
+	{
+		item = it.next();
+		QFileInfo fileInfo(item);
+		if(fileInfo.isDir() && (fileInfo.fileName() != ".") && (fileInfo.fileName() != ".."))
+			out += fileInfo.fileName();
+	}
+	return out;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
