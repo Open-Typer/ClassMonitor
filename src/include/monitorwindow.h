@@ -52,5 +52,7 @@ class MonitorWindow : public QMainWindow
 		void updateSchoolName(void);
 		void openDetails(int id);
 		void checkAnim(const QVariant value);
+		void checkBackAnim(const QVariant value);
+		void goBack(void);
 };
 #endif // MONITORWINDOW_H

@@ -63,6 +63,8 @@ void MonitorWindow::updateControlWidget(void)
 	QString widgetClass = controlWidgets.last()->metaObject()->className();
 	if(widgetClass == "classControls")
 		connect(controlWidgets.last(),SIGNAL(detailsClicked(int)),this,SLOT(openDetails(int)));
+	else
+		connect(controlWidgets.last(),SIGNAL(backClicked()),this,SLOT(goBack()));
 }
 
 /*! Shows move out animation. */
@@ -109,4 +111,44 @@ void MonitorWindow::checkAnim(const QVariant value)
 		moveAnim->setEndValue(widgetGeometry);
 		moveAnim->start();
 	}
+}
+
+/*!
+ * Connected from moveAnim->valueChanged().\n
+ * Shows move in animation with the new widget.
+ */
+void MonitorWindow::checkBackAnim(const QVariant value)
+{
+	if(value == moveAnim->endValue())
+	{
+		controlWidgets.removeLast();
+		updateControlWidget();
+		disconnect(moveAnim,nullptr,nullptr,nullptr);
+		moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
+		moveAnim->setDuration(63);
+		QRect widgetGeometry = ui->classControlsBody->geometry();
+		int oldWidth = widgetGeometry.width();
+		widgetGeometry.setWidth(0);
+		moveAnim->setStartValue(widgetGeometry);
+		widgetGeometry.setWidth(oldWidth);
+		moveAnim->setEndValue(widgetGeometry);
+		moveAnim->start();
+	}
+}
+
+/*!
+ * Connected from backClicked() signal of current widget.\n
+ * Shows inverted move out animation and switches to the previous widget.
+ */
+void MonitorWindow::goBack(void)
+{
+	disconnect(controlWidgets.last(),nullptr,nullptr,nullptr);
+	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
+	moveAnim->setDuration(63);
+	QRect widgetGeometry = ui->classControlsBody->geometry();
+	moveAnim->setStartValue(widgetGeometry);
+	widgetGeometry.setX(geometry().width());
+	moveAnim->setEndValue(widgetGeometry);
+	connect(moveAnim,SIGNAL(valueChanged(const QVariant)),this,SLOT(checkBackAnim(const QVariant)));
+	moveAnim->start();
 }
