@@ -46,6 +46,7 @@ class studentDetails : public QWidget
 
 	private slots:
 		void goBack(void);
+		void refresh(void);
 };
 
 #endif // STUDENTDETAILS_H

@@ -32,6 +32,7 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	ui->titleLabel->setText(classManager::studentName(classID,studentID));
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
+	refresh();
 }
 
 /*! Destroys the studentDetails object. */
@@ -46,4 +47,25 @@ studentDetails::~studentDetails()
 void studentDetails::goBack(void)
 {
 	emit backClicked();
+}
+
+/*! Refreshes comboboxes and other widgets. */
+void studentDetails::refresh(void)
+{
+	// Save old indexes
+	int oldP, oldL, oldS, oldE;
+	oldP = ui->packBox->currentIndex();
+	oldL = ui->lessonBox->currentIndex();
+	oldS = ui->sublessonBox->currentIndex();
+	oldE = ui->exerciseBox->currentIndex();
+	// Packs
+	ui->packBox->clear();
+	ui->packBox->addItems(classManager::studentPacks(classID,studentID));
+	if(ui->packBox->count() == 0)
+		ui->exerciseFrame->hide();
+	else
+		ui->exerciseFrame->show();
+	if(oldP == -1)
+		oldP = 0;
+	ui->packBox->setCurrentIndex(oldP);
 }
