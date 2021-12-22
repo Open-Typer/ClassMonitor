@@ -494,6 +494,39 @@ QStringList classManager::studentPacks(int classID, int id)
 	return out;
 }
 
+/*! Returns a part of the exercise ID (from a directory name).
+ *
+ * Part 1 - lesson ID\n
+ * Part 2 - sublesson ID\n
+ * Part 3 - exercise ID\n
+ */
+int classManager::exerciseID(const QString name, const int part)
+{
+	QString out = "";
+	int i, currentPart = 0;
+	for(i=0; i < name.count(); i++)
+	{
+		if(name[i] == '.')
+		{
+			currentPart++;
+			/*
+			 * 1: lesson ID
+			 * 2: sublesson ID
+			 * 3: exercise ID
+			 */
+			if(currentPart == part)
+				return out.toInt();
+			out = "";
+			i++;
+		}
+		out += name[i];
+	}
+	if(currentPart+1 == part)
+		return out.toInt();
+	else
+		return 0;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
