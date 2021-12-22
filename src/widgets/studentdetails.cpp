@@ -70,13 +70,16 @@ void studentDetails::refresh(void)
 	ui->packBox->setCurrentIndex(oldP);
 	// Lessons
 	ui->lessonBox->clear();
-	ui->lessonBox->addItems(classManager::lessonList(classManager::studentLessons(classID,studentID,ui->packBox->currentText())));
+	QList<int> lessons = classManager::studentLessons(classID,studentID,ui->packBox->currentText());
+	ui->lessonBox->addItems(classManager::lessonList(lessons));
 	if(oldL == -1)
 		oldL = 0;
 	ui->lessonBox->setCurrentIndex(oldL);
 	// Sublessons
 	ui->sublessonBox->clear();
-	ui->sublessonBox->addItems(classManager::sublessonList(classManager::studentSublessons(classID,studentID,ui->packBox->currentText(),ui->lessonBox->currentIndex()+1)));
+	QList<int> sublessons = classManager::studentSublessons(classID,studentID,ui->packBox->currentText(),
+		lessons[ui->lessonBox->currentIndex()]);
+	ui->sublessonBox->addItems(classManager::sublessonList(sublessons));
 	if(oldS == -1)
 		oldS = 0;
 	ui->sublessonBox->setCurrentIndex(oldS);
