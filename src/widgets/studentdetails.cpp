@@ -32,6 +32,10 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	ui->titleLabel->setText(classManager::studentName(classID,studentID));
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
+	connect(ui->packBox,SIGNAL(activated(int)),this,SLOT(refresh()));
+	connect(ui->lessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
+	connect(ui->sublessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
+	connect(ui->exerciseBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	refresh();
 }
 
