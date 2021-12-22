@@ -74,8 +74,10 @@ class classManager : public QObject
 		static QStringList studentPacks(int classID, int id);
 		static QList<int> studentLessons(int classID, int id, QString pack);
 		static QList<int> studentSublessons(int classID, int id, QString pack, int lesson);
+		static QList<int> studentExercises(int classID, int id, QString pack, int lesson, int sublesson);
 		static QStringList lessonList(QList<int> in);
 		static QStringList sublessonList(QList<int> in);
+		static QStringList exerciseList(QList<int> in);
 
 	private:
 		static int exerciseID(const QString name, const int part);

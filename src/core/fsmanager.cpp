@@ -542,6 +542,36 @@ QList<int> classManager::studentSublessons(int classID, int id, QString pack, in
 	return out;
 }
 
+/*! Returns list of exercises the student has used. */
+QList<int> classManager::studentExercises(int classID, int id, QString pack, int lesson, int sublesson)
+{
+	QList<int> out;
+	out.clear();
+	QDirIterator it(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(id) + "/stats/" + pack);
+	QString item;
+	while(it.hasNext())
+	{
+		item = it.next();
+		QFileInfo fileInfo(item);
+		if(fileInfo.isDir() && (fileInfo.fileName() != ".") && (fileInfo.fileName() != ".."))
+		{
+			int lID = exerciseID(fileInfo.fileName(),1);
+			if(lID == lesson)
+			{
+				int sID = exerciseID(fileInfo.fileName(),2);
+				if(sID == sublesson)
+				{
+					int eID = exerciseID(fileInfo.fileName(),3);
+					if(!out.contains(eID))
+						out += eID;
+				}
+			}
+		}
+	}
+	std::sort(out.begin(),out.end());
+	return out;
+}
+
 /*! Returns a part of the exercise ID (from a directory name).
  *
  * Part 1 - lesson ID\n
@@ -610,6 +640,16 @@ QStringList classManager::sublessonList(QList<int> in)
 				break;
 		}
 	}
+	return out;
+}
+
+/*! Converts integer list of exercises to a human-readable string list. */
+QStringList classManager::exerciseList(QList<int> in)
+{
+	QStringList out;
+	out.clear();
+	for(int i=0; i < in.count(); i++)
+		out += tr("Exercise") + " " + QString::number(in[i]);
 	return out;
 }
 
