@@ -73,7 +73,9 @@ class classManager : public QObject
 		static bool removeStudent(int classID, int id);
 		static QStringList studentPacks(int classID, int id);
 		static QList<int> studentLessons(int classID, int id, QString pack);
+		static QList<int> studentSublessons(int classID, int id, QString pack, int lesson);
 		static QStringList lessonList(QList<int> in);
+		static QStringList sublessonList(QList<int> in);
 
 	private:
 		static int exerciseID(const QString name, const int part);
