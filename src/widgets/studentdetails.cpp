@@ -68,4 +68,10 @@ void studentDetails::refresh(void)
 	if(oldP == -1)
 		oldP = 0;
 	ui->packBox->setCurrentIndex(oldP);
+	// Lessons
+	ui->lessonBox->clear();
+	ui->lessonBox->addItems(classManager::lessonList(classManager::studentLessons(classID,studentID,ui->packBox->currentText())));
+	if(oldL == -1)
+		oldL = 0;
+	ui->lessonBox->setCurrentIndex(oldL);
 }
