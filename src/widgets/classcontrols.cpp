@@ -32,6 +32,7 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	verify();
 	// Connections
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
+	connect(ui->studentsTable,&QTableWidget::itemDoubleClicked,this,&classControls::openDetails);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addStudent()));
 	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeStudent()));
 	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editStudent()));
@@ -129,7 +130,7 @@ void classControls::editStudent(void)
 }
 
 /*!
- * Connected from detailsButton->clicked().\n
+ * Connected from detailsButton->clicked() and studentsTable->itemDoubleClicked().\n
  * Emits detailsClicked() signal.
  *
  * \see detailsClicked()
