@@ -23,7 +23,9 @@
 
 #include <QMainWindow>
 #include <QSettings>
+#include <QPropertyAnimation>
 #include "widgets/classcontrols.h"
+#include "widgets/studentdetails.h"
 #include "core/fsmanager.h"
 
 QT_BEGIN_NAMESPACE
@@ -42,9 +44,13 @@ class MonitorWindow : public QMainWindow
 		Ui::MonitorWindow *ui;
 		int classID;
 		QList<QWidget*> controlWidgets;
+		QPropertyAnimation *moveAnim;
 		void updateControlWidget(void);
+		void outAnim(void);
 
 	private slots:
 		void updateSchoolName(void);
+		void openDetails(int id);
+		void checkAnim(const QVariant value);
 };
 #endif // MONITORWINDOW_H
