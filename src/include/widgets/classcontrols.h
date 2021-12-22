@@ -42,11 +42,16 @@ class classControls : public QWidget
 		int classID;
 		void setupTable(void);
 
+	signals:
+		/*! A signal, which is emitted when the details button is clicked. \see openDetails() */
+		void detailsClicked();
+
 	private slots:
 		void verify(void);
 		void addStudent(void);
 		void removeStudent(void);
 		void editStudent(void);
+		void openDetails(void);
 };
 
 #endif // CLASSCONTROLS_H
