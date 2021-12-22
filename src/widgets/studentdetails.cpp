@@ -66,9 +66,17 @@ void studentDetails::refresh(void)
 	ui->packBox->clear();
 	ui->packBox->addItems(classManager::studentPacks(classID,studentID));
 	if(ui->packBox->count() == 0)
+	{
 		ui->exerciseFrame->hide();
+		ui->chartFrame->hide();
+		ui->noInfoFrame->show();
+	}
 	else
+	{
 		ui->exerciseFrame->show();
+		ui->chartFrame->show();
+		ui->noInfoFrame->hide();
+	}
 	if(oldP == -1)
 		oldP = 0;
 	ui->packBox->setCurrentIndex(oldP);
