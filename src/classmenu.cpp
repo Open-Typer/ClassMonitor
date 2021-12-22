@@ -28,6 +28,7 @@ classMenu::classMenu(QWidget *parent) :
 {
 	ui->setupUi(this);
 	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
+	setWindowFlag(Qt::WindowMinimizeButtonHint,true);
 	setupList();
 	verify();
 	// Connections
