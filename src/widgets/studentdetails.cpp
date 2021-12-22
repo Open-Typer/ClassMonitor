@@ -21,6 +21,7 @@
 #include "widgets/studentdetails.h"
 #include "ui_studentdetails.h"
 
+/*! Constructs studentDetails. */
 studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	QWidget(parent),
 	ui(new Ui::studentDetails)
@@ -30,6 +31,7 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	studentID = id;
 }
 
+/*! Destroys the studentDetails object. */
 studentDetails::~studentDetails()
 {
 	delete ui;
