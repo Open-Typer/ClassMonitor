@@ -29,10 +29,20 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	ui->setupUi(this);
 	classID = openClassID;
 	studentID = id;
+	// Connections
+	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 }
 
 /*! Destroys the studentDetails object. */
 studentDetails::~studentDetails()
 {
 	delete ui;
+}
+
+/*! Connected from backButton->clicked().\n
+ * Emits goBack().
+ */
+void studentDetails::goBack(void)
+{
+	emit backClicked();
 }

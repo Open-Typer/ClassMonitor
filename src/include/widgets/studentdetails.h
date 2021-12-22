@@ -38,6 +38,13 @@ class studentDetails : public QWidget
 	private:
 		Ui::studentDetails *ui;
 		int classID, studentID;
+
+	signals:
+		/*! A signal, which is emitted when the back button is clicked. */
+		void backClicked();
+
+	private slots:
+		void goBack(void);
 };
 
 #endif // STUDENTDETAILS_H
