@@ -30,7 +30,8 @@ SOURCES += \
     src/studentedit.cpp \
     src/useredit.cpp \
     src/usermanager.cpp \
-    src/widgets/classcontrols.cpp
+    src/widgets/classcontrols.cpp \
+    src/widgets/studentdetails.cpp
 
 HEADERS += \
     src/include/adminselector.h \
@@ -43,7 +44,8 @@ HEADERS += \
     src/include/studentedit.h \
     src/include/useredit.h \
     src/include/usermanager.h \
-    src/include/widgets/classcontrols.h
+    src/include/widgets/classcontrols.h \
+    src/include/widgets/studentdetails.h
 
 FORMS += \
     ui/adminselector.ui \
@@ -55,7 +57,8 @@ FORMS += \
     ui/studentedit.ui \
     ui/useredit.ui \
     ui/usermanager.ui \
-    ui/widgets/classcontrols.ui
+    ui/widgets/classcontrols.ui \
+    ui/widgets/studentdetails.ui
 
 TRANSLATIONS += \
     lang/ClassMonitor_sk_SK.ts
