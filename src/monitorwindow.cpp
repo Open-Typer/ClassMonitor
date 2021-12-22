@@ -27,6 +27,7 @@ MonitorWindow::MonitorWindow(int openClassID, QWidget *parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
+	setWindowState(Qt::WindowMaximized);
 	classID = openClassID;
 	updateSchoolName();
 	controlWidgets.clear();
