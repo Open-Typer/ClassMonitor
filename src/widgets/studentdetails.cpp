@@ -74,4 +74,10 @@ void studentDetails::refresh(void)
 	if(oldL == -1)
 		oldL = 0;
 	ui->lessonBox->setCurrentIndex(oldL);
+	// Sublessons
+	ui->sublessonBox->clear();
+	ui->sublessonBox->addItems(classManager::sublessonList(classManager::studentSublessons(classID,studentID,ui->packBox->currentText(),ui->lessonBox->currentIndex()+1)));
+	if(oldS == -1)
+		oldS = 0;
+	ui->sublessonBox->setCurrentIndex(oldS);
 }
