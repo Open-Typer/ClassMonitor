@@ -136,5 +136,5 @@ void classControls::editStudent(void)
  */
 void classControls::openDetails(void)
 {
-	emit detailsClicked();
+	emit detailsClicked(classManager::studentIDs(classID).value(ui->studentsTable->selectionModel()->selectedRows()[0].row()));
 }

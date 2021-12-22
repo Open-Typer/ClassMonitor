@@ -44,7 +44,7 @@ class classControls : public QWidget
 
 	signals:
 		/*! A signal, which is emitted when the details button is clicked. \see openDetails() */
-		void detailsClicked();
+		void detailsClicked(int);
 
 	private slots:
 		void verify(void);
