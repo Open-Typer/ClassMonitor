@@ -46,6 +46,7 @@ class monitorServer : public QObject
 	private:
 		QTcpServer *server;
 		QTcpSocket *clientSocket;
+		QByteArray convertData(bool *ok, QList<QByteArray> input);
 		QList<QByteArray> readData(QByteArray input);
 };
 

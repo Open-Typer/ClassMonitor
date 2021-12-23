@@ -90,6 +90,32 @@ void monitorServer::sendResponse(void)
 	QList<QByteArray> requestList = readData(request);
 }
 
+/*! Converts list of QByteArrays to a single QByteArray, which can be used for a response. */
+QByteArray monitorServer::convertData(bool *ok, QList<QByteArray> input)
+{
+	QByteArray out;
+	out.clear();
+	for(int i = 0; i < input.count(); i++)
+	{
+		QByteArray sizeNum, dataSize;
+		// Data size
+		sizeNum.setNum(input[i].size(),16);
+		dataSize = QByteArray::fromHex(sizeNum);
+		if(sizeNum.size() <= 2)
+			dataSize.prepend(QByteArray::fromHex("0"));
+		else if(sizeNum.size() > 4)
+		{
+			*ok = false;
+			return QByteArray();
+		}
+		out += dataSize;
+		// Data
+		out += input[i];
+	}
+	*ok = true;
+	return out;
+}
+
 /*! Returns a list of QByteArrays from the input QByteArray. */
 QList<QByteArray> monitorServer::readData(QByteArray input)
 {
