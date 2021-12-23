@@ -93,7 +93,8 @@ void monitorServer::sendResponse(void)
 	{
 		if(classManager::studentAuth(requestList[1],requestList[2]))
 		{
-			sessions.insert(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString(),requestList[1]);
+			sessions.insert(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString(),
+				QPair<QString,QDateTime>(requestList[1],QDateTime::currentDateTimeUtc()));
 			clientSocket->write(convertData({"ok"}));
 		}
 		else

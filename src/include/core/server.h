@@ -49,7 +49,7 @@ class monitorServer : public QObject
 		QByteArray convertData(bool *ok, QList<QByteArray> input);
 		QByteArray convertData(QList<QByteArray> input);
 		QList<QByteArray> readData(QByteArray input);
-		QMap<QString,QString> sessions;
+		QMap<QString,QPair<QString,QDateTime>> sessions;
 };
 
 #endif // SERVER_H
