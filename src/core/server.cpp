@@ -116,6 +116,13 @@ QByteArray monitorServer::convertData(bool *ok, QList<QByteArray> input)
 	return out;
 }
 
+/*! Implementation of convertData() without status boolean. */
+QByteArray monitorServer::convertData(QList<QByteArray> input)
+{
+	bool ok;
+	return convertData(&ok,input);
+}
+
 /*! Returns a list of QByteArrays from the input QByteArray. */
 QList<QByteArray> monitorServer::readData(QByteArray input)
 {
