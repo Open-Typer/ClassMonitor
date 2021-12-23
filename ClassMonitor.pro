@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,6 +27,7 @@ SOURCES += \
     src/main.cpp \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp \
+    src/core/server.cpp \
     src/studentedit.cpp \
     src/useredit.cpp \
     src/usermanager.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     src/include/initialsetup.h \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h \
+    src/include/core/server.h \
     src/include/studentedit.h \
     src/include/useredit.h \
     src/include/usermanager.h \
