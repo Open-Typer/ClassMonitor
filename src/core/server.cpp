@@ -36,8 +36,11 @@ monitorServer::monitorServer(QObject *parent) :
 		return;
 	}
 	sessions.clear();
+	QTimer *sessionTimer = new QTimer;
 	// Connections
+	connect(sessionTimer,&QTimer::timeout,this,&monitorServer::updateSessions);
 	connect(server,&QTcpServer::newConnection,this,&monitorServer::readRequest);
+	sessionTimer->start(5000);
 }
 
 /*! Destroys the monitorServer object. */
@@ -162,4 +165,23 @@ QList<QByteArray> monitorServer::readData(QByteArray input)
 		out += data;
 	}
 	return out;
+}
+
+/*!
+ * Connected from sessionTimer->elapsed().\n
+ * Removes old student sessions.
+ */
+void monitorServer::updateSessions(void)
+{
+	QList<QPair<QString,QDateTime>> sessionList = sessions.values();
+	for(int i=0; i < sessions.count(); i++)
+	{
+		QPair<QString,QDateTime> value = sessionList[i];
+		if(value.second.secsTo(QDateTime::currentDateTimeUtc()) > 60)
+		{
+			sessions.remove(sessions.keys().value(i));
+			emit updateSessions();
+			return;
+		}
+	}
 }

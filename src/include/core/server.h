@@ -26,6 +26,7 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QNetworkInterface>
+#include <QTimer>
 #include "core/fsmanager.h"
 
 /*! \brief The monitorServer class uses QTcpServer to communicate with Open-Typer clients. */
@@ -42,6 +43,7 @@ class monitorServer : public QObject
 	private slots:
 		void readRequest(void);
 		void sendResponse(void);
+		void updateSessions(void);
 
 	private:
 		QTcpServer *server;
