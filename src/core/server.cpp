@@ -35,6 +35,7 @@ monitorServer::monitorServer(QObject *parent) :
 		errBox.exec();
 		return;
 	}
+	sessions.clear();
 	// Connections
 	connect(server,&QTcpServer::newConnection,this,&monitorServer::readRequest);
 }
@@ -88,6 +89,16 @@ void monitorServer::sendResponse(void)
 {
 	QByteArray request = clientSocket->readAll();
 	QList<QByteArray> requestList = readData(request);
+	if(requestList[0] == "auth")
+	{
+		if(classManager::studentAuth(requestList[1],requestList[2]))
+		{
+			sessions.insert(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString(),requestList[1]);
+			clientSocket->write(convertData({"ok"}));
+		}
+		else
+			clientSocket->write(convertData({"fail"}));
+	}
 }
 
 /*! Converts list of QByteArrays to a single QByteArray, which can be used for a response. */
