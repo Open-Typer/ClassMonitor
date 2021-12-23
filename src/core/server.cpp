@@ -116,22 +116,23 @@ QByteArray monitorServer::convertData(bool *ok, QList<QByteArray> input)
 			dataSize.prepend(QByteArray::fromHex("0"));
 		else if(sizeNum.size() > 4)
 		{
-			*ok = false;
+			if(ok != nullptr)
+				*ok = false;
 			return QByteArray();
 		}
 		out += dataSize;
 		// Data
 		out += input[i];
 	}
-	*ok = true;
+	if(ok != nullptr)
+		*ok = true;
 	return out;
 }
 
 /*! Implementation of convertData() without status boolean. */
 QByteArray monitorServer::convertData(QList<QByteArray> input)
 {
-	bool ok;
-	return convertData(&ok,input);
+	return convertData(nullptr,input);
 }
 
 /*! Returns a list of QByteArrays from the input QByteArray. */
