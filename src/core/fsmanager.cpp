@@ -477,6 +477,36 @@ bool classManager::removeStudent(int classID, int id)
 	return dir.removeRecursively();
 }
 
+/*! Returns class ID and student ID from a username. */
+QPair<int,int> classManager::findStudent(QString username)
+{
+	QList<int> clIDs = classIDs();
+	int i, i2;
+	for(i=0; i < clIDs.count(); i++)
+	{
+		QList<int> stIDs = studentIDs(clIDs[i]);
+		for(i2=0; i2 < stIDs.count(); i2++)
+		{
+			if(studentUsername(clIDs[i],stIDs[i2]) == username)
+				return QPair<int,int>(clIDs[i],stIDs[i2]);
+		}
+	}
+	return QPair<int,int>(0,0);
+}
+
+/*! Checks student password. */
+bool classManager::studentAuth(QString username, QString password)
+{
+	QCryptographicHash hash(QCryptographicHash::Sha256);
+	hash.addData(password.toUtf8());
+	QPair<int,int> studentLoc = findStudent(username);
+	QFile passwdFile(fileUtils::configLocation() + "/classes/" + QString::number(studentLoc.first) + "/student_" + QString::number(studentLoc.second) + "/passwd");
+	if((passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered)) && (passwdFile.readAll().compare(hash.result()) == 0))
+		return true;
+	else
+		return false;
+}
+
 /*! Returns list of lesson packs the student has used. */
 QStringList classManager::studentPacks(int classID, int id)
 {

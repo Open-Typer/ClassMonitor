@@ -71,6 +71,8 @@ class classManager : public QObject
 		static bool addStudent(int classID, QString name, QString username, QString password);
 		static bool editStudent(int classID, int id, QString name, QString username, QString password = "");
 		static bool removeStudent(int classID, int id);
+		static QPair<int,int> findStudent(QString username);
+		static bool studentAuth(QString username, QString password);
 		static QStringList studentPacks(int classID, int id);
 		static QList<int> studentLessons(int classID, int id, QString pack);
 		static QList<int> studentSublessons(int classID, int id, QString pack, int lesson);
