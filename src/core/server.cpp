@@ -103,6 +103,8 @@ void monitorServer::sendResponse(void)
 		else
 			clientSocket->write(convertData({"fail"}));
 	}
+	else if(requestList[0] == "check")
+		clientSocket->write(convertData({"ok"}));
 }
 
 /*! Converts list of QByteArrays to a single QByteArray, which can be used for a response. */
