@@ -105,6 +105,14 @@ void monitorServer::sendResponse(void)
 	}
 	else if(requestList[0] == "check")
 		clientSocket->write(convertData({"ok"}));
+	else if(requestList[0] == "get")
+	{
+		if(requestList[1] == "username")
+		{
+			QString username = sessions.value(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString()).first;
+			clientSocket->write(convertData({"ok",username.toUtf8()}));
+		}
+	}
 	else
 		clientSocket->write(convertData({"fail"}));
 }
