@@ -103,6 +103,11 @@ void monitorServer::sendResponse(void)
 		else
 			clientSocket->write(convertData({"fail"}));
 	}
+	else if(requestList[0] == "logout")
+	{
+		sessions.remove(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString());
+		clientSocket->write(convertData({"ok"}));
+	}
 	else if(requestList[0] == "check")
 		clientSocket->write(convertData({"ok"}));
 	else if(requestList[0] == "get")
