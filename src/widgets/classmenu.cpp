@@ -18,16 +18,15 @@
  * along with Open-Typer. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "classmenu.h"
+#include "widgets/classmenu.h"
 #include "ui_classmenu.h"
 
 /*! Constructs classMenu. */
 classMenu::classMenu(QWidget *parent) :
-	QDialog(parent),
+	QWidget(parent),
 	ui(new Ui::classMenu)
 {
 	ui->setupUi(this);
-	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	setWindowFlag(Qt::WindowMinimizeButtonHint,true);
 	setupList();
 	verify();
@@ -87,9 +86,8 @@ void classMenu::open(void)
 	if((ui->classList->currentRow() != -1) && userManager::auth(classManager::classOwner(classID)))
 	{
 		classManager::setClassTimestamp(classID,QDateTime::currentDateTimeUtc());
-		MonitorWindow *monitor = new MonitorWindow(classID);
-		monitor->show();
-		accept();
+		setupList();
+		emit classOpened(classID);
 	}
 }
 

@@ -22,16 +22,16 @@
 #include "ui_monitorwindow.h"
 
 /*! Constructs MonitorWindow. */
-MonitorWindow::MonitorWindow(int openClassID, QWidget *parent)
+MonitorWindow::MonitorWindow(QWidget *parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
 	setWindowState(Qt::WindowMaximized);
-	classID = openClassID;
+	classID = 0;
 	updateSchoolName();
 	controlWidgets.clear();
-	classControls *newWidget = new classControls(classID);
+	classMenu *newWidget = new classMenu();
 	controlWidgets += newWidget;
 	updateControlWidget();
 }
@@ -46,7 +46,11 @@ MonitorWindow::~MonitorWindow()
 void MonitorWindow::updateSchoolName(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
-	ui->schoolNameLabel->setText(settings.value("main/schoolname","?").toString() + " - " + classManager::className(classID));
+	QString name = settings.value("main/schoolname","?").toString();
+	if(classID == 0)
+		ui->schoolNameLabel->setText(name);
+	else
+		ui->schoolNameLabel->setText(name + " - " + classManager::className(classID));
 }
 
 /*! Sets current control widget. */
@@ -61,10 +65,14 @@ void MonitorWindow::updateControlWidget(void)
 	// Add current widget
 	ui->classControlsBody->addWidget(controlWidgets.last());
 	QString widgetClass = controlWidgets.last()->metaObject()->className();
-	if(widgetClass == "classControls")
-		connect(controlWidgets.last(),SIGNAL(detailsClicked(int)),this,SLOT(openDetails(int)));
+	if(widgetClass == "classMenu")
+		connect(controlWidgets.last(),SIGNAL(classOpened(int)),this,SLOT(openClass(int)));
 	else
+	{
 		connect(controlWidgets.last(),SIGNAL(backClicked()),this,SLOT(goBack()));
+		if(widgetClass == "classControls")
+			connect(controlWidgets.last(),SIGNAL(detailsClicked(int)),this,SLOT(openDetails(int)));
+	}
 }
 
 /*! Shows move out animation. */
@@ -79,6 +87,19 @@ void MonitorWindow::outAnim(void)
 	moveAnim->setEndValue(widgetGeometry);
 	connect(moveAnim,SIGNAL(valueChanged(const QVariant)),this,SLOT(checkAnim(const QVariant)));
 	moveAnim->start();
+	updateSchoolName();
+}
+
+/*!
+ * Connected from controlWidgets#classOpened().\n
+ * Opens classControls.
+ */
+void MonitorWindow::openClass(int id)
+{
+	classID = id;
+	outAnim();
+	classControls *newWidget = new classControls(classID);
+	controlWidgets += newWidget;
 }
 
 /*!
@@ -143,6 +164,9 @@ void MonitorWindow::checkBackAnim(const QVariant value)
 void MonitorWindow::goBack(void)
 {
 	disconnect(controlWidgets.last(),nullptr,nullptr,nullptr);
+	QString widgetClass = controlWidgets.last()->metaObject()->className();
+	if(widgetClass == "classControls")
+		classID = 0;
 	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
 	moveAnim->setDuration(63);
 	QRect widgetGeometry = ui->classControlsBody->geometry();
@@ -151,4 +175,5 @@ void MonitorWindow::goBack(void)
 	moveAnim->setEndValue(widgetGeometry);
 	connect(moveAnim,SIGNAL(valueChanged(const QVariant)),this,SLOT(checkBackAnim(const QVariant)));
 	moveAnim->start();
+	updateSchoolName();
 }

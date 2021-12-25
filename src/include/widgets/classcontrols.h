@@ -43,10 +43,13 @@ class classControls : public QWidget
 		void setupTable(void);
 
 	signals:
+		/*! A signal, which is emitted when the back button is clicked. */
+		void backClicked();
 		/*! A signal, which is emitted when the details button is clicked. \see openDetails() */
 		void detailsClicked(int);
 
 	private slots:
+		void goBack(void);
 		void verify(void);
 		void addStudent(void);
 		void removeStudent(void);

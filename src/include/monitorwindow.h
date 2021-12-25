@@ -24,6 +24,7 @@
 #include <QMainWindow>
 #include <QSettings>
 #include <QPropertyAnimation>
+#include "widgets/classmenu.h"
 #include "widgets/classcontrols.h"
 #include "widgets/studentdetails.h"
 #include "core/fsmanager.h"
@@ -37,7 +38,7 @@ class MonitorWindow : public QMainWindow
 {
 	Q_OBJECT
 	public:
-		MonitorWindow(int openClassID, QWidget *parent = nullptr);
+		MonitorWindow(QWidget *parent = nullptr);
 		~MonitorWindow();
 
 	private:
@@ -50,6 +51,7 @@ class MonitorWindow : public QMainWindow
 
 	private slots:
 		void updateSchoolName(void);
+		void openClass(int id);
 		void openDetails(int id);
 		void checkAnim(const QVariant value);
 		void checkBackAnim(const QVariant value);

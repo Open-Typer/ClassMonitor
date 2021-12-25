@@ -21,7 +21,7 @@
 #ifndef CLASSMENU_H
 #define CLASSMENU_H
 
-#include <QDialog>
+#include <QWidget>
 #include <QListWidgetItem>
 #include <QMessageBox>
 #include "monitorwindow.h"
@@ -34,8 +34,8 @@ namespace Ui {
 	class classMenu;
 }
 
-/*! \brief The classMenu class is a class menu dialog. */
-class classMenu : public QDialog
+/*! \brief The classMenu class is a class menu widget used by MonitorWindow. */
+class classMenu : public QWidget
 {
 	Q_OBJECT
 	public:
@@ -46,6 +46,10 @@ class classMenu : public QDialog
 	private:
 		Ui::classMenu *ui;
 		void setupList(void);
+
+	signals:
+		/*! A signal, which is emitted when a class is opened. The parameter is class ID. */
+		void classOpened(int);
 
 	private slots:
 		void verify(void);

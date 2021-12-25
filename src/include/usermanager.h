@@ -22,7 +22,6 @@
 #define USERMANAGER_H
 
 #include <QDialog>
-#include "classmenu.h"
 #include "useredit.h"
 #include "core/fsmanager.h"
 

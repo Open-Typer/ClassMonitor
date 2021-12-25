@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>classMenu</class>
- <widget class="QDialog" name="classMenu">
+ <widget class="QWidget" name="classMenu">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -109,7 +109,7 @@
             <string notr="true"/>
            </property>
            <property name="icon">
-            <iconset resource="../res.qrc">
+            <iconset resource="../../res.qrc">
              <normaloff>:/res/images/plus.png</normaloff>:/res/images/plus.png</iconset>
            </property>
            <property name="iconSize">
@@ -129,7 +129,7 @@
             <string notr="true"/>
            </property>
            <property name="icon">
-            <iconset resource="../res.qrc">
+            <iconset resource="../../res.qrc">
              <normaloff>:/res/images/remove.png</normaloff>:/res/images/remove.png</iconset>
            </property>
            <property name="iconSize">
@@ -149,7 +149,7 @@
             <string notr="true"/>
            </property>
            <property name="icon">
-            <iconset resource="../res.qrc">
+            <iconset resource="../../res.qrc">
              <normaloff>:/res/images/edit.png</normaloff>:/res/images/edit.png</iconset>
            </property>
            <property name="iconSize">
@@ -193,7 +193,7 @@
             <string notr="true"/>
            </property>
            <property name="icon">
-            <iconset resource="../res.qrc">
+            <iconset resource="../../res.qrc">
              <normaloff>:/res/images/user.png</normaloff>:/res/images/user.png</iconset>
            </property>
            <property name="iconSize">
@@ -219,7 +219,7 @@
             <string notr="true"/>
            </property>
            <property name="icon">
-            <iconset resource="../res.qrc">
+            <iconset resource="../../res.qrc">
              <normaloff>:/res/images/done.png</normaloff>:/res/images/done.png</iconset>
            </property>
            <property name="iconSize">
@@ -242,7 +242,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../res.qrc"/>
+  <include location="../../res.qrc"/>
  </resources>
  <connections/>
 </ui>

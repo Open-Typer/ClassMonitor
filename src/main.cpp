@@ -21,12 +21,11 @@
 #include <QApplication>
 #include "monitorwindow.h"
 #include "initialsetup.h"
-#include "classmenu.h"
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	classMenu w;
+	MonitorWindow w;
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
 	{

@@ -31,6 +31,7 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	setupTable();
 	verify();
 	// Connections
+	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->studentsTable,&QTableWidget::itemDoubleClicked,this,&classControls::openDetails);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addStudent()));
@@ -43,6 +44,14 @@ classControls::classControls(int openClassID, QWidget *parent) :
 classControls::~classControls()
 {
 	delete ui;
+}
+
+/*! Connected from backButton->clicked().\n
+ * Emits backClicked().
+ */
+void classControls::goBack(void)
+{
+	emit backClicked();
 }
 
 /*! Loads the students. */

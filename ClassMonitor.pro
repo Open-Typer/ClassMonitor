@@ -22,7 +22,6 @@ SOURCES += \
     src/adminselector.cpp \
     src/authdialog.cpp \
     src/classedit.cpp \
-    src/classmenu.cpp \
     src/initialsetup.cpp \
     src/main.cpp \
     src/monitorwindow.cpp \
@@ -31,6 +30,7 @@ SOURCES += \
     src/studentedit.cpp \
     src/useredit.cpp \
     src/usermanager.cpp \
+    src/widgets/classmenu.cpp \
     src/widgets/classcontrols.cpp \
     src/widgets/studentdetails.cpp
 
@@ -38,7 +38,6 @@ HEADERS += \
     src/include/adminselector.h \
     src/include/authdialog.h \
     src/include/classedit.h \
-    src/include/classmenu.h \
     src/include/initialsetup.h \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h \
@@ -46,6 +45,7 @@ HEADERS += \
     src/include/studentedit.h \
     src/include/useredit.h \
     src/include/usermanager.h \
+    src/include/widgets/classmenu.h \
     src/include/widgets/classcontrols.h \
     src/include/widgets/studentdetails.h
 
@@ -53,12 +53,12 @@ FORMS += \
     ui/adminselector.ui \
     ui/authdialog.ui \
     ui/classedit.ui \
-    ui/classmenu.ui \
     ui/initialsetup.ui \
     ui/monitorwindow.ui \
     ui/studentedit.ui \
     ui/useredit.ui \
     ui/usermanager.ui \
+    ui/widgets/classmenu.ui \
     ui/widgets/classcontrols.ui \
     ui/widgets/studentdetails.ui
 
