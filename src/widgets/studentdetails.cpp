@@ -46,7 +46,7 @@ studentDetails::~studentDetails()
 }
 
 /*! Connected from backButton->clicked().\n
- * Emits goBack().
+ * Emits backClicked().
  */
 void studentDetails::goBack(void)
 {
