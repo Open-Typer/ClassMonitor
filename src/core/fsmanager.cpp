@@ -737,6 +737,35 @@ QStringList classManager::historyEntry(int classID, int studentID, QString pack,
 	return QStringList();
 }
 
+/*! Adds a new entry to the exercise history. Returns true if successful. */
+bool classManager::addHistoryEntry(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, QList<QVariant> entry)
+{
+	if(!classIDs().contains(classID) || !studentIDs(classID).contains(studentID))
+		return false;
+	QDir dir;
+	QString statsPath = fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(studentID) + "/stats/" + pack + "/" +
+		QString::number(lesson) + "." + QString::number(sublesson) + "." + QString::number(exercise);
+	dir.mkpath(statsPath);
+	QFile historyFile(statsPath + "/history.csv");
+	if(historyFile.open(QIODevice::Append | QIODevice::Text))
+	{
+		for(int i=0; i < entry.count(); i++)
+		{
+			if(i > 0)
+			{
+				if(historyFile.write(";") == -1)
+					return false;
+			}
+			if(historyFile.write(entry[i].toString().toUtf8()) == -1)
+				return false;
+		}
+		historyFile.write("\n");
+	}
+	else
+		return false;
+	return true;
+}
+
 /*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
