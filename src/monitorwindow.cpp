@@ -91,7 +91,7 @@ void MonitorWindow::outAnim(void)
 }
 
 /*!
- * Connected from controlWidgets#classOpened().\n
+ * Connected from classMenu#classOpened().\n
  * Opens classControls.
  */
 void MonitorWindow::openClass(int id)
