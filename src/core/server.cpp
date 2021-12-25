@@ -92,7 +92,7 @@ void monitorServer::sendResponse(void)
 {
 	QByteArray request = clientSocket->readAll();
 	QList<QByteArray> requestList = readData(request);
-	if(requestList[0] == "auth")
+	if((requestList[0] == "auth") && (requestList.count() >= 3))
 	{
 		if(classManager::studentAuth(requestList[1],requestList[2]))
 		{
@@ -110,7 +110,7 @@ void monitorServer::sendResponse(void)
 	}
 	else if(requestList[0] == "check")
 		clientSocket->write(convertData({"ok"}));
-	else if(requestList[0] == "get")
+	else if((requestList[0] == "get") && (requestList.count() >= 2))
 	{
 		if(requestList[1] == "username")
 		{
