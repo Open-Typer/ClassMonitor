@@ -146,10 +146,10 @@ void classMenu::editClass(void)
 
 /*!
  * Connected from usersButton->clicked().\n
- * Asks for administrator authentication and opens userManagerDialog.
+ * Asks for administrator authentication and opens user manager.
  *
  * \see adminSelector
- * \see userManagerDialog
+ * \see userManagerWidget
  */
 void classMenu::openUserManager(void)
 {
@@ -158,7 +158,6 @@ void classMenu::openUserManager(void)
 		return;
 	if(userManager::auth(adminDialog.userID))
 	{
-		userManagerDialog dialog(adminDialog.userID);
-		dialog.exec();
+		emit userManagerOpened();
 	}
 }

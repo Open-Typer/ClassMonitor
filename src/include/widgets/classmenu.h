@@ -28,7 +28,6 @@
 #include "core/fsmanager.h"
 #include "classedit.h"
 #include "adminselector.h"
-#include "usermanager.h"
 
 namespace Ui {
 	class classMenu;
@@ -50,6 +49,8 @@ class classMenu : public QWidget
 	signals:
 		/*! A signal, which is emitted when a class is opened. The parameter is class ID. */
 		void classOpened(int);
+		/*! A signal, which is emitted when user manager button is clicked. */
+		void userManagerOpened();
 
 	private slots:
 		void verify(void);

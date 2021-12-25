@@ -66,7 +66,10 @@ void MonitorWindow::updateControlWidget(void)
 	ui->classControlsBody->addWidget(controlWidgets.last());
 	QString widgetClass = controlWidgets.last()->metaObject()->className();
 	if(widgetClass == "classMenu")
+	{
 		connect(controlWidgets.last(),SIGNAL(classOpened(int)),this,SLOT(openClass(int)));
+		connect(controlWidgets.last(),SIGNAL(userManagerOpened()),this,SLOT(openUserManager()));
+	}
 	else
 	{
 		connect(controlWidgets.last(),SIGNAL(backClicked()),this,SLOT(goBack()));
@@ -99,6 +102,18 @@ void MonitorWindow::openClass(int id)
 	classID = id;
 	outAnim();
 	classControls *newWidget = new classControls(classID);
+	controlWidgets += newWidget;
+}
+
+/*!
+ * Connected from classMenu#userManagerOpened().\n
+ * Opens userManagerWidget.
+ */
+void MonitorWindow::openUserManager(void)
+{
+	classID = 0;
+	outAnim();
+	userManagerWidget *newWidget = new userManagerWidget(classID);
 	controlWidgets += newWidget;
 }
 

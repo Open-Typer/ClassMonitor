@@ -18,37 +18,36 @@
  * along with Open-Typer. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "usermanager.h"
+#include "widgets/usermanager.h"
 #include "ui_usermanager.h"
 
-/*! Constructs userManagerDialog. */
-userManagerDialog::userManagerDialog(int userLoginID, QWidget *parent) :
-	QDialog(parent),
-	ui(new Ui::userManagerDialog)
+/*! Constructs userManagerWidget. */
+userManagerWidget::userManagerWidget(int userLoginID, QWidget *parent) :
+	QWidget(parent),
+	ui(new Ui::userManagerWidget)
 {
 	ui->setupUi(this);
-	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->schoolNameEdit->setText(settings.value("main/schoolname","?").toString());
 	loginID = userLoginID;
 	setupList();
 	// Connections
-	connect(ui->userList,&QListWidget::itemSelectionChanged,this,&userManagerDialog::verify);
-	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&userManagerDialog::verify);
+	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(finish()));
+	connect(ui->userList,&QListWidget::itemSelectionChanged,this,&userManagerWidget::verify);
+	connect(ui->schoolNameEdit,&QLineEdit::textChanged,this,&userManagerWidget::verify);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addUser()));
 	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeUser()));
 	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editUser()));
-	connect(ui->closeButton,SIGNAL(clicked()),this,SLOT(finish()));
 }
 
-/*! Destroys the userManagerDialog object. */
-userManagerDialog::~userManagerDialog()
+/*! Destroys the userManagerWidget object. */
+userManagerWidget::~userManagerWidget()
 {
 	delete ui;
 }
 
 /*! Loads the users. */
-void userManagerDialog::setupList(void)
+void userManagerWidget::setupList(void)
 {
 	ui->userList->clear();
 	QList<int> users = userManager::userIDs();
@@ -65,9 +64,9 @@ void userManagerDialog::setupList(void)
  * Checks if there's a selected user and enables the open and remove buttons,
  * checks if the school name is correct and enables the close button.
  */
-void userManagerDialog::verify(void)
+void userManagerWidget::verify(void)
 {
-	ui->closeButton->setEnabled(false);
+	ui->backButton->setEnabled(false);
 	// Check list of users
 	bool enable = (ui->userList->currentRow() != -1);
 	ui->editButton->setEnabled(enable);
@@ -79,18 +78,18 @@ void userManagerDialog::verify(void)
 	if(ui->schoolNameEdit->text() == "")
 		return;
 	// Everything is correct
-	ui->closeButton->setEnabled(true);
+	ui->backButton->setEnabled(true);
 }
 
 /*
- * Connected from closeButton->clicked().\n
- * Saves school name and closes the window.
+ * Connected from backButton->clicked().\n
+ * Saves school name and emits backClicked().
  */
-void userManagerDialog::finish(void)
+void userManagerWidget::finish(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	settings.setValue("main/schoolname",ui->schoolNameEdit->text());
-	accept();
+	emit backClicked();
 }
 
 /*!
@@ -99,7 +98,7 @@ void userManagerDialog::finish(void)
  *
  * \see finish()
  */
-void userManagerDialog::closeEvent(QCloseEvent *event)
+void userManagerWidget::closeEvent(QCloseEvent *event)
 {
 	emit finish();
 	event->accept();
@@ -111,7 +110,7 @@ void userManagerDialog::closeEvent(QCloseEvent *event)
  *
  * \see userEdit
  */
-void userManagerDialog::addUser(void)
+void userManagerWidget::addUser(void)
 {
 	userEdit dialog(true);
 	dialog.exec();
@@ -122,7 +121,7 @@ void userManagerDialog::addUser(void)
  * Connected from removeButton->clicked().\n
  * Removes selected user.
  */
-void userManagerDialog::removeUser(void)
+void userManagerWidget::removeUser(void)
 {
 	if(ui->userList->currentRow() == -1)
 		return;
@@ -151,7 +150,7 @@ void userManagerDialog::removeUser(void)
  *
  * \see userEdit
  */
-void userManagerDialog::editUser(void)
+void userManagerWidget::editUser(void)
 {
 	userEdit dialog(false,userManager::userIDs().value(ui->userList->currentRow()));
 	dialog.exec();

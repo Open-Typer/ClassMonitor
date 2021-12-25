@@ -21,26 +21,30 @@
 #ifndef USERMANAGER_H
 #define USERMANAGER_H
 
-#include <QDialog>
+#include <QWidget>
 #include "useredit.h"
 #include "core/fsmanager.h"
 
 namespace Ui {
-	class userManagerDialog;
+	class userManagerWidget;
 }
 
-/*! \brief the userManagerDialog class is a dialog for user management. */
-class userManagerDialog : public QDialog
+/*! \brief the userManagerWidget class is a widget for user management, used by MonitorWindow. */
+class userManagerWidget : public QWidget
 {
 	Q_OBJECT
 	public:
-		explicit userManagerDialog(int userLoginID, QWidget *parent = nullptr);
-		~userManagerDialog();
+		explicit userManagerWidget(int userLoginID, QWidget *parent = nullptr);
+		~userManagerWidget();
 
 	private:
-		Ui::userManagerDialog *ui;
+		Ui::userManagerWidget *ui;
 		void setupList(void);
 		int loginID;
+
+	signals:
+		/*! A signal, which is emitted when the back button is clicked. */
+		void backClicked();
 
 	protected:
 		void closeEvent(QCloseEvent *event);

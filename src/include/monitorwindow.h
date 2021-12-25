@@ -26,6 +26,7 @@
 #include <QPropertyAnimation>
 #include "widgets/classmenu.h"
 #include "widgets/classcontrols.h"
+#include "widgets/usermanager.h"
 #include "widgets/studentdetails.h"
 #include "core/fsmanager.h"
 
@@ -52,6 +53,7 @@ class MonitorWindow : public QMainWindow
 	private slots:
 		void updateSchoolName(void);
 		void openClass(int id);
+		void openUserManager(void);
 		void openDetails(int id);
 		void checkAnim(const QVariant value);
 		void checkBackAnim(const QVariant value);
