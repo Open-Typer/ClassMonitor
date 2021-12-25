@@ -117,6 +117,8 @@ void monitorServer::sendResponse(void)
 			QString username = sessions.value(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString()).first;
 			clientSocket->write(convertData({"ok",username.toUtf8()}));
 		}
+		else
+			clientSocket->write(convertData({"fail"}));
 	}
 	else
 		clientSocket->write(convertData({"fail"}));
