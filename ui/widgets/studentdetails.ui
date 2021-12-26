@@ -121,7 +121,7 @@
       <enum>QFrame::Sunken</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_5">
-      <item row="0" column="0">
+      <item row="1" column="0">
        <widget class="QTabWidget" name="statsTabWidget">
         <property name="currentIndex">
          <number>0</number>
@@ -175,6 +175,19 @@
           </item>
          </layout>
         </widget>
+       </widget>
+      </item>
+      <item row="0" column="0" alignment="Qt::AlignLeft">
+       <widget class="QPushButton" name="refreshButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Refresh</string>
+        </property>
        </widget>
       </item>
      </layout>
