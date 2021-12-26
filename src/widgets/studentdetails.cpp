@@ -38,6 +38,7 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	connect(ui->lessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	connect(ui->sublessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	connect(ui->exerciseBox,SIGNAL(activated(int)),this,SLOT(refresh()));
+	connect(ui->refreshButton,SIGNAL(clicked()),this,SLOT(refresh()));
 	connect(ui->statsTable,SIGNAL(itemSelectionChanged()),SLOT(refreshTable()));
 	refresh();
 }
@@ -56,7 +57,12 @@ void studentDetails::goBack(void)
 	emit backClicked();
 }
 
-/*! Refreshes comboboxes and other widgets. \see refreshTable() */
+/*!
+ * Connected from exercise selection comboboxes (%activated() signal) and refreshButton->clicked().\n
+ * Refreshes comboboxes and other widgets.
+ *
+ * \see refreshTable()
+ */
 void studentDetails::refresh(void)
 {
 	// Save old indexes
