@@ -726,7 +726,10 @@ QStringList classManager::historyEntry(int classID, int studentID, QString pack,
 						part = "";
 					}
 					else
-						part += currentLine[i];
+					{
+						if(currentLine[i] != '\n')
+							part += currentLine[i];
+					}
 				}
 				out += part;
 				return out;
