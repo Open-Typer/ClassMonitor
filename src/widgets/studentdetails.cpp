@@ -71,13 +71,13 @@ void studentDetails::refresh(void)
 	if(ui->packBox->count() == 0)
 	{
 		ui->exerciseFrame->hide();
-		ui->statsTabWidget->hide();
+		ui->statsFrame->hide();
 		ui->noInfoFrame->show();
 	}
 	else
 	{
 		ui->exerciseFrame->show();
-		ui->statsTabWidget->show();
+		ui->statsFrame->show();
 		ui->noInfoFrame->hide();
 	}
 	if(oldP == -1)
