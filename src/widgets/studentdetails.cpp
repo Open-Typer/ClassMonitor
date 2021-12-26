@@ -30,12 +30,15 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	classID = openClassID;
 	studentID = id;
 	ui->titleLabel->setText(classManager::studentName(classID,studentID));
+	ui->statsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+	ui->statsTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 	connect(ui->packBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	connect(ui->lessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	connect(ui->sublessonBox,SIGNAL(activated(int)),this,SLOT(refresh()));
 	connect(ui->exerciseBox,SIGNAL(activated(int)),this,SLOT(refresh()));
+	connect(ui->statsTable,SIGNAL(itemSelectionChanged()),SLOT(refreshTable()));
 	refresh();
 }
 
@@ -53,7 +56,7 @@ void studentDetails::goBack(void)
 	emit backClicked();
 }
 
-/*! Refreshes comboboxes and other widgets. */
+/*! Refreshes comboboxes and other widgets. \see refreshTable() */
 void studentDetails::refresh(void)
 {
 	// Save old indexes
@@ -104,4 +107,49 @@ void studentDetails::refresh(void)
 	if(oldE == -1)
 		oldE = 0;
 	ui->sublessonBox->setCurrentIndex(oldE);
+	// Table
+	refreshTable();
+}
+
+/*!
+ * Connected from statsTable->itemSelectionChanged().\n
+ * Refreshes statsTable.
+ *
+ * \see refresh()
+ */
+void studentDetails::refreshTable(void)
+{
+	// Init lists
+	QStringList packs = classManager::studentPacks(classID,studentID);
+	QList<int> lessons = classManager::studentLessons(classID,studentID,packs[ui->packBox->currentIndex()]);
+	QList<int> sublessons = classManager::studentSublessons(classID,studentID,packs[ui->packBox->currentIndex()],
+		lessons[ui->lessonBox->currentIndex()]);
+	QList<int> exercises = classManager::studentExercises(classID,studentID,packs[ui->packBox->currentIndex()],
+		lessons[ui->lessonBox->currentIndex()],
+		sublessons[ui->sublessonBox->currentIndex()]);
+	// Init table
+	ui->statsTable->clear();
+	ui->statsTable->setColumnCount(3);
+	ui->statsTable->setHorizontalHeaderLabels({ tr("Speed"), tr("Mistakes"), tr("Time") });
+	QString pack = packs[ui->packBox->currentIndex()];
+	int lesson = lessons[ui->lessonBox->currentIndex()];
+	int sublesson = sublessons[ui->sublessonBox->currentIndex()];
+	int exercise = exercises[ui->exerciseBox->currentIndex()];
+	int i, count = classManager::historySize(classID,studentID,pack,lesson,sublesson,exercise);
+	ui->statsTable->setRowCount(count);
+	// Load entries
+	QTableWidgetItem *item;
+	for(i=0; i < count; i++)
+	{
+		QStringList entry = classManager::historyEntry(classID,studentID,pack,lesson,sublesson,exercise,i);
+		// Speed
+		item = new QTableWidgetItem(entry[0]);
+		ui->statsTable->setItem(i,0,item);
+		// Mistakes
+		item = new QTableWidgetItem(entry[1]);
+		ui->statsTable->setItem(i,1,item);
+		// Time
+		item = new QTableWidgetItem(entry[2]);
+		ui->statsTable->setItem(i,2,item);
+	}
 }
