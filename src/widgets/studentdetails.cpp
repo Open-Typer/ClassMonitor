@@ -119,6 +119,8 @@ void studentDetails::refresh(void)
  */
 void studentDetails::refreshTable(void)
 {
+	if(ui->packBox->count() == 0)
+		return;
 	// Init lists
 	QStringList packs = classManager::studentPacks(classID,studentID);
 	QList<int> lessons = classManager::studentLessons(classID,studentID,packs[ui->packBox->currentIndex()]);
