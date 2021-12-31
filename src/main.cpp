@@ -21,10 +21,13 @@
 #include <QApplication>
 #include "monitorwindow.h"
 #include "initialsetup.h"
+#include "core/server.h"
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
+	// Start server
+	new monitorServer;
 	MonitorWindow w;
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
