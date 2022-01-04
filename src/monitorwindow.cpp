@@ -2,7 +2,7 @@
  * monitorwindow.cpp
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,8 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	classMenu *newWidget = new classMenu();
 	controlWidgets += newWidget;
 	updateControlWidget();
+	// Connections
+	connect(ui->optionsButton,SIGNAL(clicked()),this,SLOT(openOptions()));
 }
 
 /*! Destroys the MonitorWindow object. */
@@ -51,6 +53,16 @@ void MonitorWindow::updateSchoolName(void)
 		ui->schoolNameLabel->setText(name);
 	else
 		ui->schoolNameLabel->setText(name + " - " + classManager::className(classID));
+}
+
+/*!
+ * Connected from optionsButton->clicked().\n
+ * Opens optionsWindow.
+ */
+void MonitorWindow::openOptions(void)
+{
+	optionsWindow dialog;
+	dialog.exec();
 }
 
 /*! Sets current control widget. */

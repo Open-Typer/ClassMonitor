@@ -2,7 +2,7 @@
  * monitorwindow.h
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@
 #include <QMainWindow>
 #include <QSettings>
 #include <QPropertyAnimation>
+#include "options/optionswindow.h"
 #include "widgets/classmenu.h"
 #include "widgets/classcontrols.h"
 #include "widgets/usermanager.h"
@@ -52,6 +53,7 @@ class MonitorWindow : public QMainWindow
 
 	private slots:
 		void updateSchoolName(void);
+		void openOptions(void);
 		void openClass(int id);
 		void openUserManager(void);
 		void openDetails(int id);
