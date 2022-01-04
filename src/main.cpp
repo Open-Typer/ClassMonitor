@@ -19,6 +19,7 @@
  */
 
 #include <QApplication>
+#include <QTcpSocket>
 #include "monitorwindow.h"
 #include "initialsetup.h"
 #include "core/server.h"
@@ -27,9 +28,20 @@ int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	// Start server
-	monitorServer server(true);
-	if(!server.isListening())
-		return 0;
+	serverPtr = new monitorServer(true);
+	if(!serverPtr->isListening())
+	{
+		// Check if there's an existing server instance
+		QTcpSocket *socket = new QTcpSocket;
+		socket->connectToHost("localhost",serverPtr->port());
+		if(socket->waitForConnected())
+			return 0;
+		// Run server again, but allow error messages
+		serverPtr = new monitorServer(false);
+		// Let the user change server settings
+		optionsWindow options;
+		options.exec();
+	}
 	MonitorWindow w;
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
