@@ -54,4 +54,6 @@ class monitorServer : public QObject
 		QMap<QString,QPair<QString,QDateTime>> sessions;
 };
 
+extern monitorServer *serverPtr;
+
 #endif // SERVER_H

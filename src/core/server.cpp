@@ -20,6 +20,8 @@
 
 #include "core/server.h"
 
+monitorServer *serverPtr = nullptr;
+
 /*! Constructs monitorServer. */
 monitorServer::monitorServer(bool silent, QObject *parent) :
 	QObject(parent)
