@@ -68,7 +68,7 @@ QHostAddress monitorServer::address(void)
 quint16 monitorServer::port(void)
 {
 	QSettings settings(fileUtils::configLocation() + "/settings.ini");
-	return (quint16) settings.value("server/port",57100).toInt();
+	return settings.value("server/port",57100).toUInt();
 }
 
 /*! Returns true if the server is listening. */
