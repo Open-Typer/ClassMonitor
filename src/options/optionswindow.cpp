@@ -46,5 +46,8 @@ optionsWindow::~optionsWindow()
 void optionsWindow::closeOptions(void)
 {
 	settings->setValue("server/port",ui->portEdit->value());
-	accept();
+	delete serverPtr;
+	serverPtr = new monitorServer;
+	if(serverPtr->isListening())
+		accept();
 }
