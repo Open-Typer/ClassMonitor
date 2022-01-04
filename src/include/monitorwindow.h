@@ -35,7 +35,11 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MonitorWindow; }
 QT_END_NAMESPACE
 
-/*! \brief The MonitorWindow class is the main window. */
+/*!
+ * \brief The MonitorWindow class is the main window.
+ *
+ * \image html MonitorWindow.png
+ */
 class MonitorWindow : public QMainWindow
 {
 	Q_OBJECT
