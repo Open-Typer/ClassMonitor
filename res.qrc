@@ -17,5 +17,6 @@
         <file>res/images/done.png</file>
         <file>res/images/stats.png</file>
         <file>res/images/previous.png</file>
+        <file>res/images/options.png</file>
     </qresource>
 </RCC>
