@@ -27,6 +27,7 @@ SOURCES += \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp \
     src/core/server.cpp \
+    src/options/optionswindow.cpp \
     src/studentedit.cpp \
     src/useredit.cpp \
     src/widgets/classmenu.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h \
     src/include/core/server.h \
+    src/include/options/optionswindow.h \
     src/include/studentedit.h \
     src/include/useredit.h \
     src/include/widgets/classmenu.h \
@@ -55,6 +57,7 @@ FORMS += \
     ui/classedit.ui \
     ui/initialsetup.ui \
     ui/monitorwindow.ui \
+    ui/options/optionswindow.ui \
     ui/studentedit.ui \
     ui/useredit.ui \
     ui/widgets/classmenu.ui \
