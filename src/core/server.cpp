@@ -21,18 +21,21 @@
 #include "core/server.h"
 
 /*! Constructs monitorServer. */
-monitorServer::monitorServer(QObject *parent) :
+monitorServer::monitorServer(bool silent, QObject *parent) :
 	QObject(parent)
 {
 	server = new QTcpServer(this);
 	if(!server->listen(QHostAddress::Any,port()))
 	{
-		QMessageBox errBox;
-		errBox.setWindowTitle("Error");
-		errBox.setText(tr("Unable to start server on port %1.").arg(port()));
-		errBox.setInformativeText(server->errorString());
-		errBox.setIcon(QMessageBox::Critical);
-		errBox.exec();
+		if(!silent)
+		{
+			QMessageBox errBox;
+			errBox.setWindowTitle("Error");
+			errBox.setText(tr("Unable to start server on port %1.").arg(port()));
+			errBox.setInformativeText(server->errorString());
+			errBox.setIcon(QMessageBox::Critical);
+			errBox.exec();
+		}
 		return;
 	}
 	sessions.clear();
