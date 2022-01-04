@@ -123,6 +123,18 @@ void monitorServer::sendResponse(void)
 			else
 				clientSocket->write(convertData({"fail"}));
 		}
+		else if((requestList[1] == "resultcount") && (requestList.count() >= 6))
+		{
+			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
+			if(sessions.contains(clientAddress))
+			{
+				QString username = sessions.value(clientAddress).first;
+				QPair<int,int> studentLoc = classManager::findStudent(username);
+				clientSocket->write(convertData({"ok",QByteArray::number(classManager::historySize(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt()))}));
+			}
+			else
+				clientSocket->write(convertData({"fail"}));
+		}
 		else
 			clientSocket->write(convertData({"fail"}));
 	}
