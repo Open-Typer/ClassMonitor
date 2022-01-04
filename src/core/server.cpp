@@ -2,7 +2,7 @@
  * server.cpp
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -130,11 +130,17 @@ void monitorServer::sendResponse(void)
 	{
 		if((requestList[1] == "result") && (requestList.count() >= 9))
 		{
-			QString username = sessions.value(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString()).first;
-			QPair<int,int> studentLoc = classManager::findStudent(username);
-			QList<QVariant> resultData = {requestList[6],requestList[7],requestList[8]};
-			if(classManager::addHistoryEntry(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),resultData))
-				clientSocket->write(convertData({"ok"}));
+			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
+			if(sessions.contains(clientAddress))
+			{
+				QString username = sessions.value(clientAddress).first;
+				QPair<int,int> studentLoc = classManager::findStudent(username);
+				QList<QVariant> resultData = {requestList[6],requestList[7],requestList[8]};
+				if(classManager::addHistoryEntry(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),resultData))
+					clientSocket->write(convertData({"ok"}));
+				else
+					clientSocket->write(convertData({"fail"}));
+			}
 			else
 				clientSocket->write(convertData({"fail"}));
 		}
