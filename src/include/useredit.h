@@ -28,7 +28,11 @@ namespace Ui {
 	class userEdit;
 }
 
-/*! \brief the userEdit class is a dialog used to add or edit users. */
+/*!
+ * \brief the userEdit class is a dialog used to add or edit users.
+ *
+ * \image html userEdit.png
+ */
 class userEdit : public QDialog
 {
 	Q_OBJECT
