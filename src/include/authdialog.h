@@ -27,7 +27,11 @@ namespace Ui {
 	class authDialog;
 }
 
-/*! \brief The authDialog class is an authentication dialog with a password input box. */
+/*!
+ * \brief The authDialog class is an authentication dialog with a password input box.
+ *
+ * \image html authDialog.png
+ */
 class authDialog : public QDialog
 {
 	Q_OBJECT
