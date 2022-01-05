@@ -33,7 +33,11 @@ namespace Ui {
 	class classMenu;
 }
 
-/*! \brief The classMenu class is a class menu widget used by MonitorWindow. */
+/*!
+ * \brief The classMenu class is a class menu widget used by MonitorWindow.
+ *
+ * \image html classMenu.png
+ */
 class classMenu : public QWidget
 {
 	Q_OBJECT
