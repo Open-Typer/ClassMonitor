@@ -29,7 +29,11 @@ namespace Ui {
 	class userManagerWidget;
 }
 
-/*! \brief the userManagerWidget class is a widget for user management, used by MonitorWindow. */
+/*!
+ * \brief the userManagerWidget class is a widget for user management, used by MonitorWindow.
+ *
+ * \image html userManagerWidget.png
+ */
 class userManagerWidget : public QWidget
 {
 	Q_OBJECT
