@@ -28,7 +28,11 @@ namespace Ui {
 	class studentEdit;
 }
 
-/*! \brief The studentEdit class is a dialog used to add or edit students. */
+/*!
+ * \brief The studentEdit class is a dialog used to add or edit students.
+ *
+ * \image html studentEdit.png
+ */
 class studentEdit : public QDialog
 {
 	Q_OBJECT
