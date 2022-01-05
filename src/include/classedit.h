@@ -30,7 +30,11 @@ namespace Ui {
 	class classEdit;
 }
 
-/*! \brief The classEdit class is a dialog for class adding and editing. */
+/*!
+ * \brief The classEdit class is a dialog for class adding and editing.
+ *
+ * \image html classEdit.png
+ */
 class classEdit : public QDialog
 {
 	Q_OBJECT
