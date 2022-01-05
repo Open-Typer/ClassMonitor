@@ -28,7 +28,11 @@ namespace Ui {
 	class studentDetails;
 }
 
-/*! \brief The studentDetails class is a widget for student results and statistics, used by MonitorWindow. */
+/*!
+ * \brief The studentDetails class is a widget for student results and statistics, used by MonitorWindow.
+ *
+ * \image html studentDetails.png
+ */
 class studentDetails : public QWidget
 {
 	Q_OBJECT
