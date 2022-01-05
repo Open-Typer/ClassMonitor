@@ -29,7 +29,11 @@ namespace Ui {
 	class classControls;
 }
 
-/*! \brief The classControls class is a widget for class management, used by MonitorWindow. */
+/*!
+ * \brief The classControls class is a widget for class management, used by MonitorWindow.
+ *
+ * \image html classControls.png
+ */
 class classControls : public QWidget
 {
 	Q_OBJECT
