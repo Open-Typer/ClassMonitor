@@ -28,7 +28,10 @@ namespace Ui {
 	class adminSelector;
 }
 
-/*! \brief The adminSelector class is a dialog used to select an administrator account. */
+/*!
+ * \brief The adminSelector class is a dialog used to select an administrator account.
+ * \image html adminSelector.png
+ */
 class adminSelector : public QDialog
 {
 	Q_OBJECT
