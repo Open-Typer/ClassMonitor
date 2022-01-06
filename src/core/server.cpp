@@ -24,8 +24,14 @@ monitorServer *serverPtr = nullptr;
 
 /*! Constructs monitorServer. */
 monitorServer::monitorServer(bool silent, QObject *parent) :
-	QTcpServer(parent)
+	QTcpServer(parent),
+	m_sslLocalCertificate(),
+	m_sslPrivateKey(),
+	m_sslProtocol(QSsl::UnknownProtocol)
 {
+	setSslLocalCertificate(":certs/server.pem");
+	setSslPrivateKey(":certs/server.key");
+	setSslProtocol(QSsl::TlsV1_2);
 	if(!listen(QHostAddress::Any,port()))
 	{
 		if(!silent)
@@ -43,7 +49,6 @@ monitorServer::monitorServer(bool silent, QObject *parent) :
 	QTimer *sessionTimer = new QTimer;
 	// Connections
 	connect(sessionTimer,&QTimer::timeout,this,&monitorServer::updateSessions);
-	connect(this,&QTcpServer::newConnection,this,&monitorServer::readRequest);
 	sessionTimer->start(5000);
 }
 
@@ -80,7 +85,7 @@ quint16 monitorServer::port(void)
  */
 void monitorServer::readRequest(void)
 {
-	clientSocket = nextPendingConnection();
+	clientSocket = dynamic_cast<QSslSocket*>(nextPendingConnection());
 	connect(clientSocket,&QIODevice::readyRead,this,&monitorServer::sendResponse);
 	connect(clientSocket,&QAbstractSocket::disconnected,clientSocket,&QObject::deleteLater);
 }
@@ -258,4 +263,73 @@ void monitorServer::updateSessions(void)
 			return;
 		}
 	}
+}
+
+/*! Overrides QTcpServer#incomingConnection(). */
+void monitorServer::incomingConnection(qintptr socketDescriptor)
+{
+	QSslSocket *sslSocket = new QSslSocket(this);
+	sslSocket->setSocketDescriptor(socketDescriptor);
+	sslSocket->setLocalCertificate(m_sslLocalCertificate);
+	sslSocket->setPrivateKey(m_sslPrivateKey);
+	sslSocket->setProtocol(m_sslProtocol);
+	addPendingConnection(sslSocket);
+	sslSocket->startServerEncryption();
+	connect(sslSocket,&QSslSocket::encrypted,this,&monitorServer::readRequest);
+}
+
+/*! Returns local SSL certificate. */
+const QSslCertificate &monitorServer::getSslLocalCertificate() const
+{
+	return m_sslLocalCertificate;
+}
+
+/*! Returns SSL private key. */
+const QSslKey &monitorServer::getSslPrivateKey() const
+{
+	return m_sslPrivateKey;
+}
+
+/*! Returns the SSL protocol that is currently set. */
+QSsl::SslProtocol monitorServer::getSslProtocol() const
+{
+	return m_sslProtocol;
+}
+
+/*! Sets local SSL certificate. */
+void monitorServer::setSslLocalCertificate(const QSslCertificate &certificate)
+{
+	m_sslLocalCertificate = certificate;
+}
+
+/*! Sets local SSL certificate from path. */
+bool monitorServer::setSslLocalCertificate(const QString &path, QSsl::EncodingFormat format)
+{
+	QFile certificateFile(path);
+	if(!certificateFile.open(QIODevice::ReadOnly))
+		return false;
+	m_sslLocalCertificate = QSslCertificate(certificateFile.readAll(),format);
+	return true;
+}
+
+/*! Sets SSL private key. */
+void monitorServer::setSslPrivateKey(const QSslKey &key)
+{
+	m_sslPrivateKey = key;
+}
+
+/*! Sets SSL private key from a file. */
+bool monitorServer::setSslPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat format, const QByteArray &passPhrase)
+{
+	QFile keyFile(fileName);
+	if(!keyFile.open(QIODevice::ReadOnly))
+		return false;
+	m_sslPrivateKey = QSslKey(keyFile.readAll(),algorithm,format,QSsl::PrivateKey,passPhrase);
+	return true;
+}
+
+/*! Sets SSL protocol. */
+void monitorServer::setSslProtocol(QSsl::SslProtocol protocol)
+{
+	m_sslProtocol = protocol;
 }

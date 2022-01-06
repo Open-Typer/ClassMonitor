@@ -25,8 +25,11 @@
 #include <QSettings>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QSslSocket>
 #include <QNetworkInterface>
 #include <QTimer>
+#include <QSslCertificate>
+#include <QSslKey>
 #include "core/fsmanager.h"
 
 /*! \brief The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients. */
@@ -38,6 +41,17 @@ class monitorServer : public QTcpServer
 		~monitorServer();
 		static quint16 port(void);
 		static QHostAddress address(void);
+		const QSslCertificate &getSslLocalCertificate() const;
+		const QSslKey &getSslPrivateKey() const;
+		QSsl::SslProtocol getSslProtocol() const;
+		void setSslLocalCertificate(const QSslCertificate &certificate);
+		bool setSslLocalCertificate(const QString &path, QSsl::EncodingFormat format = QSsl::Pem);
+		void setSslPrivateKey(const QSslKey &key);
+		bool setSslPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray());
+		void setSslProtocol(QSsl::SslProtocol protocol);
+
+	protected:
+		void incomingConnection(qintptr socketDescriptor);
 
 	private slots:
 		void readRequest(void);
@@ -45,11 +59,14 @@ class monitorServer : public QTcpServer
 		void updateSessions(void);
 
 	private:
-		QTcpSocket *clientSocket;
+		QSslSocket *clientSocket;
 		QByteArray convertData(bool *ok, QList<QByteArray> input);
 		QByteArray convertData(QList<QByteArray> input);
 		QList<QByteArray> readData(QByteArray input);
 		QMap<QString,QPair<QString,QDateTime>> sessions;
+		QSslCertificate m_sslLocalCertificate;
+		QSslKey m_sslPrivateKey;
+		QSsl::SslProtocol m_sslProtocol;
 };
 
 extern monitorServer *serverPtr;
