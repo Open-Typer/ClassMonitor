@@ -15,8 +15,10 @@ var hierarchy =
     [ "QObject", null, [
       [ "classManager", "classclassManager.html", null ],
       [ "fileUtils", "classfileUtils.html", null ],
-      [ "monitorServer", "classmonitorServer.html", null ],
       [ "userManager", "classuserManager.html", null ]
+    ] ],
+    [ "QTcpServer", null, [
+      [ "monitorServer", "classmonitorServer.html", null ]
     ] ],
     [ "QWidget", null, [
       [ "classControls", "classclassControls.html", null ],

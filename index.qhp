@@ -97,11 +97,19 @@
               <section title="address" ref="classmonitorServer.html#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
               <section title="convertData" ref="classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519" />
               <section title="convertData" ref="classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593" />
-              <section title="isListening" ref="classmonitorServer.html#af7b3e78ee8892ac2a2461d429bdcdff5" />
+              <section title="getSslLocalCertificate" ref="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f" />
+              <section title="getSslPrivateKey" ref="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931" />
+              <section title="getSslProtocol" ref="classmonitorServer.html#afb76272169b8d3a0b6d32b325df48348" />
+              <section title="incomingConnection" ref="classmonitorServer.html#a651c75918ba34568e99831d7e4852ef7" />
               <section title="port" ref="classmonitorServer.html#ae06bce523ecfc5599f1ab6219c4f6bc3" />
               <section title="readData" ref="classmonitorServer.html#a02783368ac82a41a0e2b126fa36a65b6" />
               <section title="readRequest" ref="classmonitorServer.html#a146f6d3d78c2bdd03c9dc25c5550a704" />
               <section title="sendResponse" ref="classmonitorServer.html#ad94cc73617f4f28512394180d52e451b" />
+              <section title="setSslLocalCertificate" ref="classmonitorServer.html#a922cc117a049fa6e08078aa5fec73421" />
+              <section title="setSslLocalCertificate" ref="classmonitorServer.html#a8e53ec2057f233034212eb2bd4c7254b" />
+              <section title="setSslPrivateKey" ref="classmonitorServer.html#afe6f72cde581c45666bf32500a3f2c99" />
+              <section title="setSslPrivateKey" ref="classmonitorServer.html#a821af1bda6e97ea81f5f113d3b5da873" />
+              <section title="setSslProtocol" ref="classmonitorServer.html#a504dbb55cf1b59d65e2447421dedb6c1" />
               <section title="updateSessions" ref="classmonitorServer.html#a827e63132ce650940b4e55ceb959a75b" />
             </section>
             <section title="MonitorWindow" ref="classMonitorWindow.html">
@@ -185,8 +193,10 @@
             <section title="QObject" ref="">
               <section title="classManager" ref="classclassManager.html" />
               <section title="fileUtils" ref="classfileUtils.html" />
-              <section title="monitorServer" ref="classmonitorServer.html" />
               <section title="userManager" ref="classuserManager.html" />
+            </section>
+            <section title="QTcpServer" ref="">
+              <section title="monitorServer" ref="classmonitorServer.html" />
             </section>
             <section title="QWidget" ref="">
               <section title="classControls" ref="classclassControls.html" />
@@ -323,18 +333,28 @@
       <keyword name="monitorServer" id="monitorServer" ref="classmonitorServer.html" />
       <keyword name="monitorServer" id="monitorServer::monitorServer" ref="classmonitorServer.html#a5139f286021e951906edffa8502ee3b7" />
       <keyword name="~monitorServer" id="monitorServer::~monitorServer" ref="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585" />
-      <keyword name="isListening" id="monitorServer::isListening" ref="classmonitorServer.html#af7b3e78ee8892ac2a2461d429bdcdff5" />
+      <keyword name="getSslLocalCertificate" id="monitorServer::getSslLocalCertificate" ref="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f" />
+      <keyword name="getSslPrivateKey" id="monitorServer::getSslPrivateKey" ref="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931" />
+      <keyword name="getSslProtocol" id="monitorServer::getSslProtocol" ref="classmonitorServer.html#afb76272169b8d3a0b6d32b325df48348" />
+      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer.html#a922cc117a049fa6e08078aa5fec73421" />
+      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer.html#a8e53ec2057f233034212eb2bd4c7254b" />
+      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer.html#afe6f72cde581c45666bf32500a3f2c99" />
+      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer.html#a821af1bda6e97ea81f5f113d3b5da873" />
+      <keyword name="setSslProtocol" id="monitorServer::setSslProtocol" ref="classmonitorServer.html#a504dbb55cf1b59d65e2447421dedb6c1" />
       <keyword name="port" id="monitorServer::port" ref="classmonitorServer.html#ae06bce523ecfc5599f1ab6219c4f6bc3" />
       <keyword name="address" id="monitorServer::address" ref="classmonitorServer.html#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
+      <keyword name="incomingConnection" id="monitorServer::incomingConnection" ref="classmonitorServer.html#a651c75918ba34568e99831d7e4852ef7" />
       <keyword name="readRequest" id="monitorServer::readRequest" ref="classmonitorServer.html#a146f6d3d78c2bdd03c9dc25c5550a704" />
       <keyword name="sendResponse" id="monitorServer::sendResponse" ref="classmonitorServer.html#ad94cc73617f4f28512394180d52e451b" />
       <keyword name="updateSessions" id="monitorServer::updateSessions" ref="classmonitorServer.html#a827e63132ce650940b4e55ceb959a75b" />
       <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519" />
       <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593" />
       <keyword name="readData" id="monitorServer::readData" ref="classmonitorServer.html#a02783368ac82a41a0e2b126fa36a65b6" />
-      <keyword name="server" id="monitorServer::server" ref="classmonitorServer.html#af2bd5874e3196552fce7ed61a48dbcd1" />
-      <keyword name="clientSocket" id="monitorServer::clientSocket" ref="classmonitorServer.html#a05b54ee33e08e2156aad10187ca58682" />
+      <keyword name="clientSocket" id="monitorServer::clientSocket" ref="classmonitorServer.html#a8424d0cf22f5fe546a2687e8f908d52e" />
       <keyword name="sessions" id="monitorServer::sessions" ref="classmonitorServer.html#af3a2890024a09610242edc17ab07baf4" />
+      <keyword name="m_sslLocalCertificate" id="monitorServer::m_sslLocalCertificate" ref="classmonitorServer.html#ab0597ec0d88fd1cdf9eac9567261eeda" />
+      <keyword name="m_sslPrivateKey" id="monitorServer::m_sslPrivateKey" ref="classmonitorServer.html#ab0b4481387bd311dcc06a93119b1c559" />
+      <keyword name="m_sslProtocol" id="monitorServer::m_sslProtocol" ref="classmonitorServer.html#a9a204512e1077871227c35f42837bf1a" />
       <keyword name="MonitorWindow" id="MonitorWindow" ref="classMonitorWindow.html" />
       <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
       <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
@@ -548,6 +568,7 @@
       <file>inherit_graph_1.png</file>
       <file>inherit_graph_2.png</file>
       <file>inherit_graph_3.png</file>
+      <file>inherit_graph_4.png</file>
       <file>functions.html</file>
       <file>functions.html</file>
       <file>functions.html</file>

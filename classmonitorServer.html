@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('classmonitorServer.html',''); initResi
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('classmonitorServer.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classmonitorServer.html" title="The monitorServer class uses QTcpServer to communicate with Open-Typer clients.">monitorServer</a> class uses QTcpServer to communicate with Open-Typer clients.  
+<p>The <a class="el" href="classmonitorServer.html" title="The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients.">monitorServer</a> class is a QTcpServer that is used to communicate with Open-Typer clients.  
  <a href="classmonitorServer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="server_8h_source.html">core/server.h</a>&gt;</code></p>
@@ -104,8 +105,8 @@ Inheritance diagram for monitorServer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmonitorServer__inherit__graph.png" border="0" usemap="#amonitorServer_inherit__map" alt="Inheritance graph"/></div>
 <map name="amonitorServer_inherit__map" id="amonitorServer_inherit__map">
-<area shape="rect" title="The monitorServer class uses QTcpServer to communicate with Open&#45;Typer clients." alt="" coords="5,80,108,107"/>
-<area shape="rect" title=" " alt="" coords="21,5,92,32"/>
+<area shape="rect" title="The monitorServer class is a QTcpServer that is used to communicate with Open&#45;Typer clients." alt="" coords="5,80,108,107"/>
+<area shape="rect" title=" " alt="" coords="11,5,103,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -113,8 +114,8 @@ Collaboration diagram for monitorServer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmonitorServer__coll__graph.png" border="0" usemap="#amonitorServer_coll__map" alt="Collaboration graph"/></div>
 <map name="amonitorServer_coll__map" id="amonitorServer_coll__map">
-<area shape="rect" title="The monitorServer class uses QTcpServer to communicate with Open&#45;Typer clients." alt="" coords="5,80,108,107"/>
-<area shape="rect" title=" " alt="" coords="21,5,92,32"/>
+<area shape="rect" title="The monitorServer class is a QTcpServer that is used to communicate with Open&#45;Typer clients." alt="" coords="5,80,108,107"/>
+<area shape="rect" title=" " alt="" coords="11,5,103,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -124,8 +125,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5139f286021e951906edffa8502ee3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c0a13ba9e519d6e7fc91e1f3839585"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585">~monitorServer</a> ()</td></tr>
 <tr class="separator:a10c0a13ba9e519d6e7fc91e1f3839585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b3e78ee8892ac2a2461d429bdcdff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#af7b3e78ee8892ac2a2461d429bdcdff5">isListening</a> (void)</td></tr>
-<tr class="separator:af7b3e78ee8892ac2a2461d429bdcdff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00156a3448fd0c8b8a59e328419950f"><td class="memItemLeft" align="right" valign="top">const QSslCertificate &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f">getSslLocalCertificate</a> () const</td></tr>
+<tr class="separator:ad00156a3448fd0c8b8a59e328419950f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd66e4bdad6c4aa34704c3ae9ba6931"><td class="memItemLeft" align="right" valign="top">const QSslKey &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931">getSslPrivateKey</a> () const</td></tr>
+<tr class="separator:aacd66e4bdad6c4aa34704c3ae9ba6931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb76272169b8d3a0b6d32b325df48348"><td class="memItemLeft" align="right" valign="top">QSsl::SslProtocol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#afb76272169b8d3a0b6d32b325df48348">getSslProtocol</a> () const</td></tr>
+<tr class="separator:afb76272169b8d3a0b6d32b325df48348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922cc117a049fa6e08078aa5fec73421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a922cc117a049fa6e08078aa5fec73421">setSslLocalCertificate</a> (const QSslCertificate &amp;certificate)</td></tr>
+<tr class="separator:a922cc117a049fa6e08078aa5fec73421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e53ec2057f233034212eb2bd4c7254b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a8e53ec2057f233034212eb2bd4c7254b">setSslLocalCertificate</a> (const QString &amp;path, QSsl::EncodingFormat format=QSsl::Pem)</td></tr>
+<tr class="separator:a8e53ec2057f233034212eb2bd4c7254b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6f72cde581c45666bf32500a3f2c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#afe6f72cde581c45666bf32500a3f2c99">setSslPrivateKey</a> (const QSslKey &amp;key)</td></tr>
+<tr class="separator:afe6f72cde581c45666bf32500a3f2c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821af1bda6e97ea81f5f113d3b5da873"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a821af1bda6e97ea81f5f113d3b5da873">setSslPrivateKey</a> (const QString &amp;fileName, QSsl::KeyAlgorithm algorithm=QSsl::Rsa, QSsl::EncodingFormat format=QSsl::Pem, const QByteArray &amp;passPhrase=QByteArray())</td></tr>
+<tr class="separator:a821af1bda6e97ea81f5f113d3b5da873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504dbb55cf1b59d65e2447421dedb6c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a504dbb55cf1b59d65e2447421dedb6c1">setSslProtocol</a> (QSsl::SslProtocol protocol)</td></tr>
+<tr class="separator:a504dbb55cf1b59d65e2447421dedb6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -133,6 +148,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae06bce523ecfc5599f1ab6219c4f6bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01ad50bc566caddbb3cc01c5f0a9f6e"><td class="memItemLeft" align="right" valign="top">static QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#ab01ad50bc566caddbb3cc01c5f0a9f6e">address</a> (void)</td></tr>
 <tr class="separator:ab01ad50bc566caddbb3cc01c5f0a9f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a651c75918ba34568e99831d7e4852ef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a651c75918ba34568e99831d7e4852ef7">incomingConnection</a> (qintptr socketDescriptor)</td></tr>
+<tr class="separator:a651c75918ba34568e99831d7e4852ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
 Private Slots</h2></td></tr>
@@ -154,18 +174,24 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af2bd5874e3196552fce7ed61a48dbcd1"><td class="memItemLeft" align="right" valign="top"><a id="af2bd5874e3196552fce7ed61a48dbcd1" name="af2bd5874e3196552fce7ed61a48dbcd1"></a>
-QTcpServer *&#160;</td><td class="memItemRight" valign="bottom"><b>server</b></td></tr>
-<tr class="separator:af2bd5874e3196552fce7ed61a48dbcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05b54ee33e08e2156aad10187ca58682"><td class="memItemLeft" align="right" valign="top"><a id="a05b54ee33e08e2156aad10187ca58682" name="a05b54ee33e08e2156aad10187ca58682"></a>
-QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><b>clientSocket</b></td></tr>
-<tr class="separator:a05b54ee33e08e2156aad10187ca58682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8424d0cf22f5fe546a2687e8f908d52e"><td class="memItemLeft" align="right" valign="top"><a id="a8424d0cf22f5fe546a2687e8f908d52e" name="a8424d0cf22f5fe546a2687e8f908d52e"></a>
+QSslSocket *&#160;</td><td class="memItemRight" valign="bottom"><b>clientSocket</b></td></tr>
+<tr class="separator:a8424d0cf22f5fe546a2687e8f908d52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a2890024a09610242edc17ab07baf4"><td class="memItemLeft" align="right" valign="top"><a id="af3a2890024a09610242edc17ab07baf4" name="af3a2890024a09610242edc17ab07baf4"></a>
 QMap&lt; QString, QPair&lt; QString, QDateTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sessions</b></td></tr>
 <tr class="separator:af3a2890024a09610242edc17ab07baf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0597ec0d88fd1cdf9eac9567261eeda"><td class="memItemLeft" align="right" valign="top"><a id="ab0597ec0d88fd1cdf9eac9567261eeda" name="ab0597ec0d88fd1cdf9eac9567261eeda"></a>
+QSslCertificate&#160;</td><td class="memItemRight" valign="bottom"><b>m_sslLocalCertificate</b></td></tr>
+<tr class="separator:ab0597ec0d88fd1cdf9eac9567261eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b4481387bd311dcc06a93119b1c559"><td class="memItemLeft" align="right" valign="top"><a id="ab0b4481387bd311dcc06a93119b1c559" name="ab0b4481387bd311dcc06a93119b1c559"></a>
+QSslKey&#160;</td><td class="memItemRight" valign="bottom"><b>m_sslPrivateKey</b></td></tr>
+<tr class="separator:ab0b4481387bd311dcc06a93119b1c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a204512e1077871227c35f42837bf1a"><td class="memItemLeft" align="right" valign="top"><a id="a9a204512e1077871227c35f42837bf1a" name="a9a204512e1077871227c35f42837bf1a"></a>
+QSsl::SslProtocol&#160;</td><td class="memItemRight" valign="bottom"><b>m_sslProtocol</b></td></tr>
+<tr class="separator:a9a204512e1077871227c35f42837bf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >The <a class="el" href="classmonitorServer.html" title="The monitorServer class uses QTcpServer to communicate with Open-Typer clients.">monitorServer</a> class uses QTcpServer to communicate with Open-Typer clients. </p>
+<div class="textblock"><p >The <a class="el" href="classmonitorServer.html" title="The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients.">monitorServer</a> class is a QTcpServer that is used to communicate with Open-Typer clients. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5139f286021e951906edffa8502ee3b7" name="a5139f286021e951906edffa8502ee3b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5139f286021e951906edffa8502ee3b7">&#9670;&nbsp;</a></span>monitorServer()</h2>
@@ -200,7 +226,7 @@ QMap&lt; QString, QPair&lt; QString, QDateTime &gt; &gt;&#160;</td><td class="me
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Constructs <a class="el" href="classmonitorServer.html" title="The monitorServer class uses QTcpServer to communicate with Open-Typer clients.">monitorServer</a>. </p>
+<p >Constructs <a class="el" href="classmonitorServer.html" title="The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients.">monitorServer</a>. </p>
 
 </div>
 </div>
@@ -218,7 +244,7 @@ QMap&lt; QString, QPair&lt; QString, QDateTime &gt; &gt;&#160;</td><td class="me
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Destroys the <a class="el" href="classmonitorServer.html" title="The monitorServer class uses QTcpServer to communicate with Open-Typer clients.">monitorServer</a> object. </p>
+<p >Destroys the <a class="el" href="classmonitorServer.html" title="The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients.">monitorServer</a> object. </p>
 
 </div>
 </div>
@@ -314,22 +340,84 @@ QMap&lt; QString, QPair&lt; QString, QDateTime &gt; &gt;&#160;</td><td class="me
 
 </div>
 </div>
-<a id="af7b3e78ee8892ac2a2461d429bdcdff5" name="af7b3e78ee8892ac2a2461d429bdcdff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7b3e78ee8892ac2a2461d429bdcdff5">&#9670;&nbsp;</a></span>isListening()</h2>
+<a id="ad00156a3448fd0c8b8a59e328419950f" name="ad00156a3448fd0c8b8a59e328419950f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00156a3448fd0c8b8a59e328419950f">&#9670;&nbsp;</a></span>getSslLocalCertificate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool monitorServer::isListening </td>
+          <td class="memname">const QSslCertificate &amp; monitorServer::getSslLocalCertificate </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Returns true if the server is listening. </p>
+<p >Returns local SSL certificate. </p>
+
+</div>
+</div>
+<a id="aacd66e4bdad6c4aa34704c3ae9ba6931" name="aacd66e4bdad6c4aa34704c3ae9ba6931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd66e4bdad6c4aa34704c3ae9ba6931">&#9670;&nbsp;</a></span>getSslPrivateKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QSslKey &amp; monitorServer::getSslPrivateKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns SSL private key. </p>
+
+</div>
+</div>
+<a id="afb76272169b8d3a0b6d32b325df48348" name="afb76272169b8d3a0b6d32b325df48348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb76272169b8d3a0b6d32b325df48348">&#9670;&nbsp;</a></span>getSslProtocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSsl::SslProtocol monitorServer::getSslProtocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the SSL protocol that is currently set. </p>
+
+</div>
+</div>
+<a id="a651c75918ba34568e99831d7e4852ef7" name="a651c75918ba34568e99831d7e4852ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651c75918ba34568e99831d7e4852ef7">&#9670;&nbsp;</a></span>incomingConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorServer::incomingConnection </td>
+          <td>(</td>
+          <td class="paramtype">qintptr&#160;</td>
+          <td class="paramname"><em>socketDescriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Overrides QTcpServer::incomingConnection(). </p>
 
 </div>
 </div>
@@ -410,7 +498,7 @@ QMap&lt; QString, QPair&lt; QString, QDateTime &gt; &gt;&#160;</td><td class="me
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Connected from server-&gt;newConnection().<br  />
+<p >Connected from newConnection().<br  />
 Reads the request and sends a response.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classmonitorServer.html#ad94cc73617f4f28512394180d52e451b">sendResponse()</a> </dd></dl>
 
@@ -440,6 +528,133 @@ Reads the request and sends a response.</p>
 </table>
 </div><div class="memdoc">
 <p >Sends a response back to the client. </p>
+
+</div>
+</div>
+<a id="a922cc117a049fa6e08078aa5fec73421" name="a922cc117a049fa6e08078aa5fec73421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922cc117a049fa6e08078aa5fec73421">&#9670;&nbsp;</a></span>setSslLocalCertificate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorServer::setSslLocalCertificate </td>
+          <td>(</td>
+          <td class="paramtype">const QSslCertificate &amp;&#160;</td>
+          <td class="paramname"><em>certificate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets local SSL certificate. </p>
+
+</div>
+</div>
+<a id="a8e53ec2057f233034212eb2bd4c7254b" name="a8e53ec2057f233034212eb2bd4c7254b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e53ec2057f233034212eb2bd4c7254b">&#9670;&nbsp;</a></span>setSslLocalCertificate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool monitorServer::setSslLocalCertificate </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSsl::EncodingFormat&#160;</td>
+          <td class="paramname"><em>format</em> = <code>QSsl::Pem</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets local SSL certificate from path. </p>
+
+</div>
+</div>
+<a id="afe6f72cde581c45666bf32500a3f2c99" name="afe6f72cde581c45666bf32500a3f2c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6f72cde581c45666bf32500a3f2c99">&#9670;&nbsp;</a></span>setSslPrivateKey() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorServer::setSslPrivateKey </td>
+          <td>(</td>
+          <td class="paramtype">const QSslKey &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets SSL private key. </p>
+
+</div>
+</div>
+<a id="a821af1bda6e97ea81f5f113d3b5da873" name="a821af1bda6e97ea81f5f113d3b5da873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821af1bda6e97ea81f5f113d3b5da873">&#9670;&nbsp;</a></span>setSslPrivateKey() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool monitorServer::setSslPrivateKey </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSsl::KeyAlgorithm&#160;</td>
+          <td class="paramname"><em>algorithm</em> = <code>QSsl::Rsa</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSsl::EncodingFormat&#160;</td>
+          <td class="paramname"><em>format</em> = <code>QSsl::Pem</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>passPhrase</em> = <code>QByteArray()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets SSL private key from a file. </p>
+
+</div>
+</div>
+<a id="a504dbb55cf1b59d65e2447421dedb6c1" name="a504dbb55cf1b59d65e2447421dedb6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504dbb55cf1b59d65e2447421dedb6c1">&#9670;&nbsp;</a></span>setSslProtocol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorServer::setSslProtocol </td>
+          <td>(</td>
+          <td class="paramtype">QSsl::SslProtocol&#160;</td>
+          <td class="paramname"><em>protocol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets SSL protocol. </p>
 
 </div>
 </div>
