@@ -28,6 +28,8 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
+	// Set window icon
+	a.setWindowIcon(QIcon(":/res/images/icon.ico"));
 	// Start server
 	serverPtr = new monitorServer(true);
 	if(!serverPtr->isListening())
