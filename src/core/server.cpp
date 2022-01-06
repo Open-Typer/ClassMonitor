@@ -24,17 +24,16 @@ monitorServer *serverPtr = nullptr;
 
 /*! Constructs monitorServer. */
 monitorServer::monitorServer(bool silent, QObject *parent) :
-	QObject(parent)
+	QTcpServer(parent)
 {
-	server = new QTcpServer(this);
-	if(!server->listen(QHostAddress::Any,port()))
+	if(!listen(QHostAddress::Any,port()))
 	{
 		if(!silent)
 		{
 			QMessageBox errBox;
 			errBox.setWindowTitle("Error");
 			errBox.setText(tr("Unable to start server on port %1.").arg(port()));
-			errBox.setInformativeText(server->errorString());
+			errBox.setInformativeText(errorString());
 			errBox.setIcon(QMessageBox::Critical);
 			errBox.exec();
 		}
@@ -44,14 +43,14 @@ monitorServer::monitorServer(bool silent, QObject *parent) :
 	QTimer *sessionTimer = new QTimer;
 	// Connections
 	connect(sessionTimer,&QTimer::timeout,this,&monitorServer::updateSessions);
-	connect(server,&QTcpServer::newConnection,this,&monitorServer::readRequest);
+	connect(this,&QTcpServer::newConnection,this,&monitorServer::readRequest);
 	sessionTimer->start(5000);
 }
 
 /*! Destroys the monitorServer object. */
 monitorServer::~monitorServer()
 {
-	server->close();
+	close();
 }
 
 /*! Returns the IP address of the network interface. */
@@ -73,21 +72,15 @@ quint16 monitorServer::port(void)
 	return settings.value("server/port",57100).toUInt();
 }
 
-/*! Returns true if the server is listening. */
-bool monitorServer::isListening(void)
-{
-	return server->isListening();
-}
-
 /*!
- * Connected from server->newConnection().\n
+ * Connected from newConnection().\n
  * Reads the request and sends a response.
  *
  * \see sendResponse()
  */
 void monitorServer::readRequest(void)
 {
-	clientSocket = server->nextPendingConnection();
+	clientSocket = nextPendingConnection();
 	connect(clientSocket,&QIODevice::readyRead,this,&monitorServer::sendResponse);
 	connect(clientSocket,&QAbstractSocket::disconnected,clientSocket,&QObject::deleteLater);
 }

@@ -29,8 +29,8 @@
 #include <QTimer>
 #include "core/fsmanager.h"
 
-/*! \brief The monitorServer class uses QTcpServer to communicate with Open-Typer clients. */
-class monitorServer : public QObject
+/*! \brief The monitorServer class is a QTcpServer that is used to communicate with Open-Typer clients. */
+class monitorServer : public QTcpServer
 {
 	Q_OBJECT
 	public:
@@ -38,7 +38,6 @@ class monitorServer : public QObject
 		~monitorServer();
 		static quint16 port(void);
 		static QHostAddress address(void);
-		bool isListening(void);
 
 	private slots:
 		void readRequest(void);
@@ -46,7 +45,6 @@ class monitorServer : public QObject
 		void updateSessions(void);
 
 	private:
-		QTcpServer *server;
 		QTcpSocket *clientSocket;
 		QByteArray convertData(bool *ok, QList<QByteArray> input);
 		QByteArray convertData(QList<QByteArray> input);
