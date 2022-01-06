@@ -19,7 +19,8 @@
  */
 
 #include <QApplication>
-#include <QTcpSocket>
+#include <QSslSocket>
+#include <QFile>
 #include "monitorwindow.h"
 #include "initialsetup.h"
 #include "core/server.h"
@@ -32,9 +33,15 @@ int main(int argc, char *argv[])
 	if(!serverPtr->isListening())
 	{
 		// Check if there's an existing server instance
-		QTcpSocket *socket = new QTcpSocket;
-		socket->connectToHost("localhost",serverPtr->port());
-		if(socket->waitForConnected())
+		QSslSocket *socket = new QSslSocket;
+		QFile *certFile = new QFile(":certs/server.pem");
+		certFile->open(QIODevice::ReadOnly | QIODevice::Text);
+		QSslCertificate cert(certFile);
+		socket->addCaCertificate(cert);
+		socket->setProtocol(QSsl::TlsV1_2);
+		socket->ignoreSslErrors({QSslError(QSslError::HostNameMismatch,cert)});
+		socket->connectToHostEncrypted("localhost",serverPtr->port());
+		if(socket->waitForEncrypted())
 			return 0;
 		// Run server again, but allow error messages
 		serverPtr = new monitorServer(false);
