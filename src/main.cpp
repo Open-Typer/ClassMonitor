@@ -47,7 +47,8 @@ int main(int argc, char *argv[])
 		serverPtr = new monitorServer(false);
 		// Let the user change server settings
 		optionsWindow options;
-		options.exec();
+		if(options.exec() == QDialog::Rejected)
+			return 0;
 	}
 	MonitorWindow w;
 	// Open initialSetup if no users are found
