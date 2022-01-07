@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('studentdetails_8h_source.html',''); in
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * studentdetails.h</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is part of Open-Typer</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (C) 2021 - adazem009</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (C) 2021-2022 - adazem009</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Open-Typer is free software; you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
@@ -111,40 +111,47 @@ $(document).ready(function(){initNavTree('studentdetails_8h_source.html',''); in
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define STUDENTDETAILS_H</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;core/fsmanager.h&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">class </span><a class="code hl_class" href="classstudentDetails.html">studentDetails</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classstudentDetails.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="classstudentDetails.html">studentDetails</a> : <span class="keyword">public</span> QWidget</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Q_OBJECT</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0">studentDetails</a>(<span class="keywordtype">int</span> openClassID, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87">~studentDetails</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Ui::studentDetails *ui;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">int</span> classID, studentID;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    signals:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c">   49</a></span>        <span class="keywordtype">void</span> <a class="code hl_signal" href="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c">backClicked</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5">goBack</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2">refresh</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce">refreshTable</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;QtCharts&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;core/fsmanager.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">using namespace </span>QtCharts;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">class </span><a class="code hl_class" href="classstudentDetails.html">studentDetails</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classstudentDetails.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classstudentDetails.html">studentDetails</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    Q_OBJECT</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0">studentDetails</a>(<span class="keywordtype">int</span> openClassID, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87">~studentDetails</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        Ui::studentDetails *ui;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classstudentDetails.html#a81d4151110126cdb2b88111d7cf8aaf1">refreshChart</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">int</span> classID, studentID;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        QChart *speedChart, *mistakesChart, *timeChart;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        QLineSeries *speedSeries, *mistakesSeries, *timeSeries;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    signals:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c">   55</a></span>        <span class="keywordtype">void</span> <a class="code hl_signal" href="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c">backClicked</a>();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// STUDENTDETAILS_H</span></div>
-<div class="ttc" id="aclassstudentDetails_html"><div class="ttname"><a href="classstudentDetails.html">studentDetails</a></div><div class="ttdoc">The studentDetails class is a widget for student results and statistics, used by MonitorWindow.</div><div class="ttdef"><b>Definition:</b> studentdetails.h:37</div></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5">goBack</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2">refresh</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce">refreshTable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// STUDENTDETAILS_H</span></div>
+<div class="ttc" id="aclassstudentDetails_html"><div class="ttname"><a href="classstudentDetails.html">studentDetails</a></div><div class="ttdoc">The studentDetails class is a widget for student results and statistics, used by MonitorWindow.</div><div class="ttdef"><b>Definition:</b> studentdetails.h:40</div></div>
 <div class="ttc" id="aclassstudentDetails_html_a285e47a614c7fa26c61ed1bafd7433b0"><div class="ttname"><a href="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0">studentDetails::studentDetails</a></div><div class="ttdeci">studentDetails(int openClassID, int id, QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:25</div></div>
 <div class="ttc" id="aclassstudentDetails_html_a4223d16b876261e2734f3bfd4252a73c"><div class="ttname"><a href="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c">studentDetails::backClicked</a></div><div class="ttdeci">void backClicked()</div></div>
-<div class="ttc" id="aclassstudentDetails_html_a49db064c526ee9a21684d79f0e3f78ce"><div class="ttname"><a href="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce">studentDetails::refreshTable</a></div><div class="ttdeci">void refreshTable(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:126</div></div>
-<div class="ttc" id="aclassstudentDetails_html_a716f5e0da755e7a71cdf1fae1800e6c5"><div class="ttname"><a href="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5">studentDetails::goBack</a></div><div class="ttdeci">void goBack(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:55</div></div>
-<div class="ttc" id="aclassstudentDetails_html_aa584eb65a41aa7dcb1d23e4185f319f2"><div class="ttname"><a href="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2">studentDetails::refresh</a></div><div class="ttdeci">void refresh(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:66</div></div>
-<div class="ttc" id="aclassstudentDetails_html_af7a767871f4c72c1c6c87a9d350fde87"><div class="ttname"><a href="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87">studentDetails::~studentDetails</a></div><div class="ttdeci">~studentDetails()</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:47</div></div>
+<div class="ttc" id="aclassstudentDetails_html_a49db064c526ee9a21684d79f0e3f78ce"><div class="ttname"><a href="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce">studentDetails::refreshTable</a></div><div class="ttdeci">void refreshTable(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:153</div></div>
+<div class="ttc" id="aclassstudentDetails_html_a716f5e0da755e7a71cdf1fae1800e6c5"><div class="ttname"><a href="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5">studentDetails::goBack</a></div><div class="ttdeci">void goBack(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:82</div></div>
+<div class="ttc" id="aclassstudentDetails_html_a81d4151110126cdb2b88111d7cf8aaf1"><div class="ttname"><a href="classstudentDetails.html#a81d4151110126cdb2b88111d7cf8aaf1">studentDetails::refreshChart</a></div><div class="ttdeci">void refreshChart(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:195</div></div>
+<div class="ttc" id="aclassstudentDetails_html_aa584eb65a41aa7dcb1d23e4185f319f2"><div class="ttname"><a href="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2">studentDetails::refresh</a></div><div class="ttdeci">void refresh(void)</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:93</div></div>
+<div class="ttc" id="aclassstudentDetails_html_af7a767871f4c72c1c6c87a9d350fde87"><div class="ttname"><a href="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87">studentDetails::~studentDetails</a></div><div class="ttdeci">~studentDetails()</div><div class="ttdef"><b>Definition:</b> studentdetails.cpp:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

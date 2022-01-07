@@ -137,6 +137,7 @@
               <section title="backClicked" ref="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c" />
               <section title="goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
               <section title="refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
+              <section title="refreshChart" ref="classstudentDetails.html#a81d4151110126cdb2b88111d7cf8aaf1" />
               <section title="refreshTable" ref="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce" />
             </section>
             <section title="studentEdit" ref="classstudentEdit.html">
@@ -385,9 +386,16 @@
       <keyword name="goBack" id="studentDetails::goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
       <keyword name="refresh" id="studentDetails::refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
       <keyword name="refreshTable" id="studentDetails::refreshTable" ref="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce" />
+      <keyword name="refreshChart" id="studentDetails::refreshChart" ref="classstudentDetails.html#a81d4151110126cdb2b88111d7cf8aaf1" />
       <keyword name="ui" id="studentDetails::ui" ref="classstudentDetails.html#ae3968d5bd412eb31f4bd81a23ec1ba7d" />
       <keyword name="classID" id="studentDetails::classID" ref="classstudentDetails.html#a85da6073b1753ba55fb609373bb34b33" />
       <keyword name="studentID" id="studentDetails::studentID" ref="classstudentDetails.html#a627e9b40eb8b31f6e772532a3bcc1e47" />
+      <keyword name="speedChart" id="studentDetails::speedChart" ref="classstudentDetails.html#a505295ec1c08b892c54a527574fa2f13" />
+      <keyword name="mistakesChart" id="studentDetails::mistakesChart" ref="classstudentDetails.html#acbdd6c42187d1444b62423a96d8be8a1" />
+      <keyword name="timeChart" id="studentDetails::timeChart" ref="classstudentDetails.html#a1119a0a45074beee89385afc589e604a" />
+      <keyword name="speedSeries" id="studentDetails::speedSeries" ref="classstudentDetails.html#ae8a332fd8ca0bdcb9631e8a2feb4a420" />
+      <keyword name="mistakesSeries" id="studentDetails::mistakesSeries" ref="classstudentDetails.html#add929e0117b647d02449182eacbe55a2" />
+      <keyword name="timeSeries" id="studentDetails::timeSeries" ref="classstudentDetails.html#a4397e556a2335e43593e13f0f5b0698b" />
       <keyword name="studentEdit" id="studentEdit" ref="classstudentEdit.html" />
       <keyword name="studentEdit" id="studentEdit::studentEdit" ref="classstudentEdit.html#a652c5267ae2ca99a90e25847f58e8a5f" />
       <keyword name="~studentEdit" id="studentEdit::~studentEdit" ref="classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33" />

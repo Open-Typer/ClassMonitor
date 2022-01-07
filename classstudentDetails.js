@@ -5,5 +5,6 @@ var classstudentDetails =
     [ "backClicked", "classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c", null ],
     [ "goBack", "classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5", null ],
     [ "refresh", "classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2", null ],
+    [ "refreshChart", "classstudentDetails.html#a81d4151110126cdb2b88111d7cf8aaf1", null ],
     [ "refreshTable", "classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce", null ]
 ];
