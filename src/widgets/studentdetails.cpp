@@ -2,7 +2,7 @@
  * studentdetails.cpp
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +32,33 @@ studentDetails::studentDetails(int openClassID, int id, QWidget *parent) :
 	ui->titleLabel->setText(classManager::studentName(classID,studentID));
 	ui->statsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	ui->statsTable->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+	// Set up charts
+	speedChart = new QChart;
+	speedSeries = new QLineSeries;
+	mistakesChart = new QChart;
+	mistakesSeries = new QLineSeries;
+	timeChart = new QChart;
+	timeSeries = new QLineSeries;
+	// Create chart views
+	QChartView *speedChartView = new QChartView(speedChart, ui->statsChartTab);
+	QChartView *mistakesChartView = new QChartView(mistakesChart, ui->statsChartTab);
+	QChartView *timeChartView = new QChartView(timeChart, ui->statsChartTab);
+	ui->statsChartTabLayout->addWidget(speedChartView);
+	ui->statsChartTabLayout->addWidget(mistakesChartView);
+	ui->statsChartTabLayout->addWidget(timeChartView);
+	// Init charts
+	// Speed
+	speedChart->addSeries(speedSeries);
+	speedChart->legend()->hide();
+	speedChart->setTitle(tr("Speed"));
+	// Mistakes
+	mistakesChart->addSeries(mistakesSeries);
+	mistakesChart->legend()->hide();
+	mistakesChart->setTitle(tr("Mistakes"));
+	// Time
+	timeChart->addSeries(timeSeries);
+	timeChart->legend()->hide();
+	timeChart->setTitle(tr("Time"));
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 	connect(ui->packBox,SIGNAL(activated(int)),this,SLOT(refresh()));
@@ -160,4 +187,38 @@ void studentDetails::refreshTable(void)
 		item = new QTableWidgetItem(entry[2]);
 		ui->statsTable->setItem(i,2,item);
 	}
+	// Refresh chart
+	refreshChart();
+}
+
+/*! Refreshes the charts. */
+void studentDetails::refreshChart(void)
+{
+	speedSeries->clear();
+	mistakesSeries->clear();
+	timeSeries->clear();
+	for(int i=0; i < ui->statsTable->rowCount(); i++)
+	{
+		// Speed
+		speedSeries->append(i,ui->statsTable->item(i,0)->text().toInt());
+		// Mistakes
+		mistakesSeries->append(i,ui->statsTable->item(i,1)->text().toInt());
+		// Time
+		timeSeries->append(i,ui->statsTable->item(i,2)->text().toInt());
+	}
+	// Speed
+	speedChart->removeSeries(speedSeries);
+	speedChart->addSeries(speedSeries);
+	speedChart->createDefaultAxes();
+	speedChart->axisY()->setMin(0);
+	// Mistakes
+	mistakesChart->removeSeries(mistakesSeries);
+	mistakesChart->addSeries(mistakesSeries);
+	mistakesChart->createDefaultAxes();
+	mistakesChart->axisY()->setMin(0);
+	// Time
+	timeChart->removeSeries(timeSeries);
+	timeChart->addSeries(timeSeries);
+	timeChart->createDefaultAxes();
+	timeChart->axisY()->setMin(0);
 }
