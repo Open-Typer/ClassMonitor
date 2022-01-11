@@ -186,7 +186,7 @@ bool userManager::auth(int userID, QString password)
 		"/passwd");
 	if(passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered))
 	{
-		if(passwdFile.readAll().compare(hash.result()) == 0)
+		if(passwdFile.readAll() == hash.result())
 			return true;
 		else
 		{
@@ -501,7 +501,7 @@ bool classManager::studentAuth(QString username, QString password)
 	hash.addData(password.toUtf8());
 	QPair<int,int> studentLoc = findStudent(username);
 	QFile passwdFile(fileUtils::configLocation() + "/classes/" + QString::number(studentLoc.first) + "/student_" + QString::number(studentLoc.second) + "/passwd");
-	if((passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered)) && (passwdFile.readAll().compare(hash.result()) == 0))
+	if((passwdFile.open(QIODevice::ReadOnly | QIODevice::Unbuffered)) && (passwdFile.readAll() == hash.result()))
 		return true;
 	else
 		return false;
