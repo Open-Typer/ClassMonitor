@@ -78,7 +78,7 @@ quint16 monitorServer::port(void)
 }
 
 /*!
- * Connected from newConnection().\n
+ * Connected from QSslSocket::encrypted().\n
  * Reads the request and sends a response.
  *
  * \see sendResponse()
