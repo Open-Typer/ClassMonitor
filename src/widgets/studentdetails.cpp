@@ -210,15 +210,15 @@ void studentDetails::refreshCharts(void)
 	speedChart->removeSeries(speedSeries);
 	speedChart->addSeries(speedSeries);
 	speedChart->createDefaultAxes();
-	speedChart->axisY()->setMin(0);
+	speedChart->axes(Qt::Vertical).value(0)->setMin(0);
 	// Mistakes
 	mistakesChart->removeSeries(mistakesSeries);
 	mistakesChart->addSeries(mistakesSeries);
 	mistakesChart->createDefaultAxes();
-	mistakesChart->axisY()->setMin(0);
+	mistakesChart->axes(Qt::Vertical).value(0)->setMin(0);
 	// Time
 	timeChart->removeSeries(timeSeries);
 	timeChart->addSeries(timeSeries);
 	timeChart->createDefaultAxes();
-	timeChart->axisY()->setMin(0);
+	timeChart->axes(Qt::Vertical).value(0)->setMin(0);
 }
