@@ -2,7 +2,7 @@
  * classcontrols.h
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,8 +22,11 @@
 #define CLASSCONTROLS_H
 
 #include <QWidget>
+#include <QtCharts>
 #include "studentedit.h"
 #include "core/fsmanager.h"
+
+using namespace QtCharts;
 
 namespace Ui {
 	class classControls;
@@ -44,6 +47,7 @@ class classControls : public QWidget
 	private:
 		Ui::classControls *ui;
 		int classID;
+		QChart *speedChart, *mistakesChart, *timeChart;
 		void setupTable(void);
 
 	signals:
@@ -59,6 +63,7 @@ class classControls : public QWidget
 		void removeStudent(void);
 		void editStudent(void);
 		void openDetails(void);
+		void refreshCharts(void);
 };
 
 #endif // CLASSCONTROLS_H

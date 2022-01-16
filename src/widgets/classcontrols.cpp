@@ -2,7 +2,7 @@
  * classcontrols.cpp
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,6 +30,28 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	classID = openClassID;
 	setupTable();
 	verify();
+	// Set up charts
+	speedChart = new QChart;
+	mistakesChart = new QChart;
+	timeChart = new QChart;
+	speedChart->setTheme(QChart::ChartThemeDark);
+	mistakesChart->setTheme(QChart::ChartThemeDark);
+	timeChart->setTheme(QChart::ChartThemeDark);
+	// Create chart views
+	QChartView *speedChartView = new QChartView(speedChart, ui->chartFrame);
+	QChartView *mistakesChartView = new QChartView(mistakesChart, ui->chartFrame);
+	QChartView *timeChartView = new QChartView(timeChart, ui->chartFrame);
+	ui->chartLayout->addWidget(speedChartView);
+	ui->chartLayout->addWidget(mistakesChartView);
+	ui->chartLayout->addWidget(timeChartView);
+	// Init charts
+	// Speed
+	speedChart->setTitle(tr("Speed"));
+	// Mistakes
+	mistakesChart->setTitle(tr("Mistakes"));
+	// Time
+	timeChart->setTitle(tr("Time"));
+	refreshCharts();
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
@@ -38,6 +60,12 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	connect(ui->removeButton,SIGNAL(clicked()),this,SLOT(removeStudent()));
 	connect(ui->editButton,SIGNAL(clicked()),this,SLOT(editStudent()));
 	connect(ui->detailsButton,SIGNAL(clicked()),this,SLOT(openDetails()));
+	connect(ui->tabWidget,SIGNAL(currentChanged(int)),this,SLOT(refreshCharts()));
+	connect(ui->packBox,SIGNAL(activated(int)),this,SLOT(refreshCharts()));
+	connect(ui->lessonBox,SIGNAL(activated(int)),this,SLOT(refreshCharts()));
+	connect(ui->sublessonBox,SIGNAL(activated(int)),this,SLOT(refreshCharts()));
+	connect(ui->exerciseBox,SIGNAL(activated(int)),this,SLOT(refreshCharts()));
+	connect(ui->refreshButton,SIGNAL(clicked()),this,SLOT(refreshCharts()));
 }
 
 /*! Destroys the classControls object. */
@@ -147,4 +175,132 @@ void classControls::editStudent(void)
 void classControls::openDetails(void)
 {
 	emit detailsClicked(classManager::studentIDs(classID).value(ui->studentsTable->selectionModel()->selectedRows()[0].row()));
+}
+
+/*! Refreshes the charts. */
+void classControls::refreshCharts(void)
+{
+	QList<int> studentIDs = classManager::studentIDs(classID);
+	// Save old indexes
+	int oldP, oldL, oldS, oldE;
+	oldP = ui->packBox->currentIndex();
+	oldL = ui->lessonBox->currentIndex();
+	oldS = ui->sublessonBox->currentIndex();
+	oldE = ui->exerciseBox->currentIndex();
+	// Packs
+	ui->packBox->clear();
+	QStringList packs;
+	packs.clear();
+	for(int i=0; i < studentIDs.count(); i++)
+	{
+		QStringList list = classManager::studentPacks(classID,studentIDs[i]);
+		for(int i=0; i < list.count(); i++)
+		{
+			if(!packs.contains(list[i]))
+				packs += list[i];
+		}
+	}
+	ui->packBox->addItems(packs);
+	if(ui->packBox->count() == 0)
+	{
+		ui->exerciseFrame->hide();
+		ui->chartFrame->hide();
+		ui->refreshButton->hide();
+		return;
+	}
+	else
+	{
+		ui->exerciseFrame->show();
+		ui->chartFrame->show();
+		ui->refreshButton->show();
+	}
+	if(oldP == -1)
+		oldP = 0;
+	ui->packBox->setCurrentIndex(oldP);
+	// Lessons
+	ui->lessonBox->clear();
+	QList<int> lessons;
+	lessons.clear();
+	for(int i=0; i < studentIDs.count(); i++)
+	{
+		QList<int> list = classManager::studentLessons(classID,studentIDs[i],ui->packBox->currentText());
+		for(int i=0; i < list.count(); i++)
+		{
+			if(!lessons.contains(list[i]))
+				lessons += list[i];
+		}
+	}
+	ui->lessonBox->addItems(classManager::lessonList(lessons));
+	if(oldL == -1)
+		oldL = 0;
+	ui->lessonBox->setCurrentIndex(oldL);
+	// Sublessons
+	ui->sublessonBox->clear();
+	QList<int> sublessons;
+	sublessons.clear();
+	for(int i=0; i < studentIDs.count(); i++)
+	{
+		QList<int> list = classManager::studentSublessons(classID,studentIDs[i],ui->packBox->currentText(),
+			lessons[ui->lessonBox->currentIndex()]);
+		for(int i=0; i < list.count(); i++)
+		{
+			if(!sublessons.contains(list[i]))
+				sublessons += list[i];
+		}
+	}
+	ui->sublessonBox->addItems(classManager::sublessonList(sublessons));
+	if(oldS == -1)
+		oldS = 0;
+	ui->sublessonBox->setCurrentIndex(oldS);
+	// Exercise
+	ui->exerciseBox->clear();
+	QList<int> exercises;
+	exercises.clear();
+	for(int i=0; i < studentIDs.count(); i++)
+	{
+		QList<int> list = classManager::studentExercises(classID,studentIDs[i],ui->packBox->currentText(),
+			lessons[ui->lessonBox->currentIndex()],
+			sublessons[ui->sublessonBox->currentIndex()]);
+		for(int i=0; i < list.count(); i++)
+		{
+			if(!exercises.contains(list[i]))
+				exercises += list[i];
+		}
+	}
+	ui->exerciseBox->addItems(classManager::exerciseList(exercises));
+	if(oldE == -1)
+		oldE = 0;
+	ui->exerciseBox->setCurrentIndex(oldE);
+	// Refresh charts
+	speedChart->removeAllSeries();
+	mistakesChart->removeAllSeries();
+	timeChart->removeAllSeries();
+	QString pack = packs[ui->packBox->currentIndex()];
+	int lesson = lessons[ui->lessonBox->currentIndex()];
+	int sublesson = sublessons[ui->sublessonBox->currentIndex()];
+	int exercise = exercises[ui->exerciseBox->currentIndex()];
+	for(int i=0; i < studentIDs.count(); i++)
+	{
+		int i2, count = classManager::historySize(classID,studentIDs[i],pack,lesson,sublesson,exercise);
+		QString studentName = classManager::studentName(classID,studentIDs[i]);
+		QLineSeries *speedSeries = new QLineSeries;
+		QLineSeries *mistakesSeries = new QLineSeries;
+		QLineSeries *timeSeries = new QLineSeries;
+		speedSeries->setName(studentName);
+		mistakesSeries->setName(studentName);
+		timeSeries->setName(studentName);
+		for(i2=0; i2 < count; i2++)
+		{
+			QStringList entry = classManager::historyEntry(classID,studentIDs[i],pack,lesson,sublesson,exercise,i2);
+			speedSeries->append(i2,entry[0].toInt());
+			mistakesSeries->append(i2,entry[1].toInt());
+			timeSeries->append(i2,entry[2].toInt());
+		}
+		speedChart->addSeries(speedSeries);
+		speedChart->createDefaultAxes();
+		mistakesChart->addSeries(mistakesSeries);
+		mistakesChart->createDefaultAxes();
+		timeChart->addSeries(timeSeries);
+		timeChart->createDefaultAxes();
+	}
 }
