@@ -75,6 +75,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     certs/certs.qrc \
-    res.qrc
+    res.qrc \
+    light-theme/light-style.qrc \
+    dark-theme/dark-style.qrc
 
 win32:RC_ICONS += res/images/icon.ico
