@@ -76,6 +76,7 @@ void MonitorWindow::updateSchoolName(void)
 void MonitorWindow::openOptions(void)
 {
 	optionsWindow dialog;
+	dialog.setStyleSheet(styleSheet());
 	dialog.exec();
 	setTheme();
 }
