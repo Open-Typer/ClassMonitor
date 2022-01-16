@@ -139,7 +139,7 @@ void studentDetails::refresh(void)
 	ui->exerciseBox->addItems(classManager::exerciseList(exercises));
 	if(oldE == -1)
 		oldE = 0;
-	ui->sublessonBox->setCurrentIndex(oldE);
+	ui->exerciseBox->setCurrentIndex(oldE);
 	// Table
 	refreshTable();
 }
