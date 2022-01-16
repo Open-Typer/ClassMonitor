@@ -29,6 +29,7 @@ optionsWindow::optionsWindow(QWidget *parent) :
 	ui->setupUi(this);
 	settings = new QSettings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->portEdit->setValue(monitorServer::port());
+	ui->darkThemeCheckBox->setChecked(settings->value("customization/darktheme","false").toBool());
 	// Connections
 	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(closeOptions()));
 }
@@ -46,6 +47,7 @@ optionsWindow::~optionsWindow()
 void optionsWindow::closeOptions(void)
 {
 	settings->setValue("server/port",ui->portEdit->value());
+	settings->setValue("customization/darktheme",ui->darkThemeCheckBox->isChecked());
 	delete serverPtr;
 	serverPtr = new monitorServer;
 	if(serverPtr->isListening())
