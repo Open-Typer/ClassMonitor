@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$classauthDialog.html" title="The authDialog class is an authentication dialog with a password input box." alt="" coords="135,56,218,83"/>
 <area shape="rect" id="node4" href="$classclassEdit.html" title="The classEdit class is a dialog for class adding and editing." alt="" coords="139,107,214,133"/>
 <area shape="rect" id="node5" href="$classinitialSetup.html" title="The initialSetup class is a dialog for initial program setup." alt="" coords="133,157,220,184"/>
-<area shape="rect" id="node6" href="$classoptionsWindow.html" title="The optionsWindow class is dialog used for options." alt="" coords="121,208,232,235"/>
+<area shape="rect" id="node6" href="$classoptionsWindow.html" title="The optionsWindow class is a dialog used for options." alt="" coords="121,208,232,235"/>
 <area shape="rect" id="node7" href="$classstudentEdit.html" title="The studentEdit class is a dialog used to add or edit students." alt="" coords="133,259,220,285"/>
 <area shape="rect" id="node8" href="$classuserEdit.html" title="the userEdit class is a dialog used to add or edit users." alt="" coords="142,309,211,336"/>
 </map>
