@@ -30,7 +30,11 @@ namespace Ui {
 	class optionsWindow;
 }
 
-/*! \brief The optionsWindow class is dialog used for options. */
+/*!
+ * \brief The optionsWindow class is a dialog used for options.
+ *
+ * \image html optionsWindow.png
+ */
 class optionsWindow : public QDialog
 {
 	Q_OBJECT
