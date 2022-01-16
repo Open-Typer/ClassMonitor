@@ -187,12 +187,12 @@ void studentDetails::refreshTable(void)
 		item = new QTableWidgetItem(entry[2]);
 		ui->statsTable->setItem(i,2,item);
 	}
-	// Refresh chart
-	refreshChart();
+	// Refresh charts
+	refreshCharts();
 }
 
 /*! Refreshes the charts. */
-void studentDetails::refreshChart(void)
+void studentDetails::refreshCharts(void)
 {
 	speedSeries->clear();
 	mistakesSeries->clear();

@@ -45,7 +45,7 @@ class studentDetails : public QWidget
 
 	private:
 		Ui::studentDetails *ui;
-		void refreshChart(void);
+		void refreshCharts(void);
 		int classID, studentID;
 		QChart *speedChart, *mistakesChart, *timeChart;
 		QLineSeries *speedSeries, *mistakesSeries, *timeSeries;
