@@ -27,6 +27,7 @@
               <section title="editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
               <section title="goBack" ref="classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b" />
               <section title="openDetails" ref="classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41" />
+              <section title="refreshCharts" ref="classclassControls.html#a70f87b55fb524edef079d0d0c831234a" />
               <section title="removeStudent" ref="classclassControls.html#a36196fc52adb22c50458b9d38787721c" />
               <section title="setupTable" ref="classclassControls.html#adb3be8efc35307d49b7b254d465dbed4" />
               <section title="verify" ref="classclassControls.html#a1a17121155cb9a41f72f103346e8ce40" />
@@ -267,9 +268,13 @@
       <keyword name="removeStudent" id="classControls::removeStudent" ref="classclassControls.html#a36196fc52adb22c50458b9d38787721c" />
       <keyword name="editStudent" id="classControls::editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
       <keyword name="openDetails" id="classControls::openDetails" ref="classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41" />
+      <keyword name="refreshCharts" id="classControls::refreshCharts" ref="classclassControls.html#a70f87b55fb524edef079d0d0c831234a" />
       <keyword name="setupTable" id="classControls::setupTable" ref="classclassControls.html#adb3be8efc35307d49b7b254d465dbed4" />
       <keyword name="ui" id="classControls::ui" ref="classclassControls.html#a4c97f0b1697be38b7db2c8ff74d2e867" />
       <keyword name="classID" id="classControls::classID" ref="classclassControls.html#aae9fba807d7f3d7f04ef55c4ee66c40c" />
+      <keyword name="speedChart" id="classControls::speedChart" ref="classclassControls.html#a22d037fb87e7386d2a01650079360183" />
+      <keyword name="mistakesChart" id="classControls::mistakesChart" ref="classclassControls.html#ac9587c5866bb50aa99ee547d13e3d12f" />
+      <keyword name="timeChart" id="classControls::timeChart" ref="classclassControls.html#abb514c9b10a0e0e0fde0971494623b38" />
       <keyword name="classEdit" id="classEdit" ref="classclassEdit.html" />
       <keyword name="classEdit" id="classEdit::classEdit" ref="classclassEdit.html#ab04a76336f5ed8db1c1002f623c82386" />
       <keyword name="~classEdit" id="classEdit::~classEdit" ref="classclassEdit.html#a9e852276cad342ffab7886447f133fe9" />
