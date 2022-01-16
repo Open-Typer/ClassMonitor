@@ -2,7 +2,7 @@
  * fsmanager.h
  * This file is part of Open-Typer
  *
- * Copyright (C) 2021 - adazem009
+ * Copyright (C) 2021-2022 - adazem009
  *
  * Open-Typer is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -83,6 +83,7 @@ class classManager : public QObject
 		static int historySize(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise);
 		static QStringList historyEntry(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, int entry);
 		static bool addHistoryEntry(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, QList<QVariant> entry);
+		static int compareWithStudents(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, bool better);
 
 	private:
 		static int exerciseID(const QString name, const int part);

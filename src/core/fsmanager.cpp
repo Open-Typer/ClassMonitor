@@ -770,6 +770,62 @@ bool classManager::addHistoryEntry(int classID, int studentID, QString pack, int
 }
 
 /*!
+ * Returns number of better or worse students based on their average number of points.\n
+ * The number of points for each entry is speed - mistakes*10.
+ */
+int classManager::compareWithStudents(int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, bool better)
+{
+	int out = 0;
+	QList<int> recordedStudents;
+	recordedStudents.clear();
+	QList<int> students = studentIDs(classID);
+	for(int i=0; i < students.count(); i++)
+	{
+		QDir statsDir(fileUtils::configLocation() + "/classes/" + QString::number(classID) + "/student_" + QString::number(students[i]) + "/stats/" + pack + "/" +
+			QString::number(lesson) + "." + QString::number(sublesson) + "." + QString::number(exercise));
+		if(statsDir.exists())
+			recordedStudents += students[i];
+	}
+	int count = historySize(classID,studentID,pack,lesson,sublesson,exercise);
+	QList<int> points;
+	points.clear();
+	int sum = 0;
+	for(int i2=0; i2 < count; i2++)
+	{
+		QStringList entry = historyEntry(classID,studentID,pack,lesson,sublesson,exercise,i2);
+		int pointCount = entry[0].toInt() - entry[1].toInt()*10;
+		points += pointCount;
+		sum += pointCount;
+	}
+	int myAvgPoints = sum / count;
+	for(int i=0; i < recordedStudents.count(); i++)
+	{
+		count = historySize(classID,recordedStudents[i],pack,lesson,sublesson,exercise);
+		points.clear();
+		sum = 0;
+		for(int i2=0; i2 < count; i2++)
+		{
+			QStringList entry = historyEntry(classID,recordedStudents[i],pack,lesson,sublesson,exercise,i2);
+			int pointCount = entry[0].toInt() - entry[1].toInt()*10;
+			points += pointCount;
+			sum += pointCount;
+		}
+		int avgPoints = sum / count;
+		if(better)
+		{
+			if(avgPoints > myAvgPoints)
+				out++;
+		}
+		else
+		{
+			if(avgPoints < myAvgPoints)
+				out++;
+		}
+	}
+	return out;
+}
+
+/*!
  * Returns the path to the program configuration directory.\n
  * For example: <tt>/home/user/.config/Open-Typer-CM</tt>
  */
