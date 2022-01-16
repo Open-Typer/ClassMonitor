@@ -156,6 +156,32 @@ void monitorServer::sendResponse(void)
 			else
 				clientSocket->write(convertData({"fail"}));
 		}
+		else if((requestList[1] == "betterstudents") && (requestList.count() >= 6))
+		{
+			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
+			if(sessions.contains(clientAddress))
+			{
+				QString username = sessions.value(clientAddress).first;
+				QPair<int,int> studentLoc = classManager::findStudent(username);
+				int betterStudents = classManager::compareWithStudents(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),true);
+				clientSocket->write(convertData({"ok",QByteArray::number(betterStudents)}));
+			}
+			else
+				clientSocket->write(convertData({"fail"}));
+		}
+		else if((requestList[1] == "worsestudents") && (requestList.count() >= 6))
+		{
+			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
+			if(sessions.contains(clientAddress))
+			{
+				QString username = sessions.value(clientAddress).first;
+				QPair<int,int> studentLoc = classManager::findStudent(username);
+				int worseStudents = classManager::compareWithStudents(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),false);
+				clientSocket->write(convertData({"ok",QByteArray::number(worseStudents)}));
+			}
+			else
+				clientSocket->write(convertData({"fail"}));
+		}
 		else
 			clientSocket->write(convertData({"fail"}));
 	}
