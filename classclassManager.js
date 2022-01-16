@@ -22,6 +22,7 @@ var classclassManager =
     [ "setClassTimestamp", "classclassManager.html#a1f156eecbbed6cc2b5ad46ae9f9293d6", null ],
     [ "studentAuth", "classclassManager.html#aec8d6e6ef3f44c097759b458b5aec9fe", null ],
     [ "studentExercises", "classclassManager.html#a3273090e7be05c7e73fd5f945563fa67", null ],
+    [ "studentIDs", "classclassManager.html#a0c2c0476512512196826a9f132d67232", null ],
     [ "studentLessons", "classclassManager.html#a389d710ae52dd068d163008d9bfb992d", null ],
     [ "studentName", "classclassManager.html#a14e826d7b30223050e86f18e6b8e6794", null ],
     [ "studentNames", "classclassManager.html#a39d0c11685730db59cdec05314b969c8", null ],
