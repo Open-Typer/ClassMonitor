@@ -29,6 +29,8 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	ui->setupUi(this);
 	setWindowState(Qt::WindowMaximized);
 	classID = 0;
+	settings = new QSettings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
+	setTheme();
 	updateSchoolName();
 	controlWidgets.clear();
 	classMenu *newWidget = new classMenu();
@@ -44,11 +46,23 @@ MonitorWindow::~MonitorWindow()
 	delete ui;
 }
 
+/*! Sets the theme. */
+void MonitorWindow::setTheme(void)
+{
+	QString fileName;
+	if(settings->value("customization/darktheme","false").toBool())
+		fileName = ":/dark-theme/style.qss";
+	else
+		fileName = ":/light-theme/style.qss";
+	QFile styleSheetFile(fileName);
+	if(styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text))
+		setStyleSheet(styleSheetFile.readAll());
+}
+
 /*! Updates schoolNameLabel. */
 void MonitorWindow::updateSchoolName(void)
 {
-	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
-	QString name = settings.value("main/schoolname","?").toString();
+	QString name = settings->value("main/schoolname","?").toString();
 	if(classID == 0)
 		ui->schoolNameLabel->setText(name);
 	else
@@ -63,6 +77,7 @@ void MonitorWindow::openOptions(void)
 {
 	optionsWindow dialog;
 	dialog.exec();
+	setTheme();
 }
 
 /*! Sets current control widget. */

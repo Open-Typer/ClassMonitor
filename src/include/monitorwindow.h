@@ -50,8 +50,10 @@ class MonitorWindow : public QMainWindow
 	private:
 		Ui::MonitorWindow *ui;
 		int classID;
+		QSettings *settings;
 		QList<QWidget*> controlWidgets;
 		QPropertyAnimation *moveAnim;
+		void setTheme(void);
 		void updateControlWidget(void);
 		void outAnim(void);
 
