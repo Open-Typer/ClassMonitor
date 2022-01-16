@@ -73,7 +73,7 @@ QHostAddress monitorServer::address(void)
 /*! Returns the port, which was set by the user (or the default port). */
 quint16 monitorServer::port(void)
 {
-	QSettings settings(fileUtils::configLocation() + "/settings.ini");
+	QSettings settings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	return settings.value("server/port",57100).toUInt();
 }
 
