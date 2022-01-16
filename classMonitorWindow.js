@@ -10,6 +10,7 @@ var classMonitorWindow =
     [ "openOptions", "classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b", null ],
     [ "openUserManager", "classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b", null ],
     [ "outAnim", "classMonitorWindow.html#ad24edc9d59961347444006f958e198b4", null ],
+    [ "setTheme", "classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43", null ],
     [ "updateControlWidget", "classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3", null ],
     [ "updateSchoolName", "classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114", null ]
 ];

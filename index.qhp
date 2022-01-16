@@ -125,6 +125,7 @@
               <section title="openOptions" ref="classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b" />
               <section title="openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
               <section title="outAnim" ref="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4" />
+              <section title="setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
               <section title="updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
               <section title="updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
             </section>
@@ -373,10 +374,12 @@
       <keyword name="checkAnim" id="MonitorWindow::checkAnim" ref="classMonitorWindow.html#ab1cb2881ee34bf96a384464b350b90c4" />
       <keyword name="checkBackAnim" id="MonitorWindow::checkBackAnim" ref="classMonitorWindow.html#ad98895d34aa45cfce3e6e33be3672716" />
       <keyword name="goBack" id="MonitorWindow::goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
+      <keyword name="setTheme" id="MonitorWindow::setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
       <keyword name="updateControlWidget" id="MonitorWindow::updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
       <keyword name="outAnim" id="MonitorWindow::outAnim" ref="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4" />
       <keyword name="ui" id="MonitorWindow::ui" ref="classMonitorWindow.html#a64b276a63b60489dcbc98109714af9c5" />
       <keyword name="classID" id="MonitorWindow::classID" ref="classMonitorWindow.html#a67de80a02a89be2230de95dc35532e33" />
+      <keyword name="settings" id="MonitorWindow::settings" ref="classMonitorWindow.html#a5356edb5cf7502e3cf8e490f44e31f13" />
       <keyword name="controlWidgets" id="MonitorWindow::controlWidgets" ref="classMonitorWindow.html#a33121248c05eaf896eb6e0f2fcd1013f" />
       <keyword name="moveAnim" id="MonitorWindow::moveAnim" ref="classMonitorWindow.html#a9477eef88c9942555685bb15d979fc21" />
       <keyword name="optionsWindow" id="optionsWindow" ref="classoptionsWindow.html" />
