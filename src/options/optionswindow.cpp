@@ -27,7 +27,7 @@ optionsWindow::optionsWindow(QWidget *parent) :
 	ui(new Ui::optionsWindow)
 {
 	ui->setupUi(this);
-	settings = new QSettings(fileUtils::configLocation() + "/settings.ini");
+	settings = new QSettings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->portEdit->setValue(monitorServer::port());
 	// Connections
 	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(closeOptions()));
