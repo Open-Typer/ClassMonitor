@@ -49,6 +49,7 @@
               <section title="classNames" ref="classclassManager.html#ab1ac49983c53806f01f781a62f7346b0" />
               <section title="classOwner" ref="classclassManager.html#a661a064a729750064acc16ded16603f4" />
               <section title="classTimestamp" ref="classclassManager.html#a095217eb1e7d5f2b4df379e990cacaf8" />
+              <section title="compareWithStudents" ref="classclassManager.html#a85e46645a1feef13c07aa1a179496362" />
               <section title="editClass" ref="classclassManager.html#acf762f28a16ff767b77b84a0fe5a7303" />
               <section title="editStudent" ref="classclassManager.html#a0627ec9fa26d621947df87d5a781a388" />
               <section title="exerciseID" ref="classclassManager.html#a53bd159645d39ed479cd2f060fe98cbf" />
@@ -315,6 +316,7 @@
       <keyword name="historySize" id="classManager::historySize" ref="classclassManager.html#afd5328d51846a04a24970b0a5cee1f40" />
       <keyword name="historyEntry" id="classManager::historyEntry" ref="classclassManager.html#a0e098862f5302975be6371d8f9891edd" />
       <keyword name="addHistoryEntry" id="classManager::addHistoryEntry" ref="classclassManager.html#aa778d307dc7beccba3af4dd8df42d4b1" />
+      <keyword name="compareWithStudents" id="classManager::compareWithStudents" ref="classclassManager.html#a85e46645a1feef13c07aa1a179496362" />
       <keyword name="exerciseID" id="classManager::exerciseID" ref="classclassManager.html#a53bd159645d39ed479cd2f060fe98cbf" />
       <keyword name="classMenu" id="classMenu" ref="classclassMenu.html" />
       <keyword name="classOpened" id="classMenu::classOpened" ref="classclassMenu.html#aeec7785c6b515b4af1ce14c1aad7531c" />

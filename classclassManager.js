@@ -9,6 +9,7 @@ var classclassManager =
     [ "classNames", "classclassManager.html#ab1ac49983c53806f01f781a62f7346b0", null ],
     [ "classOwner", "classclassManager.html#a661a064a729750064acc16ded16603f4", null ],
     [ "classTimestamp", "classclassManager.html#a095217eb1e7d5f2b4df379e990cacaf8", null ],
+    [ "compareWithStudents", "classclassManager.html#a85e46645a1feef13c07aa1a179496362", null ],
     [ "editClass", "classclassManager.html#acf762f28a16ff767b77b84a0fe5a7303", null ],
     [ "editStudent", "classclassManager.html#a0627ec9fa26d621947df87d5a781a388", null ],
     [ "exerciseID", "classclassManager.html#a53bd159645d39ed479cd2f060fe98cbf", null ],

@@ -175,6 +175,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0e098862f5302975be6371d8f9891edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa778d307dc7beccba3af4dd8df42d4b1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclassManager.html#aa778d307dc7beccba3af4dd8df42d4b1">addHistoryEntry</a> (int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, QList&lt; QVariant &gt; entry)</td></tr>
 <tr class="separator:aa778d307dc7beccba3af4dd8df42d4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e46645a1feef13c07aa1a179496362"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclassManager.html#a85e46645a1feef13c07aa1a179496362">compareWithStudents</a> (int classID, int studentID, QString pack, int lesson, int sublesson, int exercise, bool better)</td></tr>
+<tr class="separator:a85e46645a1feef13c07aa1a179496362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
@@ -510,6 +512,74 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p >Returns class timestamp (when the class was used last time). </p>
+
+</div>
+</div>
+<a id="a85e46645a1feef13c07aa1a179496362" name="a85e46645a1feef13c07aa1a179496362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e46645a1feef13c07aa1a179496362">&#9670;&nbsp;</a></span>compareWithStudents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int classManager::compareWithStudents </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>classID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>studentID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>pack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lesson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sublesson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exercise</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>better</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns number of better or worse students based on their average number of points.<br  />
+The number of points for each entry is speed - mistakes*10. </p>
 
 </div>
 </div>

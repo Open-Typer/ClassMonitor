@@ -14,6 +14,7 @@ var searchData=
   ['classtimestamp_11',['classTimestamp',['../classclassManager.html#a095217eb1e7d5f2b4df379e990cacaf8',1,'classManager']]],
   ['closeevent_12',['closeEvent',['../classuserManagerWidget.html#a1fdf50fda40344abf0097da0e99e63cd',1,'userManagerWidget']]],
   ['closeoptions_13',['closeOptions',['../classoptionsWindow.html#a53c6de72dfe4909444452005cce9bc92',1,'optionsWindow']]],
-  ['configlocation_14',['configLocation',['../classfileUtils.html#ad5cb3697ed9304de49faa998c9091bd5',1,'fileUtils']]],
-  ['convertdata_15',['convertData',['../classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519',1,'monitorServer::convertData(bool *ok, QList&lt; QByteArray &gt; input)'],['../classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593',1,'monitorServer::convertData(QList&lt; QByteArray &gt; input)']]]
+  ['comparewithstudents_14',['compareWithStudents',['../classclassManager.html#a85e46645a1feef13c07aa1a179496362',1,'classManager']]],
+  ['configlocation_15',['configLocation',['../classfileUtils.html#ad5cb3697ed9304de49faa998c9091bd5',1,'fileUtils']]],
+  ['convertdata_16',['convertData',['../classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519',1,'monitorServer::convertData(bool *ok, QList&lt; QByteArray &gt; input)'],['../classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593',1,'monitorServer::convertData(QList&lt; QByteArray &gt; input)']]]
 ];
