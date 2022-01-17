@@ -34,9 +34,6 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	speedChart = new QChart;
 	mistakesChart = new QChart;
 	timeChart = new QChart;
-	speedChart->setTheme(QChart::ChartThemeDark);
-	mistakesChart->setTheme(QChart::ChartThemeDark);
-	timeChart->setTheme(QChart::ChartThemeDark);
 	// Create chart views
 	QChartView *speedChartView = new QChartView(speedChart, ui->chartFrame);
 	QChartView *mistakesChartView = new QChartView(mistakesChart, ui->chartFrame);
@@ -303,4 +300,20 @@ void classControls::refreshCharts(void)
 		timeChart->addSeries(timeSeries);
 		timeChart->createDefaultAxes();
 	}
+}
+
+/*!
+ * Connected from MonitorWindow::themeChanged().\n
+ * Updates the theme of the charts.
+ */
+void classControls::changeTheme(bool dark)
+{
+	QChart::ChartTheme theme;
+	if(dark)
+		theme = QChart::ChartThemeDark;
+	else
+		theme = QChart::ChartThemeLight;
+	speedChart->setTheme(theme);
+	mistakesChart->setTheme(theme);
+	timeChart->setTheme(theme);
 }

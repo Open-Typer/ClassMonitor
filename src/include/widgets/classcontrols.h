@@ -64,6 +64,7 @@ class classControls : public QWidget
 		void editStudent(void);
 		void openDetails(void);
 		void refreshCharts(void);
+		void changeTheme(bool dark);
 };
 
 #endif // CLASSCONTROLS_H
