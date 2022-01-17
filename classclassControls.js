@@ -4,6 +4,7 @@ var classclassControls =
     [ "~classControls", "classclassControls.html#abf75656086d258bb4c99209e35987448", null ],
     [ "addStudent", "classclassControls.html#a065ff24b5ec8c6e6f781df71d3ffe886", null ],
     [ "backClicked", "classclassControls.html#aa1dda56b86029c91c95b4e1eab3efeed", null ],
+    [ "changeTheme", "classclassControls.html#a99fc1e8400e6b1881a79737c74381c58", null ],
     [ "detailsClicked", "classclassControls.html#a151fa314492e99ce4a6183b91fb906ad", null ],
     [ "editStudent", "classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e", null ],
     [ "goBack", "classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b", null ],

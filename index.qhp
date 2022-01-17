@@ -23,6 +23,7 @@
               <section title="~classControls" ref="classclassControls.html#abf75656086d258bb4c99209e35987448" />
               <section title="addStudent" ref="classclassControls.html#a065ff24b5ec8c6e6f781df71d3ffe886" />
               <section title="backClicked" ref="classclassControls.html#aa1dda56b86029c91c95b4e1eab3efeed" />
+              <section title="changeTheme" ref="classclassControls.html#a99fc1e8400e6b1881a79737c74381c58" />
               <section title="detailsClicked" ref="classclassControls.html#a151fa314492e99ce4a6183b91fb906ad" />
               <section title="editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
               <section title="goBack" ref="classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b" />
@@ -127,6 +128,7 @@
               <section title="openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
               <section title="outAnim" ref="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4" />
               <section title="setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
+              <section title="themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
               <section title="updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
               <section title="updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
             </section>
@@ -139,6 +141,7 @@
               <section title="studentDetails" ref="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0" />
               <section title="~studentDetails" ref="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87" />
               <section title="backClicked" ref="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c" />
+              <section title="changeTheme" ref="classstudentDetails.html#a1255046a70b2f22a5be3e2f9774a1bd0" />
               <section title="goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
               <section title="refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
               <section title="refreshCharts" ref="classstudentDetails.html#a0488a551935057caa40ba9583d6dc67c" />
@@ -271,6 +274,7 @@
       <keyword name="editStudent" id="classControls::editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
       <keyword name="openDetails" id="classControls::openDetails" ref="classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41" />
       <keyword name="refreshCharts" id="classControls::refreshCharts" ref="classclassControls.html#a70f87b55fb524edef079d0d0c831234a" />
+      <keyword name="changeTheme" id="classControls::changeTheme" ref="classclassControls.html#a99fc1e8400e6b1881a79737c74381c58" />
       <keyword name="setupTable" id="classControls::setupTable" ref="classclassControls.html#adb3be8efc35307d49b7b254d465dbed4" />
       <keyword name="ui" id="classControls::ui" ref="classclassControls.html#a4c97f0b1697be38b7db2c8ff74d2e867" />
       <keyword name="classID" id="classControls::classID" ref="classclassControls.html#aae9fba807d7f3d7f04ef55c4ee66c40c" />
@@ -366,6 +370,7 @@
       <keyword name="m_sslPrivateKey" id="monitorServer::m_sslPrivateKey" ref="classmonitorServer.html#ab0b4481387bd311dcc06a93119b1c559" />
       <keyword name="m_sslProtocol" id="monitorServer::m_sslProtocol" ref="classmonitorServer.html#a9a204512e1077871227c35f42837bf1a" />
       <keyword name="MonitorWindow" id="MonitorWindow" ref="classMonitorWindow.html" />
+      <keyword name="themeChanged" id="MonitorWindow::themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
       <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
       <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
       <keyword name="updateSchoolName" id="MonitorWindow::updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
@@ -397,6 +402,7 @@
       <keyword name="goBack" id="studentDetails::goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
       <keyword name="refresh" id="studentDetails::refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
       <keyword name="refreshTable" id="studentDetails::refreshTable" ref="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce" />
+      <keyword name="changeTheme" id="studentDetails::changeTheme" ref="classstudentDetails.html#a1255046a70b2f22a5be3e2f9774a1bd0" />
       <keyword name="refreshCharts" id="studentDetails::refreshCharts" ref="classstudentDetails.html#a0488a551935057caa40ba9583d6dc67c" />
       <keyword name="ui" id="studentDetails::ui" ref="classstudentDetails.html#ae3968d5bd412eb31f4bd81a23ec1ba7d" />
       <keyword name="classID" id="studentDetails::classID" ref="classstudentDetails.html#a85da6073b1753ba55fb609373bb34b33" />
@@ -607,6 +613,8 @@
       <file>functions.html</file>
       <file>functions.html</file>
       <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions_func.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
