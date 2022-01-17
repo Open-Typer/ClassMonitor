@@ -222,3 +222,19 @@ void studentDetails::refreshCharts(void)
 	timeChart->createDefaultAxes();
 	timeChart->axes(Qt::Vertical).value(0)->setMin(0);
 }
+
+/*!
+ * Connected from MonitorWindow::themeChanged().\n
+ * Updates the theme of the charts.
+ */
+void studentDetails::changeTheme(bool dark)
+{
+	QChart::ChartTheme theme;
+	if(dark)
+		theme = QChart::ChartThemeDark;
+	else
+		theme = QChart::ChartThemeLight;
+	speedChart->setTheme(theme);
+	mistakesChart->setTheme(theme);
+	timeChart->setTheme(theme);
+}

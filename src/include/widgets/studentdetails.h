@@ -58,6 +58,7 @@ class studentDetails : public QWidget
 		void goBack(void);
 		void refresh(void);
 		void refreshTable(void);
+		void changeTheme(bool dark);
 };
 
 #endif // STUDENTDETAILS_H
