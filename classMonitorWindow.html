@@ -142,10 +142,6 @@ Private Slots</h2></td></tr>
 <tr class="separator:afede0a06f1d764ba725558c10e655c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463634ef5107435462dda07a679559dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#a463634ef5107435462dda07a679559dd">openDetails</a> (int id)</td></tr>
 <tr class="separator:a463634ef5107435462dda07a679559dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1cb2881ee34bf96a384464b350b90c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#ab1cb2881ee34bf96a384464b350b90c4">checkAnim</a> (const QVariant value)</td></tr>
-<tr class="separator:ab1cb2881ee34bf96a384464b350b90c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad98895d34aa45cfce3e6e33be3672716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#ad98895d34aa45cfce3e6e33be3672716">checkBackAnim</a> (const QVariant value)</td></tr>
-<tr class="separator:ad98895d34aa45cfce3e6e33be3672716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb5f778ff2d434e83d00ac95e294478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478">goBack</a> (void)</td></tr>
 <tr class="separator:a9cb5f778ff2d434e83d00ac95e294478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -155,8 +151,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:af699eca4de50b1a83400b92783cb6c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a186eb9f50c054e9606322a8ef943d5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3">updateControlWidget</a> (void)</td></tr>
 <tr class="separator:a186eb9f50c054e9606322a8ef943d5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24edc9d59961347444006f958e198b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4">outAnim</a> (void)</td></tr>
-<tr class="separator:ad24edc9d59961347444006f958e198b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb4f1892a3f675d5cac55b5f7d3c92a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitorWindow.html#aafb4f1892a3f675d5cac55b5f7d3c92a">transition</a> (void)</td></tr>
+<tr class="separator:aafb4f1892a3f675d5cac55b5f7d3c92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -220,62 +216,6 @@ QPropertyAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>moveA
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab1cb2881ee34bf96a384464b350b90c4" name="ab1cb2881ee34bf96a384464b350b90c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1cb2881ee34bf96a384464b350b90c4">&#9670;&nbsp;</a></span>checkAnim</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MonitorWindow::checkAnim </td>
-          <td>(</td>
-          <td class="paramtype">const QVariant&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Connected from moveAnim-&gt;valueChanged().<br  />
-Shows move in animation with the new widget. </p>
-
-</div>
-</div>
-<a id="ad98895d34aa45cfce3e6e33be3672716" name="ad98895d34aa45cfce3e6e33be3672716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad98895d34aa45cfce3e6e33be3672716">&#9670;&nbsp;</a></span>checkBackAnim</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MonitorWindow::checkBackAnim </td>
-          <td>(</td>
-          <td class="paramtype">const QVariant&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Connected from moveAnim-&gt;valueChanged().<br  />
-Shows move in animation with the new widget. </p>
-
-</div>
-</div>
 <a id="a9cb5f778ff2d434e83d00ac95e294478" name="a9cb5f778ff2d434e83d00ac95e294478"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cb5f778ff2d434e83d00ac95e294478">&#9670;&nbsp;</a></span>goBack</h2>
 
@@ -416,33 +356,6 @@ Opens <a class="el" href="classuserManagerWidget.html" title="the userManagerWid
 
 </div>
 </div>
-<a id="ad24edc9d59961347444006f958e198b4" name="ad24edc9d59961347444006f958e198b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad24edc9d59961347444006f958e198b4">&#9670;&nbsp;</a></span>outAnim()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MonitorWindow::outAnim </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Shows move out animation. </p>
-
-</div>
-</div>
 <a id="af699eca4de50b1a83400b92783cb6c43" name="af699eca4de50b1a83400b92783cb6c43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af699eca4de50b1a83400b92783cb6c43">&#9670;&nbsp;</a></span>setTheme()</h2>
 
@@ -494,6 +407,33 @@ Opens <a class="el" href="classuserManagerWidget.html" title="the userManagerWid
 </table>
 </div><div class="memdoc">
 <p >A signal, which is emitted when the theme changes. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43">setTheme()</a> </dd></dl>
+
+</div>
+</div>
+<a id="aafb4f1892a3f675d5cac55b5f7d3c92a" name="aafb4f1892a3f675d5cac55b5f7d3c92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb4f1892a3f675d5cac55b5f7d3c92a">&#9670;&nbsp;</a></span>transition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MonitorWindow::transition </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Shows move out animation. </p>
 
 </div>
 </div>

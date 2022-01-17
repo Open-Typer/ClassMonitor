@@ -119,16 +119,14 @@
             <section title="MonitorWindow" ref="classMonitorWindow.html">
               <section title="MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
               <section title="~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
-              <section title="checkAnim" ref="classMonitorWindow.html#ab1cb2881ee34bf96a384464b350b90c4" />
-              <section title="checkBackAnim" ref="classMonitorWindow.html#ad98895d34aa45cfce3e6e33be3672716" />
               <section title="goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
               <section title="openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
               <section title="openDetails" ref="classMonitorWindow.html#a463634ef5107435462dda07a679559dd" />
               <section title="openOptions" ref="classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b" />
               <section title="openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
-              <section title="outAnim" ref="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4" />
               <section title="setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
               <section title="themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
+              <section title="transition" ref="classMonitorWindow.html#aafb4f1892a3f675d5cac55b5f7d3c92a" />
               <section title="updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
               <section title="updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
             </section>
@@ -378,12 +376,10 @@
       <keyword name="openClass" id="MonitorWindow::openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
       <keyword name="openUserManager" id="MonitorWindow::openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
       <keyword name="openDetails" id="MonitorWindow::openDetails" ref="classMonitorWindow.html#a463634ef5107435462dda07a679559dd" />
-      <keyword name="checkAnim" id="MonitorWindow::checkAnim" ref="classMonitorWindow.html#ab1cb2881ee34bf96a384464b350b90c4" />
-      <keyword name="checkBackAnim" id="MonitorWindow::checkBackAnim" ref="classMonitorWindow.html#ad98895d34aa45cfce3e6e33be3672716" />
       <keyword name="goBack" id="MonitorWindow::goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
       <keyword name="setTheme" id="MonitorWindow::setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
       <keyword name="updateControlWidget" id="MonitorWindow::updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
-      <keyword name="outAnim" id="MonitorWindow::outAnim" ref="classMonitorWindow.html#ad24edc9d59961347444006f958e198b4" />
+      <keyword name="transition" id="MonitorWindow::transition" ref="classMonitorWindow.html#aafb4f1892a3f675d5cac55b5f7d3c92a" />
       <keyword name="ui" id="MonitorWindow::ui" ref="classMonitorWindow.html#a64b276a63b60489dcbc98109714af9c5" />
       <keyword name="classID" id="MonitorWindow::classID" ref="classMonitorWindow.html#a67de80a02a89be2230de95dc35532e33" />
       <keyword name="settings" id="MonitorWindow::settings" ref="classMonitorWindow.html#a5356edb5cf7502e3cf8e490f44e31f13" />
