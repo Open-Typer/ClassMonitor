@@ -58,6 +58,7 @@ void MonitorWindow::setTheme(void)
 	QFile styleSheetFile(fileName);
 	if(styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text))
 		setStyleSheet(styleSheetFile.readAll());
+	globalStyleSheet = styleSheet();
 	emit themeChanged(dark);
 }
 
