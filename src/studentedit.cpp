@@ -27,6 +27,7 @@ studentEdit::studentEdit(bool newStudent, int class_id, int id, QWidget *parent)
 	ui(new Ui::studentEdit)
 {
 	ui->setupUi(this);
+	setStyleSheet(globalStyleSheet);
 	if(newStudent)
 	{
 		setWindowTitle(tr("New student"));

@@ -30,6 +30,7 @@ optionsWindow::optionsWindow(QWidget *parent) :
 	settings = new QSettings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
 	ui->portEdit->setValue(monitorServer::port());
 	ui->darkThemeCheckBox->setChecked(settings->value("customization/darktheme","false").toBool());
+	setStyleSheet(globalStyleSheet);
 	// Connections
 	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(closeOptions()));
 }

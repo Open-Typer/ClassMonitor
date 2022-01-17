@@ -27,6 +27,7 @@ adminSelector::adminSelector(QWidget *parent) :
 	ui(new Ui::adminSelector)
 {
 	ui->setupUi(this);
+	setStyleSheet(globalStyleSheet);
 	// Load administrators
 	adminIDs.clear();
 	QStringList admins;

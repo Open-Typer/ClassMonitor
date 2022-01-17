@@ -22,6 +22,7 @@
 #define STUDENTEDIT_H
 
 #include <QDialog>
+#include "global.h"
 #include "core/fsmanager.h"
 
 namespace Ui {

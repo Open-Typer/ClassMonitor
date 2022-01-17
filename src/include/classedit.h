@@ -24,6 +24,7 @@
 #include <QDialog>
 #include <QCryptographicHash>
 #include <QMessageBox>
+#include "global.h"
 #include "core/fsmanager.h"
 
 namespace Ui {

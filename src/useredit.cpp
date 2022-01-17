@@ -27,6 +27,7 @@ userEdit::userEdit(bool newUser, int id, QWidget *parent) :
 	ui(new Ui::userEdit)
 {
 	ui->setupUi(this);
+	setStyleSheet(globalStyleSheet);
 	// Roles
 	QStringList roles;
 	roles += tr("Basic","Basic user role");

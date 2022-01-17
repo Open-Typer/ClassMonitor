@@ -27,6 +27,7 @@ authDialog::authDialog(QString userName, QWidget *parent) :
 	ui(new Ui::authDialog)
 {
 	ui->setupUi(this);
+	setStyleSheet(globalStyleSheet);
 	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	password = ui->passwordEdit->text();
 	if(userName != "")

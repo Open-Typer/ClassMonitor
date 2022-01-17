@@ -27,6 +27,7 @@ classEdit::classEdit(bool newClass, int id, QWidget *parent) :
 	ui(new Ui::classEdit)
 {
 	ui->setupUi(this);
+	setStyleSheet(globalStyleSheet);
 	ui->gridLayout->setSizeConstraint(QLayout::SetFixedSize);
 	ui->okButton->setEnabled(false);
 	// Set up list of icons

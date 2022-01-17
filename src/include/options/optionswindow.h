@@ -23,6 +23,7 @@
 
 #include <QDialog>
 #include <QSettings>
+#include "global.h"
 #include "core/fsmanager.h"
 #include "core/server.h"
 
