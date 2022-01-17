@@ -55,7 +55,7 @@ class MonitorWindow : public QMainWindow
 		QPropertyAnimation *moveAnim;
 		void setTheme(void);
 		void updateControlWidget(void);
-		void outAnim(void);
+		void transition(void);
 
 	signals:
 		/*! A signal, which is emitted when the theme changes. \see setTheme() */
@@ -67,8 +67,6 @@ class MonitorWindow : public QMainWindow
 		void openClass(int id);
 		void openUserManager(void);
 		void openDetails(int id);
-		void checkAnim(const QVariant value);
-		void checkBackAnim(const QVariant value);
 		void goBack(void);
 };
 #endif // MONITORWINDOW_H

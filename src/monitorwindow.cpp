@@ -112,8 +112,9 @@ void MonitorWindow::updateControlWidget(void)
 }
 
 /*! Shows move out animation. */
-void MonitorWindow::outAnim(void)
+void MonitorWindow::transition(void)
 {
+	// Out transition
 	disconnect(controlWidgets.last(),nullptr,nullptr,nullptr);
 	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
 	moveAnim->setDuration(63);
@@ -121,9 +122,23 @@ void MonitorWindow::outAnim(void)
 	moveAnim->setStartValue(widgetGeometry);
 	widgetGeometry.setWidth(0);
 	moveAnim->setEndValue(widgetGeometry);
-	connect(moveAnim,SIGNAL(valueChanged(const QVariant)),this,SLOT(checkAnim(const QVariant)));
+	QEventLoop animLoop;
+	connect(moveAnim,&QVariantAnimation::finished,&animLoop,&QEventLoop::quit);
 	moveAnim->start();
+	animLoop.exec(QEventLoop::ExcludeUserInputEvents);
+	// In transition
 	updateSchoolName();
+	updateControlWidget();
+	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
+	moveAnim->setDuration(63);
+	widgetGeometry = controlWidgets.last()->geometry();
+	widgetGeometry.setX(geometry().width());
+	moveAnim->setStartValue(widgetGeometry);
+	widgetGeometry.setX(0);
+	moveAnim->setEndValue(widgetGeometry);
+	connect(moveAnim,&QVariantAnimation::finished,&animLoop,&QEventLoop::quit);
+	moveAnim->start();
+	animLoop.exec(QEventLoop::ExcludeUserInputEvents);
 }
 
 /*!
@@ -133,9 +148,9 @@ void MonitorWindow::outAnim(void)
 void MonitorWindow::openClass(int id)
 {
 	classID = id;
-	outAnim();
 	classControls *newWidget = new classControls(classID);
 	controlWidgets += newWidget;
+	transition();
 }
 
 /*!
@@ -145,9 +160,9 @@ void MonitorWindow::openClass(int id)
 void MonitorWindow::openUserManager(void)
 {
 	classID = 0;
-	outAnim();
 	userManagerWidget *newWidget = new userManagerWidget(classID);
 	controlWidgets += newWidget;
+	transition();
 }
 
 /*!
@@ -156,53 +171,9 @@ void MonitorWindow::openUserManager(void)
  */
 void MonitorWindow::openDetails(int id)
 {
-	outAnim();
 	studentDetails *newWidget = new studentDetails(classID,id);
 	controlWidgets += newWidget;
-}
-
-/*!
- * Connected from moveAnim->valueChanged().\n
- * Shows move in animation with the new widget.
- */
-void MonitorWindow::checkAnim(const QVariant value)
-{
-	if(value == moveAnim->endValue())
-	{
-		updateControlWidget();
-		disconnect(moveAnim,nullptr,nullptr,nullptr);
-		moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
-		moveAnim->setDuration(63);
-		QRect widgetGeometry = ui->classControlsBody->geometry();
-		widgetGeometry.setX(geometry().width());
-		moveAnim->setStartValue(widgetGeometry);
-		widgetGeometry.setX(0);
-		moveAnim->setEndValue(widgetGeometry);
-		moveAnim->start();
-	}
-}
-
-/*!
- * Connected from moveAnim->valueChanged().\n
- * Shows move in animation with the new widget.
- */
-void MonitorWindow::checkBackAnim(const QVariant value)
-{
-	if(value == moveAnim->endValue())
-	{
-		controlWidgets.removeLast();
-		updateControlWidget();
-		disconnect(moveAnim,nullptr,nullptr,nullptr);
-		moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
-		moveAnim->setDuration(63);
-		QRect widgetGeometry = ui->classControlsBody->geometry();
-		int oldWidth = widgetGeometry.width();
-		widgetGeometry.setWidth(0);
-		moveAnim->setStartValue(widgetGeometry);
-		widgetGeometry.setWidth(oldWidth);
-		moveAnim->setEndValue(widgetGeometry);
-		moveAnim->start();
-	}
+	transition();
 }
 
 /*!
@@ -215,13 +186,30 @@ void MonitorWindow::goBack(void)
 	QString widgetClass = controlWidgets.last()->metaObject()->className();
 	if(widgetClass == "classControls")
 		classID = 0;
+	// Out transition
 	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
 	moveAnim->setDuration(63);
 	QRect widgetGeometry = ui->classControlsBody->geometry();
 	moveAnim->setStartValue(widgetGeometry);
 	widgetGeometry.setX(geometry().width());
 	moveAnim->setEndValue(widgetGeometry);
-	connect(moveAnim,SIGNAL(valueChanged(const QVariant)),this,SLOT(checkBackAnim(const QVariant)));
+	QEventLoop animLoop;
+	connect(moveAnim,&QVariantAnimation::finished,&animLoop,&QEventLoop::quit);
 	moveAnim->start();
+	animLoop.exec(QEventLoop::ExcludeUserInputEvents);
+	// In transition
 	updateSchoolName();
+	controlWidgets.removeLast();
+	updateControlWidget();
+	moveAnim = new QPropertyAnimation(ui->classControlsBody,"geometry");
+	moveAnim->setDuration(63);
+	widgetGeometry = ui->classControlsBody->geometry();
+	int oldWidth = widgetGeometry.width();
+	widgetGeometry.setWidth(0);
+	moveAnim->setStartValue(widgetGeometry);
+	widgetGeometry.setWidth(oldWidth);
+	moveAnim->setEndValue(widgetGeometry);
+	connect(moveAnim,&QVariantAnimation::finished,&animLoop,&QEventLoop::quit);
+	moveAnim->start();
+	animLoop.exec();
 }
