@@ -6,6 +6,7 @@ var dir_b0856f6b0d80ccb263b2f415c91f9e17 =
     [ "adminselector.h", "adminselector_8h_source.html", null ],
     [ "authdialog.h", "authdialog_8h_source.html", null ],
     [ "classedit.h", "classedit_8h_source.html", null ],
+    [ "global.h", "global_8h_source.html", null ],
     [ "initialsetup.h", "initialsetup_8h_source.html", null ],
     [ "monitorwindow.h", "monitorwindow_8h_source.html", null ],
     [ "studentedit.h", "studentedit_8h_source.html", null ],

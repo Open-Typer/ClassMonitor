@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Open-Typer Class Monitor: src/include/authdialog.h Source File</title>
+<title>Open-Typer Class Monitor: src/include/global.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('authdialog_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('global_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,14 +84,14 @@ $(document).ready(function(){initNavTree('authdialog_8h_source.html',''); initRe
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">authdialog.h</div></div>
+  <div class="headertitle"><div class="title">global.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * authdialog.h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * global.h</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is part of Open-Typer</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (C) 2021 - adazem009</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (C) 2022 - adazem009</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Open-Typer is free software; you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
@@ -107,42 +107,15 @@ $(document).ready(function(){initNavTree('authdialog_8h_source.html',''); initRe
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * along with Open-Typer. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef AUTHDIALOG_H</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define AUTHDIALOG_H</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;QDialog&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;global.h&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">class </span><a class="code hl_class" href="classauthDialog.html">authDialog</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classauthDialog.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="classauthDialog.html">authDialog</a> : <span class="keyword">public</span> QDialog</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Q_OBJECT</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classauthDialog.html#a5a88e7540cbb540925e2b1c36f8c5b7f">authDialog</a>(QString userName = <span class="stringliteral">&quot;&quot;</span>, QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="classauthDialog.html#a1b9e517dadde0e190c5347b47f201522">~authDialog</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        QString password;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        Ui::authDialog *ui;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> <a class="code hl_slot" href="classauthDialog.html#ab1c0f4066afa72bbf37855d3ffb67b9f">updateText</a>(QString text);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// AUTHDIALOG_H</span></div>
-<div class="ttc" id="aclassauthDialog_html"><div class="ttname"><a href="classauthDialog.html">authDialog</a></div><div class="ttdoc">The authDialog class is an authentication dialog with a password input box.</div><div class="ttdef"><b>Definition:</b> authdialog.h:37</div></div>
-<div class="ttc" id="aclassauthDialog_html_a1b9e517dadde0e190c5347b47f201522"><div class="ttname"><a href="classauthDialog.html#a1b9e517dadde0e190c5347b47f201522">authDialog::~authDialog</a></div><div class="ttdeci">~authDialog()</div><div class="ttdef"><b>Definition:</b> authdialog.cpp:41</div></div>
-<div class="ttc" id="aclassauthDialog_html_a5a88e7540cbb540925e2b1c36f8c5b7f"><div class="ttname"><a href="classauthDialog.html#a5a88e7540cbb540925e2b1c36f8c5b7f">authDialog::authDialog</a></div><div class="ttdeci">authDialog(QString userName=&quot;&quot;, QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> authdialog.cpp:25</div></div>
-<div class="ttc" id="aclassauthDialog_html_ab1c0f4066afa72bbf37855d3ffb67b9f"><div class="ttname"><a href="classauthDialog.html#ab1c0f4066afa72bbf37855d3ffb67b9f">authDialog::updateText</a></div><div class="ttdeci">void updateText(QString text)</div><div class="ttdef"><b>Definition:</b> authdialog.cpp:50</div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> QString globalStyleSheet;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><b>authdialog.h</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><b>global.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>

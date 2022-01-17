@@ -236,6 +236,7 @@
                 <section title="adminselector.h" ref="adminselector_8h_source.html" />
                 <section title="authdialog.h" ref="authdialog_8h_source.html" />
                 <section title="classedit.h" ref="classedit_8h_source.html" />
+                <section title="global.h" ref="global_8h_source.html" />
                 <section title="initialsetup.h" ref="initialsetup_8h_source.html" />
                 <section title="monitorwindow.h" ref="monitorwindow_8h_source.html" />
                 <section title="studentedit.h" ref="studentedit_8h_source.html" />
@@ -486,6 +487,7 @@
       <file>classedit_8h_source.html</file>
       <file>fsmanager_8h_source.html</file>
       <file>server_8h_source.html</file>
+      <file>global_8h_source.html</file>
       <file>initialsetup_8h_source.html</file>
       <file>monitorwindow_8h_source.html</file>
       <file>optionswindow_8h_source.html</file>
