@@ -50,13 +50,15 @@ MonitorWindow::~MonitorWindow()
 void MonitorWindow::setTheme(void)
 {
 	QString fileName;
-	if(settings->value("customization/darktheme","false").toBool())
+	bool dark = settings->value("customization/darktheme","false").toBool();
+	if(dark)
 		fileName = ":/dark-theme/style.qss";
 	else
 		fileName = ":/light-theme/style.qss";
 	QFile styleSheetFile(fileName);
 	if(styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text))
 		setStyleSheet(styleSheetFile.readAll());
+	emit themeChanged(dark);
 }
 
 /*! Updates schoolNameLabel. */
@@ -93,6 +95,8 @@ void MonitorWindow::updateControlWidget(void)
 	// Add current widget
 	ui->classControlsBody->addWidget(controlWidgets.last());
 	QString widgetClass = controlWidgets.last()->metaObject()->className();
+	if(controlWidgets.last()->metaObject()->indexOfSlot("changeTheme(bool)") != -1)
+		connect(this,SIGNAL(themeChanged(bool)),controlWidgets.last(),SLOT(changeTheme(bool)));
 	if(widgetClass == "classMenu")
 	{
 		connect(controlWidgets.last(),SIGNAL(classOpened(int)),this,SLOT(openClass(int)));
@@ -104,6 +108,7 @@ void MonitorWindow::updateControlWidget(void)
 		if(widgetClass == "classControls")
 			connect(controlWidgets.last(),SIGNAL(detailsClicked(int)),this,SLOT(openDetails(int)));
 	}
+	setTheme();
 }
 
 /*! Shows move out animation. */

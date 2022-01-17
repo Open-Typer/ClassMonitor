@@ -57,6 +57,10 @@ class MonitorWindow : public QMainWindow
 		void updateControlWidget(void);
 		void outAnim(void);
 
+	signals:
+		/*! A signal, which is emitted when the theme changes. \see setTheme() */
+		void themeChanged(bool);
+
 	private slots:
 		void updateSchoolName(void);
 		void openOptions(void);
