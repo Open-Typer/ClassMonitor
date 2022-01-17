@@ -19,6 +19,7 @@ INCLUDEPATH += \
     src/include
 
 SOURCES += \
+    src/global.cpp \
     src/adminselector.cpp \
     src/authdialog.cpp \
     src/classedit.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
     src/widgets/studentdetails.cpp
 
 HEADERS += \
+    src/include/global.h \
     src/include/adminselector.h \
     src/include/authdialog.h \
     src/include/classedit.h \
