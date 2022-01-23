@@ -24,6 +24,7 @@
 #include <QMainWindow>
 #include <QSettings>
 #include <QPropertyAnimation>
+#include "updater/updater.h"
 #include "options/optionswindow.h"
 #include "widgets/classmenu.h"
 #include "widgets/classcontrols.h"

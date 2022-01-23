@@ -27,6 +27,7 @@ MonitorWindow::MonitorWindow(QWidget *parent)
 	, ui(new Ui::MonitorWindow)
 {
 	ui->setupUi(this);
+	new Updater;
 	setWindowState(Qt::WindowMaximized);
 	classID = 0;
 	settings = new QSettings(fileUtils::configLocation() + "/settings.ini",QSettings::IniFormat);
