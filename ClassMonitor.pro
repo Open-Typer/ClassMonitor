@@ -34,7 +34,9 @@ SOURCES += \
     src/widgets/classmenu.cpp \
     src/widgets/usermanager.cpp \
     src/widgets/classcontrols.cpp \
-    src/widgets/studentdetails.cpp
+    src/widgets/studentdetails.cpp \
+    src/updater/updater.cpp \
+    src/updater/updaterdialog.cpp
 
 HEADERS += \
     src/include/global.h \
@@ -51,7 +53,9 @@ HEADERS += \
     src/include/widgets/classmenu.h \
     src/include/widgets/usermanager.h \
     src/include/widgets/classcontrols.h \
-    src/include/widgets/studentdetails.h
+    src/include/widgets/studentdetails.h \
+    src/include/updater/updater.h \
+    src/include/updater/updaterdialog.h
 
 FORMS += \
     ui/adminselector.ui \
@@ -65,7 +69,8 @@ FORMS += \
     ui/widgets/classmenu.ui \
     ui/widgets/usermanager.ui \
     ui/widgets/classcontrols.ui \
-    ui/widgets/studentdetails.ui
+    ui/widgets/studentdetails.ui \
+    ui/updater/updaterdialog.ui
 
 TRANSLATIONS += \
     lang/ClassMonitor_sk_SK.ts
