@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "QDialog", null, [
+      [ "UpdaterDialog", "classUpdaterDialog.html", null ],
       [ "adminSelector", "classadminSelector.html", null ],
       [ "authDialog", "classauthDialog.html", null ],
       [ "classEdit", "classclassEdit.html", null ],
@@ -13,6 +14,7 @@ var hierarchy =
       [ "MonitorWindow", "classMonitorWindow.html", null ]
     ] ],
     [ "QObject", null, [
+      [ "Updater", "classUpdater.html", null ],
       [ "classManager", "classclassManager.html", null ],
       [ "fileUtils", "classfileUtils.html", null ],
       [ "userManager", "classuserManager.html", null ]

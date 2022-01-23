@@ -11,6 +11,8 @@ var searchData=
   ['_7eoptionswindow_8',['~optionsWindow',['../classoptionsWindow.html#ad2942ee73b6562894bf2d25f554b9e5c',1,'optionsWindow']]],
   ['_7estudentdetails_9',['~studentDetails',['../classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87',1,'studentDetails']]],
   ['_7estudentedit_10',['~studentEdit',['../classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33',1,'studentEdit']]],
-  ['_7euseredit_11',['~userEdit',['../classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7',1,'userEdit']]],
-  ['_7eusermanagerwidget_12',['~userManagerWidget',['../classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164',1,'userManagerWidget']]]
+  ['_7eupdater_11',['~Updater',['../classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e',1,'Updater']]],
+  ['_7eupdaterdialog_12',['~UpdaterDialog',['../classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0',1,'UpdaterDialog']]],
+  ['_7euseredit_13',['~userEdit',['../classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7',1,'userEdit']]],
+  ['_7eusermanagerwidget_14',['~userManagerWidget',['../classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164',1,'userManagerWidget']]]
 ];

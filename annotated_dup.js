@@ -13,6 +13,8 @@ var annotated_dup =
     [ "optionsWindow", "classoptionsWindow.html", "classoptionsWindow" ],
     [ "studentDetails", "classstudentDetails.html", "classstudentDetails" ],
     [ "studentEdit", "classstudentEdit.html", "classstudentEdit" ],
+    [ "Updater", "classUpdater.html", "classUpdater" ],
+    [ "UpdaterDialog", "classUpdaterDialog.html", "classUpdaterDialog" ],
     [ "userEdit", "classuserEdit.html", "classuserEdit" ],
     [ "userManager", "classuserManager.html", "classuserManager" ],
     [ "userManagerWidget", "classuserManagerWidget.html", "classuserManagerWidget" ]

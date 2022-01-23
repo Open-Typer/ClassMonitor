@@ -151,6 +151,14 @@
               <section title="finish" ref="classstudentEdit.html#a57769f6f3bb7e2595c8e5ea2dc3f27a1" />
               <section title="verify" ref="classstudentEdit.html#a22d4a3f1f4275d71fccf8fa966db4c1a" />
             </section>
+            <section title="Updater" ref="classUpdater.html">
+              <section title="Updater" ref="classUpdater.html#abf702b842504bc1147a5e7bebbbf15ea" />
+              <section title="~Updater" ref="classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e" />
+            </section>
+            <section title="UpdaterDialog" ref="classUpdaterDialog.html">
+              <section title="UpdaterDialog" ref="classUpdaterDialog.html#ae6833c46d5feff6d267e113ba23410e4" />
+              <section title="~UpdaterDialog" ref="classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0" />
+            </section>
             <section title="userEdit" ref="classuserEdit.html">
               <section title="userEdit" ref="classuserEdit.html#aa9c71975e895a6c6c4f23eafafa2622f" />
               <section title="~userEdit" ref="classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
@@ -185,6 +193,7 @@
           <section title="Class Index" ref="classes.html" />
           <section title="Class Hierarchy" ref="hierarchy.html">
             <section title="QDialog" ref="">
+              <section title="UpdaterDialog" ref="classUpdaterDialog.html" />
               <section title="adminSelector" ref="classadminSelector.html" />
               <section title="authDialog" ref="classauthDialog.html" />
               <section title="classEdit" ref="classclassEdit.html" />
@@ -197,6 +206,7 @@
               <section title="MonitorWindow" ref="classMonitorWindow.html" />
             </section>
             <section title="QObject" ref="">
+              <section title="Updater" ref="classUpdater.html" />
               <section title="classManager" ref="classclassManager.html" />
               <section title="fileUtils" ref="classfileUtils.html" />
               <section title="userManager" ref="classuserManager.html" />
@@ -226,6 +236,10 @@
                 </section>
                 <section title="options" ref="dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html">
                   <section title="optionswindow.h" ref="optionswindow_8h_source.html" />
+                </section>
+                <section title="updater" ref="dir_7468157ebcb76345a67412f7bb97ed29.html">
+                  <section title="updater.h" ref="updater_8h_source.html" />
+                  <section title="updaterdialog.h" ref="updaterdialog_8h_source.html" />
                 </section>
                 <section title="widgets" ref="dir_99f4b16b17a360d9840a4176588db3c6.html">
                   <section title="classcontrols.h" ref="classcontrols_8h_source.html" />
@@ -421,6 +435,13 @@
       <keyword name="passwordReset" id="studentEdit::passwordReset" ref="classstudentEdit.html#a2a22440b4141e2917add2c899242e1af" />
       <keyword name="classID" id="studentEdit::classID" ref="classstudentEdit.html#a45fc732c319c25aa8180329c2d117384" />
       <keyword name="studentID" id="studentEdit::studentID" ref="classstudentEdit.html#abff49504499bd8000642f00f96320b5b" />
+      <keyword name="Updater" id="Updater" ref="classUpdater.html" />
+      <keyword name="Updater" id="Updater::Updater" ref="classUpdater.html#abf702b842504bc1147a5e7bebbbf15ea" />
+      <keyword name="~Updater" id="Updater::~Updater" ref="classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e" />
+      <keyword name="UpdaterDialog" id="UpdaterDialog" ref="classUpdaterDialog.html" />
+      <keyword name="UpdaterDialog" id="UpdaterDialog::UpdaterDialog" ref="classUpdaterDialog.html#ae6833c46d5feff6d267e113ba23410e4" />
+      <keyword name="~UpdaterDialog" id="UpdaterDialog::~UpdaterDialog" ref="classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0" />
+      <keyword name="ui" id="UpdaterDialog::ui" ref="classUpdaterDialog.html#afff6bfb3f2078b3e9e7a73651f2ad147" />
       <keyword name="userEdit" id="userEdit" ref="classuserEdit.html" />
       <keyword name="userEdit" id="userEdit::userEdit" ref="classuserEdit.html#aa9c71975e895a6c6c4f23eafafa2622f" />
       <keyword name="~userEdit" id="userEdit::~userEdit" ref="classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
@@ -492,6 +513,8 @@
       <file>monitorwindow_8h_source.html</file>
       <file>optionswindow_8h_source.html</file>
       <file>studentedit_8h_source.html</file>
+      <file>updater_8h_source.html</file>
+      <file>updaterdialog_8h_source.html</file>
       <file>useredit_8h_source.html</file>
       <file>classcontrols_8h_source.html</file>
       <file>classmenu_8h_source.html</file>
@@ -559,6 +582,14 @@
       <file>classstudentEdit__coll__graph.png</file>
       <file>studentEdit.png</file>
       <file>classstudentEdit-members.html</file>
+      <file>classUpdater.html</file>
+      <file>classUpdater__inherit__graph.png</file>
+      <file>classUpdater__coll__graph.png</file>
+      <file>classUpdater-members.html</file>
+      <file>classUpdaterDialog.html</file>
+      <file>classUpdaterDialog__inherit__graph.png</file>
+      <file>classUpdaterDialog__coll__graph.png</file>
+      <file>classUpdaterDialog-members.html</file>
       <file>classuserEdit.html</file>
       <file>classuserEdit__inherit__graph.png</file>
       <file>classuserEdit__coll__graph.png</file>
@@ -581,6 +612,8 @@
       <file>dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html</file>
       <file>dir_51d37d93a99f151d07755b62737feb84.html</file>
       <file>dir_68267d1309a1af8e8297ef4c3efbcdba.html</file>
+      <file>dir_7468157ebcb76345a67412f7bb97ed29.html</file>
+      <file>dir_f356faf232716eaaa298279b6f90416b.html</file>
       <file>dir_99f4b16b17a360d9840a4176588db3c6.html</file>
       <file>dir_0abdee562046be6f5823d1ca8c3fd13c.html</file>
       <file>index.html</file>
