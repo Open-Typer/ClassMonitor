@@ -6,6 +6,7 @@
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="Open-Typer Class Monitor" ref="index.html">
+        <section title="Build instructions" ref="md_docs_data_pages_Build_instructions.html" />
         <section title="Classes" ref="annotated.html">
           <section title="Class List" ref="annotated.html">
             <section title="adminSelector" ref="classadminSelector.html">
@@ -163,6 +164,7 @@
               <section title="userEdit" ref="classuserEdit.html#aa9c71975e895a6c6c4f23eafafa2622f" />
               <section title="~userEdit" ref="classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
               <section title="finish" ref="classuserEdit.html#a786c48d075bb78bcf7abe27b477466c8" />
+              <section title="resetPassword" ref="classuserEdit.html#a915d722fe57c91e1dd1e55a9b3bac8eb" />
               <section title="verify" ref="classuserEdit.html#a23e63b7b722d05537b6e45b83b144cb2" />
             </section>
             <section title="userManager" ref="classuserManager.html">
@@ -262,6 +264,7 @@
       </section>
     </toc>
     <keywords>
+      <keyword name="Build instructions" id="Build instructions" ref="md_docs_data_pages_Build_instructions.html" />
       <keyword name="adminSelector" id="adminSelector" ref="classadminSelector.html" />
       <keyword name="adminSelector" id="adminSelector::adminSelector" ref="classadminSelector.html#ae8c7c8639d2b04422fe66025378636d6" />
       <keyword name="~adminSelector" id="adminSelector::~adminSelector" ref="classadminSelector.html#a77578993a413d00dbbdcde8f4b3e5eb9" />
@@ -520,6 +523,7 @@
       <file>classmenu_8h_source.html</file>
       <file>studentdetails_8h_source.html</file>
       <file>usermanager_8h_source.html</file>
+      <file>md_docs_data_pages_Build_instructions.html</file>
       <file>classadminSelector.html</file>
       <file>classadminSelector__inherit__graph.png</file>
       <file>classadminSelector__coll__graph.png</file>
@@ -608,15 +612,18 @@
       <file>graph_legend.html</file>
       <file>dir_aebb8dcc11953d78e620bbef0b9e2183.html</file>
       <file>dir_4cf372765f693cf540fc4810db0c309c.html</file>
+      <file>dir_5854880b00b3c6c6627d48510baba8d2.html</file>
       <file>dir_b0856f6b0d80ccb263b2f415c91f9e17.html</file>
       <file>dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html</file>
       <file>dir_51d37d93a99f151d07755b62737feb84.html</file>
+      <file>dir_8c421087272d921338bde95c2b39aa1b.html</file>
       <file>dir_68267d1309a1af8e8297ef4c3efbcdba.html</file>
       <file>dir_7468157ebcb76345a67412f7bb97ed29.html</file>
       <file>dir_f356faf232716eaaa298279b6f90416b.html</file>
       <file>dir_99f4b16b17a360d9840a4176588db3c6.html</file>
       <file>dir_0abdee562046be6f5823d1ca8c3fd13c.html</file>
       <file>index.html</file>
+      <file>pages.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>
       <file>hierarchy.html</file>

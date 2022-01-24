@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Open-Typer Class Monitor", "index.html", [
+    [ "Build instructions", "md_docs_data_pages_Build_instructions.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
