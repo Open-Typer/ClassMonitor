@@ -97,7 +97,7 @@ void userEdit::verify(void)
 	ui->okButton->setEnabled(true);
 }
 
-/*
+/*!
  * Connected from resetPasswordButton->clicked().\n
  * Shows password boxes.
  */
