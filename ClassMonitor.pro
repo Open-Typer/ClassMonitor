@@ -28,6 +28,7 @@ SOURCES += \
     src/monitorwindow.cpp \
     src/core/fsmanager.cpp \
     src/core/server.cpp \
+    src/core/language.cpp \
     src/options/optionswindow.cpp \
     src/studentedit.cpp \
     src/useredit.cpp \
@@ -47,6 +48,7 @@ HEADERS += \
     src/include/monitorwindow.h \
     src/include/core/fsmanager.h \
     src/include/core/server.h \
+    src/include/core/language.h \
     src/include/options/optionswindow.h \
     src/include/studentedit.h \
     src/include/useredit.h \
