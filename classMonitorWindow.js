@@ -2,6 +2,7 @@ var classMonitorWindow =
 [
     [ "MonitorWindow", "classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa", null ],
     [ "~MonitorWindow", "classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f", null ],
+    [ "changeEvent", "classMonitorWindow.html#af1953ae9cc698e68a98541af9edcf109", null ],
     [ "goBack", "classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478", null ],
     [ "openClass", "classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049", null ],
     [ "openDetails", "classMonitorWindow.html#a463634ef5107435462dda07a679559dd", null ],

@@ -8,6 +8,7 @@ var annotated_dup =
     [ "classMenu", "classclassMenu.html", "classclassMenu" ],
     [ "fileUtils", "classfileUtils.html", "classfileUtils" ],
     [ "initialSetup", "classinitialSetup.html", "classinitialSetup" ],
+    [ "languageManager", "classlanguageManager.html", "classlanguageManager" ],
     [ "monitorServer", "classmonitorServer.html", "classmonitorServer" ],
     [ "MonitorWindow", "classMonitorWindow.html", "classMonitorWindow" ],
     [ "optionsWindow", "classoptionsWindow.html", "classoptionsWindow" ],

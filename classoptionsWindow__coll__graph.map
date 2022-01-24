@@ -1,4 +1,6 @@
 <map id="optionsWindow" name="optionsWindow">
-<area shape="rect" id="node1" title="The optionsWindow class is a dialog used for options." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="27,5,95,32"/>
+<area shape="rect" id="node1" title="The optionsWindow class is a dialog used for options." alt="" coords="5,171,116,197"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,73,108"/>
+<area shape="rect" id="node3" href="$classlanguageManager.html" title="The languageManager class provides a list of supported languages." alt="" coords="97,81,221,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="124,5,195,32"/>
 </map>

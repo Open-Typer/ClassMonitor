@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['optionswindow_0',['optionsWindow',['../classoptionsWindow.html',1,'']]]
+  ['monitorserver_0',['monitorServer',['../classmonitorServer.html',1,'']]],
+  ['monitorwindow_1',['MonitorWindow',['../classMonitorWindow.html',1,'']]]
 ];

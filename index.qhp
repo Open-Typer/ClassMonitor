@@ -96,6 +96,11 @@
               <section title="save" ref="classinitialSetup.html#a79b12a24899b1252e621fd8f34241ec5" />
               <section title="verify" ref="classinitialSetup.html#a3bda32cc5591d06ea720ace7e2d0a558" />
             </section>
+            <section title="languageManager" ref="classlanguageManager.html">
+              <section title="languageManager" ref="classlanguageManager.html#abe17868a43f7d0ad2c10d37245ae43bb" />
+              <section title="~languageManager" ref="classlanguageManager.html#aa528e7f1356bfb831104e0c4e1c6c485" />
+              <section title="setLanguage" ref="classlanguageManager.html#a741725e057f7ef8f34fc4ef4d0a64502" />
+            </section>
             <section title="monitorServer" ref="classmonitorServer.html">
               <section title="monitorServer" ref="classmonitorServer.html#a5139f286021e951906edffa8502ee3b7" />
               <section title="~monitorServer" ref="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585" />
@@ -120,6 +125,7 @@
             <section title="MonitorWindow" ref="classMonitorWindow.html">
               <section title="MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
               <section title="~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
+              <section title="changeEvent" ref="classMonitorWindow.html#af1953ae9cc698e68a98541af9edcf109" />
               <section title="goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
               <section title="openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
               <section title="openDetails" ref="classMonitorWindow.html#a463634ef5107435462dda07a679559dd" />
@@ -211,6 +217,7 @@
               <section title="Updater" ref="classUpdater.html" />
               <section title="classManager" ref="classclassManager.html" />
               <section title="fileUtils" ref="classfileUtils.html" />
+              <section title="languageManager" ref="classlanguageManager.html" />
               <section title="userManager" ref="classuserManager.html" />
             </section>
             <section title="QTcpServer" ref="">
@@ -234,6 +241,7 @@
               <section title="include" ref="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">
                 <section title="core" ref="dir_4cf372765f693cf540fc4810db0c309c.html">
                   <section title="fsmanager.h" ref="fsmanager_8h_source.html" />
+                  <section title="language.h" ref="language_8h_source.html" />
                   <section title="server.h" ref="server_8h_source.html" />
                 </section>
                 <section title="options" ref="dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html">
@@ -360,6 +368,13 @@
       <keyword name="verify" id="initialSetup::verify" ref="classinitialSetup.html#a3bda32cc5591d06ea720ace7e2d0a558" />
       <keyword name="save" id="initialSetup::save" ref="classinitialSetup.html#a79b12a24899b1252e621fd8f34241ec5" />
       <keyword name="ui" id="initialSetup::ui" ref="classinitialSetup.html#a152b72ecb49b51ca1d28ddfd5df37e4b" />
+      <keyword name="languageManager" id="languageManager" ref="classlanguageManager.html" />
+      <keyword name="languageManager" id="languageManager::languageManager" ref="classlanguageManager.html#abe17868a43f7d0ad2c10d37245ae43bb" />
+      <keyword name="~languageManager" id="languageManager::~languageManager" ref="classlanguageManager.html#aa528e7f1356bfb831104e0c4e1c6c485" />
+      <keyword name="setLanguage" id="languageManager::setLanguage" ref="classlanguageManager.html#a741725e057f7ef8f34fc4ef4d0a64502" />
+      <keyword name="supportedLanguages" id="languageManager::supportedLanguages" ref="classlanguageManager.html#a9a9c7204f4fda5fdaf854374cc609c29" />
+      <keyword name="supportedCountries" id="languageManager::supportedCountries" ref="classlanguageManager.html#ab715083a9b92b8a7a2b3f0ab8215c458" />
+      <keyword name="boxItems" id="languageManager::boxItems" ref="classlanguageManager.html#aedfb85e051ce25c65e5dbeb1dc4f97a8" />
       <keyword name="monitorServer" id="monitorServer" ref="classmonitorServer.html" />
       <keyword name="monitorServer" id="monitorServer::monitorServer" ref="classmonitorServer.html#a5139f286021e951906edffa8502ee3b7" />
       <keyword name="~monitorServer" id="monitorServer::~monitorServer" ref="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585" />
@@ -389,6 +404,7 @@
       <keyword name="themeChanged" id="MonitorWindow::themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
       <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
       <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
+      <keyword name="changeEvent" id="MonitorWindow::changeEvent" ref="classMonitorWindow.html#af1953ae9cc698e68a98541af9edcf109" />
       <keyword name="updateSchoolName" id="MonitorWindow::updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
       <keyword name="openOptions" id="MonitorWindow::openOptions" ref="classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b" />
       <keyword name="openClass" id="MonitorWindow::openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
@@ -409,6 +425,8 @@
       <keyword name="closeOptions" id="optionsWindow::closeOptions" ref="classoptionsWindow.html#a53c6de72dfe4909444452005cce9bc92" />
       <keyword name="ui" id="optionsWindow::ui" ref="classoptionsWindow.html#a9d8f2019045cd76cde4e0c86e1d2296d" />
       <keyword name="settings" id="optionsWindow::settings" ref="classoptionsWindow.html#a3e4a3003f127ff60107380f265f5debf" />
+      <keyword name="langMgr" id="optionsWindow::langMgr" ref="classoptionsWindow.html#afd1158afeed54cbd0001e7444ad54a64" />
+      <keyword name="languages" id="optionsWindow::languages" ref="classoptionsWindow.html#a23d4cdfa64350fa9b8bb9b6d1d3d3380" />
       <keyword name="studentDetails" id="studentDetails" ref="classstudentDetails.html" />
       <keyword name="backClicked" id="studentDetails::backClicked" ref="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c" />
       <keyword name="studentDetails" id="studentDetails::studentDetails" ref="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0" />
@@ -510,6 +528,7 @@
       <file>authdialog_8h_source.html</file>
       <file>classedit_8h_source.html</file>
       <file>fsmanager_8h_source.html</file>
+      <file>language_8h_source.html</file>
       <file>server_8h_source.html</file>
       <file>global_8h_source.html</file>
       <file>initialsetup_8h_source.html</file>
@@ -562,6 +581,10 @@
       <file>classinitialSetup__coll__graph.png</file>
       <file>initialSetup.png</file>
       <file>classinitialSetup-members.html</file>
+      <file>classlanguageManager.html</file>
+      <file>classlanguageManager__inherit__graph.png</file>
+      <file>classlanguageManager__coll__graph.png</file>
+      <file>classlanguageManager-members.html</file>
       <file>classmonitorServer.html</file>
       <file>classmonitorServer__inherit__graph.png</file>
       <file>classmonitorServer__coll__graph.png</file>

@@ -17,6 +17,7 @@ var hierarchy =
       [ "Updater", "classUpdater.html", null ],
       [ "classManager", "classclassManager.html", null ],
       [ "fileUtils", "classfileUtils.html", null ],
+      [ "languageManager", "classlanguageManager.html", null ],
       [ "userManager", "classuserManager.html", null ]
     ] ],
     [ "QTcpServer", null, [
