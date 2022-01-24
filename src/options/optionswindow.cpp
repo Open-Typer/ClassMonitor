@@ -31,6 +31,19 @@ optionsWindow::optionsWindow(QWidget *parent) :
 	ui->portEdit->setValue(monitorServer::port());
 	ui->darkThemeCheckBox->setChecked(settings->value("customization/darktheme","false").toBool());
 	setStyleSheet(globalStyleSheet);
+	// Load languages
+	ui->languageList->clear();
+	languages = langMgr.boxItems;
+	for(int i=0; i < languages.count(); i++)
+	{
+		QListWidgetItem *item = new QListWidgetItem(languages[i]);
+		ui->languageList->addItem(item);
+	}
+	QString lang = settings->value("main/language","").toString();
+	if(lang == "")
+		ui->languageList->setCurrentRow(0);
+	else
+		ui->languageList->setCurrentRow(languages.indexOf(lang));
 	// Connections
 	connect(ui->okButton,SIGNAL(clicked()),this,SLOT(closeOptions()));
 }
@@ -47,6 +60,11 @@ optionsWindow::~optionsWindow()
  */
 void optionsWindow::closeOptions(void)
 {
+	if(ui->languageList->currentRow() == 0)
+		settings->setValue("main/language","");
+	else
+		settings->setValue("main/language",languages[ui->languageList->currentRow()]);
+	langMgr.setLanguage();
 	settings->setValue("server/port",ui->portEdit->value());
 	settings->setValue("customization/darktheme",ui->darkThemeCheckBox->isChecked());
 	delete serverPtr;

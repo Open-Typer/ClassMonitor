@@ -26,6 +26,7 @@
 #include "global.h"
 #include "core/fsmanager.h"
 #include "core/server.h"
+#include "core/language.h"
 
 namespace Ui {
 	class optionsWindow;
@@ -46,6 +47,8 @@ class optionsWindow : public QDialog
 	private:
 		Ui::optionsWindow *ui;
 		QSettings *settings;
+		languageManager langMgr;
+		QStringList languages;
 
 	private slots:
 		void closeOptions(void);
