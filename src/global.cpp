@@ -21,3 +21,4 @@
 #include "global.h"
 
 QString globalStyleSheet = "";
+QList<QTranslator*> globalTranslators;

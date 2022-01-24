@@ -19,5 +19,7 @@
  */
 
 #include <QString>
+#include <QTranslator>
 
 extern QString globalStyleSheet;
+extern QList<QTranslator*> globalTranslators;
