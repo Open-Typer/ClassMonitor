@@ -24,6 +24,7 @@
 #include "monitorwindow.h"
 #include "initialsetup.h"
 #include "core/server.h"
+#include "core/language.h"
 
 int main(int argc, char *argv[])
 {
@@ -52,6 +53,8 @@ int main(int argc, char *argv[])
 		if(options.exec() == QDialog::Rejected)
 			return 0;
 	}
+	languageManager langMgr;
+	langMgr.setLanguage();
 	MonitorWindow w;
 	// Open initialSetup if no users are found
 	if(userManager::userIDs().count() == 0)
