@@ -84,6 +84,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     certs/certs.qrc \
+    lang/lang.qrc \
     res.qrc \
     light-theme/light-style.qrc \
     dark-theme/dark-style.qrc

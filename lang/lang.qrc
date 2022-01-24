@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/res/lang">
+        <file>ClassMonitor_sk_SK.qm</file>
+    </qresource>
+</RCC>
