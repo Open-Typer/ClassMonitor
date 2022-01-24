@@ -58,6 +58,9 @@ class MonitorWindow : public QMainWindow
 		void updateControlWidget(void);
 		void transition(void);
 
+	protected:
+		void changeEvent(QEvent *event);
+
 	signals:
 		/*! A signal, which is emitted when the theme changes. \see setTheme() */
 		void themeChanged(bool);

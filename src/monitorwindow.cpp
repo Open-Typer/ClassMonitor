@@ -215,3 +215,11 @@ void MonitorWindow::goBack(void)
 	moveAnim->start();
 	animLoop.exec();
 }
+
+/*! Overrides QWidget::changeEvent(). */
+void MonitorWindow::changeEvent(QEvent *event)
+{
+	if(event->type() == QEvent::LanguageChange)
+		ui->retranslateUi(this);
+	QWidget::changeEvent(event);
+}
