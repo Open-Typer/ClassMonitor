@@ -30,7 +30,7 @@ userEdit::userEdit(bool newUser, int id, QWidget *parent) :
 	setStyleSheet(globalStyleSheet);
 	// Roles
 	QStringList roles;
-	roles += tr("Basic","Basic user role");
+	roles += tr("Teacher","Teacher user role");
 	roles += tr("Administrator","Administrator user role");
 	ui->roleBox->addItems(roles);
 	ui->roleBox->setCurrentIndex(0);
