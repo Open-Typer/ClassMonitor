@@ -165,7 +165,7 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
     <message>
         <location filename="../src/widgets/classcontrols.cpp" line="140"/>
         <source>Are you sure you want to remove student</source>
-        <translation>Ste si istí, že chcete odstrániť študenta</translation>
+        <translation>Ste si istý/-á, že chcete odstrániť študenta</translation>
     </message>
     <message>
         <location filename="../src/widgets/classcontrols.cpp" line="141"/>
@@ -289,7 +289,7 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
     <message>
         <location filename="../src/widgets/classmenu.cpp" line="117"/>
         <source>Are you sure you want to remove class </source>
-        <translation>Ste si istí, že chcete odstrániť triedu </translation>
+        <translation>Ste si istý/-á, že chcete odstrániť triedu </translation>
     </message>
     <message>
         <location filename="../src/widgets/classmenu.cpp" line="118"/>
@@ -576,7 +576,7 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
     <message>
         <location filename="../src/widgets/usermanager.cpp" line="131"/>
         <source>Are you sure you want to remove user</source>
-        <translation>Ste si istí, že chcete odstrániť používateľa</translation>
+        <translation>Ste si istý/-á, že chcete odstrániť používateľa</translation>
     </message>
     <message>
         <location filename="../src/widgets/usermanager.cpp" line="132"/>
