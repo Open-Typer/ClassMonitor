@@ -336,6 +336,14 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
     </message>
 </context>
 <context>
+    <name>languageManager</name>
+    <message>
+        <location filename="../src/core/language.cpp" line="44"/>
+        <source>System (default)</source>
+        <translation>Systémový (predvolený)</translation>
+    </message>
+</context>
+<context>
     <name>monitorServer</name>
     <message>
         <location filename="../src/core/server.cpp" line="41"/>
@@ -346,28 +354,33 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
 <context>
     <name>optionsWindow</name>
     <message>
-        <location filename="../ui/options/optionswindow.ui" line="26"/>
+        <location filename="../ui/options/optionswindow.ui" line="14"/>
         <location filename="../ui/options/optionswindow.ui" line="116"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
     <message>
-        <location filename="../ui/options/optionswindow.ui" line="68"/>
+        <location filename="../ui/options/optionswindow.ui" line="56"/>
+        <source>Language</source>
+        <translation>Jazyk</translation>
+    </message>
+    <message>
+        <location filename="../ui/options/optionswindow.ui" line="129"/>
         <source>Server</source>
         <translation>Server</translation>
     </message>
     <message>
-        <location filename="../ui/options/optionswindow.ui" line="74"/>
+        <location filename="../ui/options/optionswindow.ui" line="135"/>
         <source>Server port:</source>
         <translation>Port servera:</translation>
     </message>
     <message>
-        <location filename="../ui/options/optionswindow.ui" line="169"/>
+        <location filename="../ui/options/optionswindow.ui" line="87"/>
         <source>Customization</source>
         <translation>Prispôsobenie</translation>
     </message>
     <message>
-        <location filename="../ui/options/optionswindow.ui" line="175"/>
+        <location filename="../ui/options/optionswindow.ui" line="93"/>
         <source>Dark theme</source>
         <translation>Tmavý motív</translation>
     </message>
