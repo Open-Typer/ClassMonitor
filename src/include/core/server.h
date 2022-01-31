@@ -41,6 +41,7 @@ class monitorServer : public QTcpServer
 		~monitorServer();
 		static quint16 port(void);
 		static QHostAddress address(void);
+		void sendSignal(QByteArray name, QList<QByteArray> data, QList<QByteArray> usernames);
 		const QSslCertificate &getSslLocalCertificate() const;
 		const QSslKey &getSslPrivateKey() const;
 		QSsl::SslProtocol getSslProtocol() const;

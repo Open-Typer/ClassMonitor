@@ -213,7 +213,26 @@ void monitorServer::sendResponse(void)
 		clientSocket->write(convertData({"fail"}));
 }
 
-/*! Converts list of QByteArrays to a single QByteArray, which can be used for a response. */
+/*! Sends a signal to clients with username from a list. */
+void monitorServer::sendSignal(QByteArray name, QList<QByteArray> data, QList<QByteArray> usernames)
+{
+	QList<QByteArray> rawData;
+	rawData.clear();
+	rawData += name;
+	for(int i=0; i < data.count(); i++)
+		rawData += data[i];
+	QByteArray finalData = convertData(rawData);
+	for(int i=0; i < clientSockets.count(); i++)
+	{
+		if(sessions.contains(clientSockets[i]))
+		{
+			if(usernames.contains(sessions[clientSockets[i]].toUtf8()))
+				clientSockets[i]->write(finalData);
+		}
+	}
+}
+
+/*! Converts list of QByteArrays to a single QByteArray, which can be used for a response or signal. */
 QByteArray monitorServer::convertData(bool *ok, QList<QByteArray> input)
 {
 	QByteArray out;
