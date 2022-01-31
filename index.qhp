@@ -28,6 +28,7 @@
               <section title="detailsClicked" ref="classclassControls#a151fa314492e99ce4a6183b91fb906ad" />
               <section title="editStudent" ref="classclassControls#a35f2c8f2ea293dfcad7d36d934e0288e" />
               <section title="goBack" ref="classclassControls#abb2c1e4418b45849b4ce2bd7a682be6b" />
+              <section title="loadExercise" ref="classclassControls#ad94d9e3849a23e72661f278a40294867" />
               <section title="openDetails" ref="classclassControls#a4f72d70048afef1fe87f9ac93d76de41" />
               <section title="refreshCharts" ref="classclassControls#a70f87b55fb524edef079d0d0c831234a" />
               <section title="removeStudent" ref="classclassControls#a36196fc52adb22c50458b9d38787721c" />
@@ -116,6 +117,7 @@
               <section title="port" ref="classmonitorServer#ae06bce523ecfc5599f1ab6219c4f6bc3" />
               <section title="readData" ref="classmonitorServer#a02783368ac82a41a0e2b126fa36a65b6" />
               <section title="sendResponse" ref="classmonitorServer#ad94cc73617f4f28512394180d52e451b" />
+              <section title="sendSignal" ref="classmonitorServer#a8ec64bd1847a880cd628dd2e5cd8d660" />
               <section title="setSslLocalCertificate" ref="classmonitorServer#a922cc117a049fa6e08078aa5fec73421" />
               <section title="setSslLocalCertificate" ref="classmonitorServer#a8e53ec2057f233034212eb2bd4c7254b" />
               <section title="setSslPrivateKey" ref="classmonitorServer#afe6f72cde581c45666bf32500a3f2c99" />
@@ -142,6 +144,13 @@
               <section title="optionsWindow" ref="classoptionsWindow#a45fae6808c165b25c933492140379fd3" />
               <section title="~optionsWindow" ref="classoptionsWindow#ad2942ee73b6562894bf2d25f554b9e5c" />
               <section title="closeOptions" ref="classoptionsWindow#a53c6de72dfe4909444452005cce9bc92" />
+            </section>
+            <section title="paperConfigDialog" ref="classpaperConfigDialog">
+              <section title="paperConfigDialog" ref="classpaperConfigDialog#aa332336ca2ba987341d72ab24c1e991b" />
+              <section title="~paperConfigDialog" ref="classpaperConfigDialog#af6de249a3dd88ad11fcd941545e5d25b" />
+              <section title="reject" ref="classpaperConfigDialog#ad8aa809dedc36fbf58fdbd36ed125301" />
+              <section title="setIncludeNewLines" ref="classpaperConfigDialog#a2516e00c55ea34f28a9ea0e8b86625d6" />
+              <section title="updateLineLength" ref="classpaperConfigDialog#a1fbcba6f6e7ee29f2a7e98f191e26d8b" />
             </section>
             <section title="studentDetails" ref="classstudentDetails">
               <section title="studentDetails" ref="classstudentDetails#a285e47a614c7fa26c61ed1bafd7433b0" />
@@ -208,6 +217,7 @@
               <section title="classEdit" ref="classclassEdit" />
               <section title="initialSetup" ref="classinitialSetup" />
               <section title="optionsWindow" ref="classoptionsWindow" />
+              <section title="paperConfigDialog" ref="classpaperConfigDialog" />
               <section title="studentEdit" ref="classstudentEdit" />
               <section title="userEdit" ref="classuserEdit" />
             </section>
@@ -265,6 +275,7 @@
                 <section title="global.h" ref="global_8h_source" />
                 <section title="initialsetup.h" ref="initialsetup_8h_source" />
                 <section title="monitorwindow.h" ref="monitorwindow_8h_source" />
+                <section title="paperconfigdialog.h" ref="paperconfigdialog_8h_source" />
                 <section title="studentedit.h" ref="studentedit_8h_source" />
                 <section title="useredit.h" ref="useredit_8h_source" />
               </section>
@@ -286,6 +297,7 @@
       <keyword name="monitorServer" id="monitorServer" ref="classmonitorServer" />
       <keyword name="MonitorWindow" id="MonitorWindow" ref="classMonitorWindow" />
       <keyword name="optionsWindow" id="optionsWindow" ref="classoptionsWindow" />
+      <keyword name="paperConfigDialog" id="paperConfigDialog" ref="classpaperConfigDialog" />
       <keyword name="studentDetails" id="studentDetails" ref="classstudentDetails" />
       <keyword name="studentEdit" id="studentEdit" ref="classstudentEdit" />
       <keyword name="Updater" id="Updater" ref="classUpdater" />
@@ -356,6 +368,7 @@
       <keyword name="initialSetup" id="initialSetup::initialSetup" ref="classinitialSetup#a2c04fb32795d022271a129609da6f5dd" />
       <keyword name="languageManager" id="languageManager::languageManager" ref="classlanguageManager#abe17868a43f7d0ad2c10d37245ae43bb" />
       <keyword name="lessonList" id="classManager::lessonList" ref="classclassManager#a45204fec2ad23a129dcaa207f8f220c7" />
+      <keyword name="loadExercise" id="classControls::loadExercise" ref="classclassControls#ad94d9e3849a23e72661f278a40294867" />
       <keyword name="monitorServer" id="monitorServer::monitorServer" ref="classmonitorServer#a5139f286021e951906edffa8502ee3b7" />
       <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow#a139e1a9860177c72701690d8706a39fa" />
       <keyword name="open" id="classMenu::open" ref="classclassMenu#ab4d5b12f17e4c3d94db1491335061d91" />
@@ -366,12 +379,14 @@
       <keyword name="openUserManager" id="MonitorWindow::openUserManager" ref="classMonitorWindow#afede0a06f1d764ba725558c10e655c5b" />
       <keyword name="openUserManager" id="classMenu::openUserManager" ref="classclassMenu#afbd77a25e3a9ab85ced82fee78c85849" />
       <keyword name="optionsWindow" id="optionsWindow::optionsWindow" ref="classoptionsWindow#a45fae6808c165b25c933492140379fd3" />
+      <keyword name="paperConfigDialog" id="paperConfigDialog::paperConfigDialog" ref="classpaperConfigDialog#aa332336ca2ba987341d72ab24c1e991b" />
       <keyword name="port" id="monitorServer::port" ref="classmonitorServer#ae06bce523ecfc5599f1ab6219c4f6bc3" />
       <keyword name="readData" id="monitorServer::readData" ref="classmonitorServer#a02783368ac82a41a0e2b126fa36a65b6" />
       <keyword name="refresh" id="studentDetails::refresh" ref="classstudentDetails#aa584eb65a41aa7dcb1d23e4185f319f2" />
       <keyword name="refreshCharts" id="classControls::refreshCharts" ref="classclassControls#a70f87b55fb524edef079d0d0c831234a" />
       <keyword name="refreshCharts" id="studentDetails::refreshCharts" ref="classstudentDetails#a0488a551935057caa40ba9583d6dc67c" />
       <keyword name="refreshTable" id="studentDetails::refreshTable" ref="classstudentDetails#a49db064c526ee9a21684d79f0e3f78ce" />
+      <keyword name="reject" id="paperConfigDialog::reject" ref="classpaperConfigDialog#ad8aa809dedc36fbf58fdbd36ed125301" />
       <keyword name="removeClass" id="classManager::removeClass" ref="classclassManager#a8be2c4c66f6b0a896942deb48dddddb5" />
       <keyword name="removeClass" id="classMenu::removeClass" ref="classclassMenu#a3fd814240bf8382e53034c45807f55bf" />
       <keyword name="removeStudent" id="classManager::removeStudent" ref="classclassManager#a2e428146e6012fb747a29d91cd687049" />
@@ -383,8 +398,10 @@
       <keyword name="roleName" id="userManager::roleName" ref="classuserManager#a2951398109a854c2de7d8528eb37a4da" />
       <keyword name="save" id="initialSetup::save" ref="classinitialSetup#a79b12a24899b1252e621fd8f34241ec5" />
       <keyword name="sendResponse" id="monitorServer::sendResponse" ref="classmonitorServer#ad94cc73617f4f28512394180d52e451b" />
+      <keyword name="sendSignal" id="monitorServer::sendSignal" ref="classmonitorServer#a8ec64bd1847a880cd628dd2e5cd8d660" />
       <keyword name="sessions" id="monitorServer::sessions" ref="classmonitorServer#a73de17b0acce09f4f8fa336294ad432e" />
       <keyword name="setClassTimestamp" id="classManager::setClassTimestamp" ref="classclassManager#a1f156eecbbed6cc2b5ad46ae9f9293d6" />
+      <keyword name="setIncludeNewLines" id="paperConfigDialog::setIncludeNewLines" ref="classpaperConfigDialog#a2516e00c55ea34f28a9ea0e8b86625d6" />
       <keyword name="setLanguage" id="languageManager::setLanguage" ref="classlanguageManager#a741725e057f7ef8f34fc4ef4d0a64502" />
       <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer#a922cc117a049fa6e08078aa5fec73421" />
       <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer#a8e53ec2057f233034212eb2bd4c7254b" />
@@ -410,6 +427,7 @@
       <keyword name="themeChanged" id="MonitorWindow::themeChanged" ref="classMonitorWindow#a8f187f43d19f718b79c96d238279e097" />
       <keyword name="transition" id="MonitorWindow::transition" ref="classMonitorWindow#aafb4f1892a3f675d5cac55b5f7d3c92a" />
       <keyword name="updateControlWidget" id="MonitorWindow::updateControlWidget" ref="classMonitorWindow#a186eb9f50c054e9606322a8ef943d5c3" />
+      <keyword name="updateLineLength" id="paperConfigDialog::updateLineLength" ref="classpaperConfigDialog#a1fbcba6f6e7ee29f2a7e98f191e26d8b" />
       <keyword name="updateOwner" id="classEdit::updateOwner" ref="classclassEdit#a44d206f77fc7fe1c8cc868a9daca5c49" />
       <keyword name="Updater" id="Updater::Updater" ref="classUpdater#abf702b842504bc1147a5e7bebbbf15ea" />
       <keyword name="UpdaterDialog" id="UpdaterDialog::UpdaterDialog" ref="classUpdaterDialog#ae6833c46d5feff6d267e113ba23410e4" />
@@ -439,6 +457,7 @@
       <keyword name="~monitorServer" id="monitorServer::~monitorServer" ref="classmonitorServer#a10c0a13ba9e519d6e7fc91e1f3839585" />
       <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow#addd6a957bc31c8b95faff7cb575c903f" />
       <keyword name="~optionsWindow" id="optionsWindow::~optionsWindow" ref="classoptionsWindow#ad2942ee73b6562894bf2d25f554b9e5c" />
+      <keyword name="~paperConfigDialog" id="paperConfigDialog::~paperConfigDialog" ref="classpaperConfigDialog#af6de249a3dd88ad11fcd941545e5d25b" />
       <keyword name="~studentDetails" id="studentDetails::~studentDetails" ref="classstudentDetails#af7a767871f4c72c1c6c87a9d350fde87" />
       <keyword name="~studentEdit" id="studentEdit::~studentEdit" ref="classstudentEdit#a9d21d9eb48bb859aeccc60b1900d5a33" />
       <keyword name="~Updater" id="Updater::~Updater" ref="classUpdater#a2f8434a97a4f3d3c716bb05abb20621e" />
@@ -487,6 +506,7 @@
       <file>initialsetup_8h_source.html</file>
       <file>monitorwindow_8h_source.html</file>
       <file>optionswindow_8h_source.html</file>
+      <file>paperconfigdialog_8h_source.html</file>
       <file>studentedit_8h_source.html</file>
       <file>updater_8h_source.html</file>
       <file>updaterdialog_8h_source.html</file>
@@ -552,6 +572,11 @@
       <file>classoptionsWindow__coll__graph.png</file>
       <file>optionsWindow.png</file>
       <file>classoptionsWindow-members.html</file>
+      <file>classpaperConfigDialog.html</file>
+      <file>classpaperConfigDialog__inherit__graph.png</file>
+      <file>classpaperConfigDialog__coll__graph.png</file>
+      <file>paperConfigDialog.png</file>
+      <file>classpaperConfigDialog-members.html</file>
       <file>classstudentDetails.html</file>
       <file>classstudentDetails__inherit__graph.png</file>
       <file>classstudentDetails__coll__graph.png</file>

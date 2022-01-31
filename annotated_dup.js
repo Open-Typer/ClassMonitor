@@ -12,6 +12,7 @@ var annotated_dup =
     [ "monitorServer", "classmonitorServer.html", "classmonitorServer" ],
     [ "MonitorWindow", "classMonitorWindow.html", "classMonitorWindow" ],
     [ "optionsWindow", "classoptionsWindow.html", "classoptionsWindow" ],
+    [ "paperConfigDialog", "classpaperConfigDialog.html", "classpaperConfigDialog" ],
     [ "studentDetails", "classstudentDetails.html", "classstudentDetails" ],
     [ "studentEdit", "classstudentEdit.html", "classstudentEdit" ],
     [ "Updater", "classUpdater.html", "classUpdater" ],

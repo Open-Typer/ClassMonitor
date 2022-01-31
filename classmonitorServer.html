@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5139f286021e951906edffa8502ee3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c0a13ba9e519d6e7fc91e1f3839585"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585">~monitorServer</a> ()</td></tr>
 <tr class="separator:a10c0a13ba9e519d6e7fc91e1f3839585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec64bd1847a880cd628dd2e5cd8d660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#a8ec64bd1847a880cd628dd2e5cd8d660">sendSignal</a> (QByteArray name, QList&lt; QByteArray &gt; data, QList&lt; QByteArray &gt; usernames)</td></tr>
+<tr class="separator:a8ec64bd1847a880cd628dd2e5cd8d660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad00156a3448fd0c8b8a59e328419950f"><td class="memItemLeft" align="right" valign="top">const QSslCertificate &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f">getSslLocalCertificate</a> () const</td></tr>
 <tr class="separator:ad00156a3448fd0c8b8a59e328419950f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd66e4bdad6c4aa34704c3ae9ba6931"><td class="memItemLeft" align="right" valign="top">const QSslKey &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931">getSslPrivateKey</a> () const</td></tr>
@@ -337,7 +339,7 @@ Accepts a new connection.</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Converts list of QByteArrays to a single QByteArray, which can be used for a response. </p>
+<p >Converts list of QByteArrays to a single QByteArray, which can be used for a response or signal. </p>
 
 </div>
 </div>
@@ -555,6 +557,41 @@ Accepts a new connection.</p>
 </div><div class="memdoc">
 <p >Connected from QIODevice::readyRead().<br  />
 Sends a response back to the client. </p>
+
+</div>
+</div>
+<a id="a8ec64bd1847a880cd628dd2e5cd8d660" name="a8ec64bd1847a880cd628dd2e5cd8d660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec64bd1847a880cd628dd2e5cd8d660">&#9670;&nbsp;</a></span>sendSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitorServer::sendSignal </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QList&lt; QByteArray &gt;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QList&lt; QByteArray &gt;&#160;</td>
+          <td class="paramname"><em>usernames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sends a signal to clients with username from a list. </p>
 
 </div>
 </div>

@@ -10,10 +10,11 @@ var searchData=
   ['_7emonitorserver_7',['~monitorServer',['../classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585',1,'monitorServer']]],
   ['_7emonitorwindow_8',['~MonitorWindow',['../classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f',1,'MonitorWindow']]],
   ['_7eoptionswindow_9',['~optionsWindow',['../classoptionsWindow.html#ad2942ee73b6562894bf2d25f554b9e5c',1,'optionsWindow']]],
-  ['_7estudentdetails_10',['~studentDetails',['../classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87',1,'studentDetails']]],
-  ['_7estudentedit_11',['~studentEdit',['../classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33',1,'studentEdit']]],
-  ['_7eupdater_12',['~Updater',['../classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e',1,'Updater']]],
-  ['_7eupdaterdialog_13',['~UpdaterDialog',['../classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0',1,'UpdaterDialog']]],
-  ['_7euseredit_14',['~userEdit',['../classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7',1,'userEdit']]],
-  ['_7eusermanagerwidget_15',['~userManagerWidget',['../classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164',1,'userManagerWidget']]]
+  ['_7epaperconfigdialog_10',['~paperConfigDialog',['../classpaperConfigDialog.html#af6de249a3dd88ad11fcd941545e5d25b',1,'paperConfigDialog']]],
+  ['_7estudentdetails_11',['~studentDetails',['../classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87',1,'studentDetails']]],
+  ['_7estudentedit_12',['~studentEdit',['../classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33',1,'studentEdit']]],
+  ['_7eupdater_13',['~Updater',['../classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e',1,'Updater']]],
+  ['_7eupdaterdialog_14',['~UpdaterDialog',['../classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0',1,'UpdaterDialog']]],
+  ['_7euseredit_15',['~userEdit',['../classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7',1,'userEdit']]],
+  ['_7eusermanagerwidget_16',['~userManagerWidget',['../classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164',1,'userManagerWidget']]]
 ];

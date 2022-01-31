@@ -7,6 +7,7 @@ var hierarchy =
       [ "classEdit", "classclassEdit.html", null ],
       [ "initialSetup", "classinitialSetup.html", null ],
       [ "optionsWindow", "classoptionsWindow.html", null ],
+      [ "paperConfigDialog", "classpaperConfigDialog.html", null ],
       [ "studentEdit", "classstudentEdit.html", null ],
       [ "userEdit", "classuserEdit.html", null ]
     ] ],

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['studentdetails_0',['studentDetails',['../classstudentDetails.html',1,'']]],
-  ['studentedit_1',['studentEdit',['../classstudentEdit.html',1,'']]]
+  ['paperconfigdialog_0',['paperConfigDialog',['../classpaperConfigDialog.html',1,'']]]
 ];

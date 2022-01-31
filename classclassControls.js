@@ -8,6 +8,7 @@ var classclassControls =
     [ "detailsClicked", "classclassControls.html#a151fa314492e99ce4a6183b91fb906ad", null ],
     [ "editStudent", "classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e", null ],
     [ "goBack", "classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b", null ],
+    [ "loadExercise", "classclassControls.html#ad94d9e3849a23e72661f278a40294867", null ],
     [ "openDetails", "classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41", null ],
     [ "refreshCharts", "classclassControls.html#a70f87b55fb524edef079d0d0c831234a", null ],
     [ "removeStudent", "classclassControls.html#a36196fc52adb22c50458b9d38787721c", null ],
