@@ -51,6 +51,7 @@ classControls::classControls(int openClassID, QWidget *parent) :
 	refreshCharts();
 	// Connections
 	connect(ui->backButton,SIGNAL(clicked()),this,SLOT(goBack()));
+	connect(ui->loadExerciseButton,SIGNAL(clicked()),this,SLOT(loadExercise()));
 	connect(ui->studentsTable,SIGNAL(itemSelectionChanged()),this,SLOT(verify()));
 	connect(ui->studentsTable,&QTableWidget::itemDoubleClicked,this,&classControls::openDetails);
 	connect(ui->addButton,SIGNAL(clicked()),this,SLOT(addStudent()));
@@ -316,4 +317,40 @@ void classControls::changeTheme(bool dark)
 	speedChart->setTheme(theme);
 	mistakesChart->setTheme(theme);
 	timeChart->setTheme(theme);
+}
+
+/*!
+ * Connected from loadExerciseButton.\n
+ * Loads exercise from a text file and sends it to all students in this class.
+ */
+void classControls::loadExercise(void)
+{
+	QString fileName = QFileDialog::getOpenFileName(this);
+	if(!fileName.isNull())
+	{
+		QFile file(fileName);
+		if(file.size() > 2048) // Maximum size
+		{
+			QMessageBox errBox;
+			errBox.setText(tr("This file is too large!"));
+			errBox.setStyleSheet(styleSheet());
+			errBox.exec();
+			return;
+		}
+		if(file.open(QIODevice::ReadOnly | QIODevice::Text))
+		{
+			paperConfigDialog dialog;
+			dialog.setStyleSheet(styleSheet());
+			dialog.exec();
+			QList<QByteArray> usernames;
+			usernames.clear();
+			QList<int> students = classManager::studentIDs(classID);
+			for(int i=0; i < students.count(); i++)
+				usernames += classManager::studentUsername(classID,students[i]).toUtf8();
+			QByteArray includeNewLines = "false";
+			if(dialog.includeNewLines)
+				includeNewLines = "true";
+			serverPtr->sendSignal("loadExercise", { file.readAll(), QByteArray::number(dialog.lineLength), includeNewLines }, usernames);
+		}
+	}
 }

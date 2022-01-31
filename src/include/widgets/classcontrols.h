@@ -24,7 +24,9 @@
 #include <QWidget>
 #include <QtCharts>
 #include "studentedit.h"
+#include "paperconfigdialog.h"
 #include "core/fsmanager.h"
+#include "core/server.h"
 
 using namespace QtCharts;
 
@@ -65,6 +67,7 @@ class classControls : public QWidget
 		void openDetails(void);
 		void refreshCharts(void);
 		void changeTheme(bool dark);
+		void loadExercise(void);
 };
 
 #endif // CLASSCONTROLS_H
