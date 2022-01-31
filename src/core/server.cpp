@@ -25,6 +25,8 @@ monitorServer *serverPtr = nullptr;
 /*! Constructs monitorServer. */
 monitorServer::monitorServer(bool silent, QObject *parent) :
 	QTcpServer(parent),
+	clientSockets(),
+	sessions(),
 	m_sslLocalCertificate(),
 	m_sslPrivateKey(),
 	m_sslProtocol(QSsl::UnknownProtocol)
@@ -45,11 +47,6 @@ monitorServer::monitorServer(bool silent, QObject *parent) :
 		}
 		return;
 	}
-	sessions.clear();
-	QTimer *sessionTimer = new QTimer;
-	// Connections
-	connect(sessionTimer,&QTimer::timeout,this,&monitorServer::updateSessions);
-	sessionTimer->start(5000);
 }
 
 /*! Destroys the monitorServer object. */
@@ -79,28 +76,40 @@ quint16 monitorServer::port(void)
 
 /*!
  * Connected from QSslSocket::encrypted().\n
- * Reads the request and sends a response.
+ * Accepts a new connection.
  *
  * \see sendResponse()
  */
-void monitorServer::readRequest(void)
+void monitorServer::acceptConnection(void)
 {
-	clientSocket = dynamic_cast<QSslSocket*>(nextPendingConnection());
+	QSslSocket *clientSocket = dynamic_cast<QSslSocket*>(nextPendingConnection());
 	connect(clientSocket,&QIODevice::readyRead,this,&monitorServer::sendResponse);
-	connect(clientSocket,&QAbstractSocket::disconnected,clientSocket,&QObject::deleteLater);
+	connect(clientSocket,&QAbstractSocket::disconnected,this,&monitorServer::disconnectClient);
+	clientSockets += clientSocket;
 }
 
-/*! Sends a response back to the client. */
+/*! Connected from QAbstractSocket::disconnected(). */
+void monitorServer::disconnectClient(void)
+{
+	QSslSocket *clientSocket = (QSslSocket*) sender();
+	clientSockets.removeAll(clientSocket);
+	clientSocket->deleteLater();
+}
+
+/*!
+ * Connected from QIODevice::readyRead().\n
+ * Sends a response back to the client.
+ */
 void monitorServer::sendResponse(void)
 {
+	QSslSocket *clientSocket = (QSslSocket*) sender();
 	QByteArray request = clientSocket->readAll();
 	QList<QByteArray> requestList = readData(request);
 	if((requestList[0] == "auth") && (requestList.count() >= 3))
 	{
 		if(classManager::studentAuth(requestList[1],requestList[2]))
 		{
-			sessions.insert(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString(),
-				QPair<QString,QDateTime>(requestList[1],QDateTime::currentDateTimeUtc()));
+			sessions.insert(clientSocket,requestList[1]);
 			clientSocket->write(convertData({"ok"}));
 		}
 		else
@@ -108,7 +117,7 @@ void monitorServer::sendResponse(void)
 	}
 	else if(requestList[0] == "logout")
 	{
-		sessions.remove(QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString());
+		sessions.remove(clientSocket);
 		clientSocket->write(convertData({"ok"}));
 	}
 	else if(requestList[0] == "check")
@@ -117,10 +126,9 @@ void monitorServer::sendResponse(void)
 	{
 		if(requestList[1] == "username")
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				clientSocket->write(convertData({"ok",username.toUtf8()}));
 			}
 			else
@@ -128,10 +136,9 @@ void monitorServer::sendResponse(void)
 		}
 		else if((requestList[1] == "resultcount") && (requestList.count() >= 6))
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				QPair<int,int> studentLoc = classManager::findStudent(username);
 				clientSocket->write(convertData({"ok",QByteArray::number(classManager::historySize(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt()))}));
 			}
@@ -140,10 +147,9 @@ void monitorServer::sendResponse(void)
 		}
 		else if((requestList[1] == "result") && (requestList.count() >= 7))
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				QPair<int,int> studentLoc = classManager::findStudent(username);
 				QStringList entry = classManager::historyEntry(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),requestList[6].toInt());
 				QList<QByteArray> responseList;
@@ -158,10 +164,9 @@ void monitorServer::sendResponse(void)
 		}
 		else if((requestList[1] == "betterstudents") && (requestList.count() >= 6))
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				QPair<int,int> studentLoc = classManager::findStudent(username);
 				int betterStudents = classManager::compareWithStudents(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),true);
 				clientSocket->write(convertData({"ok",QByteArray::number(betterStudents)}));
@@ -171,10 +176,9 @@ void monitorServer::sendResponse(void)
 		}
 		else if((requestList[1] == "worsestudents") && (requestList.count() >= 6))
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				QPair<int,int> studentLoc = classManager::findStudent(username);
 				int worseStudents = classManager::compareWithStudents(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),false);
 				clientSocket->write(convertData({"ok",QByteArray::number(worseStudents)}));
@@ -189,10 +193,9 @@ void monitorServer::sendResponse(void)
 	{
 		if((requestList[1] == "result") && (requestList.count() >= 9))
 		{
-			QString clientAddress = QHostAddress(clientSocket->peerAddress().toIPv4Address()).toString();
-			if(sessions.contains(clientAddress))
+			if(sessions.contains(clientSocket))
 			{
-				QString username = sessions.value(clientAddress).first;
+				QString username = sessions.value(clientSocket);
 				QPair<int,int> studentLoc = classManager::findStudent(username);
 				QList<QVariant> resultData = {requestList[6],requestList[7],requestList[8]};
 				if(classManager::addHistoryEntry(studentLoc.first,studentLoc.second,QString(requestList[2]),requestList[3].toInt(),requestList[4].toInt(),requestList[5].toInt(),resultData))
@@ -272,25 +275,6 @@ QList<QByteArray> monitorServer::readData(QByteArray input)
 	return out;
 }
 
-/*!
- * Connected from sessionTimer->elapsed().\n
- * Removes old student sessions.
- */
-void monitorServer::updateSessions(void)
-{
-	QList<QPair<QString,QDateTime>> sessionList = sessions.values();
-	for(int i=0; i < sessions.count(); i++)
-	{
-		QPair<QString,QDateTime> value = sessionList[i];
-		if(value.second.secsTo(QDateTime::currentDateTimeUtc()) > 60)
-		{
-			sessions.remove(sessions.keys().value(i));
-			emit updateSessions();
-			return;
-		}
-	}
-}
-
 /*! Overrides QTcpServer#incomingConnection(). */
 void monitorServer::incomingConnection(qintptr socketDescriptor)
 {
@@ -301,7 +285,7 @@ void monitorServer::incomingConnection(qintptr socketDescriptor)
 	sslSocket->setProtocol(m_sslProtocol);
 	addPendingConnection(sslSocket);
 	sslSocket->startServerEncryption();
-	connect(sslSocket,&QSslSocket::encrypted,this,&monitorServer::readRequest);
+	connect(sslSocket,&QSslSocket::encrypted,this,&monitorServer::acceptConnection);
 }
 
 /*! Returns local SSL certificate. */

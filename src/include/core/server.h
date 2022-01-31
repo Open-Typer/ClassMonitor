@@ -54,16 +54,16 @@ class monitorServer : public QTcpServer
 		void incomingConnection(qintptr socketDescriptor);
 
 	private slots:
-		void readRequest(void);
+		void acceptConnection(void);
+		void disconnectClient(void);
 		void sendResponse(void);
-		void updateSessions(void);
 
 	private:
-		QSslSocket *clientSocket;
+		QList<QSslSocket*> clientSockets;
 		QByteArray convertData(bool *ok, QList<QByteArray> input);
 		QByteArray convertData(QList<QByteArray> input);
 		QList<QByteArray> readData(QByteArray input);
-		QMap<QString,QPair<QString,QDateTime>> sessions;
+		QMap<QSslSocket*,QString> sessions; /*!< Stores student sessions (socket, username). */
 		QSslCertificate m_sslLocalCertificate;
 		QSslKey m_sslPrivateKey;
 		QSsl::SslProtocol m_sslProtocol;
