@@ -6,265 +6,267 @@
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="Open-Typer Class Monitor" ref="index.html">
-        <section title="Build instructions" ref="md_docs_data_pages_Build_instructions.html" />
-        <section title="Classes" ref="annotated.html">
-          <section title="Class List" ref="annotated.html">
-            <section title="adminSelector" ref="classadminSelector.html">
-              <section title="adminSelector" ref="classadminSelector.html#ae8c7c8639d2b04422fe66025378636d6" />
-              <section title="~adminSelector" ref="classadminSelector.html#a77578993a413d00dbbdcde8f4b3e5eb9" />
-              <section title="finish" ref="classadminSelector.html#a6badf56d6db693f9d3f1b9b05a142e95" />
+        <section title="Build instructions" ref="md_docs_data_pages_Build_instructions" />
+        <section title="Classes" ref="annotated">
+          <section title="Class List" ref="annotated">
+            <section title="adminSelector" ref="classadminSelector">
+              <section title="adminSelector" ref="classadminSelector#ae8c7c8639d2b04422fe66025378636d6" />
+              <section title="~adminSelector" ref="classadminSelector#a77578993a413d00dbbdcde8f4b3e5eb9" />
+              <section title="finish" ref="classadminSelector#a6badf56d6db693f9d3f1b9b05a142e95" />
             </section>
-            <section title="authDialog" ref="classauthDialog.html">
-              <section title="authDialog" ref="classauthDialog.html#a5a88e7540cbb540925e2b1c36f8c5b7f" />
-              <section title="~authDialog" ref="classauthDialog.html#a1b9e517dadde0e190c5347b47f201522" />
-              <section title="updateText" ref="classauthDialog.html#ab1c0f4066afa72bbf37855d3ffb67b9f" />
+            <section title="authDialog" ref="classauthDialog">
+              <section title="authDialog" ref="classauthDialog#a5a88e7540cbb540925e2b1c36f8c5b7f" />
+              <section title="~authDialog" ref="classauthDialog#a1b9e517dadde0e190c5347b47f201522" />
+              <section title="updateText" ref="classauthDialog#ab1c0f4066afa72bbf37855d3ffb67b9f" />
             </section>
-            <section title="classControls" ref="classclassControls.html">
-              <section title="classControls" ref="classclassControls.html#a490fc7075794f498f3315e10b83bfd97" />
-              <section title="~classControls" ref="classclassControls.html#abf75656086d258bb4c99209e35987448" />
-              <section title="addStudent" ref="classclassControls.html#a065ff24b5ec8c6e6f781df71d3ffe886" />
-              <section title="backClicked" ref="classclassControls.html#aa1dda56b86029c91c95b4e1eab3efeed" />
-              <section title="changeTheme" ref="classclassControls.html#a99fc1e8400e6b1881a79737c74381c58" />
-              <section title="detailsClicked" ref="classclassControls.html#a151fa314492e99ce4a6183b91fb906ad" />
-              <section title="editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
-              <section title="goBack" ref="classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b" />
-              <section title="openDetails" ref="classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41" />
-              <section title="refreshCharts" ref="classclassControls.html#a70f87b55fb524edef079d0d0c831234a" />
-              <section title="removeStudent" ref="classclassControls.html#a36196fc52adb22c50458b9d38787721c" />
-              <section title="setupTable" ref="classclassControls.html#adb3be8efc35307d49b7b254d465dbed4" />
-              <section title="verify" ref="classclassControls.html#a1a17121155cb9a41f72f103346e8ce40" />
+            <section title="classControls" ref="classclassControls">
+              <section title="classControls" ref="classclassControls#a490fc7075794f498f3315e10b83bfd97" />
+              <section title="~classControls" ref="classclassControls#abf75656086d258bb4c99209e35987448" />
+              <section title="addStudent" ref="classclassControls#a065ff24b5ec8c6e6f781df71d3ffe886" />
+              <section title="backClicked" ref="classclassControls#aa1dda56b86029c91c95b4e1eab3efeed" />
+              <section title="changeTheme" ref="classclassControls#a99fc1e8400e6b1881a79737c74381c58" />
+              <section title="detailsClicked" ref="classclassControls#a151fa314492e99ce4a6183b91fb906ad" />
+              <section title="editStudent" ref="classclassControls#a35f2c8f2ea293dfcad7d36d934e0288e" />
+              <section title="goBack" ref="classclassControls#abb2c1e4418b45849b4ce2bd7a682be6b" />
+              <section title="openDetails" ref="classclassControls#a4f72d70048afef1fe87f9ac93d76de41" />
+              <section title="refreshCharts" ref="classclassControls#a70f87b55fb524edef079d0d0c831234a" />
+              <section title="removeStudent" ref="classclassControls#a36196fc52adb22c50458b9d38787721c" />
+              <section title="setupTable" ref="classclassControls#adb3be8efc35307d49b7b254d465dbed4" />
+              <section title="verify" ref="classclassControls#a1a17121155cb9a41f72f103346e8ce40" />
             </section>
-            <section title="classEdit" ref="classclassEdit.html">
-              <section title="classEdit" ref="classclassEdit.html#ab04a76336f5ed8db1c1002f623c82386" />
-              <section title="~classEdit" ref="classclassEdit.html#a9e852276cad342ffab7886447f133fe9" />
-              <section title="finish" ref="classclassEdit.html#a2190e2445a8ff442f6716a83ff9e520b" />
-              <section title="updateOwner" ref="classclassEdit.html#a44d206f77fc7fe1c8cc868a9daca5c49" />
-              <section title="verify" ref="classclassEdit.html#a32507fbb569e4568c13758c0d6e8955e" />
+            <section title="classEdit" ref="classclassEdit">
+              <section title="classEdit" ref="classclassEdit#ab04a76336f5ed8db1c1002f623c82386" />
+              <section title="~classEdit" ref="classclassEdit#a9e852276cad342ffab7886447f133fe9" />
+              <section title="finish" ref="classclassEdit#a2190e2445a8ff442f6716a83ff9e520b" />
+              <section title="updateOwner" ref="classclassEdit#a44d206f77fc7fe1c8cc868a9daca5c49" />
+              <section title="verify" ref="classclassEdit#a32507fbb569e4568c13758c0d6e8955e" />
             </section>
-            <section title="classManager" ref="classclassManager.html">
-              <section title="addClass" ref="classclassManager.html#a098cfb23b1a5cbef36ee39ebd5f96fd0" />
-              <section title="addHistoryEntry" ref="classclassManager.html#aa778d307dc7beccba3af4dd8df42d4b1" />
-              <section title="addStudent" ref="classclassManager.html#a05c60e996a66cd75952bde503a9ecd06" />
-              <section title="classIcon" ref="classclassManager.html#abac8ef8312cc147c37ba576880f3ab93" />
-              <section title="classIDs" ref="classclassManager.html#a58a201a7ddd9bb365114801fe6623fc2" />
-              <section title="className" ref="classclassManager.html#a3bcd26448ef6282387c715ae3a579b41" />
-              <section title="classNames" ref="classclassManager.html#ab1ac49983c53806f01f781a62f7346b0" />
-              <section title="classOwner" ref="classclassManager.html#a661a064a729750064acc16ded16603f4" />
-              <section title="classTimestamp" ref="classclassManager.html#a095217eb1e7d5f2b4df379e990cacaf8" />
-              <section title="compareWithStudents" ref="classclassManager.html#a85e46645a1feef13c07aa1a179496362" />
-              <section title="editClass" ref="classclassManager.html#acf762f28a16ff767b77b84a0fe5a7303" />
-              <section title="editStudent" ref="classclassManager.html#a0627ec9fa26d621947df87d5a781a388" />
-              <section title="exerciseID" ref="classclassManager.html#a53bd159645d39ed479cd2f060fe98cbf" />
-              <section title="exerciseList" ref="classclassManager.html#ab126013cf786c7b46774602fdeb89491" />
-              <section title="findStudent" ref="classclassManager.html#ac3b14a8a915ad2d49a801254c2842e86" />
-              <section title="historyEntry" ref="classclassManager.html#a0e098862f5302975be6371d8f9891edd" />
-              <section title="historySize" ref="classclassManager.html#afd5328d51846a04a24970b0a5cee1f40" />
-              <section title="lessonList" ref="classclassManager.html#a45204fec2ad23a129dcaa207f8f220c7" />
-              <section title="removeClass" ref="classclassManager.html#a8be2c4c66f6b0a896942deb48dddddb5" />
-              <section title="removeStudent" ref="classclassManager.html#a2e428146e6012fb747a29d91cd687049" />
-              <section title="setClassTimestamp" ref="classclassManager.html#a1f156eecbbed6cc2b5ad46ae9f9293d6" />
-              <section title="studentAuth" ref="classclassManager.html#aec8d6e6ef3f44c097759b458b5aec9fe" />
-              <section title="studentExercises" ref="classclassManager.html#a3273090e7be05c7e73fd5f945563fa67" />
-              <section title="studentIDs" ref="classclassManager.html#a0c2c0476512512196826a9f132d67232" />
-              <section title="studentLessons" ref="classclassManager.html#a389d710ae52dd068d163008d9bfb992d" />
-              <section title="studentName" ref="classclassManager.html#a14e826d7b30223050e86f18e6b8e6794" />
-              <section title="studentNames" ref="classclassManager.html#a39d0c11685730db59cdec05314b969c8" />
-              <section title="studentPacks" ref="classclassManager.html#a508460e41153a0fec301d5ab554cf4c1" />
-              <section title="studentSublessons" ref="classclassManager.html#a7404ccdf4d152ed0f8f65762fd4fcf64" />
-              <section title="studentUsername" ref="classclassManager.html#a06ee5b7d41313160822bb0205a264f9c" />
-              <section title="sublessonList" ref="classclassManager.html#a393154d953c5fb9f4367c96fb46d2369" />
+            <section title="classManager" ref="classclassManager">
+              <section title="addClass" ref="classclassManager#a098cfb23b1a5cbef36ee39ebd5f96fd0" />
+              <section title="addHistoryEntry" ref="classclassManager#aa778d307dc7beccba3af4dd8df42d4b1" />
+              <section title="addStudent" ref="classclassManager#a05c60e996a66cd75952bde503a9ecd06" />
+              <section title="classIcon" ref="classclassManager#abac8ef8312cc147c37ba576880f3ab93" />
+              <section title="classIDs" ref="classclassManager#a58a201a7ddd9bb365114801fe6623fc2" />
+              <section title="className" ref="classclassManager#a3bcd26448ef6282387c715ae3a579b41" />
+              <section title="classNames" ref="classclassManager#ab1ac49983c53806f01f781a62f7346b0" />
+              <section title="classOwner" ref="classclassManager#a661a064a729750064acc16ded16603f4" />
+              <section title="classTimestamp" ref="classclassManager#a095217eb1e7d5f2b4df379e990cacaf8" />
+              <section title="compareWithStudents" ref="classclassManager#a85e46645a1feef13c07aa1a179496362" />
+              <section title="editClass" ref="classclassManager#acf762f28a16ff767b77b84a0fe5a7303" />
+              <section title="editStudent" ref="classclassManager#a0627ec9fa26d621947df87d5a781a388" />
+              <section title="exerciseID" ref="classclassManager#a53bd159645d39ed479cd2f060fe98cbf" />
+              <section title="exerciseList" ref="classclassManager#ab126013cf786c7b46774602fdeb89491" />
+              <section title="findStudent" ref="classclassManager#ac3b14a8a915ad2d49a801254c2842e86" />
+              <section title="historyEntry" ref="classclassManager#a0e098862f5302975be6371d8f9891edd" />
+              <section title="historySize" ref="classclassManager#afd5328d51846a04a24970b0a5cee1f40" />
+              <section title="lessonList" ref="classclassManager#a45204fec2ad23a129dcaa207f8f220c7" />
+              <section title="removeClass" ref="classclassManager#a8be2c4c66f6b0a896942deb48dddddb5" />
+              <section title="removeStudent" ref="classclassManager#a2e428146e6012fb747a29d91cd687049" />
+              <section title="setClassTimestamp" ref="classclassManager#a1f156eecbbed6cc2b5ad46ae9f9293d6" />
+              <section title="studentAuth" ref="classclassManager#aec8d6e6ef3f44c097759b458b5aec9fe" />
+              <section title="studentExercises" ref="classclassManager#a3273090e7be05c7e73fd5f945563fa67" />
+              <section title="studentIDs" ref="classclassManager#a0c2c0476512512196826a9f132d67232" />
+              <section title="studentLessons" ref="classclassManager#a389d710ae52dd068d163008d9bfb992d" />
+              <section title="studentName" ref="classclassManager#a14e826d7b30223050e86f18e6b8e6794" />
+              <section title="studentNames" ref="classclassManager#a39d0c11685730db59cdec05314b969c8" />
+              <section title="studentPacks" ref="classclassManager#a508460e41153a0fec301d5ab554cf4c1" />
+              <section title="studentSublessons" ref="classclassManager#a7404ccdf4d152ed0f8f65762fd4fcf64" />
+              <section title="studentUsername" ref="classclassManager#a06ee5b7d41313160822bb0205a264f9c" />
+              <section title="sublessonList" ref="classclassManager#a393154d953c5fb9f4367c96fb46d2369" />
             </section>
-            <section title="classMenu" ref="classclassMenu.html">
-              <section title="classMenu" ref="classclassMenu.html#a8107cc01bcc1e8e21be618c1134361ca" />
-              <section title="~classMenu" ref="classclassMenu.html#ad1aec6a54189ccd2b6dda095cd3e1776" />
-              <section title="addClass" ref="classclassMenu.html#a8d55002ce78ce04a75bd0c613a6d7443" />
-              <section title="classOpened" ref="classclassMenu.html#aeec7785c6b515b4af1ce14c1aad7531c" />
-              <section title="editClass" ref="classclassMenu.html#a2dd46bceef1d3f5930cc59b6f4c261c5" />
-              <section title="open" ref="classclassMenu.html#ab4d5b12f17e4c3d94db1491335061d91" />
-              <section title="openUserManager" ref="classclassMenu.html#afbd77a25e3a9ab85ced82fee78c85849" />
-              <section title="removeClass" ref="classclassMenu.html#a3fd814240bf8382e53034c45807f55bf" />
-              <section title="setupList" ref="classclassMenu.html#a37e00cb0b7d15f013d4df4b366a5ad88" />
-              <section title="userManagerOpened" ref="classclassMenu.html#a51fca17797bb4edf38b6df9c65059393" />
-              <section title="verify" ref="classclassMenu.html#af3b4d9c638480b2980522be23fba4210" />
+            <section title="classMenu" ref="classclassMenu">
+              <section title="classMenu" ref="classclassMenu#a8107cc01bcc1e8e21be618c1134361ca" />
+              <section title="~classMenu" ref="classclassMenu#ad1aec6a54189ccd2b6dda095cd3e1776" />
+              <section title="addClass" ref="classclassMenu#a8d55002ce78ce04a75bd0c613a6d7443" />
+              <section title="classOpened" ref="classclassMenu#aeec7785c6b515b4af1ce14c1aad7531c" />
+              <section title="editClass" ref="classclassMenu#a2dd46bceef1d3f5930cc59b6f4c261c5" />
+              <section title="open" ref="classclassMenu#ab4d5b12f17e4c3d94db1491335061d91" />
+              <section title="openUserManager" ref="classclassMenu#afbd77a25e3a9ab85ced82fee78c85849" />
+              <section title="removeClass" ref="classclassMenu#a3fd814240bf8382e53034c45807f55bf" />
+              <section title="setupList" ref="classclassMenu#a37e00cb0b7d15f013d4df4b366a5ad88" />
+              <section title="userManagerOpened" ref="classclassMenu#a51fca17797bb4edf38b6df9c65059393" />
+              <section title="verify" ref="classclassMenu#af3b4d9c638480b2980522be23fba4210" />
             </section>
-            <section title="fileUtils" ref="classfileUtils.html">
-              <section title="configLocation" ref="classfileUtils.html#ad5cb3697ed9304de49faa998c9091bd5" />
+            <section title="fileUtils" ref="classfileUtils">
+              <section title="configLocation" ref="classfileUtils#ad5cb3697ed9304de49faa998c9091bd5" />
             </section>
-            <section title="initialSetup" ref="classinitialSetup.html">
-              <section title="initialSetup" ref="classinitialSetup.html#a2c04fb32795d022271a129609da6f5dd" />
-              <section title="~initialSetup" ref="classinitialSetup.html#a9b5f719b8dff40cf5dab8d04be1e8c60" />
-              <section title="save" ref="classinitialSetup.html#a79b12a24899b1252e621fd8f34241ec5" />
-              <section title="verify" ref="classinitialSetup.html#a3bda32cc5591d06ea720ace7e2d0a558" />
+            <section title="initialSetup" ref="classinitialSetup">
+              <section title="initialSetup" ref="classinitialSetup#a2c04fb32795d022271a129609da6f5dd" />
+              <section title="~initialSetup" ref="classinitialSetup#a9b5f719b8dff40cf5dab8d04be1e8c60" />
+              <section title="save" ref="classinitialSetup#a79b12a24899b1252e621fd8f34241ec5" />
+              <section title="verify" ref="classinitialSetup#a3bda32cc5591d06ea720ace7e2d0a558" />
             </section>
-            <section title="languageManager" ref="classlanguageManager.html">
-              <section title="languageManager" ref="classlanguageManager.html#abe17868a43f7d0ad2c10d37245ae43bb" />
-              <section title="~languageManager" ref="classlanguageManager.html#aa528e7f1356bfb831104e0c4e1c6c485" />
-              <section title="setLanguage" ref="classlanguageManager.html#a741725e057f7ef8f34fc4ef4d0a64502" />
+            <section title="languageManager" ref="classlanguageManager">
+              <section title="languageManager" ref="classlanguageManager#abe17868a43f7d0ad2c10d37245ae43bb" />
+              <section title="~languageManager" ref="classlanguageManager#aa528e7f1356bfb831104e0c4e1c6c485" />
+              <section title="setLanguage" ref="classlanguageManager#a741725e057f7ef8f34fc4ef4d0a64502" />
             </section>
-            <section title="monitorServer" ref="classmonitorServer.html">
-              <section title="monitorServer" ref="classmonitorServer.html#a5139f286021e951906edffa8502ee3b7" />
-              <section title="~monitorServer" ref="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585" />
-              <section title="address" ref="classmonitorServer.html#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
-              <section title="convertData" ref="classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519" />
-              <section title="convertData" ref="classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593" />
-              <section title="getSslLocalCertificate" ref="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f" />
-              <section title="getSslPrivateKey" ref="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931" />
-              <section title="getSslProtocol" ref="classmonitorServer.html#afb76272169b8d3a0b6d32b325df48348" />
-              <section title="incomingConnection" ref="classmonitorServer.html#a651c75918ba34568e99831d7e4852ef7" />
-              <section title="port" ref="classmonitorServer.html#ae06bce523ecfc5599f1ab6219c4f6bc3" />
-              <section title="readData" ref="classmonitorServer.html#a02783368ac82a41a0e2b126fa36a65b6" />
-              <section title="readRequest" ref="classmonitorServer.html#a146f6d3d78c2bdd03c9dc25c5550a704" />
-              <section title="sendResponse" ref="classmonitorServer.html#ad94cc73617f4f28512394180d52e451b" />
-              <section title="setSslLocalCertificate" ref="classmonitorServer.html#a922cc117a049fa6e08078aa5fec73421" />
-              <section title="setSslLocalCertificate" ref="classmonitorServer.html#a8e53ec2057f233034212eb2bd4c7254b" />
-              <section title="setSslPrivateKey" ref="classmonitorServer.html#afe6f72cde581c45666bf32500a3f2c99" />
-              <section title="setSslPrivateKey" ref="classmonitorServer.html#a821af1bda6e97ea81f5f113d3b5da873" />
-              <section title="setSslProtocol" ref="classmonitorServer.html#a504dbb55cf1b59d65e2447421dedb6c1" />
-              <section title="updateSessions" ref="classmonitorServer.html#a827e63132ce650940b4e55ceb959a75b" />
+            <section title="monitorServer" ref="classmonitorServer">
+              <section title="monitorServer" ref="classmonitorServer#a5139f286021e951906edffa8502ee3b7" />
+              <section title="~monitorServer" ref="classmonitorServer#a10c0a13ba9e519d6e7fc91e1f3839585" />
+              <section title="acceptConnection" ref="classmonitorServer#af49b1ef481202dedcb6a6d96ed352ac1" />
+              <section title="address" ref="classmonitorServer#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
+              <section title="convertData" ref="classmonitorServer#a21ac62f2a47529c975e8e588e88a5519" />
+              <section title="convertData" ref="classmonitorServer#a13113cdf9fb7db16384cc34fba441593" />
+              <section title="disconnectClient" ref="classmonitorServer#a4752d1160f813a9c7c539bfa90068bfd" />
+              <section title="getSslLocalCertificate" ref="classmonitorServer#ad00156a3448fd0c8b8a59e328419950f" />
+              <section title="getSslPrivateKey" ref="classmonitorServer#aacd66e4bdad6c4aa34704c3ae9ba6931" />
+              <section title="getSslProtocol" ref="classmonitorServer#afb76272169b8d3a0b6d32b325df48348" />
+              <section title="incomingConnection" ref="classmonitorServer#a651c75918ba34568e99831d7e4852ef7" />
+              <section title="port" ref="classmonitorServer#ae06bce523ecfc5599f1ab6219c4f6bc3" />
+              <section title="readData" ref="classmonitorServer#a02783368ac82a41a0e2b126fa36a65b6" />
+              <section title="sendResponse" ref="classmonitorServer#ad94cc73617f4f28512394180d52e451b" />
+              <section title="setSslLocalCertificate" ref="classmonitorServer#a922cc117a049fa6e08078aa5fec73421" />
+              <section title="setSslLocalCertificate" ref="classmonitorServer#a8e53ec2057f233034212eb2bd4c7254b" />
+              <section title="setSslPrivateKey" ref="classmonitorServer#afe6f72cde581c45666bf32500a3f2c99" />
+              <section title="setSslPrivateKey" ref="classmonitorServer#a821af1bda6e97ea81f5f113d3b5da873" />
+              <section title="setSslProtocol" ref="classmonitorServer#a504dbb55cf1b59d65e2447421dedb6c1" />
+              <section title="sessions" ref="classmonitorServer#a73de17b0acce09f4f8fa336294ad432e" />
             </section>
-            <section title="MonitorWindow" ref="classMonitorWindow.html">
-              <section title="MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
-              <section title="~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
-              <section title="changeEvent" ref="classMonitorWindow.html#af1953ae9cc698e68a98541af9edcf109" />
-              <section title="goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
-              <section title="openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
-              <section title="openDetails" ref="classMonitorWindow.html#a463634ef5107435462dda07a679559dd" />
-              <section title="openOptions" ref="classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b" />
-              <section title="openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
-              <section title="setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
-              <section title="themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
-              <section title="transition" ref="classMonitorWindow.html#aafb4f1892a3f675d5cac55b5f7d3c92a" />
-              <section title="updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
-              <section title="updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
+            <section title="MonitorWindow" ref="classMonitorWindow">
+              <section title="MonitorWindow" ref="classMonitorWindow#a139e1a9860177c72701690d8706a39fa" />
+              <section title="~MonitorWindow" ref="classMonitorWindow#addd6a957bc31c8b95faff7cb575c903f" />
+              <section title="changeEvent" ref="classMonitorWindow#af1953ae9cc698e68a98541af9edcf109" />
+              <section title="goBack" ref="classMonitorWindow#a9cb5f778ff2d434e83d00ac95e294478" />
+              <section title="openClass" ref="classMonitorWindow#a29c3ebef5b28d8a75322a61604a0b049" />
+              <section title="openDetails" ref="classMonitorWindow#a463634ef5107435462dda07a679559dd" />
+              <section title="openOptions" ref="classMonitorWindow#a79ce9f627db257fc2460a8f6c0a9836b" />
+              <section title="openUserManager" ref="classMonitorWindow#afede0a06f1d764ba725558c10e655c5b" />
+              <section title="setTheme" ref="classMonitorWindow#af699eca4de50b1a83400b92783cb6c43" />
+              <section title="themeChanged" ref="classMonitorWindow#a8f187f43d19f718b79c96d238279e097" />
+              <section title="transition" ref="classMonitorWindow#aafb4f1892a3f675d5cac55b5f7d3c92a" />
+              <section title="updateControlWidget" ref="classMonitorWindow#a186eb9f50c054e9606322a8ef943d5c3" />
+              <section title="updateSchoolName" ref="classMonitorWindow#a067bd8f535624b4e094c129c9b4fc114" />
             </section>
-            <section title="optionsWindow" ref="classoptionsWindow.html">
-              <section title="optionsWindow" ref="classoptionsWindow.html#a45fae6808c165b25c933492140379fd3" />
-              <section title="~optionsWindow" ref="classoptionsWindow.html#ad2942ee73b6562894bf2d25f554b9e5c" />
-              <section title="closeOptions" ref="classoptionsWindow.html#a53c6de72dfe4909444452005cce9bc92" />
+            <section title="optionsWindow" ref="classoptionsWindow">
+              <section title="optionsWindow" ref="classoptionsWindow#a45fae6808c165b25c933492140379fd3" />
+              <section title="~optionsWindow" ref="classoptionsWindow#ad2942ee73b6562894bf2d25f554b9e5c" />
+              <section title="closeOptions" ref="classoptionsWindow#a53c6de72dfe4909444452005cce9bc92" />
             </section>
-            <section title="studentDetails" ref="classstudentDetails.html">
-              <section title="studentDetails" ref="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0" />
-              <section title="~studentDetails" ref="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87" />
-              <section title="backClicked" ref="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c" />
-              <section title="changeTheme" ref="classstudentDetails.html#a1255046a70b2f22a5be3e2f9774a1bd0" />
-              <section title="goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
-              <section title="refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
-              <section title="refreshCharts" ref="classstudentDetails.html#a0488a551935057caa40ba9583d6dc67c" />
-              <section title="refreshTable" ref="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce" />
+            <section title="studentDetails" ref="classstudentDetails">
+              <section title="studentDetails" ref="classstudentDetails#a285e47a614c7fa26c61ed1bafd7433b0" />
+              <section title="~studentDetails" ref="classstudentDetails#af7a767871f4c72c1c6c87a9d350fde87" />
+              <section title="backClicked" ref="classstudentDetails#a4223d16b876261e2734f3bfd4252a73c" />
+              <section title="changeTheme" ref="classstudentDetails#a1255046a70b2f22a5be3e2f9774a1bd0" />
+              <section title="goBack" ref="classstudentDetails#a716f5e0da755e7a71cdf1fae1800e6c5" />
+              <section title="refresh" ref="classstudentDetails#aa584eb65a41aa7dcb1d23e4185f319f2" />
+              <section title="refreshCharts" ref="classstudentDetails#a0488a551935057caa40ba9583d6dc67c" />
+              <section title="refreshTable" ref="classstudentDetails#a49db064c526ee9a21684d79f0e3f78ce" />
             </section>
-            <section title="studentEdit" ref="classstudentEdit.html">
-              <section title="studentEdit" ref="classstudentEdit.html#a652c5267ae2ca99a90e25847f58e8a5f" />
-              <section title="~studentEdit" ref="classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33" />
-              <section title="finish" ref="classstudentEdit.html#a57769f6f3bb7e2595c8e5ea2dc3f27a1" />
-              <section title="verify" ref="classstudentEdit.html#a22d4a3f1f4275d71fccf8fa966db4c1a" />
+            <section title="studentEdit" ref="classstudentEdit">
+              <section title="studentEdit" ref="classstudentEdit#a652c5267ae2ca99a90e25847f58e8a5f" />
+              <section title="~studentEdit" ref="classstudentEdit#a9d21d9eb48bb859aeccc60b1900d5a33" />
+              <section title="finish" ref="classstudentEdit#a57769f6f3bb7e2595c8e5ea2dc3f27a1" />
+              <section title="verify" ref="classstudentEdit#a22d4a3f1f4275d71fccf8fa966db4c1a" />
             </section>
-            <section title="Updater" ref="classUpdater.html">
-              <section title="Updater" ref="classUpdater.html#abf702b842504bc1147a5e7bebbbf15ea" />
-              <section title="~Updater" ref="classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e" />
+            <section title="Updater" ref="classUpdater">
+              <section title="Updater" ref="classUpdater#abf702b842504bc1147a5e7bebbbf15ea" />
+              <section title="~Updater" ref="classUpdater#a2f8434a97a4f3d3c716bb05abb20621e" />
             </section>
-            <section title="UpdaterDialog" ref="classUpdaterDialog.html">
-              <section title="UpdaterDialog" ref="classUpdaterDialog.html#ae6833c46d5feff6d267e113ba23410e4" />
-              <section title="~UpdaterDialog" ref="classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0" />
+            <section title="UpdaterDialog" ref="classUpdaterDialog">
+              <section title="UpdaterDialog" ref="classUpdaterDialog#ae6833c46d5feff6d267e113ba23410e4" />
+              <section title="~UpdaterDialog" ref="classUpdaterDialog#ab42ebaf4837dfff9f69b8040cbda1fa0" />
             </section>
-            <section title="userEdit" ref="classuserEdit.html">
-              <section title="userEdit" ref="classuserEdit.html#aa9c71975e895a6c6c4f23eafafa2622f" />
-              <section title="~userEdit" ref="classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
-              <section title="finish" ref="classuserEdit.html#a786c48d075bb78bcf7abe27b477466c8" />
-              <section title="resetPassword" ref="classuserEdit.html#a915d722fe57c91e1dd1e55a9b3bac8eb" />
-              <section title="verify" ref="classuserEdit.html#a23e63b7b722d05537b6e45b83b144cb2" />
+            <section title="userEdit" ref="classuserEdit">
+              <section title="userEdit" ref="classuserEdit#aa9c71975e895a6c6c4f23eafafa2622f" />
+              <section title="~userEdit" ref="classuserEdit#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
+              <section title="finish" ref="classuserEdit#a786c48d075bb78bcf7abe27b477466c8" />
+              <section title="resetPassword" ref="classuserEdit#a915d722fe57c91e1dd1e55a9b3bac8eb" />
+              <section title="verify" ref="classuserEdit#a23e63b7b722d05537b6e45b83b144cb2" />
             </section>
-            <section title="userManager" ref="classuserManager.html">
-              <section title="addUser" ref="classuserManager.html#a691b1ccc20644b5924d96efeaf48204f" />
-              <section title="auth" ref="classuserManager.html#aa15838004cbea8f204fadc37533e75da" />
-              <section title="auth" ref="classuserManager.html#a7148c3dd2d00f2834679fe1fe7cbb829" />
-              <section title="editUser" ref="classuserManager.html#a72302221367a532a938e2fab118efe01" />
-              <section title="removeUser" ref="classuserManager.html#aff60439d092f5ff32e623ac5a716ed04" />
-              <section title="roleID" ref="classuserManager.html#aade58bf4f44b022f0b9165f39927993c" />
-              <section title="roleName" ref="classuserManager.html#a2951398109a854c2de7d8528eb37a4da" />
-              <section title="userIDs" ref="classuserManager.html#a4b58dadfdb88ebc1a49abd3161051ef5" />
-              <section title="userName" ref="classuserManager.html#a846f65c4461e713b32b3139eabbf404c" />
-              <section title="userNames" ref="classuserManager.html#ada0ff4dfd60b350a7196f82b545a4029" />
-              <section title="userRole" ref="classuserManager.html#abb51966537b488651c4d8a38f3cb8448" />
+            <section title="userManager" ref="classuserManager">
+              <section title="addUser" ref="classuserManager#a691b1ccc20644b5924d96efeaf48204f" />
+              <section title="auth" ref="classuserManager#aa15838004cbea8f204fadc37533e75da" />
+              <section title="auth" ref="classuserManager#a7148c3dd2d00f2834679fe1fe7cbb829" />
+              <section title="editUser" ref="classuserManager#a72302221367a532a938e2fab118efe01" />
+              <section title="removeUser" ref="classuserManager#aff60439d092f5ff32e623ac5a716ed04" />
+              <section title="roleID" ref="classuserManager#aade58bf4f44b022f0b9165f39927993c" />
+              <section title="roleName" ref="classuserManager#a2951398109a854c2de7d8528eb37a4da" />
+              <section title="userIDs" ref="classuserManager#a4b58dadfdb88ebc1a49abd3161051ef5" />
+              <section title="userName" ref="classuserManager#a846f65c4461e713b32b3139eabbf404c" />
+              <section title="userNames" ref="classuserManager#ada0ff4dfd60b350a7196f82b545a4029" />
+              <section title="userRole" ref="classuserManager#abb51966537b488651c4d8a38f3cb8448" />
             </section>
-            <section title="userManagerWidget" ref="classuserManagerWidget.html">
-              <section title="userManagerWidget" ref="classuserManagerWidget.html#a19fcce6a0c978de959bd83c8dde7a120" />
-              <section title="~userManagerWidget" ref="classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164" />
-              <section title="addUser" ref="classuserManagerWidget.html#af137c5c2a19bd1c5df48e98948e07584" />
-              <section title="backClicked" ref="classuserManagerWidget.html#a698112ca4108026dff5449c56d4ce2a0" />
-              <section title="closeEvent" ref="classuserManagerWidget.html#a1fdf50fda40344abf0097da0e99e63cd" />
-              <section title="editUser" ref="classuserManagerWidget.html#ab41b78a77e2e880c49593872f444f34d" />
-              <section title="removeUser" ref="classuserManagerWidget.html#a77f2c89fe41db2649bd92f64e8cfaad1" />
-              <section title="setupList" ref="classuserManagerWidget.html#af434ca35d5e148a3c87e79522cd110b7" />
-              <section title="verify" ref="classuserManagerWidget.html#ac0c06ef1d7b9547717d79eba3c5c52a7" />
+            <section title="userManagerWidget" ref="classuserManagerWidget">
+              <section title="userManagerWidget" ref="classuserManagerWidget#a19fcce6a0c978de959bd83c8dde7a120" />
+              <section title="~userManagerWidget" ref="classuserManagerWidget#aac90acf6e6637c141ac29ca57db2c164" />
+              <section title="addUser" ref="classuserManagerWidget#af137c5c2a19bd1c5df48e98948e07584" />
+              <section title="backClicked" ref="classuserManagerWidget#a698112ca4108026dff5449c56d4ce2a0" />
+              <section title="closeEvent" ref="classuserManagerWidget#a1fdf50fda40344abf0097da0e99e63cd" />
+              <section title="editUser" ref="classuserManagerWidget#ab41b78a77e2e880c49593872f444f34d" />
+              <section title="removeUser" ref="classuserManagerWidget#a77f2c89fe41db2649bd92f64e8cfaad1" />
+              <section title="setupList" ref="classuserManagerWidget#af434ca35d5e148a3c87e79522cd110b7" />
+              <section title="verify" ref="classuserManagerWidget#ac0c06ef1d7b9547717d79eba3c5c52a7" />
             </section>
           </section>
-          <section title="Class Index" ref="classes.html" />
-          <section title="Class Hierarchy" ref="hierarchy.html">
+          <section title="Class Index" ref="classes" />
+          <section title="Class Hierarchy" ref="hierarchy">
             <section title="QDialog" ref="">
-              <section title="UpdaterDialog" ref="classUpdaterDialog.html" />
-              <section title="adminSelector" ref="classadminSelector.html" />
-              <section title="authDialog" ref="classauthDialog.html" />
-              <section title="classEdit" ref="classclassEdit.html" />
-              <section title="initialSetup" ref="classinitialSetup.html" />
-              <section title="optionsWindow" ref="classoptionsWindow.html" />
-              <section title="studentEdit" ref="classstudentEdit.html" />
-              <section title="userEdit" ref="classuserEdit.html" />
+              <section title="UpdaterDialog" ref="classUpdaterDialog" />
+              <section title="adminSelector" ref="classadminSelector" />
+              <section title="authDialog" ref="classauthDialog" />
+              <section title="classEdit" ref="classclassEdit" />
+              <section title="initialSetup" ref="classinitialSetup" />
+              <section title="optionsWindow" ref="classoptionsWindow" />
+              <section title="studentEdit" ref="classstudentEdit" />
+              <section title="userEdit" ref="classuserEdit" />
             </section>
             <section title="QMainWindow" ref="">
-              <section title="MonitorWindow" ref="classMonitorWindow.html" />
+              <section title="MonitorWindow" ref="classMonitorWindow" />
             </section>
             <section title="QObject" ref="">
-              <section title="Updater" ref="classUpdater.html" />
-              <section title="classManager" ref="classclassManager.html" />
-              <section title="fileUtils" ref="classfileUtils.html" />
-              <section title="languageManager" ref="classlanguageManager.html" />
-              <section title="userManager" ref="classuserManager.html" />
+              <section title="Updater" ref="classUpdater" />
+              <section title="classManager" ref="classclassManager" />
+              <section title="fileUtils" ref="classfileUtils" />
+              <section title="languageManager" ref="classlanguageManager" />
+              <section title="userManager" ref="classuserManager" />
             </section>
             <section title="QTcpServer" ref="">
-              <section title="monitorServer" ref="classmonitorServer.html" />
+              <section title="monitorServer" ref="classmonitorServer" />
             </section>
             <section title="QWidget" ref="">
-              <section title="classControls" ref="classclassControls.html" />
-              <section title="classMenu" ref="classclassMenu.html" />
-              <section title="studentDetails" ref="classstudentDetails.html" />
-              <section title="userManagerWidget" ref="classuserManagerWidget.html" />
+              <section title="classControls" ref="classclassControls" />
+              <section title="classMenu" ref="classclassMenu" />
+              <section title="studentDetails" ref="classstudentDetails" />
+              <section title="userManagerWidget" ref="classuserManagerWidget" />
             </section>
           </section>
-          <section title="Class Members" ref="functions.html">
-            <section title="All" ref="functions.html" />
-            <section title="Functions" ref="functions_func.html" />
+          <section title="Class Members" ref="functions">
+            <section title="All" ref="functions" />
+            <section title="Functions" ref="functions_func" />
+            <section title="Variables" ref="functions_vars" />
           </section>
         </section>
-        <section title="Files" ref="files.html">
-          <section title="File List" ref="files.html">
-            <section title="src" ref="dir_68267d1309a1af8e8297ef4c3efbcdba.html">
-              <section title="include" ref="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">
-                <section title="core" ref="dir_4cf372765f693cf540fc4810db0c309c.html">
-                  <section title="fsmanager.h" ref="fsmanager_8h_source.html" />
-                  <section title="language.h" ref="language_8h_source.html" />
-                  <section title="server.h" ref="server_8h_source.html" />
+        <section title="Files" ref="files">
+          <section title="File List" ref="files">
+            <section title="src" ref="dir_68267d1309a1af8e8297ef4c3efbcdba">
+              <section title="include" ref="dir_b0856f6b0d80ccb263b2f415c91f9e17">
+                <section title="core" ref="dir_4cf372765f693cf540fc4810db0c309c">
+                  <section title="fsmanager.h" ref="fsmanager_8h_source" />
+                  <section title="language.h" ref="language_8h_source" />
+                  <section title="server.h" ref="server_8h_source" />
                 </section>
-                <section title="options" ref="dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html">
-                  <section title="optionswindow.h" ref="optionswindow_8h_source.html" />
+                <section title="options" ref="dir_a6b8e448081bf8ce4db4cf71fa3ecf15">
+                  <section title="optionswindow.h" ref="optionswindow_8h_source" />
                 </section>
-                <section title="updater" ref="dir_7468157ebcb76345a67412f7bb97ed29.html">
-                  <section title="updater.h" ref="updater_8h_source.html" />
-                  <section title="updaterdialog.h" ref="updaterdialog_8h_source.html" />
+                <section title="updater" ref="dir_7468157ebcb76345a67412f7bb97ed29">
+                  <section title="updater.h" ref="updater_8h_source" />
+                  <section title="updaterdialog.h" ref="updaterdialog_8h_source" />
                 </section>
-                <section title="widgets" ref="dir_99f4b16b17a360d9840a4176588db3c6.html">
-                  <section title="classcontrols.h" ref="classcontrols_8h_source.html" />
-                  <section title="classmenu.h" ref="classmenu_8h_source.html" />
-                  <section title="studentdetails.h" ref="studentdetails_8h_source.html" />
-                  <section title="usermanager.h" ref="usermanager_8h_source.html" />
+                <section title="widgets" ref="dir_99f4b16b17a360d9840a4176588db3c6">
+                  <section title="classcontrols.h" ref="classcontrols_8h_source" />
+                  <section title="classmenu.h" ref="classmenu_8h_source" />
+                  <section title="studentdetails.h" ref="studentdetails_8h_source" />
+                  <section title="usermanager.h" ref="usermanager_8h_source" />
                 </section>
-                <section title="adminselector.h" ref="adminselector_8h_source.html" />
-                <section title="authdialog.h" ref="authdialog_8h_source.html" />
-                <section title="classedit.h" ref="classedit_8h_source.html" />
-                <section title="global.h" ref="global_8h_source.html" />
-                <section title="initialsetup.h" ref="initialsetup_8h_source.html" />
-                <section title="monitorwindow.h" ref="monitorwindow_8h_source.html" />
-                <section title="studentedit.h" ref="studentedit_8h_source.html" />
-                <section title="useredit.h" ref="useredit_8h_source.html" />
+                <section title="adminselector.h" ref="adminselector_8h_source" />
+                <section title="authdialog.h" ref="authdialog_8h_source" />
+                <section title="classedit.h" ref="classedit_8h_source" />
+                <section title="global.h" ref="global_8h_source" />
+                <section title="initialsetup.h" ref="initialsetup_8h_source" />
+                <section title="monitorwindow.h" ref="monitorwindow_8h_source" />
+                <section title="studentedit.h" ref="studentedit_8h_source" />
+                <section title="useredit.h" ref="useredit_8h_source" />
               </section>
             </section>
           </section>
@@ -272,232 +274,177 @@
       </section>
     </toc>
     <keywords>
-      <keyword name="Build instructions" id="Build instructions" ref="md_docs_data_pages_Build_instructions.html" />
-      <keyword name="adminSelector" id="adminSelector" ref="classadminSelector.html" />
-      <keyword name="adminSelector" id="adminSelector::adminSelector" ref="classadminSelector.html#ae8c7c8639d2b04422fe66025378636d6" />
-      <keyword name="~adminSelector" id="adminSelector::~adminSelector" ref="classadminSelector.html#a77578993a413d00dbbdcde8f4b3e5eb9" />
-      <keyword name="userID" id="adminSelector::userID" ref="classadminSelector.html#a81f6d169bedf542ca38c94cdb33f907a" />
-      <keyword name="finish" id="adminSelector::finish" ref="classadminSelector.html#a6badf56d6db693f9d3f1b9b05a142e95" />
-      <keyword name="ui" id="adminSelector::ui" ref="classadminSelector.html#a09d571fda9b56b85637c6044f59fba3f" />
-      <keyword name="adminIDs" id="adminSelector::adminIDs" ref="classadminSelector.html#a2fe5d905f4a906f96b9c69199dd78b2e" />
-      <keyword name="authDialog" id="authDialog" ref="classauthDialog.html" />
-      <keyword name="authDialog" id="authDialog::authDialog" ref="classauthDialog.html#a5a88e7540cbb540925e2b1c36f8c5b7f" />
-      <keyword name="~authDialog" id="authDialog::~authDialog" ref="classauthDialog.html#a1b9e517dadde0e190c5347b47f201522" />
-      <keyword name="password" id="authDialog::password" ref="classauthDialog.html#a195edaaf5f3bcd7d50154cfe55c9b741" />
-      <keyword name="updateText" id="authDialog::updateText" ref="classauthDialog.html#ab1c0f4066afa72bbf37855d3ffb67b9f" />
-      <keyword name="ui" id="authDialog::ui" ref="classauthDialog.html#a4a975b581224bb6cb5a534254860ccce" />
-      <keyword name="classControls" id="classControls" ref="classclassControls.html" />
-      <keyword name="backClicked" id="classControls::backClicked" ref="classclassControls.html#aa1dda56b86029c91c95b4e1eab3efeed" />
-      <keyword name="detailsClicked" id="classControls::detailsClicked" ref="classclassControls.html#a151fa314492e99ce4a6183b91fb906ad" />
-      <keyword name="classControls" id="classControls::classControls" ref="classclassControls.html#a490fc7075794f498f3315e10b83bfd97" />
-      <keyword name="~classControls" id="classControls::~classControls" ref="classclassControls.html#abf75656086d258bb4c99209e35987448" />
-      <keyword name="goBack" id="classControls::goBack" ref="classclassControls.html#abb2c1e4418b45849b4ce2bd7a682be6b" />
-      <keyword name="verify" id="classControls::verify" ref="classclassControls.html#a1a17121155cb9a41f72f103346e8ce40" />
-      <keyword name="addStudent" id="classControls::addStudent" ref="classclassControls.html#a065ff24b5ec8c6e6f781df71d3ffe886" />
-      <keyword name="removeStudent" id="classControls::removeStudent" ref="classclassControls.html#a36196fc52adb22c50458b9d38787721c" />
-      <keyword name="editStudent" id="classControls::editStudent" ref="classclassControls.html#a35f2c8f2ea293dfcad7d36d934e0288e" />
-      <keyword name="openDetails" id="classControls::openDetails" ref="classclassControls.html#a4f72d70048afef1fe87f9ac93d76de41" />
-      <keyword name="refreshCharts" id="classControls::refreshCharts" ref="classclassControls.html#a70f87b55fb524edef079d0d0c831234a" />
-      <keyword name="changeTheme" id="classControls::changeTheme" ref="classclassControls.html#a99fc1e8400e6b1881a79737c74381c58" />
-      <keyword name="setupTable" id="classControls::setupTable" ref="classclassControls.html#adb3be8efc35307d49b7b254d465dbed4" />
-      <keyword name="ui" id="classControls::ui" ref="classclassControls.html#a4c97f0b1697be38b7db2c8ff74d2e867" />
-      <keyword name="classID" id="classControls::classID" ref="classclassControls.html#aae9fba807d7f3d7f04ef55c4ee66c40c" />
-      <keyword name="speedChart" id="classControls::speedChart" ref="classclassControls.html#a22d037fb87e7386d2a01650079360183" />
-      <keyword name="mistakesChart" id="classControls::mistakesChart" ref="classclassControls.html#ac9587c5866bb50aa99ee547d13e3d12f" />
-      <keyword name="timeChart" id="classControls::timeChart" ref="classclassControls.html#abb514c9b10a0e0e0fde0971494623b38" />
-      <keyword name="classEdit" id="classEdit" ref="classclassEdit.html" />
-      <keyword name="classEdit" id="classEdit::classEdit" ref="classclassEdit.html#ab04a76336f5ed8db1c1002f623c82386" />
-      <keyword name="~classEdit" id="classEdit::~classEdit" ref="classclassEdit.html#a9e852276cad342ffab7886447f133fe9" />
-      <keyword name="verify" id="classEdit::verify" ref="classclassEdit.html#a32507fbb569e4568c13758c0d6e8955e" />
-      <keyword name="updateOwner" id="classEdit::updateOwner" ref="classclassEdit.html#a44d206f77fc7fe1c8cc868a9daca5c49" />
-      <keyword name="finish" id="classEdit::finish" ref="classclassEdit.html#a2190e2445a8ff442f6716a83ff9e520b" />
-      <keyword name="ui" id="classEdit::ui" ref="classclassEdit.html#a5e1f362948f6ebaf2515fb29332e9a66" />
-      <keyword name="creatingNewClass" id="classEdit::creatingNewClass" ref="classclassEdit.html#ad7265b1dadb4dc0775f90a1b05e1447c" />
-      <keyword name="classID" id="classEdit::classID" ref="classclassEdit.html#a055e5f34eeabee327e75d527ae17603e" />
-      <keyword name="classManager" id="classManager" ref="classclassManager.html" />
-      <keyword name="classIDs" id="classManager::classIDs" ref="classclassManager.html#a58a201a7ddd9bb365114801fe6623fc2" />
-      <keyword name="className" id="classManager::className" ref="classclassManager.html#a3bcd26448ef6282387c715ae3a579b41" />
-      <keyword name="classOwner" id="classManager::classOwner" ref="classclassManager.html#a661a064a729750064acc16ded16603f4" />
-      <keyword name="classIcon" id="classManager::classIcon" ref="classclassManager.html#abac8ef8312cc147c37ba576880f3ab93" />
-      <keyword name="classTimestamp" id="classManager::classTimestamp" ref="classclassManager.html#a095217eb1e7d5f2b4df379e990cacaf8" />
-      <keyword name="classNames" id="classManager::classNames" ref="classclassManager.html#ab1ac49983c53806f01f781a62f7346b0" />
-      <keyword name="addClass" id="classManager::addClass" ref="classclassManager.html#a098cfb23b1a5cbef36ee39ebd5f96fd0" />
-      <keyword name="editClass" id="classManager::editClass" ref="classclassManager.html#acf762f28a16ff767b77b84a0fe5a7303" />
-      <keyword name="setClassTimestamp" id="classManager::setClassTimestamp" ref="classclassManager.html#a1f156eecbbed6cc2b5ad46ae9f9293d6" />
-      <keyword name="removeClass" id="classManager::removeClass" ref="classclassManager.html#a8be2c4c66f6b0a896942deb48dddddb5" />
-      <keyword name="studentIDs" id="classManager::studentIDs" ref="classclassManager.html#a0c2c0476512512196826a9f132d67232" />
-      <keyword name="studentName" id="classManager::studentName" ref="classclassManager.html#a14e826d7b30223050e86f18e6b8e6794" />
-      <keyword name="studentUsername" id="classManager::studentUsername" ref="classclassManager.html#a06ee5b7d41313160822bb0205a264f9c" />
-      <keyword name="studentNames" id="classManager::studentNames" ref="classclassManager.html#a39d0c11685730db59cdec05314b969c8" />
-      <keyword name="addStudent" id="classManager::addStudent" ref="classclassManager.html#a05c60e996a66cd75952bde503a9ecd06" />
-      <keyword name="editStudent" id="classManager::editStudent" ref="classclassManager.html#a0627ec9fa26d621947df87d5a781a388" />
-      <keyword name="removeStudent" id="classManager::removeStudent" ref="classclassManager.html#a2e428146e6012fb747a29d91cd687049" />
-      <keyword name="findStudent" id="classManager::findStudent" ref="classclassManager.html#ac3b14a8a915ad2d49a801254c2842e86" />
-      <keyword name="studentAuth" id="classManager::studentAuth" ref="classclassManager.html#aec8d6e6ef3f44c097759b458b5aec9fe" />
-      <keyword name="studentPacks" id="classManager::studentPacks" ref="classclassManager.html#a508460e41153a0fec301d5ab554cf4c1" />
-      <keyword name="studentLessons" id="classManager::studentLessons" ref="classclassManager.html#a389d710ae52dd068d163008d9bfb992d" />
-      <keyword name="studentSublessons" id="classManager::studentSublessons" ref="classclassManager.html#a7404ccdf4d152ed0f8f65762fd4fcf64" />
-      <keyword name="studentExercises" id="classManager::studentExercises" ref="classclassManager.html#a3273090e7be05c7e73fd5f945563fa67" />
-      <keyword name="lessonList" id="classManager::lessonList" ref="classclassManager.html#a45204fec2ad23a129dcaa207f8f220c7" />
-      <keyword name="sublessonList" id="classManager::sublessonList" ref="classclassManager.html#a393154d953c5fb9f4367c96fb46d2369" />
-      <keyword name="exerciseList" id="classManager::exerciseList" ref="classclassManager.html#ab126013cf786c7b46774602fdeb89491" />
-      <keyword name="historySize" id="classManager::historySize" ref="classclassManager.html#afd5328d51846a04a24970b0a5cee1f40" />
-      <keyword name="historyEntry" id="classManager::historyEntry" ref="classclassManager.html#a0e098862f5302975be6371d8f9891edd" />
-      <keyword name="addHistoryEntry" id="classManager::addHistoryEntry" ref="classclassManager.html#aa778d307dc7beccba3af4dd8df42d4b1" />
-      <keyword name="compareWithStudents" id="classManager::compareWithStudents" ref="classclassManager.html#a85e46645a1feef13c07aa1a179496362" />
-      <keyword name="exerciseID" id="classManager::exerciseID" ref="classclassManager.html#a53bd159645d39ed479cd2f060fe98cbf" />
-      <keyword name="classMenu" id="classMenu" ref="classclassMenu.html" />
-      <keyword name="classOpened" id="classMenu::classOpened" ref="classclassMenu.html#aeec7785c6b515b4af1ce14c1aad7531c" />
-      <keyword name="userManagerOpened" id="classMenu::userManagerOpened" ref="classclassMenu.html#a51fca17797bb4edf38b6df9c65059393" />
-      <keyword name="classMenu" id="classMenu::classMenu" ref="classclassMenu.html#a8107cc01bcc1e8e21be618c1134361ca" />
-      <keyword name="~classMenu" id="classMenu::~classMenu" ref="classclassMenu.html#ad1aec6a54189ccd2b6dda095cd3e1776" />
-      <keyword name="classID" id="classMenu::classID" ref="classclassMenu.html#ab1d606820ed7fcffd7fcc1845ce00c5e" />
-      <keyword name="verify" id="classMenu::verify" ref="classclassMenu.html#af3b4d9c638480b2980522be23fba4210" />
-      <keyword name="open" id="classMenu::open" ref="classclassMenu.html#ab4d5b12f17e4c3d94db1491335061d91" />
-      <keyword name="openUserManager" id="classMenu::openUserManager" ref="classclassMenu.html#afbd77a25e3a9ab85ced82fee78c85849" />
-      <keyword name="addClass" id="classMenu::addClass" ref="classclassMenu.html#a8d55002ce78ce04a75bd0c613a6d7443" />
-      <keyword name="removeClass" id="classMenu::removeClass" ref="classclassMenu.html#a3fd814240bf8382e53034c45807f55bf" />
-      <keyword name="editClass" id="classMenu::editClass" ref="classclassMenu.html#a2dd46bceef1d3f5930cc59b6f4c261c5" />
-      <keyword name="setupList" id="classMenu::setupList" ref="classclassMenu.html#a37e00cb0b7d15f013d4df4b366a5ad88" />
-      <keyword name="ui" id="classMenu::ui" ref="classclassMenu.html#a96df00972c83f17caf12b607773e2c01" />
-      <keyword name="fileUtils" id="fileUtils" ref="classfileUtils.html" />
-      <keyword name="configLocation" id="fileUtils::configLocation" ref="classfileUtils.html#ad5cb3697ed9304de49faa998c9091bd5" />
-      <keyword name="initialSetup" id="initialSetup" ref="classinitialSetup.html" />
-      <keyword name="initialSetup" id="initialSetup::initialSetup" ref="classinitialSetup.html#a2c04fb32795d022271a129609da6f5dd" />
-      <keyword name="~initialSetup" id="initialSetup::~initialSetup" ref="classinitialSetup.html#a9b5f719b8dff40cf5dab8d04be1e8c60" />
-      <keyword name="verify" id="initialSetup::verify" ref="classinitialSetup.html#a3bda32cc5591d06ea720ace7e2d0a558" />
-      <keyword name="save" id="initialSetup::save" ref="classinitialSetup.html#a79b12a24899b1252e621fd8f34241ec5" />
-      <keyword name="ui" id="initialSetup::ui" ref="classinitialSetup.html#a152b72ecb49b51ca1d28ddfd5df37e4b" />
-      <keyword name="languageManager" id="languageManager" ref="classlanguageManager.html" />
-      <keyword name="languageManager" id="languageManager::languageManager" ref="classlanguageManager.html#abe17868a43f7d0ad2c10d37245ae43bb" />
-      <keyword name="~languageManager" id="languageManager::~languageManager" ref="classlanguageManager.html#aa528e7f1356bfb831104e0c4e1c6c485" />
-      <keyword name="setLanguage" id="languageManager::setLanguage" ref="classlanguageManager.html#a741725e057f7ef8f34fc4ef4d0a64502" />
-      <keyword name="supportedLanguages" id="languageManager::supportedLanguages" ref="classlanguageManager.html#a9a9c7204f4fda5fdaf854374cc609c29" />
-      <keyword name="supportedCountries" id="languageManager::supportedCountries" ref="classlanguageManager.html#ab715083a9b92b8a7a2b3f0ab8215c458" />
-      <keyword name="boxItems" id="languageManager::boxItems" ref="classlanguageManager.html#aedfb85e051ce25c65e5dbeb1dc4f97a8" />
-      <keyword name="monitorServer" id="monitorServer" ref="classmonitorServer.html" />
-      <keyword name="monitorServer" id="monitorServer::monitorServer" ref="classmonitorServer.html#a5139f286021e951906edffa8502ee3b7" />
-      <keyword name="~monitorServer" id="monitorServer::~monitorServer" ref="classmonitorServer.html#a10c0a13ba9e519d6e7fc91e1f3839585" />
-      <keyword name="getSslLocalCertificate" id="monitorServer::getSslLocalCertificate" ref="classmonitorServer.html#ad00156a3448fd0c8b8a59e328419950f" />
-      <keyword name="getSslPrivateKey" id="monitorServer::getSslPrivateKey" ref="classmonitorServer.html#aacd66e4bdad6c4aa34704c3ae9ba6931" />
-      <keyword name="getSslProtocol" id="monitorServer::getSslProtocol" ref="classmonitorServer.html#afb76272169b8d3a0b6d32b325df48348" />
-      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer.html#a922cc117a049fa6e08078aa5fec73421" />
-      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer.html#a8e53ec2057f233034212eb2bd4c7254b" />
-      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer.html#afe6f72cde581c45666bf32500a3f2c99" />
-      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer.html#a821af1bda6e97ea81f5f113d3b5da873" />
-      <keyword name="setSslProtocol" id="monitorServer::setSslProtocol" ref="classmonitorServer.html#a504dbb55cf1b59d65e2447421dedb6c1" />
-      <keyword name="port" id="monitorServer::port" ref="classmonitorServer.html#ae06bce523ecfc5599f1ab6219c4f6bc3" />
-      <keyword name="address" id="monitorServer::address" ref="classmonitorServer.html#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
-      <keyword name="incomingConnection" id="monitorServer::incomingConnection" ref="classmonitorServer.html#a651c75918ba34568e99831d7e4852ef7" />
-      <keyword name="readRequest" id="monitorServer::readRequest" ref="classmonitorServer.html#a146f6d3d78c2bdd03c9dc25c5550a704" />
-      <keyword name="sendResponse" id="monitorServer::sendResponse" ref="classmonitorServer.html#ad94cc73617f4f28512394180d52e451b" />
-      <keyword name="updateSessions" id="monitorServer::updateSessions" ref="classmonitorServer.html#a827e63132ce650940b4e55ceb959a75b" />
-      <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer.html#a21ac62f2a47529c975e8e588e88a5519" />
-      <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer.html#a13113cdf9fb7db16384cc34fba441593" />
-      <keyword name="readData" id="monitorServer::readData" ref="classmonitorServer.html#a02783368ac82a41a0e2b126fa36a65b6" />
-      <keyword name="clientSocket" id="monitorServer::clientSocket" ref="classmonitorServer.html#a8424d0cf22f5fe546a2687e8f908d52e" />
-      <keyword name="sessions" id="monitorServer::sessions" ref="classmonitorServer.html#af3a2890024a09610242edc17ab07baf4" />
-      <keyword name="m_sslLocalCertificate" id="monitorServer::m_sslLocalCertificate" ref="classmonitorServer.html#ab0597ec0d88fd1cdf9eac9567261eeda" />
-      <keyword name="m_sslPrivateKey" id="monitorServer::m_sslPrivateKey" ref="classmonitorServer.html#ab0b4481387bd311dcc06a93119b1c559" />
-      <keyword name="m_sslProtocol" id="monitorServer::m_sslProtocol" ref="classmonitorServer.html#a9a204512e1077871227c35f42837bf1a" />
-      <keyword name="MonitorWindow" id="MonitorWindow" ref="classMonitorWindow.html" />
-      <keyword name="themeChanged" id="MonitorWindow::themeChanged" ref="classMonitorWindow.html#a8f187f43d19f718b79c96d238279e097" />
-      <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow.html#a139e1a9860177c72701690d8706a39fa" />
-      <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow.html#addd6a957bc31c8b95faff7cb575c903f" />
-      <keyword name="changeEvent" id="MonitorWindow::changeEvent" ref="classMonitorWindow.html#af1953ae9cc698e68a98541af9edcf109" />
-      <keyword name="updateSchoolName" id="MonitorWindow::updateSchoolName" ref="classMonitorWindow.html#a067bd8f535624b4e094c129c9b4fc114" />
-      <keyword name="openOptions" id="MonitorWindow::openOptions" ref="classMonitorWindow.html#a79ce9f627db257fc2460a8f6c0a9836b" />
-      <keyword name="openClass" id="MonitorWindow::openClass" ref="classMonitorWindow.html#a29c3ebef5b28d8a75322a61604a0b049" />
-      <keyword name="openUserManager" id="MonitorWindow::openUserManager" ref="classMonitorWindow.html#afede0a06f1d764ba725558c10e655c5b" />
-      <keyword name="openDetails" id="MonitorWindow::openDetails" ref="classMonitorWindow.html#a463634ef5107435462dda07a679559dd" />
-      <keyword name="goBack" id="MonitorWindow::goBack" ref="classMonitorWindow.html#a9cb5f778ff2d434e83d00ac95e294478" />
-      <keyword name="setTheme" id="MonitorWindow::setTheme" ref="classMonitorWindow.html#af699eca4de50b1a83400b92783cb6c43" />
-      <keyword name="updateControlWidget" id="MonitorWindow::updateControlWidget" ref="classMonitorWindow.html#a186eb9f50c054e9606322a8ef943d5c3" />
-      <keyword name="transition" id="MonitorWindow::transition" ref="classMonitorWindow.html#aafb4f1892a3f675d5cac55b5f7d3c92a" />
-      <keyword name="ui" id="MonitorWindow::ui" ref="classMonitorWindow.html#a64b276a63b60489dcbc98109714af9c5" />
-      <keyword name="classID" id="MonitorWindow::classID" ref="classMonitorWindow.html#a67de80a02a89be2230de95dc35532e33" />
-      <keyword name="settings" id="MonitorWindow::settings" ref="classMonitorWindow.html#a5356edb5cf7502e3cf8e490f44e31f13" />
-      <keyword name="controlWidgets" id="MonitorWindow::controlWidgets" ref="classMonitorWindow.html#a33121248c05eaf896eb6e0f2fcd1013f" />
-      <keyword name="moveAnim" id="MonitorWindow::moveAnim" ref="classMonitorWindow.html#a9477eef88c9942555685bb15d979fc21" />
-      <keyword name="optionsWindow" id="optionsWindow" ref="classoptionsWindow.html" />
-      <keyword name="optionsWindow" id="optionsWindow::optionsWindow" ref="classoptionsWindow.html#a45fae6808c165b25c933492140379fd3" />
-      <keyword name="~optionsWindow" id="optionsWindow::~optionsWindow" ref="classoptionsWindow.html#ad2942ee73b6562894bf2d25f554b9e5c" />
-      <keyword name="closeOptions" id="optionsWindow::closeOptions" ref="classoptionsWindow.html#a53c6de72dfe4909444452005cce9bc92" />
-      <keyword name="ui" id="optionsWindow::ui" ref="classoptionsWindow.html#a9d8f2019045cd76cde4e0c86e1d2296d" />
-      <keyword name="settings" id="optionsWindow::settings" ref="classoptionsWindow.html#a3e4a3003f127ff60107380f265f5debf" />
-      <keyword name="langMgr" id="optionsWindow::langMgr" ref="classoptionsWindow.html#afd1158afeed54cbd0001e7444ad54a64" />
-      <keyword name="languages" id="optionsWindow::languages" ref="classoptionsWindow.html#a23d4cdfa64350fa9b8bb9b6d1d3d3380" />
-      <keyword name="studentDetails" id="studentDetails" ref="classstudentDetails.html" />
-      <keyword name="backClicked" id="studentDetails::backClicked" ref="classstudentDetails.html#a4223d16b876261e2734f3bfd4252a73c" />
-      <keyword name="studentDetails" id="studentDetails::studentDetails" ref="classstudentDetails.html#a285e47a614c7fa26c61ed1bafd7433b0" />
-      <keyword name="~studentDetails" id="studentDetails::~studentDetails" ref="classstudentDetails.html#af7a767871f4c72c1c6c87a9d350fde87" />
-      <keyword name="goBack" id="studentDetails::goBack" ref="classstudentDetails.html#a716f5e0da755e7a71cdf1fae1800e6c5" />
-      <keyword name="refresh" id="studentDetails::refresh" ref="classstudentDetails.html#aa584eb65a41aa7dcb1d23e4185f319f2" />
-      <keyword name="refreshTable" id="studentDetails::refreshTable" ref="classstudentDetails.html#a49db064c526ee9a21684d79f0e3f78ce" />
-      <keyword name="changeTheme" id="studentDetails::changeTheme" ref="classstudentDetails.html#a1255046a70b2f22a5be3e2f9774a1bd0" />
-      <keyword name="refreshCharts" id="studentDetails::refreshCharts" ref="classstudentDetails.html#a0488a551935057caa40ba9583d6dc67c" />
-      <keyword name="ui" id="studentDetails::ui" ref="classstudentDetails.html#ae3968d5bd412eb31f4bd81a23ec1ba7d" />
-      <keyword name="classID" id="studentDetails::classID" ref="classstudentDetails.html#a85da6073b1753ba55fb609373bb34b33" />
-      <keyword name="studentID" id="studentDetails::studentID" ref="classstudentDetails.html#a627e9b40eb8b31f6e772532a3bcc1e47" />
-      <keyword name="speedChart" id="studentDetails::speedChart" ref="classstudentDetails.html#a505295ec1c08b892c54a527574fa2f13" />
-      <keyword name="mistakesChart" id="studentDetails::mistakesChart" ref="classstudentDetails.html#acbdd6c42187d1444b62423a96d8be8a1" />
-      <keyword name="timeChart" id="studentDetails::timeChart" ref="classstudentDetails.html#a1119a0a45074beee89385afc589e604a" />
-      <keyword name="speedSeries" id="studentDetails::speedSeries" ref="classstudentDetails.html#ae8a332fd8ca0bdcb9631e8a2feb4a420" />
-      <keyword name="mistakesSeries" id="studentDetails::mistakesSeries" ref="classstudentDetails.html#add929e0117b647d02449182eacbe55a2" />
-      <keyword name="timeSeries" id="studentDetails::timeSeries" ref="classstudentDetails.html#a4397e556a2335e43593e13f0f5b0698b" />
-      <keyword name="studentEdit" id="studentEdit" ref="classstudentEdit.html" />
-      <keyword name="studentEdit" id="studentEdit::studentEdit" ref="classstudentEdit.html#a652c5267ae2ca99a90e25847f58e8a5f" />
-      <keyword name="~studentEdit" id="studentEdit::~studentEdit" ref="classstudentEdit.html#a9d21d9eb48bb859aeccc60b1900d5a33" />
-      <keyword name="verify" id="studentEdit::verify" ref="classstudentEdit.html#a22d4a3f1f4275d71fccf8fa966db4c1a" />
-      <keyword name="resetPassword" id="studentEdit::resetPassword" ref="classstudentEdit.html#a4c921fd38da110e1ad6be9ca31ac579c" />
-      <keyword name="finish" id="studentEdit::finish" ref="classstudentEdit.html#a57769f6f3bb7e2595c8e5ea2dc3f27a1" />
-      <keyword name="ui" id="studentEdit::ui" ref="classstudentEdit.html#a4a83fe8f2038fdb465bf21678f90f534" />
-      <keyword name="creatingNewStudent" id="studentEdit::creatingNewStudent" ref="classstudentEdit.html#a0c6bd65acac0469e5d458d2c421d52d1" />
-      <keyword name="passwordReset" id="studentEdit::passwordReset" ref="classstudentEdit.html#a2a22440b4141e2917add2c899242e1af" />
-      <keyword name="classID" id="studentEdit::classID" ref="classstudentEdit.html#a45fc732c319c25aa8180329c2d117384" />
-      <keyword name="studentID" id="studentEdit::studentID" ref="classstudentEdit.html#abff49504499bd8000642f00f96320b5b" />
-      <keyword name="Updater" id="Updater" ref="classUpdater.html" />
-      <keyword name="Updater" id="Updater::Updater" ref="classUpdater.html#abf702b842504bc1147a5e7bebbbf15ea" />
-      <keyword name="~Updater" id="Updater::~Updater" ref="classUpdater.html#a2f8434a97a4f3d3c716bb05abb20621e" />
-      <keyword name="UpdaterDialog" id="UpdaterDialog" ref="classUpdaterDialog.html" />
-      <keyword name="UpdaterDialog" id="UpdaterDialog::UpdaterDialog" ref="classUpdaterDialog.html#ae6833c46d5feff6d267e113ba23410e4" />
-      <keyword name="~UpdaterDialog" id="UpdaterDialog::~UpdaterDialog" ref="classUpdaterDialog.html#ab42ebaf4837dfff9f69b8040cbda1fa0" />
-      <keyword name="ui" id="UpdaterDialog::ui" ref="classUpdaterDialog.html#afff6bfb3f2078b3e9e7a73651f2ad147" />
-      <keyword name="userEdit" id="userEdit" ref="classuserEdit.html" />
-      <keyword name="userEdit" id="userEdit::userEdit" ref="classuserEdit.html#aa9c71975e895a6c6c4f23eafafa2622f" />
-      <keyword name="~userEdit" id="userEdit::~userEdit" ref="classuserEdit.html#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
-      <keyword name="verify" id="userEdit::verify" ref="classuserEdit.html#a23e63b7b722d05537b6e45b83b144cb2" />
-      <keyword name="resetPassword" id="userEdit::resetPassword" ref="classuserEdit.html#a915d722fe57c91e1dd1e55a9b3bac8eb" />
-      <keyword name="finish" id="userEdit::finish" ref="classuserEdit.html#a786c48d075bb78bcf7abe27b477466c8" />
-      <keyword name="ui" id="userEdit::ui" ref="classuserEdit.html#a09f84ccc4eed328802dc1a31ae6d0969" />
-      <keyword name="creatingNewUser" id="userEdit::creatingNewUser" ref="classuserEdit.html#a12a3e2c97acc9bcbeb10df6b457f71c6" />
-      <keyword name="passwordReset" id="userEdit::passwordReset" ref="classuserEdit.html#ada9eb1bfe84fea593ddfb4291dbcd5ce" />
-      <keyword name="userID" id="userEdit::userID" ref="classuserEdit.html#ad13d07bc7335e58897300fedd3be616e" />
-      <keyword name="userManager" id="userManager" ref="classuserManager.html" />
-      <keyword name="userIDs" id="userManager::userIDs" ref="classuserManager.html#a4b58dadfdb88ebc1a49abd3161051ef5" />
-      <keyword name="userName" id="userManager::userName" ref="classuserManager.html#a846f65c4461e713b32b3139eabbf404c" />
-      <keyword name="userRole" id="userManager::userRole" ref="classuserManager.html#abb51966537b488651c4d8a38f3cb8448" />
-      <keyword name="roleID" id="userManager::roleID" ref="classuserManager.html#aade58bf4f44b022f0b9165f39927993c" />
-      <keyword name="roleName" id="userManager::roleName" ref="classuserManager.html#a2951398109a854c2de7d8528eb37a4da" />
-      <keyword name="userNames" id="userManager::userNames" ref="classuserManager.html#ada0ff4dfd60b350a7196f82b545a4029" />
-      <keyword name="addUser" id="userManager::addUser" ref="classuserManager.html#a691b1ccc20644b5924d96efeaf48204f" />
-      <keyword name="editUser" id="userManager::editUser" ref="classuserManager.html#a72302221367a532a938e2fab118efe01" />
-      <keyword name="removeUser" id="userManager::removeUser" ref="classuserManager.html#aff60439d092f5ff32e623ac5a716ed04" />
-      <keyword name="auth" id="userManager::auth" ref="classuserManager.html#a7148c3dd2d00f2834679fe1fe7cbb829" />
-      <keyword name="auth" id="userManager::auth" ref="classuserManager.html#aa15838004cbea8f204fadc37533e75da" />
-      <keyword name="userManagerWidget" id="userManagerWidget" ref="classuserManagerWidget.html" />
-      <keyword name="backClicked" id="userManagerWidget::backClicked" ref="classuserManagerWidget.html#a698112ca4108026dff5449c56d4ce2a0" />
-      <keyword name="userManagerWidget" id="userManagerWidget::userManagerWidget" ref="classuserManagerWidget.html#a19fcce6a0c978de959bd83c8dde7a120" />
-      <keyword name="~userManagerWidget" id="userManagerWidget::~userManagerWidget" ref="classuserManagerWidget.html#aac90acf6e6637c141ac29ca57db2c164" />
-      <keyword name="closeEvent" id="userManagerWidget::closeEvent" ref="classuserManagerWidget.html#a1fdf50fda40344abf0097da0e99e63cd" />
-      <keyword name="verify" id="userManagerWidget::verify" ref="classuserManagerWidget.html#ac0c06ef1d7b9547717d79eba3c5c52a7" />
-      <keyword name="finish" id="userManagerWidget::finish" ref="classuserManagerWidget.html#a5b390b92338ed75945a484a3a4ea6c0a" />
-      <keyword name="addUser" id="userManagerWidget::addUser" ref="classuserManagerWidget.html#af137c5c2a19bd1c5df48e98948e07584" />
-      <keyword name="removeUser" id="userManagerWidget::removeUser" ref="classuserManagerWidget.html#a77f2c89fe41db2649bd92f64e8cfaad1" />
-      <keyword name="editUser" id="userManagerWidget::editUser" ref="classuserManagerWidget.html#ab41b78a77e2e880c49593872f444f34d" />
-      <keyword name="setupList" id="userManagerWidget::setupList" ref="classuserManagerWidget.html#af434ca35d5e148a3c87e79522cd110b7" />
-      <keyword name="ui" id="userManagerWidget::ui" ref="classuserManagerWidget.html#a734bcf8a657166ee3688cdff0ec922ed" />
-      <keyword name="loginID" id="userManagerWidget::loginID" ref="classuserManagerWidget.html#a2e03ef7c232646e1e8f961d26264171d" />
+      <keyword name="adminSelector" id="adminSelector" ref="classadminSelector" />
+      <keyword name="authDialog" id="authDialog" ref="classauthDialog" />
+      <keyword name="classControls" id="classControls" ref="classclassControls" />
+      <keyword name="classEdit" id="classEdit" ref="classclassEdit" />
+      <keyword name="classManager" id="classManager" ref="classclassManager" />
+      <keyword name="classMenu" id="classMenu" ref="classclassMenu" />
+      <keyword name="fileUtils" id="fileUtils" ref="classfileUtils" />
+      <keyword name="initialSetup" id="initialSetup" ref="classinitialSetup" />
+      <keyword name="languageManager" id="languageManager" ref="classlanguageManager" />
+      <keyword name="monitorServer" id="monitorServer" ref="classmonitorServer" />
+      <keyword name="MonitorWindow" id="MonitorWindow" ref="classMonitorWindow" />
+      <keyword name="optionsWindow" id="optionsWindow" ref="classoptionsWindow" />
+      <keyword name="studentDetails" id="studentDetails" ref="classstudentDetails" />
+      <keyword name="studentEdit" id="studentEdit" ref="classstudentEdit" />
+      <keyword name="Updater" id="Updater" ref="classUpdater" />
+      <keyword name="UpdaterDialog" id="UpdaterDialog" ref="classUpdaterDialog" />
+      <keyword name="userEdit" id="userEdit" ref="classuserEdit" />
+      <keyword name="userManager" id="userManager" ref="classuserManager" />
+      <keyword name="userManagerWidget" id="userManagerWidget" ref="classuserManagerWidget" />
+      <keyword name="Build instructions" id="Build instructions" ref="md_docs_data_pages_Build_instructions" />
+      <keyword name="acceptConnection" id="monitorServer::acceptConnection" ref="classmonitorServer#af49b1ef481202dedcb6a6d96ed352ac1" />
+      <keyword name="addClass" id="classManager::addClass" ref="classclassManager#a098cfb23b1a5cbef36ee39ebd5f96fd0" />
+      <keyword name="addClass" id="classMenu::addClass" ref="classclassMenu#a8d55002ce78ce04a75bd0c613a6d7443" />
+      <keyword name="addHistoryEntry" id="classManager::addHistoryEntry" ref="classclassManager#aa778d307dc7beccba3af4dd8df42d4b1" />
+      <keyword name="address" id="monitorServer::address" ref="classmonitorServer#ab01ad50bc566caddbb3cc01c5f0a9f6e" />
+      <keyword name="addStudent" id="classManager::addStudent" ref="classclassManager#a05c60e996a66cd75952bde503a9ecd06" />
+      <keyword name="addStudent" id="classControls::addStudent" ref="classclassControls#a065ff24b5ec8c6e6f781df71d3ffe886" />
+      <keyword name="addUser" id="userManager::addUser" ref="classuserManager#a691b1ccc20644b5924d96efeaf48204f" />
+      <keyword name="addUser" id="userManagerWidget::addUser" ref="classuserManagerWidget#af137c5c2a19bd1c5df48e98948e07584" />
+      <keyword name="adminSelector" id="adminSelector::adminSelector" ref="classadminSelector#ae8c7c8639d2b04422fe66025378636d6" />
+      <keyword name="auth" id="userManager::auth" ref="classuserManager#a7148c3dd2d00f2834679fe1fe7cbb829" />
+      <keyword name="auth" id="userManager::auth" ref="classuserManager#aa15838004cbea8f204fadc37533e75da" />
+      <keyword name="authDialog" id="authDialog::authDialog" ref="classauthDialog#a5a88e7540cbb540925e2b1c36f8c5b7f" />
+      <keyword name="backClicked" id="classControls::backClicked" ref="classclassControls#aa1dda56b86029c91c95b4e1eab3efeed" />
+      <keyword name="backClicked" id="studentDetails::backClicked" ref="classstudentDetails#a4223d16b876261e2734f3bfd4252a73c" />
+      <keyword name="backClicked" id="userManagerWidget::backClicked" ref="classuserManagerWidget#a698112ca4108026dff5449c56d4ce2a0" />
+      <keyword name="changeEvent" id="MonitorWindow::changeEvent" ref="classMonitorWindow#af1953ae9cc698e68a98541af9edcf109" />
+      <keyword name="changeTheme" id="classControls::changeTheme" ref="classclassControls#a99fc1e8400e6b1881a79737c74381c58" />
+      <keyword name="changeTheme" id="studentDetails::changeTheme" ref="classstudentDetails#a1255046a70b2f22a5be3e2f9774a1bd0" />
+      <keyword name="classControls" id="classControls::classControls" ref="classclassControls#a490fc7075794f498f3315e10b83bfd97" />
+      <keyword name="classEdit" id="classEdit::classEdit" ref="classclassEdit#ab04a76336f5ed8db1c1002f623c82386" />
+      <keyword name="classIcon" id="classManager::classIcon" ref="classclassManager#abac8ef8312cc147c37ba576880f3ab93" />
+      <keyword name="classIDs" id="classManager::classIDs" ref="classclassManager#a58a201a7ddd9bb365114801fe6623fc2" />
+      <keyword name="classMenu" id="classMenu::classMenu" ref="classclassMenu#a8107cc01bcc1e8e21be618c1134361ca" />
+      <keyword name="className" id="classManager::className" ref="classclassManager#a3bcd26448ef6282387c715ae3a579b41" />
+      <keyword name="classNames" id="classManager::classNames" ref="classclassManager#ab1ac49983c53806f01f781a62f7346b0" />
+      <keyword name="classOpened" id="classMenu::classOpened" ref="classclassMenu#aeec7785c6b515b4af1ce14c1aad7531c" />
+      <keyword name="classOwner" id="classManager::classOwner" ref="classclassManager#a661a064a729750064acc16ded16603f4" />
+      <keyword name="classTimestamp" id="classManager::classTimestamp" ref="classclassManager#a095217eb1e7d5f2b4df379e990cacaf8" />
+      <keyword name="closeEvent" id="userManagerWidget::closeEvent" ref="classuserManagerWidget#a1fdf50fda40344abf0097da0e99e63cd" />
+      <keyword name="closeOptions" id="optionsWindow::closeOptions" ref="classoptionsWindow#a53c6de72dfe4909444452005cce9bc92" />
+      <keyword name="compareWithStudents" id="classManager::compareWithStudents" ref="classclassManager#a85e46645a1feef13c07aa1a179496362" />
+      <keyword name="configLocation" id="fileUtils::configLocation" ref="classfileUtils#ad5cb3697ed9304de49faa998c9091bd5" />
+      <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer#a21ac62f2a47529c975e8e588e88a5519" />
+      <keyword name="convertData" id="monitorServer::convertData" ref="classmonitorServer#a13113cdf9fb7db16384cc34fba441593" />
+      <keyword name="detailsClicked" id="classControls::detailsClicked" ref="classclassControls#a151fa314492e99ce4a6183b91fb906ad" />
+      <keyword name="disconnectClient" id="monitorServer::disconnectClient" ref="classmonitorServer#a4752d1160f813a9c7c539bfa90068bfd" />
+      <keyword name="editClass" id="classManager::editClass" ref="classclassManager#acf762f28a16ff767b77b84a0fe5a7303" />
+      <keyword name="editClass" id="classMenu::editClass" ref="classclassMenu#a2dd46bceef1d3f5930cc59b6f4c261c5" />
+      <keyword name="editStudent" id="classManager::editStudent" ref="classclassManager#a0627ec9fa26d621947df87d5a781a388" />
+      <keyword name="editStudent" id="classControls::editStudent" ref="classclassControls#a35f2c8f2ea293dfcad7d36d934e0288e" />
+      <keyword name="editUser" id="userManager::editUser" ref="classuserManager#a72302221367a532a938e2fab118efe01" />
+      <keyword name="editUser" id="userManagerWidget::editUser" ref="classuserManagerWidget#ab41b78a77e2e880c49593872f444f34d" />
+      <keyword name="exerciseID" id="classManager::exerciseID" ref="classclassManager#a53bd159645d39ed479cd2f060fe98cbf" />
+      <keyword name="exerciseList" id="classManager::exerciseList" ref="classclassManager#ab126013cf786c7b46774602fdeb89491" />
+      <keyword name="findStudent" id="classManager::findStudent" ref="classclassManager#ac3b14a8a915ad2d49a801254c2842e86" />
+      <keyword name="finish" id="adminSelector::finish" ref="classadminSelector#a6badf56d6db693f9d3f1b9b05a142e95" />
+      <keyword name="finish" id="classEdit::finish" ref="classclassEdit#a2190e2445a8ff442f6716a83ff9e520b" />
+      <keyword name="finish" id="studentEdit::finish" ref="classstudentEdit#a57769f6f3bb7e2595c8e5ea2dc3f27a1" />
+      <keyword name="finish" id="userEdit::finish" ref="classuserEdit#a786c48d075bb78bcf7abe27b477466c8" />
+      <keyword name="getSslLocalCertificate" id="monitorServer::getSslLocalCertificate" ref="classmonitorServer#ad00156a3448fd0c8b8a59e328419950f" />
+      <keyword name="getSslPrivateKey" id="monitorServer::getSslPrivateKey" ref="classmonitorServer#aacd66e4bdad6c4aa34704c3ae9ba6931" />
+      <keyword name="getSslProtocol" id="monitorServer::getSslProtocol" ref="classmonitorServer#afb76272169b8d3a0b6d32b325df48348" />
+      <keyword name="goBack" id="MonitorWindow::goBack" ref="classMonitorWindow#a9cb5f778ff2d434e83d00ac95e294478" />
+      <keyword name="goBack" id="classControls::goBack" ref="classclassControls#abb2c1e4418b45849b4ce2bd7a682be6b" />
+      <keyword name="goBack" id="studentDetails::goBack" ref="classstudentDetails#a716f5e0da755e7a71cdf1fae1800e6c5" />
+      <keyword name="historyEntry" id="classManager::historyEntry" ref="classclassManager#a0e098862f5302975be6371d8f9891edd" />
+      <keyword name="historySize" id="classManager::historySize" ref="classclassManager#afd5328d51846a04a24970b0a5cee1f40" />
+      <keyword name="incomingConnection" id="monitorServer::incomingConnection" ref="classmonitorServer#a651c75918ba34568e99831d7e4852ef7" />
+      <keyword name="initialSetup" id="initialSetup::initialSetup" ref="classinitialSetup#a2c04fb32795d022271a129609da6f5dd" />
+      <keyword name="languageManager" id="languageManager::languageManager" ref="classlanguageManager#abe17868a43f7d0ad2c10d37245ae43bb" />
+      <keyword name="lessonList" id="classManager::lessonList" ref="classclassManager#a45204fec2ad23a129dcaa207f8f220c7" />
+      <keyword name="monitorServer" id="monitorServer::monitorServer" ref="classmonitorServer#a5139f286021e951906edffa8502ee3b7" />
+      <keyword name="MonitorWindow" id="MonitorWindow::MonitorWindow" ref="classMonitorWindow#a139e1a9860177c72701690d8706a39fa" />
+      <keyword name="open" id="classMenu::open" ref="classclassMenu#ab4d5b12f17e4c3d94db1491335061d91" />
+      <keyword name="openClass" id="MonitorWindow::openClass" ref="classMonitorWindow#a29c3ebef5b28d8a75322a61604a0b049" />
+      <keyword name="openDetails" id="MonitorWindow::openDetails" ref="classMonitorWindow#a463634ef5107435462dda07a679559dd" />
+      <keyword name="openDetails" id="classControls::openDetails" ref="classclassControls#a4f72d70048afef1fe87f9ac93d76de41" />
+      <keyword name="openOptions" id="MonitorWindow::openOptions" ref="classMonitorWindow#a79ce9f627db257fc2460a8f6c0a9836b" />
+      <keyword name="openUserManager" id="MonitorWindow::openUserManager" ref="classMonitorWindow#afede0a06f1d764ba725558c10e655c5b" />
+      <keyword name="openUserManager" id="classMenu::openUserManager" ref="classclassMenu#afbd77a25e3a9ab85ced82fee78c85849" />
+      <keyword name="optionsWindow" id="optionsWindow::optionsWindow" ref="classoptionsWindow#a45fae6808c165b25c933492140379fd3" />
+      <keyword name="port" id="monitorServer::port" ref="classmonitorServer#ae06bce523ecfc5599f1ab6219c4f6bc3" />
+      <keyword name="readData" id="monitorServer::readData" ref="classmonitorServer#a02783368ac82a41a0e2b126fa36a65b6" />
+      <keyword name="refresh" id="studentDetails::refresh" ref="classstudentDetails#aa584eb65a41aa7dcb1d23e4185f319f2" />
+      <keyword name="refreshCharts" id="classControls::refreshCharts" ref="classclassControls#a70f87b55fb524edef079d0d0c831234a" />
+      <keyword name="refreshCharts" id="studentDetails::refreshCharts" ref="classstudentDetails#a0488a551935057caa40ba9583d6dc67c" />
+      <keyword name="refreshTable" id="studentDetails::refreshTable" ref="classstudentDetails#a49db064c526ee9a21684d79f0e3f78ce" />
+      <keyword name="removeClass" id="classManager::removeClass" ref="classclassManager#a8be2c4c66f6b0a896942deb48dddddb5" />
+      <keyword name="removeClass" id="classMenu::removeClass" ref="classclassMenu#a3fd814240bf8382e53034c45807f55bf" />
+      <keyword name="removeStudent" id="classManager::removeStudent" ref="classclassManager#a2e428146e6012fb747a29d91cd687049" />
+      <keyword name="removeStudent" id="classControls::removeStudent" ref="classclassControls#a36196fc52adb22c50458b9d38787721c" />
+      <keyword name="removeUser" id="userManager::removeUser" ref="classuserManager#aff60439d092f5ff32e623ac5a716ed04" />
+      <keyword name="removeUser" id="userManagerWidget::removeUser" ref="classuserManagerWidget#a77f2c89fe41db2649bd92f64e8cfaad1" />
+      <keyword name="resetPassword" id="userEdit::resetPassword" ref="classuserEdit#a915d722fe57c91e1dd1e55a9b3bac8eb" />
+      <keyword name="roleID" id="userManager::roleID" ref="classuserManager#aade58bf4f44b022f0b9165f39927993c" />
+      <keyword name="roleName" id="userManager::roleName" ref="classuserManager#a2951398109a854c2de7d8528eb37a4da" />
+      <keyword name="save" id="initialSetup::save" ref="classinitialSetup#a79b12a24899b1252e621fd8f34241ec5" />
+      <keyword name="sendResponse" id="monitorServer::sendResponse" ref="classmonitorServer#ad94cc73617f4f28512394180d52e451b" />
+      <keyword name="sessions" id="monitorServer::sessions" ref="classmonitorServer#a73de17b0acce09f4f8fa336294ad432e" />
+      <keyword name="setClassTimestamp" id="classManager::setClassTimestamp" ref="classclassManager#a1f156eecbbed6cc2b5ad46ae9f9293d6" />
+      <keyword name="setLanguage" id="languageManager::setLanguage" ref="classlanguageManager#a741725e057f7ef8f34fc4ef4d0a64502" />
+      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer#a922cc117a049fa6e08078aa5fec73421" />
+      <keyword name="setSslLocalCertificate" id="monitorServer::setSslLocalCertificate" ref="classmonitorServer#a8e53ec2057f233034212eb2bd4c7254b" />
+      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer#afe6f72cde581c45666bf32500a3f2c99" />
+      <keyword name="setSslPrivateKey" id="monitorServer::setSslPrivateKey" ref="classmonitorServer#a821af1bda6e97ea81f5f113d3b5da873" />
+      <keyword name="setSslProtocol" id="monitorServer::setSslProtocol" ref="classmonitorServer#a504dbb55cf1b59d65e2447421dedb6c1" />
+      <keyword name="setTheme" id="MonitorWindow::setTheme" ref="classMonitorWindow#af699eca4de50b1a83400b92783cb6c43" />
+      <keyword name="setupList" id="classMenu::setupList" ref="classclassMenu#a37e00cb0b7d15f013d4df4b366a5ad88" />
+      <keyword name="setupList" id="userManagerWidget::setupList" ref="classuserManagerWidget#af434ca35d5e148a3c87e79522cd110b7" />
+      <keyword name="setupTable" id="classControls::setupTable" ref="classclassControls#adb3be8efc35307d49b7b254d465dbed4" />
+      <keyword name="studentAuth" id="classManager::studentAuth" ref="classclassManager#aec8d6e6ef3f44c097759b458b5aec9fe" />
+      <keyword name="studentDetails" id="studentDetails::studentDetails" ref="classstudentDetails#a285e47a614c7fa26c61ed1bafd7433b0" />
+      <keyword name="studentEdit" id="studentEdit::studentEdit" ref="classstudentEdit#a652c5267ae2ca99a90e25847f58e8a5f" />
+      <keyword name="studentExercises" id="classManager::studentExercises" ref="classclassManager#a3273090e7be05c7e73fd5f945563fa67" />
+      <keyword name="studentIDs" id="classManager::studentIDs" ref="classclassManager#a0c2c0476512512196826a9f132d67232" />
+      <keyword name="studentLessons" id="classManager::studentLessons" ref="classclassManager#a389d710ae52dd068d163008d9bfb992d" />
+      <keyword name="studentName" id="classManager::studentName" ref="classclassManager#a14e826d7b30223050e86f18e6b8e6794" />
+      <keyword name="studentNames" id="classManager::studentNames" ref="classclassManager#a39d0c11685730db59cdec05314b969c8" />
+      <keyword name="studentPacks" id="classManager::studentPacks" ref="classclassManager#a508460e41153a0fec301d5ab554cf4c1" />
+      <keyword name="studentSublessons" id="classManager::studentSublessons" ref="classclassManager#a7404ccdf4d152ed0f8f65762fd4fcf64" />
+      <keyword name="studentUsername" id="classManager::studentUsername" ref="classclassManager#a06ee5b7d41313160822bb0205a264f9c" />
+      <keyword name="sublessonList" id="classManager::sublessonList" ref="classclassManager#a393154d953c5fb9f4367c96fb46d2369" />
+      <keyword name="themeChanged" id="MonitorWindow::themeChanged" ref="classMonitorWindow#a8f187f43d19f718b79c96d238279e097" />
+      <keyword name="transition" id="MonitorWindow::transition" ref="classMonitorWindow#aafb4f1892a3f675d5cac55b5f7d3c92a" />
+      <keyword name="updateControlWidget" id="MonitorWindow::updateControlWidget" ref="classMonitorWindow#a186eb9f50c054e9606322a8ef943d5c3" />
+      <keyword name="updateOwner" id="classEdit::updateOwner" ref="classclassEdit#a44d206f77fc7fe1c8cc868a9daca5c49" />
+      <keyword name="Updater" id="Updater::Updater" ref="classUpdater#abf702b842504bc1147a5e7bebbbf15ea" />
+      <keyword name="UpdaterDialog" id="UpdaterDialog::UpdaterDialog" ref="classUpdaterDialog#ae6833c46d5feff6d267e113ba23410e4" />
+      <keyword name="updateSchoolName" id="MonitorWindow::updateSchoolName" ref="classMonitorWindow#a067bd8f535624b4e094c129c9b4fc114" />
+      <keyword name="updateText" id="authDialog::updateText" ref="classauthDialog#ab1c0f4066afa72bbf37855d3ffb67b9f" />
+      <keyword name="userEdit" id="userEdit::userEdit" ref="classuserEdit#aa9c71975e895a6c6c4f23eafafa2622f" />
+      <keyword name="userIDs" id="userManager::userIDs" ref="classuserManager#a4b58dadfdb88ebc1a49abd3161051ef5" />
+      <keyword name="userManagerOpened" id="classMenu::userManagerOpened" ref="classclassMenu#a51fca17797bb4edf38b6df9c65059393" />
+      <keyword name="userManagerWidget" id="userManagerWidget::userManagerWidget" ref="classuserManagerWidget#a19fcce6a0c978de959bd83c8dde7a120" />
+      <keyword name="userName" id="userManager::userName" ref="classuserManager#a846f65c4461e713b32b3139eabbf404c" />
+      <keyword name="userNames" id="userManager::userNames" ref="classuserManager#ada0ff4dfd60b350a7196f82b545a4029" />
+      <keyword name="userRole" id="userManager::userRole" ref="classuserManager#abb51966537b488651c4d8a38f3cb8448" />
+      <keyword name="verify" id="classEdit::verify" ref="classclassEdit#a32507fbb569e4568c13758c0d6e8955e" />
+      <keyword name="verify" id="initialSetup::verify" ref="classinitialSetup#a3bda32cc5591d06ea720ace7e2d0a558" />
+      <keyword name="verify" id="studentEdit::verify" ref="classstudentEdit#a22d4a3f1f4275d71fccf8fa966db4c1a" />
+      <keyword name="verify" id="userEdit::verify" ref="classuserEdit#a23e63b7b722d05537b6e45b83b144cb2" />
+      <keyword name="verify" id="classControls::verify" ref="classclassControls#a1a17121155cb9a41f72f103346e8ce40" />
+      <keyword name="verify" id="classMenu::verify" ref="classclassMenu#af3b4d9c638480b2980522be23fba4210" />
+      <keyword name="verify" id="userManagerWidget::verify" ref="classuserManagerWidget#ac0c06ef1d7b9547717d79eba3c5c52a7" />
+      <keyword name="~adminSelector" id="adminSelector::~adminSelector" ref="classadminSelector#a77578993a413d00dbbdcde8f4b3e5eb9" />
+      <keyword name="~authDialog" id="authDialog::~authDialog" ref="classauthDialog#a1b9e517dadde0e190c5347b47f201522" />
+      <keyword name="~classControls" id="classControls::~classControls" ref="classclassControls#abf75656086d258bb4c99209e35987448" />
+      <keyword name="~classEdit" id="classEdit::~classEdit" ref="classclassEdit#a9e852276cad342ffab7886447f133fe9" />
+      <keyword name="~classMenu" id="classMenu::~classMenu" ref="classclassMenu#ad1aec6a54189ccd2b6dda095cd3e1776" />
+      <keyword name="~initialSetup" id="initialSetup::~initialSetup" ref="classinitialSetup#a9b5f719b8dff40cf5dab8d04be1e8c60" />
+      <keyword name="~languageManager" id="languageManager::~languageManager" ref="classlanguageManager#aa528e7f1356bfb831104e0c4e1c6c485" />
+      <keyword name="~monitorServer" id="monitorServer::~monitorServer" ref="classmonitorServer#a10c0a13ba9e519d6e7fc91e1f3839585" />
+      <keyword name="~MonitorWindow" id="MonitorWindow::~MonitorWindow" ref="classMonitorWindow#addd6a957bc31c8b95faff7cb575c903f" />
+      <keyword name="~optionsWindow" id="optionsWindow::~optionsWindow" ref="classoptionsWindow#ad2942ee73b6562894bf2d25f554b9e5c" />
+      <keyword name="~studentDetails" id="studentDetails::~studentDetails" ref="classstudentDetails#af7a767871f4c72c1c6c87a9d350fde87" />
+      <keyword name="~studentEdit" id="studentEdit::~studentEdit" ref="classstudentEdit#a9d21d9eb48bb859aeccc60b1900d5a33" />
+      <keyword name="~Updater" id="Updater::~Updater" ref="classUpdater#a2f8434a97a4f3d3c716bb05abb20621e" />
+      <keyword name="~UpdaterDialog" id="UpdaterDialog::~UpdaterDialog" ref="classUpdaterDialog#ab42ebaf4837dfff9f69b8040cbda1fa0" />
+      <keyword name="~userEdit" id="userEdit::~userEdit" ref="classuserEdit#a5af8ca30f46e8df4f5ba0ae7163c66d7" />
+      <keyword name="~userManagerWidget" id="userManagerWidget::~userManagerWidget" ref="classuserManagerWidget#aac90acf6e6637c141ac29ca57db2c164" />
     </keywords>
     <files>
       <file>tabs.css</file>
@@ -508,11 +455,13 @@
       <file>nav_h.png</file>
       <file>nav_f.png</file>
       <file>bc_s.png</file>
+      <file>doxygen.svg</file>
       <file>closed.png</file>
       <file>open.png</file>
       <file>bdwn.png</file>
       <file>sync_on.png</file>
       <file>sync_off.png</file>
+      <file>nav_g.png</file>
       <file>doxygen.css</file>
       <file>doxygen-awesome.css</file>
       <file>jquery.js</file>
@@ -524,6 +473,10 @@
       <file>search/mag_sel.svg</file>
       <file>search/search.css</file>
       <file>search/search.js</file>
+      <file>doc.png</file>
+      <file>folderopen.png</file>
+      <file>folderclosed.png</file>
+      <file>splitbar.png</file>
       <file>adminselector_8h_source.html</file>
       <file>authdialog_8h_source.html</file>
       <file>classedit_8h_source.html</file>
@@ -634,17 +587,27 @@
       <file>graph_legend.png</file>
       <file>graph_legend.html</file>
       <file>dir_aebb8dcc11953d78e620bbef0b9e2183.html</file>
+      <file>dir_aebb8dcc11953d78e620bbef0b9e2183_dep.png</file>
       <file>dir_4cf372765f693cf540fc4810db0c309c.html</file>
+      <file>dir_4cf372765f693cf540fc4810db0c309c_dep.png</file>
       <file>dir_5854880b00b3c6c6627d48510baba8d2.html</file>
       <file>dir_b0856f6b0d80ccb263b2f415c91f9e17.html</file>
+      <file>dir_b0856f6b0d80ccb263b2f415c91f9e17_dep.png</file>
       <file>dir_a6b8e448081bf8ce4db4cf71fa3ecf15.html</file>
+      <file>dir_a6b8e448081bf8ce4db4cf71fa3ecf15_dep.png</file>
       <file>dir_51d37d93a99f151d07755b62737feb84.html</file>
+      <file>dir_51d37d93a99f151d07755b62737feb84_dep.png</file>
       <file>dir_8c421087272d921338bde95c2b39aa1b.html</file>
+      <file>dir_8c421087272d921338bde95c2b39aa1b_dep.png</file>
       <file>dir_68267d1309a1af8e8297ef4c3efbcdba.html</file>
       <file>dir_7468157ebcb76345a67412f7bb97ed29.html</file>
+      <file>dir_7468157ebcb76345a67412f7bb97ed29_dep.png</file>
       <file>dir_f356faf232716eaaa298279b6f90416b.html</file>
+      <file>dir_f356faf232716eaaa298279b6f90416b_dep.png</file>
       <file>dir_99f4b16b17a360d9840a4176588db3c6.html</file>
+      <file>dir_99f4b16b17a360d9840a4176588db3c6_dep.png</file>
       <file>dir_0abdee562046be6f5823d1ca8c3fd13c.html</file>
+      <file>dir_0abdee562046be6f5823d1ca8c3fd13c_dep.png</file>
       <file>index.html</file>
       <file>pages.html</file>
       <file>annotated.html</file>
@@ -694,6 +657,7 @@
       <file>functions_func.html</file>
       <file>functions_func.html</file>
       <file>functions_func.html</file>
+      <file>functions_vars.html</file>
       <file>files.html</file>
     </files>
   </filterSection>
