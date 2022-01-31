@@ -19,5 +19,6 @@
         <file>res/images/stats.png</file>
         <file>res/images/previous.png</file>
         <file>res/images/options.png</file>
+        <file>res/images/paper.png</file>
     </qresource>
 </RCC>
