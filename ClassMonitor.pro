@@ -32,6 +32,7 @@ SOURCES += \
     src/options/optionswindow.cpp \
     src/studentedit.cpp \
     src/useredit.cpp \
+    src/paperconfigdialog.cpp \
     src/widgets/classmenu.cpp \
     src/widgets/usermanager.cpp \
     src/widgets/classcontrols.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     src/include/options/optionswindow.h \
     src/include/studentedit.h \
     src/include/useredit.h \
+    src/include/paperconfigdialog.h \
     src/include/widgets/classmenu.h \
     src/include/widgets/usermanager.h \
     src/include/widgets/classcontrols.h \
@@ -68,6 +70,7 @@ FORMS += \
     ui/options/optionswindow.ui \
     ui/studentedit.ui \
     ui/useredit.ui \
+    ui/paperconfigdialog.ui \
     ui/widgets/classmenu.ui \
     ui/widgets/usermanager.ui \
     ui/widgets/classcontrols.ui \
