@@ -31,7 +31,7 @@
         <source>There&apos;s a new update available.
 Would you like to download and install it?</source>
         <translation>Je dostupná nová verzia.
-Prajete si you sťiahnuť a nainštalovať?</translation>
+Prajete si ju stiahnuť a nainštalovať?</translation>
     </message>
     <message>
         <location filename="../ui/updater/updaterdialog.ui" line="89"/>
@@ -133,6 +133,11 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
         <translation>Späť</translation>
     </message>
     <message>
+        <location filename="../ui/widgets/classcontrols.ui" line="373"/>
+        <source>Load exercise</source>
+        <translation>Načítať cvičenie</translation>
+    </message>
+    <message>
         <location filename="../src/widgets/classcontrols.cpp" line="46"/>
         <source>Speed</source>
         <translation>Rýchlosť</translation>
@@ -148,39 +153,44 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
         <translation>Čas</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="90"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="91"/>
         <source>Full name</source>
         <translation>Celé meno</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="90"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="91"/>
         <source>Username</source>
         <translation>Používateľské meno</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="139"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="140"/>
         <source>Confirm</source>
         <translation>Potvrdiť</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="140"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="141"/>
         <source>Are you sure you want to remove student</source>
         <translation>Ste si istý/-á, že chcete odstrániť študenta</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="141"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="142"/>
         <source>This will remove whole training history of the student!</source>
         <translation>Táto akcia zmaže celú históriu tréningu tohto študenta!</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="142"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="143"/>
         <source>Yes</source>
         <translation>Áno</translation>
     </message>
     <message>
-        <location filename="../src/widgets/classcontrols.cpp" line="143"/>
+        <location filename="../src/widgets/classcontrols.cpp" line="144"/>
         <source>No</source>
         <translation>Nie</translation>
+    </message>
+    <message>
+        <location filename="../src/widgets/classcontrols.cpp" line="335"/>
+        <source>This file is too large!</source>
+        <translation>Tento súbor je príliš veľký!</translation>
     </message>
 </context>
 <context>
@@ -346,7 +356,7 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
 <context>
     <name>monitorServer</name>
     <message>
-        <location filename="../src/core/server.cpp" line="41"/>
+        <location filename="../src/core/server.cpp" line="43"/>
         <source>Unable to start server on port %1.</source>
         <translation>Nepodarilo sa spustiť server na porte %1.</translation>
     </message>
@@ -383,6 +393,29 @@ Prajete si you sťiahnuť a nainštalovať?</translation>
         <location filename="../ui/options/optionswindow.ui" line="93"/>
         <source>Dark theme</source>
         <translation>Tmavý motív</translation>
+    </message>
+</context>
+<context>
+    <name>paperConfigDialog</name>
+    <message>
+        <location filename="../ui/paperconfigdialog.ui" line="17"/>
+        <source>Size preferences</source>
+        <translation>Nastavenia veľkosti</translation>
+    </message>
+    <message>
+        <location filename="../ui/paperconfigdialog.ui" line="44"/>
+        <source>Line length:</source>
+        <translation>Dĺžka riadka:</translation>
+    </message>
+    <message>
+        <location filename="../ui/paperconfigdialog.ui" line="85"/>
+        <source>Load</source>
+        <translation>Načítať</translation>
+    </message>
+    <message>
+        <location filename="../ui/paperconfigdialog.ui" line="95"/>
+        <source>Include new lines</source>
+        <translation>Zahrnúť nové riadky</translation>
     </message>
 </context>
 <context>
