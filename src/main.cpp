@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
 		initialSetup setupDialog;
 		if(setupDialog.exec() == QDialog::Rejected)
 			QMetaObject::invokeMethod(&w,"close",Qt::QueuedConnection);
+		w.updateSchoolName();
 	}
 	w.show();
 	return a.exec();
