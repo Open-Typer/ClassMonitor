@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Class Monitor
+Exec=/usr/local/bin/open-typer-class-monitor %U
+Terminal=false
+Type=Application
+Icon=open-typer-class-monitor
+Comment=Classroom monitoring program for Open-Typer
+Categories=Education Utility;
